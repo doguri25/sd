@@ -1,0 +1,1979 @@
+{
+  "nodes": [
+    {
+      "id": "chengdu",
+      "name": "성도",
+      "region": "익주",
+      "kind": "city",
+      "x": 230,
+      "y": 380,
+      "longitude": 104.07,
+      "latitude": 30.67,
+      "terrain": "basin",
+      "major": true,
+      "majorReason": "촉한의 도읍",
+      "sources": [
+        "shu",
+        "geo_nanyang",
+        "chengdu"
+      ],
+      "neighbors": [
+        "zitong",
+        "bajun",
+        "jianning",
+        "yongchang"
+      ],
+      "cell": "281.0,359.1 268.1,433.4 192.5,436.8 81.4,317.2 173.9,301.9"
+    },
+    {
+      "id": "luoyang",
+      "name": "낙양",
+      "region": "사주",
+      "kind": "city",
+      "x": 455,
+      "y": 225,
+      "longitude": 112.6,
+      "latitude": 34.73,
+      "terrain": "capital",
+      "major": true,
+      "majorReason": "후한·조위·서진의 도읍",
+      "sources": [
+        "capitals",
+        "ye",
+        "xudu"
+      ],
+      "neighbors": [
+        "changan",
+        "wenxian",
+        "xudu",
+        "wan"
+      ],
+      "cell": "392.8,254.2 391.4,249.4 402.2,178.9 506.4,223.3 488.9,248.6"
+    },
+    {
+      "id": "xiapi",
+      "name": "하비",
+      "region": "서주",
+      "kind": "city",
+      "x": 728,
+      "y": 280,
+      "longitude": 117.92,
+      "latitude": 34.15,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "langya",
+        "qiao",
+        "shouchun"
+      ],
+      "cell": "766.9,323.6 694.1,307.0 684.3,263.1 780.0,232.4 853.6,242.0 871.0,254.2 844.4,281.7"
+    },
+    {
+      "id": "ye",
+      "name": "업성",
+      "region": "기주",
+      "kind": "city",
+      "x": 552,
+      "y": 195,
+      "longitude": 114.62,
+      "latitude": 36.3,
+      "terrain": "capital",
+      "major": true,
+      "majorReason": "원소·조조의 주요 정치 거점",
+      "sources": [
+        "capitals",
+        "ye",
+        "xudu"
+      ],
+      "neighbors": [
+        "wenxian",
+        "shangdang",
+        "julu",
+        "guangzong",
+        "puyang"
+      ],
+      "cell": "508.0,222.4 513.9,174.5 523.9,157.1 536.8,153.3 581.5,181.5 584.1,194.5 552.2,239.1"
+    },
+    {
+      "id": "meiw",
+      "name": "미오",
+      "region": "사주",
+      "kind": "stronghold",
+      "x": 272,
+      "y": 225,
+      "longitude": 107.75,
+      "latitude": 34.28,
+      "terrain": "highland",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plateau"
+      ],
+      "neighbors": [
+        "tianshui",
+        "changan"
+      ],
+      "cell": "269.9,87.3 309.1,231.0 283.2,265.3 227.1,263.9 263.1,95.8"
+    },
+    {
+      "id": "xiangping",
+      "name": "양평",
+      "region": "요동",
+      "kind": "city",
+      "x": 889,
+      "y": 41,
+      "longitude": 123.18,
+      "latitude": 41.27,
+      "terrain": "frontier",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "north"
+      ],
+      "neighbors": [
+        "beiping",
+        "liaodong"
+      ],
+      "cell": "777.4,0.0 1000.0,0.0 1000.0,157.4 781.4,23.1"
+    },
+    {
+      "id": "shouchun",
+      "name": "수춘",
+      "region": "양주",
+      "kind": "city",
+      "x": 713,
+      "y": 346,
+      "longitude": 116.78,
+      "latitude": 32.57,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "qiao",
+        "xiapi",
+        "runan",
+        "lujiang",
+        "jianye"
+      ],
+      "cell": "665.0,343.3 694.1,307.0 766.9,323.6 722.9,412.8"
+    },
+    {
+      "id": "runan",
+      "name": "여남",
+      "region": "예주",
+      "kind": "region",
+      "x": 587,
+      "y": 335,
+      "longitude": 114.35,
+      "latitude": 33.0,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "xudu",
+        "qiao",
+        "xinye",
+        "shouchun"
+      ],
+      "cell": "522.8,356.7 520.9,346.2 522.1,336.9 556.0,302.5 611.1,301.6 636.7,345.4 606.7,384.0"
+    },
+    {
+      "id": "wuxian",
+      "name": "오현",
+      "region": "양주",
+      "kind": "city",
+      "x": 850,
+      "y": 398,
+      "longitude": 120.62,
+      "latitude": 31.31,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "jianye",
+        "shanyin"
+      ],
+      "cell": "1000.0,252.4 1000.0,384.7 803.9,434.8 844.4,281.7 871.0,254.2"
+    },
+    {
+      "id": "shanyin",
+      "name": "산음",
+      "region": "양주",
+      "kind": "city",
+      "x": 862,
+      "y": 445,
+      "longitude": 120.58,
+      "latitude": 30.0,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "wuxian",
+        "chaisang"
+      ],
+      "cell": "1000.0,384.7 1000.0,650.0 786.2,650.0 754.1,586.8 747.8,503.8 803.9,434.8"
+    },
+    {
+      "id": "julu",
+      "name": "거록",
+      "region": "기주",
+      "kind": "region",
+      "x": 581,
+      "y": 149,
+      "longitude": 115.04,
+      "latitude": 37.22,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "changshan",
+        "nanpi",
+        "guangzong",
+        "ye"
+      ],
+      "cell": "618.7,145.4 581.5,181.5 536.8,153.3 578.7,95.3 580.6,94.2 596.2,96.6"
+    },
+    {
+      "id": "guangzong",
+      "name": "광종",
+      "region": "기주",
+      "kind": "city",
+      "x": 614,
+      "y": 183,
+      "longitude": 115.15,
+      "latitude": 37.04,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "pingyuan",
+        "julu",
+        "ye",
+        "puyang"
+      ],
+      "cell": "652.0,226.9 584.1,194.5 581.5,181.5 618.8,145.4 635.9,153.9 652.1,226.8"
+    },
+    {
+      "id": "wenxian",
+      "name": "온현",
+      "region": "사주",
+      "kind": "city",
+      "x": 472,
+      "y": 185,
+      "longitude": 113.08,
+      "latitude": 34.94,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "luoyang",
+        "shangdang",
+        "ye"
+      ],
+      "cell": "513.9,174.5 508.0,222.4 506.4,223.3 402.2,178.9 400.6,169.5 422.1,160.6"
+    },
+    {
+      "id": "xiangyang",
+      "name": "양양",
+      "region": "형주",
+      "kind": "city",
+      "x": 455,
+      "y": 359,
+      "longitude": 112.14,
+      "latitude": 32.04,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "xinye",
+        "jiangling",
+        "jiangxia"
+      ],
+      "cell": "375.8,331.7 377.9,328.8 520.9,346.2 522.8,356.7 509.9,382.7 392.3,391.2"
+    },
+    {
+      "id": "beiping",
+      "name": "북평",
+      "region": "유주",
+      "kind": "region",
+      "x": 686,
+      "y": 76,
+      "longitude": 118.3,
+      "latitude": 39.8,
+      "terrain": "frontier",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "north"
+      ],
+      "neighbors": [
+        "ji",
+        "nanpi",
+        "xiangping"
+      ],
+      "cell": "664.0,0.0 777.4,0.0 781.4,23.1 765.8,94.6 706.2,129.0 698.3,127.5 637.1,70.6"
+    },
+    {
+      "id": "yijing",
+      "name": "역경",
+      "region": "유주",
+      "kind": "stronghold",
+      "x": 535,
+      "y": 64,
+      "longitude": 115.5,
+      "latitude": 39.2,
+      "terrain": "highland",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plateau"
+      ],
+      "neighbors": [
+        "jinyang",
+        "changshan",
+        "ji"
+      ],
+      "cell": "447.7,0.0 547.2,0.0 580.6,94.2 578.7,95.3 484.2,78.9"
+    },
+    {
+      "id": "jianning",
+      "name": "건녕",
+      "region": "익주",
+      "kind": "region",
+      "x": 235,
+      "y": 490,
+      "longitude": 103.8,
+      "latitude": 25.5,
+      "terrain": "forest",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south"
+      ],
+      "neighbors": [
+        "chengdu",
+        "bajun",
+        "yongchang",
+        "longbian",
+        "guangxin"
+      ],
+      "cell": "155.5,625.6 192.5,436.8 268.1,433.4 333.5,493.9 331.0,507.5"
+    },
+    {
+      "id": "yongchang",
+      "name": "영창",
+      "region": "익주",
+      "kind": "region",
+      "x": 133,
+      "y": 470,
+      "longitude": 99.17,
+      "latitude": 25.12,
+      "terrain": "forest",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south"
+      ],
+      "neighbors": [
+        "chengdu",
+        "jianning"
+      ],
+      "cell": "137.2,650.0 0.0,650.0 0.0,295.5 81.4,317.2 192.5,436.8 155.5,625.6"
+    },
+    {
+      "id": "longbian",
+      "name": "용편",
+      "region": "교주",
+      "kind": "city",
+      "x": 311,
+      "y": 603,
+      "longitude": 106.05,
+      "latitude": 21.15,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "jianning",
+        "guangxin"
+      ],
+      "cell": "383.7,650.0 137.2,650.0 155.5,625.6 331.0,507.5 373.4,570.5"
+    },
+    {
+      "id": "guangxin",
+      "name": "광신",
+      "region": "교주",
+      "kind": "city",
+      "x": 442,
+      "y": 586,
+      "longitude": 111.3,
+      "latitude": 23.48,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "jianning",
+        "longbian",
+        "nanhai",
+        "lingling"
+      ],
+      "cell": "507.1,650.0 383.7,650.0 373.4,570.5 470.8,546.6 508.7,598.3"
+    },
+    {
+      "id": "changan",
+      "name": "장안",
+      "region": "사주",
+      "kind": "city",
+      "x": 338,
+      "y": 207,
+      "longitude": 108.9,
+      "latitude": 34.35,
+      "terrain": "capital",
+      "major": true,
+      "majorReason": "전한 도읍이자 후한 말 조정의 이전지",
+      "sources": [
+        "capitals",
+        "ye",
+        "xudu"
+      ],
+      "neighbors": [
+        "meiw",
+        "luoyang",
+        "hanzhong",
+        "shangdang"
+      ],
+      "cell": "400.6,169.5 402.2,178.9 391.4,249.4 309.1,231.0 269.9,87.3 286.1,51.5"
+    },
+    {
+      "id": "xudu",
+      "name": "허도",
+      "region": "예주",
+      "kind": "city",
+      "x": 523,
+      "y": 272,
+      "longitude": 113.86,
+      "latitude": 34.03,
+      "terrain": "capital",
+      "major": true,
+      "majorReason": "후한 말 헌제 조정의 소재지",
+      "sources": [
+        "capitals",
+        "ye",
+        "xudu"
+      ],
+      "neighbors": [
+        "luoyang",
+        "chenliu",
+        "runan",
+        "wan"
+      ],
+      "cell": "488.9,248.6 506.4,223.3 508.0,222.4 552.2,239.1 553.1,240.3 556.0,302.5 522.1,336.9 491.8,295.4"
+    },
+    {
+      "id": "hanzhong",
+      "name": "한중",
+      "region": "익주",
+      "kind": "city",
+      "x": 325,
+      "y": 265,
+      "longitude": 107.02,
+      "latitude": 33.07,
+      "terrain": "mountain",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_qin",
+        "shu"
+      ],
+      "neighbors": [
+        "tianshui",
+        "changan",
+        "zitong"
+      ],
+      "cell": "391.4,249.4 392.8,254.2 389.0,300.3 377.9,328.8 375.8,331.7 330.7,330.7 283.2,265.3 309.1,231.0"
+    },
+    {
+      "id": "jianye",
+      "name": "건업",
+      "region": "양주",
+      "kind": "city",
+      "x": 782,
+      "y": 380,
+      "longitude": 118.8,
+      "latitude": 32.05,
+      "terrain": "river",
+      "major": true,
+      "majorReason": "손오의 도읍",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "shouchun",
+        "lujiang",
+        "wuxian"
+      ],
+      "cell": "722.9,412.8 766.9,323.6 844.4,281.7 803.9,434.8 747.8,503.8 727.7,466.1"
+    },
+    {
+      "id": "puyang",
+      "name": "복양",
+      "region": "연주",
+      "kind": "city",
+      "x": 594,
+      "y": 225,
+      "longitude": 115.08,
+      "latitude": 35.72,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "guangzong",
+        "ye",
+        "chenliu",
+        "langya"
+      ],
+      "cell": "631.1,254.5 553.1,240.3 552.2,239.1 584.1,194.5 652.0,226.9 652.1,237.5"
+    },
+    {
+      "id": "jinyang",
+      "name": "진양",
+      "region": "병주",
+      "kind": "city",
+      "x": 440,
+      "y": 108,
+      "longitude": 112.48,
+      "latitude": 37.75,
+      "terrain": "highland",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plateau"
+      ],
+      "neighbors": [
+        "changshan",
+        "shangdang",
+        "yijing"
+      ],
+      "cell": "284.9,0.0 447.7,0.0 484.2,78.9 483.5,109.0 422.1,160.6 400.6,169.5 286.1,51.5"
+    },
+    {
+      "id": "changshan",
+      "name": "상산",
+      "region": "기주",
+      "kind": "city",
+      "x": 527,
+      "y": 110,
+      "longitude": 114.55,
+      "latitude": 38.15,
+      "terrain": "highland",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plateau"
+      ],
+      "neighbors": [
+        "jinyang",
+        "yijing",
+        "julu",
+        "shangdang"
+      ],
+      "cell": "578.7,95.3 536.8,153.3 523.9,157.1 483.5,109.0 484.2,78.9"
+    },
+    {
+      "id": "shangdang",
+      "name": "상당",
+      "region": "병주",
+      "kind": "city",
+      "x": 477,
+      "y": 152,
+      "longitude": 113.12,
+      "latitude": 36.18,
+      "terrain": "mountain",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_qin",
+        "shu"
+      ],
+      "neighbors": [
+        "changan",
+        "wenxian",
+        "jinyang",
+        "changshan",
+        "ye"
+      ],
+      "cell": "523.9,157.1 513.9,174.5 422.1,160.6 483.5,109.0"
+    },
+    {
+      "id": "wuwei",
+      "name": "무위",
+      "region": "양주",
+      "kind": "city",
+      "x": 135,
+      "y": 115,
+      "longitude": 102.64,
+      "latitude": 37.93,
+      "terrain": "frontier",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "north"
+      ],
+      "neighbors": [
+        "tianshui"
+      ],
+      "cell": "0.0,0.0 284.9,0.0 286.1,51.5 269.9,87.3 263.1,95.8 0.0,281.3"
+    },
+    {
+      "id": "tianshui",
+      "name": "천수",
+      "region": "옹주",
+      "kind": "city",
+      "x": 202,
+      "y": 210,
+      "longitude": 105.7,
+      "latitude": 34.58,
+      "terrain": "highland",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plateau"
+      ],
+      "neighbors": [
+        "wuwei",
+        "meiw",
+        "hanzhong"
+      ],
+      "cell": "263.1,95.8 227.1,263.9 173.9,301.9 81.4,317.2 0.0,295.5 0.0,281.3"
+    },
+    {
+      "id": "jiangling",
+      "name": "강릉",
+      "region": "형주",
+      "kind": "city",
+      "x": 459,
+      "y": 414,
+      "longitude": 112.18,
+      "latitude": 30.35,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "bajun",
+        "xiangyang",
+        "jiangxia",
+        "wuling",
+        "changsha"
+      ],
+      "cell": "392.3,391.2 509.9,382.7 510.6,417.8 475.4,455.5 389.7,411.0"
+    },
+    {
+      "id": "changsha",
+      "name": "장사",
+      "region": "형주",
+      "kind": "city",
+      "x": 518,
+      "y": 469,
+      "longitude": 113.0,
+      "latitude": 28.2,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "jiangling",
+        "jiangxia",
+        "chaisang",
+        "guiyang",
+        "wuling"
+      ],
+      "cell": "473.9,499.3 473.9,499.3 475.4,455.5 510.6,417.8 572.0,465.2 573.9,500.9"
+    },
+    {
+      "id": "ji",
+      "name": "계",
+      "region": "유주",
+      "kind": "city",
+      "x": 597,
+      "y": 42,
+      "longitude": 116.37,
+      "latitude": 39.9,
+      "terrain": "frontier",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "north"
+      ],
+      "neighbors": [
+        "yijing",
+        "beiping",
+        "nanpi"
+      ],
+      "cell": "547.2,0.0 664.0,0.0 637.1,70.6 596.2,96.6 580.6,94.2"
+    },
+    {
+      "id": "liaodong",
+      "name": "요동 항구",
+      "region": "요동",
+      "kind": "site",
+      "x": 846,
+      "y": 111,
+      "longitude": 121.55,
+      "latitude": 39.85,
+      "terrain": "coast",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "north"
+      ],
+      "neighbors": [
+        "xiangping"
+      ],
+      "cell": "781.4,23.1 1000.0,157.4 1000.0,252.4 871.0,254.2 853.6,242.0 765.8,94.6"
+    },
+    {
+      "id": "pingyuan",
+      "name": "평원",
+      "region": "청주",
+      "kind": "city",
+      "x": 668,
+      "y": 171,
+      "longitude": 116.44,
+      "latitude": 37.17,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "nanpi",
+        "beihai",
+        "guangzong"
+      ],
+      "cell": "652.1,226.8 635.9,153.9 698.3,127.5 706.2,129.0 704.6,185.1"
+    },
+    {
+      "id": "nanpi",
+      "name": "남피",
+      "region": "기주",
+      "kind": "city",
+      "x": 646,
+      "y": 119,
+      "longitude": 116.7,
+      "latitude": 38.04,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "ji",
+        "beiping",
+        "pingyuan",
+        "julu"
+      ],
+      "cell": "637.1,70.6 698.3,127.5 635.9,153.9 618.8,145.4 596.2,96.6"
+    },
+    {
+      "id": "beihai",
+      "name": "북해",
+      "region": "청주",
+      "kind": "region",
+      "x": 742,
+      "y": 173,
+      "longitude": 118.7,
+      "latitude": 36.9,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "pingyuan",
+        "langya"
+      ],
+      "cell": "853.6,242.0 780.0,232.4 704.6,185.1 706.2,129.0 765.8,94.6"
+    },
+    {
+      "id": "chenliu",
+      "name": "진류",
+      "region": "연주",
+      "kind": "city",
+      "x": 586,
+      "y": 269,
+      "longitude": 114.35,
+      "latitude": 34.6,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "xudu",
+        "puyang",
+        "qiao"
+      ],
+      "cell": "611.1,301.6 556.0,302.5 553.1,240.3 631.1,254.5"
+    },
+    {
+      "id": "langya",
+      "name": "낭야",
+      "region": "서주",
+      "kind": "region",
+      "x": 710,
+      "y": 224,
+      "longitude": 118.34,
+      "latitude": 35.06,
+      "terrain": "highland",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plateau"
+      ],
+      "neighbors": [
+        "puyang",
+        "beihai",
+        "xiapi"
+      ],
+      "cell": "780.0,232.4 684.3,263.1 652.1,237.5 652.0,226.9 652.1,226.8 704.6,185.1"
+    },
+    {
+      "id": "qiao",
+      "name": "초",
+      "region": "예주",
+      "kind": "city",
+      "x": 652,
+      "y": 297,
+      "longitude": 115.78,
+      "latitude": 33.87,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "chenliu",
+        "xiapi",
+        "runan",
+        "shouchun"
+      ],
+      "cell": "684.3,263.1 694.1,307.0 665.0,343.3 636.7,345.4 611.1,301.6 631.1,254.5 652.1,237.5"
+    },
+    {
+      "id": "wan",
+      "name": "완",
+      "region": "형주",
+      "kind": "city",
+      "x": 458,
+      "y": 276,
+      "longitude": 112.54,
+      "latitude": 33.0,
+      "terrain": "basin",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "shu",
+        "geo_nanyang"
+      ],
+      "neighbors": [
+        "luoyang",
+        "xudu",
+        "xinye"
+      ],
+      "cell": "392.8,254.2 488.9,248.6 491.8,295.4 389.0,300.3"
+    },
+    {
+      "id": "xinye",
+      "name": "신야",
+      "region": "형주",
+      "kind": "city",
+      "x": 460,
+      "y": 318,
+      "longitude": 112.36,
+      "latitude": 32.52,
+      "terrain": "plains",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_plain"
+      ],
+      "neighbors": [
+        "runan",
+        "wan",
+        "xiangyang"
+      ],
+      "cell": "491.8,295.4 522.1,336.9 520.9,346.2 377.9,328.8 389.0,300.3"
+    },
+    {
+      "id": "wuling",
+      "name": "무릉",
+      "region": "형주",
+      "kind": "region",
+      "x": 432,
+      "y": 466,
+      "longitude": 111.69,
+      "latitude": 29.04,
+      "terrain": "forest",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south"
+      ],
+      "neighbors": [
+        "jiangling",
+        "changsha",
+        "lingling"
+      ],
+      "cell": "389.7,411.0 475.4,455.5 473.9,499.3 340.7,488.0"
+    },
+    {
+      "id": "lingling",
+      "name": "영릉",
+      "region": "형주",
+      "kind": "region",
+      "x": 427,
+      "y": 525,
+      "longitude": 111.62,
+      "latitude": 26.21,
+      "terrain": "forest",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south"
+      ],
+      "neighbors": [
+        "guangxin",
+        "wuling",
+        "guiyang"
+      ],
+      "cell": "373.4,570.5 331.0,507.5 333.5,493.9 340.7,488.0 473.9,499.3 473.9,499.3 470.8,546.6"
+    },
+    {
+      "id": "guiyang",
+      "name": "계양",
+      "region": "형주",
+      "kind": "region",
+      "x": 517,
+      "y": 531,
+      "longitude": 112.95,
+      "latitude": 25.8,
+      "terrain": "forest",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south"
+      ],
+      "neighbors": [
+        "nanhai",
+        "chaisang",
+        "changsha",
+        "lingling"
+      ],
+      "cell": "508.7,598.3 470.8,546.6 473.9,499.3 573.9,500.9 586.3,520.7"
+    },
+    {
+      "id": "jiangxia",
+      "name": "강하",
+      "region": "형주",
+      "kind": "region",
+      "x": 562,
+      "y": 412,
+      "longitude": 114.8,
+      "latitude": 30.85,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "xiangyang",
+        "jiangling",
+        "changsha",
+        "chaisang",
+        "lujiang"
+      ],
+      "cell": "509.9,382.7 522.8,356.7 606.7,384.0 613.1,413.5 572.0,465.2 510.6,417.8"
+    },
+    {
+      "id": "chaisang",
+      "name": "시상",
+      "region": "양주",
+      "kind": "city",
+      "x": 626,
+      "y": 463,
+      "longitude": 115.93,
+      "latitude": 29.72,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "jiangxia",
+        "lujiang",
+        "shanyin",
+        "changsha",
+        "guiyang"
+      ],
+      "cell": "586.3,520.7 573.9,500.9 572.0,465.2 613.1,413.5 727.7,466.1 747.8,503.8 754.1,586.8"
+    },
+    {
+      "id": "lujiang",
+      "name": "여강",
+      "region": "양주",
+      "kind": "region",
+      "x": 659,
+      "y": 391,
+      "longitude": 116.62,
+      "latitude": 30.55,
+      "terrain": "river",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "nanjing"
+      ],
+      "neighbors": [
+        "jiangxia",
+        "shouchun",
+        "jianye",
+        "chaisang"
+      ],
+      "cell": "606.7,384.0 636.7,345.4 665.0,343.3 722.9,412.8 727.7,466.1 613.1,413.5"
+    },
+    {
+      "id": "bajun",
+      "name": "파군",
+      "region": "익주",
+      "kind": "region",
+      "x": 322,
+      "y": 396,
+      "longitude": 106.56,
+      "latitude": 29.57,
+      "terrain": "mountain",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_qin",
+        "shu"
+      ],
+      "neighbors": [
+        "zitong",
+        "chengdu",
+        "jianning",
+        "jiangling"
+      ],
+      "cell": "268.1,433.4 281.0,359.1 330.7,330.7 375.8,331.7 392.3,391.2 389.7,411.0 340.7,488.0 333.5,493.9"
+    },
+    {
+      "id": "zitong",
+      "name": "자동",
+      "region": "익주",
+      "kind": "city",
+      "x": 270,
+      "y": 305,
+      "longitude": 105.16,
+      "latitude": 31.65,
+      "terrain": "mountain",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "geo_qin",
+        "shu"
+      ],
+      "neighbors": [
+        "hanzhong",
+        "chengdu",
+        "bajun"
+      ],
+      "cell": "281.0,359.1 173.9,301.9 227.1,263.9 283.2,265.3 330.7,330.7"
+    },
+    {
+      "id": "nanhai",
+      "name": "남해",
+      "region": "교주",
+      "kind": "region",
+      "x": 576,
+      "y": 590,
+      "longitude": 113.27,
+      "latitude": 23.13,
+      "terrain": "coast",
+      "major": false,
+      "majorReason": "",
+      "sources": [
+        "south",
+        "north"
+      ],
+      "neighbors": [
+        "guangxin",
+        "guiyang"
+      ],
+      "cell": "786.2,650.0 507.1,650.0 508.7,598.3 586.3,520.7 754.1,586.8"
+    }
+  ],
+  "arenas": {
+    "pingyuan": {
+      "name": "평원 구장",
+      "short": "평원",
+      "hosts": [
+        "yuanshao",
+        "gongsunzan"
+      ],
+      "theme": "plains",
+      "tag": "황하 중·하류의 충적 평야와 농경지",
+      "sky": [
+        "#9db7c4",
+        "#e5d5b4"
+      ],
+      "floor": [
+        "#aca176",
+        "#746c53"
+      ],
+      "ink": "#68735c",
+      "accent": "#dfd492",
+      "cityId": "pingyuan",
+      "sign": "平 原",
+      "region": "청주",
+      "kind": "city"
+    },
+    "nanpi": {
+      "name": "남피 구장",
+      "short": "남피",
+      "hosts": [
+        "yuanshao"
+      ],
+      "theme": "plains",
+      "tag": "황하 중·하류의 충적 평야와 농경지",
+      "sky": [
+        "#9db7c4",
+        "#e5d5b4"
+      ],
+      "floor": [
+        "#aca176",
+        "#746c53"
+      ],
+      "ink": "#68735c",
+      "accent": "#dfd492",
+      "cityId": "nanpi",
+      "sign": "南 皮",
+      "region": "기주",
+      "kind": "city"
+    },
+    "beihai": {
+      "name": "북해 구장",
+      "short": "북해",
+      "hosts": [
+        "han",
+        "wei"
+      ],
+      "theme": "plains",
+      "tag": "황하 중·하류의 충적 평야와 농경지",
+      "sky": [
+        "#9db7c4",
+        "#e5d5b4"
+      ],
+      "floor": [
+        "#aca176",
+        "#746c53"
+      ],
+      "ink": "#68735c",
+      "accent": "#dfd492",
+      "cityId": "beihai",
+      "sign": "北 海",
+      "region": "청주",
+      "kind": "region"
+    },
+    "chenliu": {
+      "name": "진류 구장",
+      "short": "진류",
+      "hosts": [
+        "wei",
+        "han"
+      ],
+      "theme": "plains",
+      "tag": "황하 중·하류의 충적 평야와 농경지",
+      "sky": [
+        "#9db7c4",
+        "#e5d5b4"
+      ],
+      "floor": [
+        "#aca176",
+        "#746c53"
+      ],
+      "ink": "#68735c",
+      "accent": "#dfd492",
+      "cityId": "chenliu",
+      "sign": "陳 留",
+      "region": "연주",
+      "kind": "city"
+    },
+    "langya": {
+      "name": "낭야 구장",
+      "short": "낭야",
+      "hosts": [
+        "lubu"
+      ],
+      "theme": "fortress",
+      "tag": "산지와 골짜기가 이어지는 고원·구릉",
+      "sky": [
+        "#baafdc",
+        "#f6d8bc"
+      ],
+      "floor": [
+        "#8f9fb3",
+        "#4c566e"
+      ],
+      "ink": "#724f76",
+      "accent": "#f0acd3",
+      "cityId": "langya",
+      "sign": "琅 琊",
+      "region": "서주",
+      "kind": "region"
+    },
+    "qiao": {
+      "name": "초 구장",
+      "short": "초",
+      "hosts": [
+        "wei"
+      ],
+      "theme": "plains",
+      "tag": "황하 중·하류의 충적 평야와 농경지",
+      "sky": [
+        "#9db7c4",
+        "#e5d5b4"
+      ],
+      "floor": [
+        "#aca176",
+        "#746c53"
+      ],
+      "ink": "#68735c",
+      "accent": "#dfd492",
+      "cityId": "qiao",
+      "sign": "譙",
+      "region": "예주",
+      "kind": "city"
+    },
+    "wan": {
+      "name": "완 구장",
+      "short": "완",
+      "hosts": [
+        "zhong",
+        "wei"
+      ],
+      "theme": "jade",
+      "tag": "산지 사이에 발달한 농경 분지",
+      "sky": [
+        "#83d3f0",
+        "#e6f1d2"
+      ],
+      "floor": [
+        "#63a697",
+        "#306775"
+      ],
+      "ink": "#41795c",
+      "accent": "#8ae0a8",
+      "cityId": "wan",
+      "sign": "宛",
+      "region": "형주",
+      "kind": "city"
+    },
+    "xinye": {
+      "name": "신야 구장",
+      "short": "신야",
+      "hosts": [
+        "shu"
+      ],
+      "theme": "plains",
+      "tag": "황하 중·하류의 충적 평야와 농경지",
+      "sky": [
+        "#9db7c4",
+        "#e5d5b4"
+      ],
+      "floor": [
+        "#aca176",
+        "#746c53"
+      ],
+      "ink": "#68735c",
+      "accent": "#dfd492",
+      "cityId": "xinye",
+      "sign": "新 野",
+      "region": "형주",
+      "kind": "city"
+    },
+    "wuling": {
+      "name": "무릉 구장",
+      "short": "무릉",
+      "sign": "武 陵",
+      "hosts": [
+        "wu",
+        "shu"
+      ],
+      "theme": "jungle",
+      "base": "jade",
+      "tag": "남중·형남 지역의 산지와 산림",
+      "sky": [
+        "#78afac",
+        "#d3e8b7"
+      ],
+      "floor": [
+        "#85a27b",
+        "#466b54"
+      ],
+      "ink": "#608048",
+      "accent": "#e6e5ac",
+      "region": "형주",
+      "kind": "region",
+      "cityId": "wuling"
+    },
+    "lingling": {
+      "name": "영릉 구장",
+      "short": "영릉",
+      "sign": "零 陵",
+      "hosts": [
+        "wu"
+      ],
+      "theme": "jungle",
+      "base": "jade",
+      "tag": "남중·형남 지역의 산지와 산림",
+      "sky": [
+        "#78afac",
+        "#d3e8b7"
+      ],
+      "floor": [
+        "#85a27b",
+        "#466b54"
+      ],
+      "ink": "#608048",
+      "accent": "#e6e5ac",
+      "region": "형주",
+      "kind": "region",
+      "cityId": "lingling"
+    },
+    "guiyang": {
+      "name": "계양 구장",
+      "short": "계양",
+      "sign": "桂 陽",
+      "hosts": [
+        "wu"
+      ],
+      "theme": "jungle",
+      "base": "jade",
+      "tag": "남중·형남 지역의 산지와 산림",
+      "sky": [
+        "#78afac",
+        "#d3e8b7"
+      ],
+      "floor": [
+        "#85a27b",
+        "#466b54"
+      ],
+      "ink": "#608048",
+      "accent": "#e6e5ac",
+      "region": "형주",
+      "kind": "region",
+      "cityId": "guiyang"
+    },
+    "jiangxia": {
+      "name": "강하 구장",
+      "short": "강하",
+      "sign": "江 夏",
+      "hosts": [
+        "wu"
+      ],
+      "theme": "canal",
+      "base": "palace",
+      "tag": "장강·회수·한수 및 남방 수로·호수 주변",
+      "sky": [
+        "#adcee2",
+        "#f1e5c6"
+      ],
+      "floor": [
+        "#b6a77c",
+        "#6e795d"
+      ],
+      "ink": "#9c7b4d",
+      "accent": "#fce4ae",
+      "region": "형주",
+      "kind": "region",
+      "cityId": "jiangxia"
+    },
+    "chaisang": {
+      "name": "시상 구장",
+      "short": "시상",
+      "sign": "柴 桑",
+      "hosts": [
+        "wu"
+      ],
+      "theme": "canal",
+      "base": "palace",
+      "tag": "장강·회수·한수 및 남방 수로·호수 주변",
+      "sky": [
+        "#adcee2",
+        "#f1e5c6"
+      ],
+      "floor": [
+        "#b6a77c",
+        "#6e795d"
+      ],
+      "ink": "#9c7b4d",
+      "accent": "#fce4ae",
+      "region": "양주",
+      "kind": "city",
+      "cityId": "chaisang"
+    },
+    "lujiang": {
+      "name": "여강 구장",
+      "short": "여강",
+      "sign": "廬 江",
+      "hosts": [
+        "zhong",
+        "wu"
+      ],
+      "theme": "canal",
+      "base": "palace",
+      "tag": "장강·회수·한수 및 남방 수로·호수 주변",
+      "sky": [
+        "#adcee2",
+        "#f1e5c6"
+      ],
+      "floor": [
+        "#b6a77c",
+        "#6e795d"
+      ],
+      "ink": "#9c7b4d",
+      "accent": "#fce4ae",
+      "region": "양주",
+      "kind": "region",
+      "cityId": "lujiang"
+    },
+    "bajun": {
+      "name": "파군 구장",
+      "short": "파군",
+      "hosts": [
+        "shu"
+      ],
+      "theme": "jade",
+      "tag": "진령·대파산과 촉 지방의 산지·협곡",
+      "sky": [
+        "#83d3f0",
+        "#e6f1d2"
+      ],
+      "floor": [
+        "#63a697",
+        "#306775"
+      ],
+      "ink": "#41795c",
+      "accent": "#8ae0a8",
+      "cityId": "bajun",
+      "sign": "巴 郡",
+      "region": "익주",
+      "kind": "region"
+    },
+    "zitong": {
+      "name": "자동 구장",
+      "short": "자동",
+      "hosts": [
+        "shu"
+      ],
+      "theme": "jade",
+      "tag": "진령·대파산과 촉 지방의 산지·협곡",
+      "sky": [
+        "#83d3f0",
+        "#e6f1d2"
+      ],
+      "floor": [
+        "#63a697",
+        "#306775"
+      ],
+      "ink": "#41795c",
+      "accent": "#8ae0a8",
+      "cityId": "zitong",
+      "sign": "梓 潼",
+      "region": "익주",
+      "kind": "city"
+    },
+    "nanhai": {
+      "name": "남해 구장",
+      "short": "남해",
+      "sign": "南 海",
+      "hosts": [
+        "shixie"
+      ],
+      "theme": "harbor",
+      "base": "river",
+      "tag": "요동 및 영남의 해안·항구",
+      "sky": [
+        "#719dbf",
+        "#c6e1ee"
+      ],
+      "floor": [
+        "#779aa9",
+        "#425e74"
+      ],
+      "ink": "#597b91",
+      "accent": "#b5e7ff",
+      "region": "교주",
+      "kind": "region",
+      "cityId": "nanhai"
+    }
+  },
+  "terrains": {
+    "plains": {
+      "name": "중원·하북 평야",
+      "symbol": "平",
+      "color": "#c5c098",
+      "feature": "황하 중·하류의 충적 평야와 농경지",
+      "reason": "넓은 평야라는 지리적 특징을 바탕으로 만든 상성입니다.",
+      "source": [
+        "geo_plain"
+      ],
+      "mods": {
+        "infantry": -0.05,
+        "cavalry": 0.05,
+        "spear": 0.05,
+        "archer": 0.05,
+        "shield": -0.05,
+        "scholar": -0.05,
+        "lord": 0.05
+      }
+    },
+    "frontier": {
+      "name": "북방·서량 변경",
+      "symbol": "原",
+      "color": "#aeb8a1",
+      "feature": "북방의 평야·목초지 및 하서의 완만한 회랑",
+      "reason": "북방 변경의 말 사육·기마 전통과 개방 지형을 게임에 반영했습니다.",
+      "source": [
+        "north"
+      ],
+      "mods": {
+        "infantry": -0.05,
+        "cavalry": 0.05,
+        "spear": 0.05,
+        "archer": 0.05,
+        "shield": -0.05,
+        "scholar": -0.05,
+        "lord": 0.05
+      }
+    },
+    "highland": {
+      "name": "구릉·고원",
+      "symbol": "丘",
+      "color": "#b7aa8b",
+      "feature": "산지와 골짜기가 이어지는 고원·구릉",
+      "reason": "병주·관중 주변의 고원 및 구릉 특성을 단순화했습니다.",
+      "source": [
+        "geo_plateau"
+      ],
+      "mods": {
+        "infantry": 0.05,
+        "cavalry": -0.05,
+        "spear": 0.05,
+        "archer": 0.05,
+        "shield": 0.05,
+        "scholar": -0.05,
+        "lord": -0.05
+      }
+    },
+    "mountain": {
+      "name": "산악·협곡",
+      "symbol": "山",
+      "color": "#9fae92",
+      "feature": "진령·대파산과 촉 지방의 산지·협곡",
+      "reason": "산지와 분지 사이의 통로가 많은 지형을 반영했습니다.",
+      "source": [
+        "geo_qin",
+        "shu"
+      ],
+      "mods": {
+        "infantry": 0.05,
+        "cavalry": -0.05,
+        "spear": 0.05,
+        "archer": -0.05,
+        "shield": 0.05,
+        "scholar": 0.05,
+        "lord": -0.05
+      }
+    },
+    "basin": {
+      "name": "농경 분지",
+      "symbol": "田",
+      "color": "#b3c0a0",
+      "feature": "산지 사이에 발달한 농경 분지",
+      "reason": "성도 평원의 관개 농경과 남양 분지의 완만한 지형을 반영했습니다.",
+      "source": [
+        "shu",
+        "geo_nanyang"
+      ],
+      "mods": {
+        "infantry": 0.05,
+        "cavalry": 0.05,
+        "spear": -0.05,
+        "archer": -0.05,
+        "shield": 0.05,
+        "scholar": 0.05,
+        "lord": 0.05
+      }
+    },
+    "river": {
+      "name": "하천·수향",
+      "symbol": "江",
+      "color": "#a3bcb3",
+      "feature": "장강·회수·한수 및 남방 수로·호수 주변",
+      "reason": "하천과 호수가 발달한 생활권의 지리적 특징을 반영했습니다.",
+      "source": [
+        "south",
+        "nanjing"
+      ],
+      "mods": {
+        "infantry": 0.05,
+        "cavalry": -0.05,
+        "spear": -0.05,
+        "archer": 0.05,
+        "shield": -0.05,
+        "scholar": 0.05,
+        "lord": 0.05
+      }
+    },
+    "forest": {
+      "name": "남부 산림",
+      "symbol": "林",
+      "color": "#a3b399",
+      "feature": "남중·형남 지역의 산지와 산림",
+      "reason": "남방 산지와 골짜기·산림이 많은 지형을 반영했습니다.",
+      "source": [
+        "south"
+      ],
+      "mods": {
+        "infantry": 0.05,
+        "cavalry": -0.05,
+        "spear": 0.05,
+        "archer": -0.05,
+        "shield": 0.05,
+        "scholar": 0.05,
+        "lord": -0.05
+      }
+    },
+    "coast": {
+      "name": "해안·항구",
+      "symbol": "港",
+      "color": "#a7c1c3",
+      "feature": "요동 및 영남의 해안·항구",
+      "reason": "바다와 하천이 맞닿은 항구 입지를 반영했습니다.",
+      "source": [
+        "south",
+        "north"
+      ],
+      "mods": {
+        "infantry": 0.05,
+        "cavalry": -0.05,
+        "spear": -0.05,
+        "archer": 0.05,
+        "shield": -0.05,
+        "scholar": 0.05,
+        "lord": 0.05
+      }
+    },
+    "capital": {
+      "name": "도성·중심 시가지",
+      "symbol": "城",
+      "color": "#c2b398",
+      "feature": "한·삼국 시대의 도읍 또는 주요 정치 거점",
+      "reason": "도성·정치 거점이라는 역사적 성격을 바탕으로 한 게임용 분류입니다.",
+      "source": [
+        "capitals",
+        "ye",
+        "xudu"
+      ],
+      "mods": {
+        "infantry": 0.05,
+        "cavalry": -0.05,
+        "spear": -0.05,
+        "archer": 0.05,
+        "shield": 0.05,
+        "scholar": 0.05,
+        "lord": 0.05
+      }
+    }
+  },
+  "units": {
+    "infantry": {
+      "name": "보병",
+      "symbol": "步",
+      "color": "#d8bc85",
+      "desc": "받는 피해 12% 감소",
+      "stat": "방어"
+    },
+    "cavalry": {
+      "name": "기병",
+      "symbol": "騎",
+      "color": "#95d6e8",
+      "desc": "이동 속도 15% 증가",
+      "stat": "이동"
+    },
+    "spear": {
+      "name": "창병",
+      "symbol": "槍",
+      "color": "#edae8d",
+      "desc": "모든 투구 피해 12% 증가",
+      "stat": "공격"
+    },
+    "archer": {
+      "name": "궁병",
+      "symbol": "弓",
+      "color": "#a3dab3",
+      "desc": "특징 기술 피해 20% 증가",
+      "stat": "기술"
+    },
+    "shield": {
+      "name": "방패병",
+      "symbol": "盾",
+      "color": "#c3d3e3",
+      "desc": "최대 체력 18% 증가",
+      "stat": "체력"
+    },
+    "scholar": {
+      "name": "문관",
+      "symbol": "文",
+      "color": "#ccbbea",
+      "desc": "필살기 피해 18% 증가",
+      "stat": "필살기"
+    },
+    "lord": {
+      "name": "군주",
+      "symbol": "君",
+      "color": "#f0d078",
+      "desc": "아군 핵심 능력 +3% · 중복 불가",
+      "stat": "균형"
+    }
+  },
+  "heroUnits": {
+    "cao": "lord",
+    "xia": "infantry",
+    "xu": "shield",
+    "dianwei": "shield",
+    "zhanghe": "cavalry",
+    "xuhuang": "infantry",
+    "guan": "spear",
+    "zhang": "infantry",
+    "zhao": "cavalry",
+    "liubei": "lord",
+    "huangzhong": "archer",
+    "zhugeliang": "scholar",
+    "sun": "lord",
+    "zhou": "scholar",
+    "gan": "infantry",
+    "sunce": "cavalry",
+    "taishici": "archer",
+    "luxun": "scholar",
+    "lubu": "lord",
+    "zhangliao": "cavalry",
+    "gaoshun": "shield",
+    "chengong": "scholar",
+    "zangba": "infantry",
+    "caoxing": "archer",
+    "yuanshao": "lord",
+    "yanliang": "spear",
+    "wenchou": "cavalry",
+    "tianfeng": "scholar",
+    "jushou": "scholar",
+    "gaolan": "infantry",
+    "dongzhuo": "lord",
+    "liru": "scholar",
+    "huaxiong": "spear",
+    "lijue": "cavalry",
+    "guosi": "cavalry",
+    "jiaxu": "scholar",
+    "gongsunyuan": "lord",
+    "beiyan": "shield",
+    "yangzuo": "cavalry",
+    "lunzhi": "scholar",
+    "jiafan": "infantry",
+    "weiyan_dy": "spear",
+    "yuanshu": "lord",
+    "jiling": "spear",
+    "yanxiang": "scholar",
+    "zhangxun": "infantry",
+    "qiaorui": "archer",
+    "yanghong": "scholar",
+    "yanbaihu": "lord",
+    "yanyu": "spear",
+    "xugong": "infantry",
+    "zhangjue": "lord",
+    "zhangbao": "scholar",
+    "zhangliang": "infantry",
+    "guanhai": "spear",
+    "chengyuanzhi": "shield",
+    "dengmao": "infantry",
+    "simayi": "lord",
+    "simashi": "scholar",
+    "simazhao": "lord",
+    "dengai": "infantry",
+    "zhonghui": "scholar",
+    "yanghu": "infantry",
+    "gongsunzan": "lord",
+    "tianyu": "archer",
+    "yangang": "cavalry",
+    "gongsunyue": "cavalry",
+    "gongsunfan": "spear",
+    "shanjing": "archer",
+    "menghuo": "lord",
+    "zhurong": "archer",
+    "wutugu": "shield",
+    "mengyou": "infantry",
+    "duosi": "scholar",
+    "mulu": "cavalry",
+    "shixie": "lord",
+    "shiyi": "scholar",
+    "shiwu": "infantry",
+    "shihui": "scholar",
+    "shikuang": "archer",
+    "shizhi": "spear",
+    "xiandi": "lord",
+    "huangfusong": "infantry",
+    "zhujun": "spear",
+    "hejin": "shield",
+    "luzhi": "scholar",
+    "wangyun": "scholar",
+    "zhangyan": "lord",
+    "zhangniujue": "spear",
+    "sunqing": "cavalry",
+    "wangdang": "archer",
+    "duchang": "shield",
+    "yangfeng_hs": "infantry",
+    "mateng": "lord",
+    "machao": "cavalry",
+    "madai": "cavalry",
+    "pangde": "spear",
+    "maxiu": "cavalry",
+    "matie": "archer"
+  },
+  "sources": {
+    "geo_plain": {
+      "title": "NASA Earth Observatory — Yellow River delta",
+      "url": "https://science.nasa.gov/earth/earth-observatory/building-up-the-yellow-river-delta-148145/",
+      "note": "황토 지대와 동부의 평탄한 충적·해안 평야를 구분하는 지형 참고. 고대 하천의 정확한 유로를 재현하지 않았습니다."
+    },
+    "geo_plateau": {
+      "title": "NASA Earth Observatory — 황하와 황토고원",
+      "url": "https://science.nasa.gov/earth/earth-observatory/building-up-the-yellow-river-delta-148145/",
+      "note": "황하가 통과하는 서북의 황토 지형을 참고했습니다. 모든 서북 도시가 같은 지형이라는 뜻은 아닙니다."
+    },
+    "geo_qin": {
+      "title": "UNESCO 잠정목록 — ShuDao(촉도)",
+      "url": "https://whc.unesco.org/en/tentativelists/5994/",
+      "note": "진령·대파산 인근 산악과 북부 사천의 험한 길을 산악·협곡 분류의 근거로 참고했습니다. 잠정목록은 해당 국가 제출 자료입니다."
+    },
+    "geo_nanyang": {
+      "title": "Nanyang, Henan — 지리 개요",
+      "url": "https://en.wikipedia.org/wiki/Nanyang%2C_Henan",
+      "note": "완·신야 인근 남양분지의 위치를 확인하는 보조 지리 자료입니다. 현재의 도시·행정구역을 고대 경계로 사용하지 않았습니다."
+    },
+    "shu": {
+      "title": "UNESCO — 청성산과 도강언 관개시설",
+      "url": "https://whc.unesco.org/en/list/1001/",
+      "note": "사천분지·성도평원, 고대부터 이어진 관개와 농업 기반을 분지 분류에 참고했습니다."
+    },
+    "north": {
+      "title": "호주국립대 연구서목 — The government and geography of the Northern Frontier of Late Han",
+      "url": "https://researchportalplus.anu.edu.au/en/publications/the-government-and-geography-of-the-northern-frontier-of-late-han/",
+      "note": "후한 북방 변경의 역사 지리를 다루는 Rafe de Crespigny의 연구서(2004) 서지. 원문 전체를 검증한 주석 지도는 아닙니다."
+    },
+    "south": {
+      "title": "UNESCO — South China Karst",
+      "url": "https://whc.unesco.org/en/list/1248/",
+      "note": "운남·귀주·광서·중경 일대의 산지·협곡·습윤 지형을 참고했습니다. 개별 도시 주변의 3세기 식생을 정밀 복원한 것은 아닙니다."
+    },
+    "nanjing": {
+      "title": "난징시 공식 안내 — History",
+      "url": "https://english.nanjing.gov.cn/ThisisNanjing/WelcometoNanjing/History/",
+      "note": "손권의 건업 천도 및 오나라 도읍이라는 역사적 성격을 대도시 선정에 참고했습니다."
+    },
+    "capitals": {
+      "title": "UNESCO 잠정목록 — Chinese Section of the Silk Road",
+      "url": "https://whc.unesco.org/en/tentativelists/5335/",
+      "note": "한·위 낙양 및 한 장안 유적과 고대 도읍 설명을 참고했습니다. 등재 유산 전체가 아닌 당시 제출 잠정목록 자료입니다."
+    },
+    "ye": {
+      "title": "허베이성 공식 안내 — Site of City Yecheng",
+      "url": "https://www.chinadaily.com.cn/m/hebei/2009-12/29/content_9243147.htm",
+      "note": "업성 유적의 정치·도읍 중심지 성격을 대도시 선정에 참고했습니다. 모든 시기의 동일한 수도 지위를 의미하지 않습니다."
+    },
+    "xudu": {
+      "title": "허창시 공식 안내 — An Introduction to Xuchang City",
+      "url": "https://www.xuchang.gov.cn/English/20180807/04d29bc9-e55f-47f2-9cf2-3b4faf3c8afb.html",
+      "note": "조조와 허창의 정치적 관련성을 허도 거점 설정에 참고했습니다. 안내의 현대 인구는 게임에 사용하지 않았습니다."
+    },
+    "chengdu": {
+      "title": "대구광역시 국제교류 — Chengdu, China",
+      "url": "https://www.daegu.go.kr/english/?menu_id=00000762",
+      "note": "성도의 촉한 수도 성격을 확인하는 자매·교류도시 공식 소개 자료입니다."
+    }
+  },
+  "map": {
+    "width": 1000,
+    "height": 650,
+    "land": "82,72 202,60 301,102 400,54 540,20 727,28 821,13 934,17 960,64 906,96 884,133 839,156 801,128 757,128 761,157 808,178 838,203 792,230 771,238 790,288 809,326 860,360 904,395 908,450 889,495 836,552 758,598 672,620 565,637 480,630 425,643 338,638 255,637 164,552 98,531 68,474 102,413 70,350 105,285 66,226 107,171"
+  },
+  "balanceNote": "지리·도읍 분류는 역사 자료 참고. 영역/도로/장수별 병종과 ±5% 능력 상성, 지원병 인원은 게임 규칙입니다. 정치 경계·실제 병과 편제를 재현하지 않습니다."
+}

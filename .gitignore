@@ -1,0 +1,33 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.tmp
+*~
+
+# Local testing/build outputs
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+playwright-report/
+test-results/
+*.log
+*.zip
+
+# Personal save files — do not commit
+/saves/
+/backups/
+/삼국지피구*.json
+/*save*.json
+
+# Credentials — this game does not need these
+.env
+.env.*
+!.env.example
+*.pem
+*.key

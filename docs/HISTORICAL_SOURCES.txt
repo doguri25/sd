@@ -1,0 +1,54 @@
+﻿삼국지 피구대전 v9 — 역사·지리 참고 자료
+이 자료 목록은 지형 및 도읍 성격을 판단할 때의 참고 자료입니다.
+모든 도시의 특정 연도 지리·식생·행정 경계를 원전으로 정밀 검증했다는 뜻은 아닙니다.
+지도 영역, 경로, 장수별 병종, ±5% 상성, 지원병 인원은 게임 규칙입니다.
+ANU 항목은 연구서목을 확인한 것으로 원문 전체를 읽은 자료로 표시하지 않았습니다.
+UNESCO 잠정목록은 제출국의 자료이며 세계유산 등재 확정을 뜻하지 않습니다.
+
+[geo_plain] NASA Earth Observatory — Yellow River delta
+https://science.nasa.gov/earth/earth-observatory/building-up-the-yellow-river-delta-148145/
+황토 지대와 동부의 평탄한 충적·해안 평야를 구분하는 지형 참고. 고대 하천의 정확한 유로를 재현하지 않았습니다.
+
+[geo_plateau] NASA Earth Observatory — 황하와 황토고원
+https://science.nasa.gov/earth/earth-observatory/building-up-the-yellow-river-delta-148145/
+황하가 통과하는 서북의 황토 지형을 참고했습니다. 모든 서북 도시가 같은 지형이라는 뜻은 아닙니다.
+
+[geo_qin] UNESCO 잠정목록 — ShuDao(촉도)
+https://whc.unesco.org/en/tentativelists/5994/
+진령·대파산 인근 산악과 북부 사천의 험한 길을 산악·협곡 분류의 근거로 참고했습니다. 잠정목록은 해당 국가 제출 자료입니다.
+
+[geo_nanyang] Nanyang, Henan — 지리 개요
+https://en.wikipedia.org/wiki/Nanyang%2C_Henan
+완·신야 인근 남양분지의 위치를 확인하는 보조 지리 자료입니다. 현재의 도시·행정구역을 고대 경계로 사용하지 않았습니다.
+
+[shu] UNESCO — 청성산과 도강언 관개시설
+https://whc.unesco.org/en/list/1001/
+사천분지·성도평원, 고대부터 이어진 관개와 농업 기반을 분지 분류에 참고했습니다.
+
+[north] 호주국립대 연구서목 — The government and geography of the Northern Frontier of Late Han
+https://researchportalplus.anu.edu.au/en/publications/the-government-and-geography-of-the-northern-frontier-of-late-han/
+후한 북방 변경의 역사 지리를 다루는 Rafe de Crespigny의 연구서(2004) 서지. 원문 전체를 검증한 주석 지도는 아닙니다.
+
+[south] UNESCO — South China Karst
+https://whc.unesco.org/en/list/1248/
+운남·귀주·광서·중경 일대의 산지·협곡·습윤 지형을 참고했습니다. 개별 도시 주변의 3세기 식생을 정밀 복원한 것은 아닙니다.
+
+[nanjing] 난징시 공식 안내 — History
+https://english.nanjing.gov.cn/ThisisNanjing/WelcometoNanjing/History/
+손권의 건업 천도 및 오나라 도읍이라는 역사적 성격을 대도시 선정에 참고했습니다.
+
+[capitals] UNESCO 잠정목록 — Chinese Section of the Silk Road
+https://whc.unesco.org/en/tentativelists/5335/
+한·위 낙양 및 한 장안 유적과 고대 도읍 설명을 참고했습니다. 등재 유산 전체가 아닌 당시 제출 잠정목록 자료입니다.
+
+[ye] 허베이성 공식 안내 — Site of City Yecheng
+https://www.chinadaily.com.cn/m/hebei/2009-12/29/content_9243147.htm
+업성 유적의 정치·도읍 중심지 성격을 대도시 선정에 참고했습니다. 모든 시기의 동일한 수도 지위를 의미하지 않습니다.
+
+[xudu] 허창시 공식 안내 — An Introduction to Xuchang City
+https://www.xuchang.gov.cn/English/20180807/04d29bc9-e55f-47f2-9cf2-3b4faf3c8afb.html
+조조와 허창의 정치적 관련성을 허도 거점 설정에 참고했습니다. 안내의 현대 인구는 게임에 사용하지 않았습니다.
+
+[chengdu] 대구광역시 국제교류 — Chengdu, China
+https://www.daegu.go.kr/english/?menu_id=00000762
+성도의 촉한 수도 성격을 확인하는 자매·교류도시 공식 소개 자료입니다.

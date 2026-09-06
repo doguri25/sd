@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "check": "HTTP entry /",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTTP relative path /data/world-v9.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTTP relative path /assets/screenshots/map.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTTP relative path /docs/GITHUB_PAGES_SETUP.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTTP entry /samguk-dodgeball/",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTTP relative path /samguk-dodgeball/data/world-v9.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTTP relative path /samguk-dodgeball/assets/screenshots/map.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTTP relative path /samguk-dodgeball/docs/GITHUB_PAGES_SETUP.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Desktop: original v9 runtime initialized",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Runtime faction/officer/arena/map counts",
+      "passed": true,
+      "detail": "{'teams': 17, 'officers': 99, 'arenas': 53, 'nodes': 51}"
+    },
+    {
+      "check": "Match setup opens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Away match starts with six actors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Keyboard pause",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Resume button",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Conquest starts from UI",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Save-file export",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Save-file import",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Desktop runtime has no pageerror",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "No external game asset requests",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "Mobile landscape: stage fits viewport",
+      "passed": false,
+      "detail": "{'x': 69.11114501953125, 'y': -3.4999847412109375, 'width': 705.7777099609375, 'height': 396.99998474121094}"
+    },
+    {
+      "check": "Mobile touch opens setup",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mobile touch starts match",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Mobile runtime has no pageerror",
+      "passed": true,
+      "detail": "[]"
+    }
+  ],
+  "passed": 22,
+  "total": 23,
+  "limits": [
+    "HTTP paths checked with the Python local HTTP client, not browser navigation. Browser localhost navigation is blocked by environment policy.",
+    "Browser checks load unchanged HTML directly with page.set_content.",
+    "Actual GitHub repository upload, Pages deployment, and real phone hardware were not tested.",
+    "localStorage persistence across real hosted origins was not tested; file export/import was tested."
+  ]
+}

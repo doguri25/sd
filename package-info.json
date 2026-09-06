@@ -1,0 +1,20 @@
+{
+  "name": "samguk-dodgeball",
+  "title": "삼국지 피구대전 — 천하도 v9",
+  "gameVersion": "9.0.0",
+  "packageVersion": "9.0.0-github.1",
+  "entry": "index.html",
+  "sourceFile": "samguk_dodgeball_atlas_v9.html",
+  "sourceSha256": "26fac53b48a4db456840368035aff9e7984b828311cfeddd5ba78f6d4f8ca890",
+  "entrySha256": "26fac53b48a4db456840368035aff9e7984b828311cfeddd5ba78f6d4f8ca890",
+  "gameplayModified": false,
+  "buildRequired": false,
+  "externalRuntimeDependencies": [],
+  "publishing": {
+    "provider": "GitHub Pages",
+    "source": "Deploy from a branch",
+    "branch": "main",
+    "folder": "/(root)"
+  },
+  "verificationNote": "Actual GitHub deployment has not been performed. See docs/PACKAGE_CHECKS.md."
+}
