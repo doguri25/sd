@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#102b38">
-<title>삼국지 피구대전 — 천하도 v9</title>
+<title>삼국지 피구대전 — 천하도 v9.1 · 유동형 조이스틱</title>
 <style>
 :root{--gold:#efce87;--cream:#fff5dc;--muted:#adbbc0;--navy:#102632;--team:#3b9b7e;--teamLight:#78dcaf;--font:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}body{background:#091920;color:var(--cream);font-family:var(--font);display:grid;place-items:center;user-select:none;-webkit-user-select:none}button{font:inherit;border:0;cursor:pointer;color:inherit;touch-action:manipulation;user-select:none;-webkit-user-select:none}button:focus-visible{outline:3px solid #fff4ae;outline-offset:4px}button:active{filter:brightness(1.2)}button:disabled{cursor:default}#stage{position:absolute;width:1280px;height:720px;transform-origin:center;overflow:hidden;background:#213f46;box-shadow:0 0 0 1px #71877b,0 20px 80px #000b;touch-action:none}canvas{image-rendering:pixelated;display:block}.scene{position:absolute;inset:0;width:1280px;height:720px}.screen{position:absolute;inset:0;display:none}.screen.active{display:block}.menu-shade{position:absolute;inset:0;background:linear-gradient(90deg,#061e2cee 0%,#0c2936b8 36%,#0c2530e8 55%,#0b2430f5 100%)}.menu-top{position:absolute;left:40px;right:40px;top:24px;display:flex;align-items:center;justify-content:space-between}.eyebrow{font-size:12px;letter-spacing:3px;color:#a8cbd0;font-weight:850}.top-buttons{display:flex;gap:9px}.icon-btn{min-width:37px;height:34px;border:1px solid #809b9b6b;background:#142e3fd9;color:#eee0ba;border-radius:5px;font-size:15px;display:grid;place-items:center}.hero-copy{position:absolute;left:51px;top:96px;pointer-events:none}.edition{display:inline-block;padding:6px 13px;border:1px solid #d4b37370;background:#302d24a1;font-weight:800;color:#f4d191;letter-spacing:4px;font-size:13px}h1{font-weight:1000;font-size:78px;line-height:1.02;letter-spacing:-5px;margin:17px 0 12px;text-shadow:0 6px 0 #0c1823,3px 0 0 #132b35,-3px 0 0 #132b35}h1 strong{display:block;font-size:91px;color:#f4d392;letter-spacing:-6px;text-shadow:0 6px 0 #71563c,0 10px 0 #10242e}.hero-sub{font-size:16px;color:#c4d5d4;line-height:1.8;margin:20px 0 0}.menu-heroes{position:absolute;left:22px;top:341px;width:568px;height:253px;pointer-events:none}.hero-notes{position:absolute;left:50px;top:610px;display:flex;gap:16px;align-items:center;font-size:12px;color:#becfcf}.hero-notes span{border-left:2px solid #c7af6c;padding-left:10px;line-height:1.7}.select-panel{position:absolute;top:97px;right:44px;width:623px;bottom:37px;padding:22px 24px;background:linear-gradient(145deg,#1a3846ed,#0e2735f5);border:1px solid #8b9f9254;box-shadow:0 7px 0 #051b2673,inset 0 0 0 4px #abc1b509;display:flex;flex-direction:column;border-radius:7px}.select-heading{display:flex;justify-content:space-between;align-items:center}.select-heading h2{font-size:21px;letter-spacing:-.7px;margin:0}.select-heading span{font-size:11px;color:#aec3c7}.number{color:#e4c27c;letter-spacing:1px;margin-right:8px;font-size:13px}.team-tabs{display:flex;gap:10px;margin-top:17px}.team-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;background:#0c2330;border:1px solid #5e797b;color:#a5b9be;padding:10px 6px;border-radius:4px}.team-tab.selected{border-color:var(--teamLight);background:linear-gradient(100deg,#255948,#173847);box-shadow:0 3px 0 var(--team)}.team-seal{width:36px;height:42px;background:var(--team);border:1px solid #efd18b96;display:grid;place-items:center;font-family:serif;font-size:27px;font-weight:900;color:#fff0bd;clip-path:polygon(0 0,100% 0,100% 83%,50% 100%,0 83%)}.team-name{font-size:22px;font-weight:1000;text-align:left;line-height:1.1}.team-name small{font-size:10px;font-weight:500;display:block;margin-top:6px;color:#b3c5c6}.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 12px}.hero-card{position:relative;min-height:162px;border:1px solid #536e74;border-radius:4px;background:linear-gradient(155deg,#304e55,#182f3c);padding:0 0 9px;text-align:center;overflow:hidden}.hero-card.selected{border-color:#efd18c;box-shadow:0 0 0 1px #efd18c,inset 0 0 22px #87ad8940}.hero-card:after{content:"";position:absolute;left:8px;right:8px;top:98px;height:1px;background:#c8dcd222}.portrait{width:100%;height:110px}.hero-card b{display:block;font-size:17px}.hero-card .hero-meta{font-size:10px;color:#c4d7d5;display:block;margin-top:4px}.hp-label{position:absolute;top:8px;left:9px;font-size:9px;color:#c2decf;font-weight:800;background:#10232caa;padding:3px 5px}.ability-panel{border-left:3px solid #d9bc7c;background:#0b2430b0;padding:11px 13px;min-height:79px;font-size:12px;line-height:1.65;color:#bfd1cf}.ability-panel strong{color:#fff0ca;font-size:13px}.ability-panel .tag{font-size:10px;background:#315c50;color:#b7efcd;padding:2px 5px;margin-right:7px;font-weight:800}.ability-panel .tag.gold{background:#664f2d;color:#ffe2a0}.ability-panel .desc{margin-left:7px;color:#a1b9be;font-size:11px}.match-options{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:13px 0 11px;font-size:12px}.difficulty{display:flex;gap:4px;padding:3px;background:#091e2b;border-radius:5px}.difficulty button{background:transparent;color:#a0b4ba;padding:6px 14px;border-radius:3px;font-size:11px}.difficulty button.selected{background:#d6bd87;color:#21343a;font-weight:900}.start-btn{position:relative;height:52px;min-height:52px;border:2px solid #ffdc8c;background:linear-gradient(#eed39a,#dab26c);box-shadow:0 4px 0 #85653d,inset 0 0 0 2px #fbe3b05c;color:#26353a;font-size:20px;font-weight:1000;letter-spacing:-.5px;border-radius:4px}.start-btn span{position:absolute;right:18px;font-size:23px}.route-note{text-align:center;margin:12px 0 0;font-size:10px;color:#93adb4;letter-spacing:.1px}.menu-foot{position:absolute;left:42px;bottom:21px;font-size:9px;color:#78979f;letter-spacing:1px}
@@ -196,6 +196,31 @@ canvas{image-rendering:auto}
 .conquest-selected{height:auto;min-height:186px;max-height:223px;padding-top:9px;padding-bottom:10px}.conquest-sidebar .side-heading{margin-top:8px;margin-bottom:6px}.conquest-turn-list{height:124px;min-height:100px}.conquest-selected>small{font-size:10px;line-height:1.45}
 .make-leader{right:7px!important;top:32px!important}.lineup-hero .v9-unit-tag{pointer-events:none}
 
+/* v9.1: the thumbstick is viewport sized (outside the scaled 1280x720 stage). */
+html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behavior:none}
+#floatingJoystick{--floating-size:104px;--floating-knob-size:38px;position:fixed;left:0;top:0;
+  width:var(--floating-size);height:var(--floating-size);transform:translate(-50%,-50%);
+  border:2px solid #f3d998b8;border-radius:50%;z-index:1000;pointer-events:none;
+  background:radial-gradient(circle,#253f4b66 26%,#112d4099 72%);
+  box-shadow:0 0 0 4px #0a25334d,inset 0 0 0 4px #b5d2d01c,0 5px 20px #03182650;
+  opacity:0;visibility:hidden;contain:layout style paint;}
+#floatingJoystick.active{opacity:1;visibility:visible}
+.floating-rim{position:absolute;inset:12%;border:1px dashed #e8eed333;border-radius:50%}
+.floating-cross:before,.floating-cross:after{content:'';position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%);background:#cce2dc29}
+.floating-cross:before{width:1px;height:73%}.floating-cross:after{height:1px;width:73%}
+.floating-knob{position:absolute;left:50%;top:50%;width:var(--floating-knob-size);height:var(--floating-knob-size);
+  border-radius:50%;background:linear-gradient(145deg,#ebedcbe6,#78b4b4ed);border:2px solid #fbf1c6e6;
+  box-shadow:0 3px 10px #071c3860,inset 0 1px 2px #fff9;transform:translate(-50%,-50%)}
+.joystick.engaged{opacity:.2}.floating-move-hint{display:none}
+@media(pointer:coarse){
+  .joystick{border-style:dashed;opacity:.55}
+  .floating-move-hint{display:block;position:absolute;left:-7px;right:-7px;bottom:-1px;
+    white-space:pre-line;text-align:center;font-size:11px;line-height:1.25;font-weight:800;
+    color:#e9e2bf;text-shadow:0 1px 3px #071926;pointer-events:none;z-index:3}
+  .joystick .joy-arrow.down{display:none}
+}
+
 </style>
 </head>
 <body>
@@ -206,7 +231,7 @@ canvas{image-rendering:auto}
 <header class="menu-top"><div class="menu-brand"><span>THREE KINGDOMS · DODGEBALL</span><h1>삼국지 <strong>피구대전</strong></h1></div><div class="top-buttons"><span class="wallet-pill">軍功 <b id="menuWallet">0</b></span><button id="troopGuideBtn">병종·지역 도감</button><button id="resumeConquest" class="menu-utility" hidden>점령전 계속</button><button id="menuShop" class="menu-utility">군공 상점</button><button id="saveMenu" class="menu-utility">기록</button><button class="icon-btn sound-toggle" aria-label="효과음 설정">♪</button><button class="icon-btn fullscreen-toggle" aria-label="전체 화면">⛶</button><button class="icon-btn" id="helpMenu" aria-label="게임 방법">?</button></div></header>
 <aside class="nation-browser"><div class="browser-heading"><h2>진영 선택</h2><span id="factionCount">17개 진영</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="factionSearch" type="search" placeholder="진영 · 장수 검색" aria-label="진영 또는 장수 검색" autocomplete="off" maxlength="40"></label><div id="teamTabs" class="nation-list" role="group" aria-label="확장형 진영 목록"></div><p class="browser-foot">목록을 스크롤해 다른 진영을 찾아보세요.</p></aside>
 <section class="lineup-preview"><header class="lineup-heading"><div><span class="lineup-kicker" id="lineupKicker">SHU</span><h2 id="lineupName">촉</h2></div><p id="lineupMotto">뜨거운 의리</p><span class="lineup-seal" id="lineupSeal">蜀</span></header><div class="lineup-heroes" id="lineupHeroes"></div><footer class="lineup-footer"><div><b id="lineupCities"></b><span id="loadoutNote">장수를 선택한 뒤 경기 설정을 열어주세요.</span></div><button id="configureBtn" class="start-btn">경기 설정 <span>→</span></button></footer></section>
-<div class="menu-version">천하도 9.0 · 51개 거점 / 7병종</div>
+<div class="menu-version">천하도 9.1 · 유동형 조이스틱 · 51개 거점 / 7병종</div>
 </section>
 <section id="game" class="screen" aria-label="피구 경기 조작 화면">
 <div class="hud-team ally" id="allyTeam"><div class="banner" id="allyBanner">蜀</div><div class="hud-roster"><div class="hud-heading"><span id="allyName">촉 · 우리</span><small>CLICK TO SWITCH</small></div><div class="roster-cards" id="allyRoster"></div></div></div>
@@ -222,7 +247,7 @@ canvas{image-rendering:auto}
 <button id="dodgeBtn" class="action"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M2 15h12M0 23h10M5 31h9" stroke="#d3f2f5" stroke-width="2"/><circle cx="26" cy="7" r="5" fill="#c8f4f5"/><path d="M22 14l-7 8 7 6-5 9M23 16l7 8h8M21 27l10 9" fill="none" stroke="#c8f4f5" stroke-width="5" stroke-linecap="round"/></svg><b>회피</b><small>L / SHIFT</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="skillBtn" class="action skill"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M30 2L10 21l9 2-6 15 20-20-11-1z" fill="#fff1aa" stroke="#d2fff0" stroke-width="1.5"/><path d="M7 9l-4 9M35 26l-4 7" stroke="#a6f9df" stroke-width="2"/></svg><b>특징 기술</b><small>E</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="switchBtn" class="action switch"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="15" r="6" fill="#a7d9df"/><circle cx="30" cy="23" r="6" fill="#d4eded"/><path d="M1 33v-7q9-9 19 0v7M20 38v-5q10-9 19 0v5" fill="#a7d9df"/><path d="M19 5h13l-4-4M33 5l-4 5" fill="none" stroke="#f2d99b" stroke-width="2.5"/></svg><b>교대 / 패스</b><small>Q · 1 / 2 / 3</small></button>
-</div><div class="keyline">이동 · WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
+</div><div class="keyline">v9.1 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
 </section>
 <div class="modal setup-modal" id="setupModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="setupTitle" aria-describedby="setupHint">
 <div class="modal-card setup-card">
@@ -241,7 +266,7 @@ canvas{image-rendering:auto}
 </section></div>
 <footer class="setup-footer"><button class="setup-back" id="setupBack">← 진영 다시 선택</button><button id="startBtn" class="start-btn">군웅 제패전 시작<span>→</span></button></footer>
 </div></div>
-<div class="modal" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="modal-card wide"><div class="modal-eyebrow">HOW TO PLAY</div><h2 id="helpTitle">잡고, 피하고, 한 방 더!</h2><p><b>홈팀은 왼쪽, 어웨이팀은 오른쪽</b>입니다. 진영 목록에서 선택한 뒤 경기 설정 버튼을 누르세요. 상대 출전 인원을 모두 아웃시키면 승리! 점령전 대도시에서는 수비 지원병이 추가될 수 있어요.</p><div class="help-grid"><div class="help-item"><b>① 달리며 공을 주워요</b>조이스틱 / <kbd>WASD</kbd> / <kbd>방향키</kbd>로 이동하세요.<br>들고 있을 때 공은 회전하지 않아요. 투구·바닥 이동 방향에 맞춰 공 무늬가 회전해요.<br>바닥의 공은 가까이 가면 자동으로 주워요.<br>벽에 닿은 공은 회색 데드볼이 됩니다. 데드볼은 피해·경직이 없고, 약 0.48초 후 다시 주울 수 있어요.</div><div class="help-item"><b>② 공을 갖고 있을 때 공격!</b><kbd>J</kbd> 일반 투구 · <kbd>E</kbd> 장수별 특징 기술<br>상대를 누르면 그 장수를 조준해요.<br>기가 가득 차면 다음 공격이 자동으로 필살기가 돼요.</div><div class="help-item"><b>③ 체력을 지켜요</b><kbd>K</kbd> 공이 닿기 직전에 잡기 · <kbd>L</kbd> 빠른 회피<br>공을 맞으면 체력이 줄고 잠깐 보호받아요.<br>조운의 시간차 필살기는 연속 명중할 수 있어요.<br>체력 0은 아웃! 체력이 남아 있으면 계속 싸워요.</div><div class="help-item"><b>④ 장수마다 모이는 기</b><kbd>R</kbd> 기 100% + 공 보유 시 필살기 발동<br>시간·투구·명중·잡기로 기가 모여요.<br>필살기는 잡기 시작 직후에 정확히 맞춰야 잡혀요.<br>잡아도 원래 피해의 8%가 충격으로 남아요(최대 체력의 5% 한도). 보호막이 있으면 먼저 흡수해요.<br>강한 공을 받을수록 발밑 흙먼지가 커져요.</div><div class="help-item"><b>⑤ 교대와 패스로 빈틈을!</b><kbd>Q</kbd> / <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> / 위쪽 장수 카드<br>우리 팀이 공을 들고 있으면 선택한 장수에게 패스!<br>동료는 자동으로 움직이고 공을 줍고 피합니다.</div><div class="help-item"><b>⑥ 점령전 · 제패전 · 상점</b>점령전은 인접 지역 공격, 전체턴마다 공격·방어 각 1회. 공격 승리 시만 점령하며 공격 실패 시 영토는 유지해요.<br>제패전은 다른 16개 진영과 차례로 대결해요. 매 경기 홈·어웨이가 바뀌며 체력은 모두 회복돼요. 경기 후 남은 체력으로 군공을 얻고, 상점에서 다음 1~2경기 아이템을 준비해요.<br><kbd>P</kbd> 일시정지 · <kbd>F</kbd> 전체 화면</div></div><button class="primary-btn" id="helpClose">좋아요, 출전 준비!</button></div></div>
+<div class="modal" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="modal-card wide"><div class="modal-eyebrow">HOW TO PLAY</div><h2 id="helpTitle">잡고, 피하고, 한 방 더!</h2><p><b>홈팀은 왼쪽, 어웨이팀은 오른쪽</b>입니다. 진영 목록에서 선택한 뒤 경기 설정 버튼을 누르세요. 상대 출전 인원을 모두 아웃시키면 승리! 점령전 대도시에서는 수비 지원병이 추가될 수 있어요.</p><div class="help-grid"><div class="help-item"><b>① 달리며 공을 주워요</b><b>왼쪽 화면 어디든 터치하고 엄지를 밀어 이동!</b><br>터치한 곳에 조이스틱이 생기고, 멀리 밀면 기준점도 따라와요. 다른 손가락으로 공격 버튼을 동시에 누르세요.<br>장수 카드·버튼은 원래 기능대로 작동해요. PC는 <kbd>WASD</kbd> / <kbd>방향키</kbd> 또는 조이스틱을 사용하세요.<br>들고 있을 때 공은 회전하지 않아요. 투구·바닥 이동 방향에 맞춰 공 무늬가 회전해요.<br>바닥의 공은 가까이 가면 자동으로 주워요.<br>벽에 닿은 공은 회색 데드볼이 됩니다. 데드볼은 피해·경직이 없고, 약 0.48초 후 다시 주울 수 있어요.</div><div class="help-item"><b>② 공을 갖고 있을 때 공격!</b><kbd>J</kbd> 일반 투구 · <kbd>E</kbd> 장수별 특징 기술<br>상대를 누르면 그 장수를 조준해요.<br>기가 가득 차면 다음 공격이 자동으로 필살기가 돼요.</div><div class="help-item"><b>③ 체력을 지켜요</b><kbd>K</kbd> 공이 닿기 직전에 잡기 · <kbd>L</kbd> 빠른 회피<br>공을 맞으면 체력이 줄고 잠깐 보호받아요.<br>조운의 시간차 필살기는 연속 명중할 수 있어요.<br>체력 0은 아웃! 체력이 남아 있으면 계속 싸워요.</div><div class="help-item"><b>④ 장수마다 모이는 기</b><kbd>R</kbd> 기 100% + 공 보유 시 필살기 발동<br>시간·투구·명중·잡기로 기가 모여요.<br>필살기는 잡기 시작 직후에 정확히 맞춰야 잡혀요.<br>잡아도 원래 피해의 8%가 충격으로 남아요(최대 체력의 5% 한도). 보호막이 있으면 먼저 흡수해요.<br>강한 공을 받을수록 발밑 흙먼지가 커져요.</div><div class="help-item"><b>⑤ 교대와 패스로 빈틈을!</b><kbd>Q</kbd> / <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> / 위쪽 장수 카드<br>우리 팀이 공을 들고 있으면 선택한 장수에게 패스!<br>동료는 자동으로 움직이고 공을 줍고 피합니다.</div><div class="help-item"><b>⑥ 점령전 · 제패전 · 상점</b>점령전은 인접 지역 공격, 전체턴마다 공격·방어 각 1회. 공격 승리 시만 점령하며 공격 실패 시 영토는 유지해요.<br>제패전은 다른 16개 진영과 차례로 대결해요. 매 경기 홈·어웨이가 바뀌며 체력은 모두 회복돼요. 경기 후 남은 체력으로 군공을 얻고, 상점에서 다음 1~2경기 아이템을 준비해요.<br><kbd>P</kbd> 일시정지 · <kbd>F</kbd> 전체 화면</div></div><button class="primary-btn" id="helpClose">좋아요, 출전 준비!</button></div></div>
 <div class="modal" id="pauseModal" role="dialog" aria-modal="true" aria-labelledby="pauseTitle"><div class="modal-card"><div class="modal-eyebrow">TIME OUT</div><h2 id="pauseTitle">잠깐, 작전 타임!</h2><p>경기가 일시정지되었습니다.<br>세 장수의 호흡을 맞춰 다시 출전하세요.</p><button class="primary-btn" id="resumeBtn">경기 계속하기</button><button class="secondary-btn" id="helpGame">조작 방법 보기</button><button class="secondary-btn" id="restartBtn">현재 경기 다시 시작</button><button class="secondary-btn" id="homeBtn">팀 선택으로 돌아가기</button></div></div>
 <div class="modal" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="modal-card result-card"><section class="result-left"><div class="modal-eyebrow" id="resultEyebrow">ROUND CLEAR</div><h2 id="resultTitle">멋진 승리!</h2><canvas class="result-art" id="resultArt" width="483" height="160"></canvas><div class="result-badge" id="resultBadge"></div><p id="resultBody"></p><div class="result-stats"><div><b id="statDamage">0</b><span>입힌 피해</span></div><div><b id="statCatch">0</b><span>잡기 성공</span></div><div><b id="statUlt">0</b><span>필살기</span></div></div></section><section class="result-right"><span class="setup-eyebrow">HP → MERIT</span><h3>남은 체력이 군공으로!</h3><div id="hpScoreRows"></div><div id="scoreBreakdown"></div><div class="result-reward"><span>이번 경기 획득</span><strong id="earnedMerit">+0</strong><small>군공</small></div><p class="score-formula">장수별 남은 체력 비율 × 100(각각 버림) 후 합산<br>경기 완료 +60 · 승리 +100</p><button class="primary-btn" id="nextBtn">군공 상점 · 다음 경기 →</button><button class="secondary-btn" id="resultHome">진영 선택으로</button></section></div></div><div class="modal shop-modal" id="shopModal" role="dialog" aria-modal="true" aria-labelledby="shopTitle" aria-hidden="true"><div class="shop-card">
 <header class="shop-header"><div><span class="setup-eyebrow">ARMORY & ARCHIVES</span><h2 id="shopTitle">군공 보급소</h2><p>아이템은 아군 3명에게 적용 · 서로 다른 종류 최대 3개 · 1~2경기 후 소멸</p></div><div class="shop-balance">보유 군공 <strong id="shopWallet">0</strong><button id="shopClose" aria-label="상점 닫기">×</button></div></header>
@@ -802,7 +827,7 @@ function active(){return G.actors.find(a=>a.id===G.activeId&&!a.out)}
 function actor(id){return G.actors.find(a=>a.id===id)}
 function targetOf(a){const es=alive(1-a.side);if(!es.length)return null;return a.side===G.playerSide&&es.find(b=>b.id===G.targetId)||es.slice().sort((u,v)=>distance(a,u)-distance(a,v))[0]}
 function makeActor(id,side,i){const d=HEROES[id],xs=side===0?[426,207,419]:[855,1067,866],ys=[365,459,550];return{id:`${side}_${id}`,def:d,side,index:i,x:xs[i],y:ys[i],homeX:xs[i],homeY:ys[i],hp:d.maxHp,qi:35,out:false,outT:0,inv:0,hitT:0,dashT:0,dashCD:0,catchT:0,catchCD:0,skillCD:0,attackT:0,shot:null,dx:0,dy:0,moveX:0,moveY:0,moving:false,runPhase:i*2,dustT:0,echoT:0,holdT:0,wait:rand(...LEVELS[difficulty].wait),evadeT:0,evadeDir:1,seen:0,aiCatch:false,aiDodge:false,face:side===0?1:-1};}
-function resetInput(){keys.clear();stickInput.x=stickInput.y=0;joyPointer=courtPointer=null;G.pointer=null;$('stick').style.transform='translate(0,0)'}
+function resetInput(){keys.clear();courtPointer=null;stopFloatingJoystick();}
 function startTournament(){
  closeSetup(false);initAudio();renderMatchOptions();G.matchId=null;G.round=0;G.matchMode=matchMode;G.entrySide=entrySide;G.firstArena=selectedVenue;
  G.opponents=matchMode==='single'?[firstOpponent]:[firstOpponent,...Object.keys(TEAMS).filter(id=>id!==selectedTeam&&id!==firstOpponent)];startRound();
@@ -1074,7 +1099,7 @@ function updateActor(a,dt){
   let dx=stickInput.x+(keys.has('ArrowRight')||keys.has('d')?1:0)-(keys.has('ArrowLeft')||keys.has('a')?1:0),dy=stickInput.y+(keys.has('ArrowDown')||keys.has('s')?1:0)-(keys.has('ArrowUp')||keys.has('w')?1:0),mag=Math.hypot(dx,dy),speed=a.def.speed*speedScale*(a.attackT>.15?.35:1);
   if(mag>.05){const vx=dx/Math.max(1,mag)*speed,vy=dy/Math.max(1,mag)*speed,blend=1-Math.exp(-22*dt);a.vx=lerp(a.vx||0,vx,blend);a.vy=lerp(a.vy||0,vy,blend);a.x+=a.vx*dt;a.y+=a.vy*dt;a.moveX=dx/mag;a.moveY=dy/mag;a.moving=true;G.lastMove={x:dx/mag,y:dy/mag};G.pointer=null}
   else if(G.pointer){moveToward(a,G.pointer.x,G.pointer.y,speed,dt);if(distance(a,G.pointer)<4)G.pointer=null}
-  else if(G.ball.mode==='loose'&&G.ball.side===G.playerSide&&G.ball.age>.16){const nearest=alive(G.playerSide).slice().sort((u,v)=>Math.hypot(u.x-G.ball.x,u.y-32-G.ball.y)-Math.hypot(v.x-G.ball.x,v.y-32-G.ball.y))[0];if(nearest===a)moveToward(a,G.ball.x,G.ball.y+32,speed*.8,dt);else moveToward(a,a.x,a.y,speed,dt)}
+  else if(!floatingInput.touchUsed&&G.ball.mode==='loose'&&G.ball.side===G.playerSide&&G.ball.age>.16){const nearest=alive(G.playerSide).slice().sort((u,v)=>Math.hypot(u.x-G.ball.x,u.y-32-G.ball.y)-Math.hypot(v.x-G.ball.x,v.y-32-G.ball.y))[0];if(nearest===a)moveToward(a,G.ball.x,G.ball.y+32,speed*.8,dt);else moveToward(a,a.x,a.y,speed,dt)}
   else moveToward(a,a.x,a.y,speed,dt);
  }else{
   const plan=offBallPlan(a,dt);
@@ -1251,16 +1276,176 @@ function showHelp(inGame){helpFromGame=inGame;if(inGame){pause();$('pauseModal')
 $('helpMenu').onclick=()=>showHelp(false);$('helpGame').onclick=()=>showHelp(true);$('helpClose').onclick=()=>{$('helpModal').classList.remove('show');if(helpFromGame)resume()};
 let uiScale=1,renderScale=2;
 function fitStage(){const vw=window.innerWidth,vh=window.innerHeight;uiScale=Math.min(vw/W,vh/H);const resolution=clamp(uiScale*(window.devicePixelRatio||1),1,2);if(Math.abs(renderScale-resolution)>.001){renderScale=resolution;canvas.width=Math.round(W*renderScale);canvas.height=Math.round(H*renderScale);}$('stage').style.left='50%';$('stage').style.top='50%';$('stage').style.transform=`translate(-50%,-50%) scale(${uiScale})`;}
-window.addEventListener('resize',()=>{fitStage();resetInput()});
+window.addEventListener('resize',()=>{fitStage();resizeFloatingJoystick()});
 async function fullscreen(){try{if(document.fullscreenElement){await document.exitFullscreen?.();return}if(!document.documentElement.requestFullscreen){toast('이 브라우저에서는 기기를 가로로 돌려 플레이하세요.');return}await document.documentElement.requestFullscreen();try{await screen.orientation?.lock?.('landscape')}catch{}fitStage();}catch{toast('전체 화면을 열 수 없어요. 브라우저 창을 넓혀 플레이하세요.')}}
 document.querySelectorAll('.fullscreen-toggle').forEach(b=>b.onclick=fullscreen);document.addEventListener('fullscreenchange',fitStage);
-function bindAction(id,fn){const b=$(id);b.addEventListener('pointerdown',e=>{e.preventDefault();initAudio();fn()});b.addEventListener('click',e=>{if(e.detail===0)fn()})}
+function bindAction(id,fn){const b=$(id);b.addEventListener(window.PointerEvent?'pointerdown':'touchstart',e=>{e.preventDefault();initAudio();fn()},{passive:false});b.addEventListener('click',e=>{if(e.detail===0||!window.PointerEvent)fn()})}
 bindAction('throwBtn',()=>shootAction('normal'));bindAction('skillBtn',()=>shootAction('skill'));bindAction('ultBtn',()=>shootAction('ult'));bindAction('catchBtn',catchAction);bindAction('dodgeBtn',dodgeAction);bindAction('switchBtn',cycle);
-function joyMove(e){const r=$('joystick').getBoundingClientRect(),max=r.width*.32;let dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height/2,mag=Math.hypot(dx,dy);if(mag>max){dx*=max/mag;dy*=max/mag}stickInput.x=dx/max;stickInput.y=dy/max;$('stick').style.transform=`translate(${dx/uiScale}px,${dy/uiScale}px)`;G.pointer=null;}
-$('joystick').addEventListener('pointerdown',e=>{if(!['play','countdown'].includes(G.phase))return;if(joyPointer!==null)return;joyPointer=e.pointerId;$('joystick').setPointerCapture?.(e.pointerId);joyMove(e);e.preventDefault()});$('joystick').addEventListener('pointermove',e=>{if(e.pointerId===joyPointer){joyMove(e);e.preventDefault()}});
-function joyEnd(e){if(e.pointerId!==joyPointer)return;joyPointer=null;stickInput.x=stickInput.y=0;$('stick').style.transform='translate(0,0)'}['pointerup','pointercancel','lostpointercapture'].forEach(event=>$('joystick').addEventListener(event,joyEnd));
+/* v9.1 — viewport-relative floating thumbstick.
+   One pointer owns movement. Other fingers keep operating action/roster buttons.
+   A stable capture target + window listeners prevent a missed release from sticking. */
+const floatingInput={pointerId:null,type:null,capture:null,originX:0,originY:0,
+  clientX:0,clientY:0,radius:52,max:34,deadZone:4,touchUsed:false};
+const floatingPad=document.createElement('div');
+floatingPad.id='floatingJoystick';
+floatingPad.setAttribute('aria-hidden','true');
+floatingPad.innerHTML='<div class="floating-cross"></div><div class="floating-rim"></div><div class="floating-knob"></div>';
+document.body.appendChild(floatingPad);
+const floatingKnob=floatingPad.querySelector('.floating-knob');
+const movementHint=document.createElement('span');
+movementHint.className='floating-move-hint';
+movementHint.textContent='왼쪽 어디서든\n밀어서 이동';
+$('joystick').appendChild(movementHint);
+$('joystick').setAttribute('aria-label','이동: 왼쪽 화면을 터치하고 원하는 방향으로 미세요. 키보드 방향키 또는 WASD도 사용할 수 있습니다.');
+
+function movementSurfaceReady(){
+  return ['play','countdown'].includes(G.phase)&&$('game').classList.contains('active')&&
+    !$('game').inert&&!document.querySelector('.modal.show');
+}
+function syncMovementSurface(){
+  const enabled=movementSurfaceReady();
+  document.documentElement.classList.toggle('floating-input-on',enabled);
+  document.body.classList.toggle('floating-input-on',enabled);
+  if(!enabled&&floatingInput.pointerId!==null)stopFloatingJoystick();
+}
+function stopFloatingJoystick(){
+  // Invalidate the owner BEFORE releasing capture (which can synchronously emit loss).
+  const id=floatingInput.pointerId,capture=floatingInput.capture;
+  floatingInput.pointerId=null;floatingInput.type=null;floatingInput.capture=null;
+  joyPointer=null;stickInput.x=stickInput.y=0;G.pointer=null;
+  floatingPad.classList.remove('active');$('joystick').classList.remove('engaged');
+  $('stick').style.transform='translate(0,0)';
+  // Don't let manual control turn into automatic chasing after lifting the thumb.
+  const a=active();
+  if(a&&!keys.size&&!(a.dashT>0||a.hitT>0||a.braceT>0))a.vx=a.vy=0;
+  try{if(capture&&id!==null&&capture.hasPointerCapture?.(id))capture.releasePointerCapture(id)}catch{}
+}
+function setFloatingMetrics(){
+  // CSS pixels, not scaled court coordinates: short thumb travel on any phone/tablet.
+  floatingInput.radius=clamp(Math.min(window.innerWidth,window.innerHeight)*.14,44,58);
+  floatingInput.max=floatingInput.radius*.66;
+  floatingInput.deadZone=4;
+  floatingPad.style.setProperty('--floating-size',floatingInput.radius*2+'px');
+  floatingPad.style.setProperty('--floating-knob-size',floatingInput.radius*.74+'px');
+}
+function drawFloatingJoystick(dx=0,dy=0){
+  floatingPad.style.left=floatingInput.originX+'px';
+  floatingPad.style.top=floatingInput.originY+'px';
+  floatingKnob.style.transform=`translate(-50%,-50%) translate(${dx}px,${dy}px)`;
+}
+function floatMove(clientX,clientY){
+  if(floatingInput.pointerId===null)return;
+  floatingInput.clientX=clientX;floatingInput.clientY=clientY;
+  let dx=clientX-floatingInput.originX,dy=clientY-floatingInput.originY;
+  let distance=Math.hypot(dx,dy),max=floatingInput.max;
+  if(distance>max){
+    // Sliding base: keep following a long thumb sweep, so reversing needs little travel.
+    const factor=max/distance;dx*=factor;dy*=factor;
+    floatingInput.originX=clientX-dx;floatingInput.originY=clientY-dy;
+    distance=max;
+  }
+  const strength=clamp((distance-floatingInput.deadZone)/(max-floatingInput.deadZone),0,1);
+  stickInput.x=distance?dx/distance*strength:0;
+  stickInput.y=distance?dy/distance*strength:0;
+  G.pointer=null;
+  drawFloatingJoystick(dx,dy);
+}
+function isTouchMovementStart(e){
+  if(!movementSurfaceReady())return false;
+  const target=e.target instanceof Element?e.target:null;
+  // Buttons, dialogs and form controls keep their own actions, even on the left.
+  if(target?.closest('button,a,input,select,textarea,label,[role="button"],[contenteditable="true"],.modal'))return false;
+  if(e.pointerType==='mouse')return e.button===0&&!!target?.closest('#joystick');
+  return e.clientX>=0&&e.clientX<window.innerWidth/2&&e.clientY>=0&&e.clientY<=window.innerHeight;
+}
+function beginFloatingJoystick(e){
+  if(!isTouchMovementStart(e))return false;
+  if(floatingInput.pointerId!==null)return true; // A second left finger never steals it.
+  floatingInput.pointerId=e.pointerId;floatingInput.type=e.pointerType||'touch';
+  floatingInput.originX=floatingInput.clientX=e.clientX;
+  floatingInput.originY=floatingInput.clientY=e.clientY;
+  joyPointer=e.pointerId;courtPointer=null;G.pointer=null;stickInput.x=stickInput.y=0;
+  if(floatingInput.type!=='mouse'){
+    floatingInput.touchUsed=true;document.body.classList.add('floating-touch-used');
+  }
+  setFloatingMetrics();drawFloatingJoystick();
+  floatingPad.classList.add('active');$('joystick').classList.add('engaged');
+  // Capture on a stable, non-redrawn node. Never use isPrimary: attack may start first.
+  if(window.PointerEvent){
+    try{
+      document.documentElement.setPointerCapture(e.pointerId);
+      floatingInput.capture=document.documentElement;
+    }catch{ /* window-level move/up/cancel listeners remain a fallback */ }
+  }
+  initAudio();
+  return true;
+}
+function consumeMovementEvent(e){if(e.cancelable)e.preventDefault();e.stopImmediatePropagation()}
+function onFloatingDown(e){if(beginFloatingJoystick(e))consumeMovementEvent(e)}
+function onFloatingMove(e){
+  if(e.pointerId!==floatingInput.pointerId)return;
+  if(!movementSurfaceReady()||(e.pointerType==='mouse'&&e.buttons===0)){stopFloatingJoystick();return}
+  floatMove(e.clientX,e.clientY);consumeMovementEvent(e);
+}
+function onFloatingEnd(e){
+  if(e.pointerId!==floatingInput.pointerId)return;
+  stopFloatingJoystick();consumeMovementEvent(e);
+}
+if(window.PointerEvent){
+  document.addEventListener('pointerdown',onFloatingDown,{capture:true,passive:false});
+  window.addEventListener('pointermove',onFloatingMove,{capture:true,passive:false});
+  window.addEventListener('pointerup',onFloatingEnd,{capture:true,passive:false});
+  window.addEventListener('pointercancel',onFloatingEnd,{capture:true,passive:false});
+  window.addEventListener('lostpointercapture',e=>{
+    // Ignore the initial loss of a browser's implicit capture on a child node.
+    if(e.pointerId===floatingInput.pointerId&&e.target===floatingInput.capture)stopFloatingJoystick();
+  },true);
+  // Safety net for a browser ending its last touch without a matching pointerup.
+  const releaseLastTouch=e=>{if(!e.touches.length&&floatingInput.type==='touch')stopFloatingJoystick()};
+  window.addEventListener('touchend',releaseLastTouch,{capture:true,passive:true});
+  window.addEventListener('touchcancel',releaseLastTouch,{capture:true,passive:true});
+}else{
+  // Older embedded browsers: use touch identifiers, never touches[0] ownership.
+  const touchEvent=(t,e)=>({pointerId:t.identifier,pointerType:'touch',button:0,
+    clientX:t.clientX,clientY:t.clientY,target:t.target||e.target});
+  document.addEventListener('touchstart',e=>{
+    for(const t of e.changedTouches)if(beginFloatingJoystick(touchEvent(t,e))){consumeMovementEvent(e);break}
+  },{capture:true,passive:false});
+  window.addEventListener('touchmove',e=>{
+    const t=[...e.changedTouches].find(t=>t.identifier===floatingInput.pointerId);
+    if(t){if(!movementSurfaceReady())stopFloatingJoystick();else floatMove(t.clientX,t.clientY);consumeMovementEvent(e)}
+  },{capture:true,passive:false});
+  const endTouches=e=>{
+    if([...e.changedTouches].some(t=>t.identifier===floatingInput.pointerId)){
+      stopFloatingJoystick();consumeMovementEvent(e);
+    }
+  };
+  window.addEventListener('touchend',endTouches,{capture:true,passive:false});
+  window.addEventListener('touchcancel',endTouches,{capture:true,passive:false});
+  $('joystick').addEventListener('mousedown',e=>{
+    const p={pointerId:-1,pointerType:'mouse',button:e.button,clientX:e.clientX,clientY:e.clientY,target:e.target};
+    if(beginFloatingJoystick(p))consumeMovementEvent(e);
+  });
+  window.addEventListener('mousemove',e=>{if(floatingInput.type==='mouse')floatMove(e.clientX,e.clientY)});
+  window.addEventListener('mouseup',()=>{if(floatingInput.type==='mouse')stopFloatingJoystick()});
+}
+// No accidental text selection, long-press menu or page panning during play.
+document.addEventListener('contextmenu',e=>{if(movementSurfaceReady())e.preventDefault()});
+const floatingSurfaceObserver=new MutationObserver(syncMovementSurface);
+floatingSurfaceObserver.observe($('game'),{attributes:true,attributeFilter:['class','inert']});
+document.querySelectorAll('.modal').forEach(m=>floatingSurfaceObserver.observe(m,{attributes:true,attributeFilter:['class']}));
+function resizeFloatingJoystick(){
+  // A mobile browser bar resizing is not an input cancellation. Keep the same owner.
+  if(floatingInput.pointerId!==null){setFloatingMetrics();floatMove(floatingInput.clientX,floatingInput.clientY)}
+  syncMovementSurface();
+}
+window.addEventListener('orientationchange',()=>{resetInput();fitStage()});
+window.addEventListener('pagehide',()=>{resetInput();pause()});
+window.visualViewport?.addEventListener('resize',()=>{fitStage();resizeFloatingJoystick()});
+syncMovementSurface();
+
 function courtPoint(e){const r=$('stage').getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*W,y:(e.clientY-r.top)/r.height*H}}
-$('game').addEventListener('pointerdown',e=>{if(G.phase!=='play'||e.target.closest('button,.controls,.hud-team,.scoreboard,.game-tools'))return;const p=courtPoint(e);if(p.y<278||p.y>595)return;const enemy=alive(1-G.playerSide).find(a=>Math.hypot(a.x-p.x,a.y-44-p.y)<58);if(enemy){G.targetId=enemy.id;burst(enemy.x,enemy.y-38,'#fff0b0',5,60);return}const ally=alive(G.playerSide).find(a=>Math.hypot(a.x-p.x,a.y-44-p.y)<45);if(ally){selectActor(ally.id);return}const bd=bounds(G.playerSide);G.pointer={x:clamp(p.x,bd.minX,bd.maxX),y:clamp(p.y+20,bd.minY,bd.maxY)};courtPointer=e.pointerId;$('game').setPointerCapture?.(e.pointerId);e.preventDefault();});
+$('game').addEventListener('pointerdown',e=>{if(G.phase!=='play'||e.target.closest('button,.controls,.hud-team,.scoreboard,.game-tools'))return;const p=courtPoint(e);if(p.y<278||p.y>595)return;const enemy=alive(1-G.playerSide).find(a=>Math.hypot(a.x-p.x,a.y-44-p.y)<58);if(enemy){G.targetId=enemy.id;burst(enemy.x,enemy.y-38,'#fff0b0',5,60);return}const ally=alive(G.playerSide).find(a=>Math.hypot(a.x-p.x,a.y-44-p.y)<45);if(ally){selectActor(ally.id);return}if(e.pointerType==='touch'||e.pointerType==='pen')return;const bd=bounds(G.playerSide);G.pointer={x:clamp(p.x,bd.minX,bd.maxX),y:clamp(p.y+20,bd.minY,bd.maxY)};courtPointer=e.pointerId;$('game').setPointerCapture?.(e.pointerId);e.preventDefault();});
 $('game').addEventListener('pointermove',e=>{if(e.pointerId!==courtPointer||G.phase!=='play')return;const p=courtPoint(e),bd=bounds(G.playerSide);G.pointer={x:clamp(p.x,bd.minX,bd.maxX),y:clamp(p.y+20,bd.minY,bd.maxY)};});['pointerup','pointercancel','lostpointercapture'].forEach(event=>$('game').addEventListener(event,e=>{if(e.pointerId===courtPointer)courtPointer=null}));
 window.addEventListener('keydown',e=>{const k=e.key.length===1?e.key.toLowerCase():e.key;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' ','Tab'].includes(k)&&G.phase!=='menu')e.preventDefault();if(k==='f'&&!e.repeat){fullscreen();return}if(['Escape','p'].includes(k)){if(e.repeat)return;if($('helpModal').classList.contains('show')){$('helpClose').click()}else if(G.phase==='paused')resume();else pause();return}if(G.phase!=='play')return;keys.add(k);if(e.repeat)return;initAudio();if(k==='j'||k==='Enter')shootAction('normal');else if(k==='k'||k===' ')catchAction();else if(k==='l'||k==='Shift')dodgeAction();else if(k==='e')shootAction('skill');else if(k==='r')shootAction('ult');else if(k==='q'||k==='Tab')cycle();else if(['1','2','3'].includes(k)){const a=G.actors.filter(a=>a.side===G.playerSide)[Number(k)-1];if(a)selectActor(a.id)}});
 window.addEventListener('keyup',e=>keys.delete(e.key.length===1?e.key.toLowerCase():e.key));window.addEventListener('blur',()=>{resetInput();pause()});document.addEventListener('visibilitychange',()=>{if(document.hidden){resetInput();pause()}});
@@ -2315,7 +2500,7 @@ document.addEventListener('keydown',e=>{const m=$('v9Elimination').classList.con
 function exportV9(){downloadJSON('삼국지피구_천하도_v9.json',{game:'samguk-dodgeball',version:'9.0.0',profile:copyData(profile),campaign:campaign?copyData(campaign):null});toast('군공 · 도시 · 장수 체력 · 수비대 기록을 저장했습니다.');}
 exportV8=exportV9;$('exportSave').onclick=exportV9;$('conquestExport').onclick=exportV9;
 const v9OpenSave=openSave;openSave=function(){v9OpenSave();$('worldNote').textContent='51개 점령 거점 · 7병종 · 장수별 체력/마지막 출전 턴 · 대도시 지원병을 저장합니다. v8 파일은 기존 34개 소유권을 유지하며 새 17곳을 추가 배정합니다. 진행 중인 경기는 출전 당시 상태로 다시 시작합니다.';};$('saveMenu').onclick=()=>openSave();
-Object.assign(window.SamgukDodgeball,{version:'9.0.0',units:TROOPS,terrain:TERRAIN,world:WORLD_DATA,heroes:HEROES,choose:(team,level='normal')=>{if(!TEAMS[team]||!LEVELS[level])throw Error('Unknown team or difficulty');selectedTeam=team;selectedHero=fieldSquad(team)[0]||TEAMS[team].ids[0];difficulty=level;renderMenu()},start:()=>startTournament(),shoot:kind=>shootAction(kind),guide:openV9Guide});
+Object.assign(window.SamgukDodgeball,{version:'9.0.1',units:TROOPS,terrain:TERRAIN,world:WORLD_DATA,heroes:HEROES,choose:(team,level='normal')=>{if(!TEAMS[team]||!LEVELS[level])throw Error('Unknown team or difficulty');selectedTeam=team;selectedHero=fieldSquad(team)[0]||TEAMS[team].ids[0];difficulty=level;renderMenu()},start:()=>startTournament(),shoot:kind=>shootAction(kind),guide:openV9Guide});
 Object.assign(window.SamgukDodgeball.conquest,{rules:CONQUEST_RULES,export:exportV9,advance:campaignAdvance,launch:launchCampaignBattle,create:(team=selectedTeam,seed)=>{selectedTeam=team;newConquest(seed);return copyData(campaign)},engine:{create:createCampaign,attacks:cAttacks,begin:cBegin,resolve:cResolve,pass:cPass,auto:cAutoOne,current:cCurrent,owned:cOwned,seek:cSeekTurn,validate:sanitizeCampaign,recordHealth:recordBattleHealth,recover:recoverAfterRound,health:healthRatio,pickSquad:pickCampaignSquad},load:data=>{campaign=sanitizeCampaign(data);saveCampaign();showCampaign()}});
 Object.assign(window.SamgukDodgeball.diagnostics,{startRound:reuse=>startRound(reuse),finishRound:win=>finishRound(win),makeProjectile:(...a)=>makeProjectile(...a),eliminateActor:(...a)=>eliminateActor(...a),makeRoster:()=>makeRoster(),applyMatchBuffs:()=>applyMatchBuffs(),scoreMatch:win=>scoreMatch(win),troopFactors,deployReserve,originalHeroIDs:[...v9BaseHeroIDs],MAP_NODES,updateHUD:()=>updateHUD(),draftSet:ids=>{battleDraftSquad=ids;renderBattleDraft()},renderCampaign:()=>renderCampaign(),reserves:()=>copyData(G.reserveState)});
 
@@ -2323,6 +2508,13 @@ Object.assign(window.SamgukDodgeball.diagnostics,{startRound:reuse=>startRound(r
 $('campaignBattleStart').onclick=()=>launchCampaignBattle();
 Object.assign(WORLD_DATA,{map:{...V9_DATA.map,nodes:MAP_NODES,coordinateSystem:'relative game diagram, not historical administrative boundaries'}});
 
+// Read-only input diagnostics for mobile regression checks.
+Object.assign(window.SamgukDodgeball,{controlVersion:'floating-1.0',inputState:()=>({
+  mode:'floating-left',active:floatingInput.pointerId!==null,pointerId:floatingInput.pointerId,
+  type:floatingInput.type,origin:{x:floatingInput.originX,y:floatingInput.originY},
+  thumb:{x:floatingInput.clientX,y:floatingInput.clientY},radius:floatingInput.max,
+  stick:{...stickInput},touchUsed:floatingInput.touchUsed,surface:movementSurfaceReady()
+})});
 fitStage();renderMenu();render();requestAnimationFrame(frame);
 })();
 
