@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#102b38">
-<title>삼국지 피구대전 — 천하도 v9.6 · 와이드 코트 / 컴팩트 HUD</title>
+<title>삼국지 피구대전 — 천하도 v9.7 · 하이앵글 코트 / 모드 먼저 선택</title>
 <style>
 :root{--gold:#efce87;--cream:#fff5dc;--muted:#adbbc0;--navy:#102632;--team:#3b9b7e;--teamLight:#78dcaf;--font:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}body{background:#091920;color:var(--cream);font-family:var(--font);display:grid;place-items:center;user-select:none;-webkit-user-select:none}button{font:inherit;border:0;cursor:pointer;color:inherit;touch-action:manipulation;user-select:none;-webkit-user-select:none}button:focus-visible{outline:3px solid #fff4ae;outline-offset:4px}button:active{filter:brightness(1.2)}button:disabled{cursor:default}#stage{position:absolute;width:1280px;height:720px;transform-origin:center;overflow:hidden;background:#213f46;box-shadow:0 0 0 1px #71877b,0 20px 80px #000b;touch-action:none}canvas{image-rendering:pixelated;display:block}.scene{position:absolute;inset:0;width:1280px;height:720px}.screen{position:absolute;inset:0;display:none}.screen.active{display:block}.menu-shade{position:absolute;inset:0;background:linear-gradient(90deg,#061e2cee 0%,#0c2936b8 36%,#0c2530e8 55%,#0b2430f5 100%)}.menu-top{position:absolute;left:40px;right:40px;top:24px;display:flex;align-items:center;justify-content:space-between}.eyebrow{font-size:12px;letter-spacing:3px;color:#a8cbd0;font-weight:850}.top-buttons{display:flex;gap:9px}.icon-btn{min-width:37px;height:34px;border:1px solid #809b9b6b;background:#142e3fd9;color:#eee0ba;border-radius:5px;font-size:15px;display:grid;place-items:center}.hero-copy{position:absolute;left:51px;top:96px;pointer-events:none}.edition{display:inline-block;padding:6px 13px;border:1px solid #d4b37370;background:#302d24a1;font-weight:800;color:#f4d191;letter-spacing:4px;font-size:13px}h1{font-weight:1000;font-size:78px;line-height:1.02;letter-spacing:-5px;margin:17px 0 12px;text-shadow:0 6px 0 #0c1823,3px 0 0 #132b35,-3px 0 0 #132b35}h1 strong{display:block;font-size:91px;color:#f4d392;letter-spacing:-6px;text-shadow:0 6px 0 #71563c,0 10px 0 #10242e}.hero-sub{font-size:16px;color:#c4d5d4;line-height:1.8;margin:20px 0 0}.menu-heroes{position:absolute;left:22px;top:341px;width:568px;height:253px;pointer-events:none}.hero-notes{position:absolute;left:50px;top:610px;display:flex;gap:16px;align-items:center;font-size:12px;color:#becfcf}.hero-notes span{border-left:2px solid #c7af6c;padding-left:10px;line-height:1.7}.select-panel{position:absolute;top:97px;right:44px;width:623px;bottom:37px;padding:22px 24px;background:linear-gradient(145deg,#1a3846ed,#0e2735f5);border:1px solid #8b9f9254;box-shadow:0 7px 0 #051b2673,inset 0 0 0 4px #abc1b509;display:flex;flex-direction:column;border-radius:7px}.select-heading{display:flex;justify-content:space-between;align-items:center}.select-heading h2{font-size:21px;letter-spacing:-.7px;margin:0}.select-heading span{font-size:11px;color:#aec3c7}.number{color:#e4c27c;letter-spacing:1px;margin-right:8px;font-size:13px}.team-tabs{display:flex;gap:10px;margin-top:17px}.team-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;background:#0c2330;border:1px solid #5e797b;color:#a5b9be;padding:10px 6px;border-radius:4px}.team-tab.selected{border-color:var(--teamLight);background:linear-gradient(100deg,#255948,#173847);box-shadow:0 3px 0 var(--team)}.team-seal{width:36px;height:42px;background:var(--team);border:1px solid #efd18b96;display:grid;place-items:center;font-family:serif;font-size:27px;font-weight:900;color:#fff0bd;clip-path:polygon(0 0,100% 0,100% 83%,50% 100%,0 83%)}.team-name{font-size:22px;font-weight:1000;text-align:left;line-height:1.1}.team-name small{font-size:10px;font-weight:500;display:block;margin-top:6px;color:#b3c5c6}.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 12px}.hero-card{position:relative;min-height:162px;border:1px solid #536e74;border-radius:4px;background:linear-gradient(155deg,#304e55,#182f3c);padding:0 0 9px;text-align:center;overflow:hidden}.hero-card.selected{border-color:#efd18c;box-shadow:0 0 0 1px #efd18c,inset 0 0 22px #87ad8940}.hero-card:after{content:"";position:absolute;left:8px;right:8px;top:98px;height:1px;background:#c8dcd222}.portrait{width:100%;height:110px}.hero-card b{display:block;font-size:17px}.hero-card .hero-meta{font-size:10px;color:#c4d7d5;display:block;margin-top:4px}.hp-label{position:absolute;top:8px;left:9px;font-size:9px;color:#c2decf;font-weight:800;background:#10232caa;padding:3px 5px}.ability-panel{border-left:3px solid #d9bc7c;background:#0b2430b0;padding:11px 13px;min-height:79px;font-size:12px;line-height:1.65;color:#bfd1cf}.ability-panel strong{color:#fff0ca;font-size:13px}.ability-panel .tag{font-size:10px;background:#315c50;color:#b7efcd;padding:2px 5px;margin-right:7px;font-weight:800}.ability-panel .tag.gold{background:#664f2d;color:#ffe2a0}.ability-panel .desc{margin-left:7px;color:#a1b9be;font-size:11px}.match-options{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:13px 0 11px;font-size:12px}.difficulty{display:flex;gap:4px;padding:3px;background:#091e2b;border-radius:5px}.difficulty button{background:transparent;color:#a0b4ba;padding:6px 14px;border-radius:3px;font-size:11px}.difficulty button.selected{background:#d6bd87;color:#21343a;font-weight:900}.start-btn{position:relative;height:52px;min-height:52px;border:2px solid #ffdc8c;background:linear-gradient(#eed39a,#dab26c);box-shadow:0 4px 0 #85653d,inset 0 0 0 2px #fbe3b05c;color:#26353a;font-size:20px;font-weight:1000;letter-spacing:-.5px;border-radius:4px}.start-btn span{position:absolute;right:18px;font-size:23px}.route-note{text-align:center;margin:12px 0 0;font-size:10px;color:#93adb4;letter-spacing:.1px}.menu-foot{position:absolute;left:42px;bottom:21px;font-size:9px;color:#78979f;letter-spacing:1px}
@@ -675,16 +675,103 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 #game .game-notice{top:590px;left:370px;width:540px;max-height:20px;height:20px;line-height:14px;padding:2px 9px;font-size:10px;opacity:.93;background:#102c38b8}
 #game .keyline{bottom:0;line-height:9px;font-size:7px}
 </style>
+<style>
+/* v9.7 · Mode-first landing screen in real viewport pixels. */
+.mode-hub[hidden]{display:none!important}
+.mode-hub{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:max(22px,env(safe-area-inset-top)) max(26px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(26px,env(safe-area-inset-left));background:radial-gradient(ellipse at 20% 25%,#25535177,transparent 55%),radial-gradient(ellipse at 95% 90%,#28354caa,transparent 50%),#0b202d;color:#f6ebce;overflow:hidden;touch-action:manipulation}
+.mode-hub:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(30deg,transparent 48%,#d5bd7655 49%,transparent 50%),linear-gradient(-30deg,transparent 48%,#d5bd7633 49%,transparent 50%);background-size:140px 80px;mask-image:linear-gradient(transparent,#0008)}
+.hub-shell{position:relative;width:min(1120px,100%);height:min(670px,100%);min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:clamp(16px,3vh,32px)}
+.hub-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.hub-brandline{color:#b9cdca;font-size:11px;letter-spacing:2.2px;font-weight:750}
+.hub-header h1{margin:9px 0 8px;font-size:clamp(28px,4.5vw,49px);letter-spacing:-2px;line-height:1.15;text-shadow:none;font-weight:950}
+.hub-header h1 em{font-style:normal;color:#f2d599}
+.hub-header p{margin:0;color:#bdcfc9;font-size:clamp(13px,1.5vw,17px)}
+.hub-actions{display:flex;gap:9px;align-self:flex-start}
+.hub-actions button{width:42px;height:42px;border-radius:12px;background:#25414b;border:1px solid #99b4a55c;font-size:18px}
+.hub-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,24px);min-height:0}
+.hub-card{--accent:#8bd7b4;--wash:#356357;min-height:0;display:flex;flex-direction:column;border:1px solid #8bd7b44d;border-radius:20px;overflow:hidden;background:linear-gradient(150deg,var(--wash),#152d3a 72%);box-shadow:0 12px 28px #06162144;position:relative}
+.hub-card.single{--accent:#aad7f3;--wash:#2b4c67;border-color:#aad7f34d}
+.hub-card.tour{--accent:#f0d19c;--wash:#665536;border-color:#f0d19c4d}
+.hub-card:focus-within{box-shadow:0 0 0 2px var(--accent),0 12px 28px #06162144}
+.mode-choice{display:flex;flex-direction:column;align-items:flex-start;flex:1;min-height:0;width:100%;background:transparent;padding:clamp(15px,2vw,26px);text-align:left;position:relative;gap:0;overflow:hidden}
+.mode-choice:hover{background:#ffffff09}
+.mode-choice:focus-visible{outline:2px solid var(--accent);outline-offset:-4px;border-radius:18px}
+.mode-art{width:100%;height:clamp(70px,17vh,140px);flex:0 1 140px;min-height:45px;display:grid;place-items:center;margin:0 0 14px;border-bottom:1px solid #dcebd017}
+.mode-art svg{width:100%;height:100%;max-width:265px;display:block}
+.mode-number{color:var(--accent);font-size:10px;font-weight:800;letter-spacing:1.6px;margin-top:5px}
+.mode-choice h2{font-size:clamp(24px,3vw,34px);font-weight:900;letter-spacing:-1px;margin:9px 0 11px;line-height:1.18;white-space:nowrap}
+.mode-choice p{font-size:clamp(12px,1.4vw,15px);line-height:1.7;margin:0 0 13px;color:#d0dcd4;word-break:keep-all}
+.mode-tags{font-size:11px;line-height:1.5;color:var(--accent);font-weight:650}
+.mode-call{display:flex;justify-content:space-between;align-items:center;width:100%;border-top:1px solid #afc9b731;padding-top:14px;margin-top:auto;font-size:15px;font-weight:800;color:var(--accent)}
+.mode-call b{font-size:23px;line-height:1}
+.hub-resume{flex:none;border:1px solid #9fc4a849;color:#def0d7;background:#1b423b;margin:0 16px 14px;padding:10px 8px;border-radius:9px;font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hub-resume[hidden]{display:none}
+.hub-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;color:#9db6b7;font-size:12px;line-height:1.5}
+.hub-footer button{padding:9px 15px;border-radius:9px;border:1px solid #809c994d;background:#1b3542;font-size:12px;white-space:nowrap}
+.mode-hub-open .rotate-note,.mode-hub-open .device-note{display:none!important}
+.v97-mode-crumb{display:flex;align-items:center;gap:11px;min-height:24px}
+.v97-mode-crumb button{border:1px solid #829e9f75;border-radius:6px;background:#193b48;color:#e9d7aa;padding:4px 9px;font-size:12px;font-weight:800}
+#menu .v97-mode-crumb span{font-size:12px;letter-spacing:0;color:#c1d9ce}
+.v97-mode-field{min-width:0;display:flex;flex-direction:column;gap:5px;font-size:13px;color:#c2d2cf}
+#modeSelect[hidden]{display:none!important}
+.v97-mode-value{display:flex;align-items:center;min-height:38px;padding:6px 12px;border:1px solid #93b09b77;border-radius:6px;background:#244338;color:#f7e4b8;font-size:14px;line-height:1.35;white-space:nowrap}
+#setupModal[data-layout="compact"] .v97-mode-field{gap:2px;font-size:11px}
+#setupModal[data-layout="compact"] .v97-mode-value{min-height:27px;font-size:12px;padding:4px 8px}
+#setupModal[data-tiny="true"] .v97-mode-value{min-height:24px;font-size:11px}
+@media (max-height:480px) and (orientation:landscape){
+ .mode-hub{padding:max(12px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left))}
+ .hub-shell{gap:12px}.hub-header h1{font-size:29px;line-height:1.1;margin:5px 0}.hub-brandline{font-size:9px}.hub-header p{font-size:12px}
+ .hub-actions button{width:34px;height:34px;font-size:16px;border-radius:9px}
+ .hub-card{border-radius:13px}.hub-cards{gap:13px}.mode-choice{padding:12px 15px}
+ .mode-art{height:56px;flex:1 1 60px;min-height:30px;margin-bottom:5px}.mode-number{font-size:8px;margin:0;letter-spacing:1px}
+ .mode-choice h2{font-size:23px;margin:5px 0 7px}.mode-choice p{font-size:11px;line-height:1.5;margin-bottom:7px}
+ .mode-tags{font-size:9px}.mode-call{font-size:12px;padding-top:7px}.mode-call b{font-size:19px}
+ .hub-footer{font-size:10px}.hub-footer button{padding:6px 10px;font-size:11px}
+ .hub-resume{font-size:11px;margin:0 10px 9px;padding:7px}
+}
+@media (max-height:350px) and (orientation:landscape){
+ .hub-shell{gap:8px}.hub-header h1{font-size:25px}.hub-header p{font-size:11px}.hub-brandline{font-size:8px}
+ .mode-choice{padding:9px 11px}.mode-choice h2{font-size:21px;margin:3px 0 5px}.mode-choice p{font-size:10px;line-height:1.45;margin-bottom:5px}
+ .mode-art{min-height:22px;height:37px;margin-bottom:3px}.mode-number{font-size:8px}.mode-tags{display:none}
+ .mode-call{padding-top:5px;font-size:11px}.hub-footer>span{max-width:70%;font-size:9px}.hub-resume{padding:5px;font-size:10px;margin-bottom:6px}
+}
+@media (orientation:portrait){
+ .mode-hub{padding:max(20px,env(safe-area-inset-top)) 18px max(15px,env(safe-area-inset-bottom))}
+ .hub-shell{height:min(790px,100%);gap:17px}.hub-header{gap:8px}.hub-header h1{font-size:29px;letter-spacing:-1.5px;margin:7px 0}.hub-brandline{font-size:9px;letter-spacing:1px}.hub-header p{font-size:13px}
+ .hub-actions{gap:5px}.hub-actions button{width:30px;height:30px;font-size:15px;border-radius:8px}
+ .hub-cards{grid-template-columns:1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:13px}
+ .hub-card{border-radius:16px}.mode-choice{display:grid;grid-template-columns:86px minmax(0,1fr);grid-template-rows:auto auto 1fr auto;padding:15px;column-gap:13px}
+ .mode-art{grid-column:1;grid-row:1 / 5;min-height:0;align-self:center;height:105px;margin:0;border:0}
+ .mode-number{grid-column:2;font-size:8px;margin:0}.mode-choice h2{grid-column:2;font-size:24px;margin:4px 0 6px}
+ .mode-choice p{grid-column:2;font-size:11px;line-height:1.6;margin:0 0 6px}.mode-tags{display:none}
+ .mode-call{grid-column:2;font-size:12px;padding-top:7px;margin:0}.mode-call b{font-size:18px}
+ .hub-resume{font-size:11px;margin:0 12px 10px;padding:7px}.hub-footer{font-size:10px;gap:8px}.hub-footer>span{max-width:65%}.hub-footer button{font-size:10px;padding:7px 9px}
+}
+@media (max-width:360px) and (orientation:portrait),(max-height:650px) and (orientation:portrait){
+ .mode-hub{padding:13px}.hub-shell{gap:12px}.hub-header h1{font-size:24px;letter-spacing:-1px}.hub-header p{font-size:12px}.hub-brandline{font-size:8px}
+ .hub-actions button{width:28px;height:28px}.hub-header{gap:5px}.hub-cards{gap:10px}.mode-choice{padding:10px;grid-template-columns:62px minmax(0,1fr);column-gap:10px}
+ .mode-art{height:76px}.mode-choice h2{font-size:21px;margin:3px 0 4px}.mode-choice p{font-size:10px;line-height:1.45;margin:0 0 5px}.mode-call{font-size:11px;padding-top:4px}.mode-number{font-size:7px}
+ .hub-resume{font-size:10px;padding:5px;margin:0 10px 7px}.hub-footer>span{font-size:9px}.hub-footer button{padding:6px 8px}
+}
+
+/* Saved-game shortcut stays outside mode cards: no card height is lost on phones. */
+.hub-footer-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.hub-footer .hub-resume{margin:0;padding:9px 13px;font-size:12px;background:#1b423b;color:#def0d7;border-color:#9fc4a869}
+@media(max-width:900px){#hubResumeInfo{display:none}.hub-footer .hub-resume{padding:7px 10px;font-size:11px}.hub-footer-actions{gap:6px}}
+@media(orientation:portrait){.hub-footer{flex-direction:column;gap:8px}.hub-footer>span{max-width:100%;text-align:center;font-size:10px}.hub-footer-actions{width:100%;justify-content:center;gap:10px}.hub-footer .hub-resume{padding:7px 12px;font-size:11px}}
+@media(max-height:350px) and (orientation:landscape){.hub-footer .hub-resume{padding:6px 8px;font-size:10px}.hub-footer-actions{gap:5px}.hub-footer>span{font-size:9px;flex:1;min-width:0}}
+
+</style>
 </head>
-<body>
+<body class="mode-hub-open">
 <main id="stage" aria-label="삼국지 피구대전 가로형 게임">
 <canvas id="scene" class="scene" width="2560" height="1440" aria-label="가로형 피구 코트. 홈팀은 왼쪽, 어웨이팀은 오른쪽입니다."></canvas>
 <section id="menu" class="screen active" aria-label="진영과 장수 선택 화면">
 <div class="menu-shade"></div>
-<header class="menu-top"><div class="menu-brand"><span>THREE KINGDOMS · DODGEBALL</span><h1>삼국지 <strong>피구대전</strong></h1></div><div class="top-buttons"><span class="wallet-pill">軍功 <b id="menuWallet">0</b></span><button id="troopGuideBtn">병종·지역 도감</button><button id="resumeConquest" class="menu-utility" hidden>점령전 계속</button><button id="menuShop" class="menu-utility">군공 상점</button><button id="saveMenu" class="menu-utility">기록</button><button class="icon-btn sound-toggle" aria-label="효과음 설정">♪</button><button class="icon-btn fullscreen-toggle" aria-label="전체 화면">⛶</button><button class="icon-btn" id="helpMenu" aria-label="게임 방법">?</button></div></header>
+<header class="menu-top"><div class="menu-brand"><div class="v97-mode-crumb"><button type="button" id="backToModes">← 게임 모드</button><span id="entryModeName">게임 모드 선택</span></div><h1>삼국지 <strong>피구대전</strong></h1></div><div class="top-buttons"><span class="wallet-pill">軍功 <b id="menuWallet">0</b></span><button id="troopGuideBtn">병종·지역 도감</button><button id="resumeConquest" class="menu-utility" hidden>점령전 계속</button><button id="menuShop" class="menu-utility">군공 상점</button><button id="saveMenu" class="menu-utility">기록</button><button class="icon-btn sound-toggle" aria-label="효과음 설정">♪</button><button class="icon-btn fullscreen-toggle" aria-label="전체 화면">⛶</button><button class="icon-btn" id="helpMenu" aria-label="게임 방법">?</button></div></header>
 <aside class="nation-browser"><div class="browser-heading"><h2>진영 선택</h2><span id="factionCount">17개 진영</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="factionSearch" type="search" placeholder="진영 · 장수 검색" aria-label="진영 또는 장수 검색" autocomplete="off" maxlength="40"></label><div id="teamTabs" class="nation-list" role="group" aria-label="확장형 진영 목록"></div><p class="browser-foot">목록을 스크롤해 다른 진영을 찾아보세요.</p></aside>
 <section class="lineup-preview"><header class="lineup-heading"><div><span class="lineup-kicker" id="lineupKicker">SHU</span><h2 id="lineupName">촉</h2></div><p id="lineupMotto">뜨거운 의리</p><span class="lineup-seal" id="lineupSeal">蜀</span></header><div class="lineup-heroes" id="lineupHeroes"></div><footer class="lineup-footer"><div><b id="lineupCities"></b><span id="loadoutNote">장수를 선택한 뒤 경기 설정을 열어주세요.</span></div><button id="configureBtn" class="start-btn">경기 설정 <span>→</span></button></footer></section>
-<div class="menu-version">천하도 9.6 · 와이드 코트 / 컴팩트 HUD · 유동형 조이스틱</div>
+<div class="menu-version">천하도 9.7 · 하이앵글 코트 / 모드 먼저 선택 · 유동형 조이스틱</div>
 </section>
 <section id="game" class="screen" aria-label="피구 경기 조작 화면">
 <div class="hud-team ally" id="allyTeam"><div class="banner" id="allyBanner">蜀</div><div class="hud-roster"><div class="hud-heading"><span id="allyName">촉 · 우리</span><small>CLICK TO SWITCH</small></div><div class="roster-cards" id="allyRoster"></div></div></div>
@@ -700,7 +787,7 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <button id="dodgeBtn" class="action"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M2 15h12M0 23h10M5 31h9" stroke="#d3f2f5" stroke-width="2"/><circle cx="26" cy="7" r="5" fill="#c8f4f5"/><path d="M22 14l-7 8 7 6-5 9M23 16l7 8h8M21 27l10 9" fill="none" stroke="#c8f4f5" stroke-width="5" stroke-linecap="round"/></svg><b>회피</b><small>L / SHIFT</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="skillBtn" class="action skill"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M30 2L10 21l9 2-6 15 20-20-11-1z" fill="#fff1aa" stroke="#d2fff0" stroke-width="1.5"/><path d="M7 9l-4 9M35 26l-4 7" stroke="#a6f9df" stroke-width="2"/></svg><b>특징 기술</b><small>E</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="switchBtn" class="action switch"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="15" r="6" fill="#a7d9df"/><circle cx="30" cy="23" r="6" fill="#d4eded"/><path d="M1 33v-7q9-9 19 0v7M20 38v-5q10-9 19 0v5" fill="#a7d9df"/><path d="M19 5h13l-4-4M33 5l-4 5" fill="none" stroke="#f2d99b" stroke-width="2.5"/></svg><b>교대 / 패스</b><small>Q · 1 / 2 / 3</small></button>
-</div><div class="keyline">v9.6 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
+</div><div class="keyline">v9.7 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
 </section>
 <div class="modal setup-modal" id="setupModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="setupTitle" aria-describedby="setupHint">
 <div class="modal-card setup-card">
@@ -712,14 +799,14 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <div class="v92-side-field"><span id="sideLabel">내 출전 위치</span><select id="sideSelect" hidden aria-hidden="true" tabindex="-1"><option value="home">HOME · 왼쪽</option><option value="away">AWAY · 오른쪽</option></select><div id="sideButtons" role="group" aria-labelledby="sideLabel"><button type="button" data-side="home" aria-pressed="true">HOME<small>왼쪽</small></button><button type="button" data-side="away" aria-pressed="false">AWAY<small>오른쪽</small></button></div></div>
 <label for="rivalSelect">첫 경기 상대<select id="rivalSelect"></select></label>
 <label for="venueSelect">홈 구장<select id="venueSelect"></select></label>
-<label for="modeSelect">대전 방식<select id="modeSelect"><option value="tour">군웅 제패 · 16경기</option><option value="single">한 경기</option><option value="conquest">점령전 · 51개 거점</option></select></label>
+<div class="v97-mode-field"><span>선택한 게임 모드</span><select id="modeSelect" hidden aria-hidden="true" tabindex="-1"><option value="tour">군웅 제패 · 16경기</option><option value="single">평가전 · 한 경기</option><option value="conquest">점령전 · 51개 거점</option></select><b id="setupModeValue" class="v97-mode-value">군웅 제패전</b></div>
 </div>
 <div class="match-options"><span>경기 난이도</span><div class="difficulty" id="difficulty" role="group" aria-label="경기 난이도"><button data-level="easy">쉬움</button><button data-level="normal" class="selected">보통</button><button data-level="hard">어려움</button></div></div>
 <div class="match-summary" id="matchSummary" aria-live="polite"></div><p id="routeNote" class="route-note"></p>
 </section></div>
 <footer class="setup-footer"><button class="setup-back" id="setupBack">← 진영 다시 선택</button><button id="startBtn" class="start-btn">군웅 제패전 시작<span>→</span></button></footer>
 </div></div>
-<div class="modal" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="modal-card wide"><div class="modal-eyebrow">HOW TO PLAY</div><h2 id="helpTitle">잡고, 피하고, 한 방 더!</h2><p><b>홈팀은 왼쪽, 어웨이팀은 오른쪽</b>입니다. 진영 목록에서 선택한 뒤 경기 설정 버튼을 누르세요. 상대 출전 인원을 모두 아웃시키면 승리! 점령전 대도시에서는 수비 지원병이 추가될 수 있어요.</p><div class="help-grid"><div class="help-item"><b>① 달리며 공을 주워요</b><b>왼쪽 화면 어디든 터치하고 엄지를 밀어 이동!</b><br>터치한 곳에 조이스틱이 생기고, 멀리 밀면 기준점도 따라와요. 다른 손가락으로 공격 버튼을 동시에 누르세요.<br>장수 카드·버튼은 원래 기능대로 작동해요. PC는 <kbd>WASD</kbd> / <kbd>방향키</kbd> 또는 조이스틱을 사용하세요.<br>들고 있을 때 공은 회전하지 않아요. 투구·바닥 이동 방향에 맞춰 공 무늬가 회전해요.<br>바닥의 공은 가까이 가면 자동으로 주워요.<br>벽에 닿은 공은 회색 데드볼이 됩니다. 데드볼은 피해·경직이 없고, 약 0.48초 후 다시 주울 수 있어요.</div><div class="help-item"><b>② 공을 갖고 있을 때 공격!</b><kbd>J</kbd> 일반 투구 · <kbd>E</kbd> 장수별 특징 기술<br>상대를 누르면 그 장수를 조준해요.<br>E 기술은 기 12를 소모하고, 사용한 장수는 다음 투구 1회 동안 E를 쓸 수 없어요. J나 R로 한 번 공격하면 다시 사용할 수 있어요. 대기·잡기·패스로는 제한이 풀리지 않아요.<br>기 100에서 J는 자동 필살기, E는 특징 기술을 사용해요.</div><div class="help-item"><b>③ 체력을 지켜요</b><kbd>K</kbd> 공이 닿기 직전에 잡기 · <kbd>L</kbd> 빠른 회피<br>공을 맞으면 체력이 줄고 잠깐 보호받아요.<br>조운의 시간차 필살기는 연속 명중할 수 있어요.<br>체력 0은 아웃! 체력이 남아 있으면 계속 싸워요.</div><div class="help-item"><b>④ 장수마다 모이는 기</b><kbd>R</kbd> 기 100% + 공 보유 시 필살기 발동<br>공 획득 직후 1초, 잡기·공격 결과로 기가 모여요. 기다리기만 해서는 계속 충전되지 않아요.<br>필살기는 잡기 시작 직후에 정확히 맞춰야 잡혀요.<br>잡아도 원래 피해의 8%가 충격으로 남아요(최대 체력의 5% 한도). 보호막이 있으면 먼저 흡수해요.<br>강한 공을 받을수록 발밑 흙먼지가 커져요.</div><div class="help-item"><b>⑤ 교대와 패스로 빈틈을!</b><kbd>Q</kbd> / <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> / 위쪽 장수 카드<br>우리 팀이 공을 들고 있으면 선택한 장수에게 패스!<br>동료는 자동으로 움직이고 공을 줍고 피합니다.</div><div class="help-item"><b>⑥ 점령전 · 제패전 · 상점</b>점령전은 인접 지역 공격, 전체턴마다 공격·방어 각 1회. 공격 승리 시만 점령하며 공격 실패 시 영토는 유지해요.<br>제패전은 다른 16개 진영과 차례로 대결해요. 매 경기 홈·어웨이가 바뀌며 체력은 모두 회복돼요. 경기 후 남은 체력으로 군공을 얻고, 상점에서 다음 1~2경기 아이템을 준비해요.<br><kbd>P</kbd> 일시정지 · <kbd>F</kbd> 전체 화면</div></div><button class="primary-btn" id="helpClose">좋아요, 출전 준비!</button></div></div>
+<div class="modal" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="modal-card wide"><div class="modal-eyebrow">HOW TO PLAY</div><h2 id="helpTitle">잡고, 피하고, 한 방 더!</h2><p><b>홈팀은 왼쪽, 어웨이팀은 오른쪽</b>입니다. 첫 화면에서 점령전·평가전·군웅 제패전을 고른 뒤 진영과 장수를 선택하세요. 상대 출전 인원을 모두 아웃시키면 승리! 점령전 대도시에서는 수비 지원병이 추가될 수 있어요.</p><div class="help-grid"><div class="help-item"><b>① 달리며 공을 주워요</b><b>왼쪽 화면 어디든 터치하고 엄지를 밀어 이동!</b><br>터치한 곳에 조이스틱이 생기고, 멀리 밀면 기준점도 따라와요. 다른 손가락으로 공격 버튼을 동시에 누르세요.<br>장수 카드·버튼은 원래 기능대로 작동해요. PC는 <kbd>WASD</kbd> / <kbd>방향키</kbd> 또는 조이스틱을 사용하세요.<br>들고 있을 때 공은 회전하지 않아요. 투구·바닥 이동 방향에 맞춰 공 무늬가 회전해요.<br>바닥의 공은 가까이 가면 자동으로 주워요.<br>벽에 닿은 공은 회색 데드볼이 됩니다. 데드볼은 피해·경직이 없고, 약 0.48초 후 다시 주울 수 있어요.</div><div class="help-item"><b>② 공을 갖고 있을 때 공격!</b><kbd>J</kbd> 일반 투구 · <kbd>E</kbd> 장수별 특징 기술<br>상대를 누르면 그 장수를 조준해요.<br>E 기술은 기 12를 소모하고, 사용한 장수는 다음 투구 1회 동안 E를 쓸 수 없어요. J나 R로 한 번 공격하면 다시 사용할 수 있어요. 대기·잡기·패스로는 제한이 풀리지 않아요.<br>기 100에서 J는 자동 필살기, E는 특징 기술을 사용해요.</div><div class="help-item"><b>③ 체력을 지켜요</b><kbd>K</kbd> 공이 닿기 직전에 잡기 · <kbd>L</kbd> 빠른 회피<br>공을 맞으면 체력이 줄고 잠깐 보호받아요.<br>조운의 시간차 필살기는 연속 명중할 수 있어요.<br>체력 0은 아웃! 체력이 남아 있으면 계속 싸워요.</div><div class="help-item"><b>④ 장수마다 모이는 기</b><kbd>R</kbd> 기 100% + 공 보유 시 필살기 발동<br>공 획득 직후 1초, 잡기·공격 결과로 기가 모여요. 기다리기만 해서는 계속 충전되지 않아요.<br>필살기는 잡기 시작 직후에 정확히 맞춰야 잡혀요.<br>잡아도 원래 피해의 8%가 충격으로 남아요(최대 체력의 5% 한도). 보호막이 있으면 먼저 흡수해요.<br>강한 공을 받을수록 발밑 흙먼지가 커져요.</div><div class="help-item"><b>⑤ 교대와 패스로 빈틈을!</b><kbd>Q</kbd> / <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> / 위쪽 장수 카드<br>우리 팀이 공을 들고 있으면 선택한 장수에게 패스!<br>동료는 자동으로 움직이고 공을 줍고 피합니다.</div><div class="help-item"><b>⑥ 점령전 · 제패전 · 상점</b>점령전은 인접 지역 공격, 전체턴마다 공격·방어 각 1회. 공격 승리 시만 점령하며 공격 실패 시 영토는 유지해요.<br>제패전은 다른 16개 진영과 차례로 대결해요. 매 경기 홈·어웨이가 바뀌며 체력은 모두 회복돼요. 경기 후 남은 체력으로 군공을 얻고, 상점에서 다음 1~2경기 아이템을 준비해요.<br><kbd>P</kbd> 일시정지 · <kbd>F</kbd> 전체 화면</div></div><button class="primary-btn" id="helpClose">좋아요, 출전 준비!</button></div></div>
 <div class="modal" id="pauseModal" role="dialog" aria-modal="true" aria-labelledby="pauseTitle"><div class="modal-card"><div class="modal-eyebrow">TIME OUT</div><h2 id="pauseTitle">잠깐, 작전 타임!</h2><p>경기가 일시정지되었습니다.<br>세 장수의 호흡을 맞춰 다시 출전하세요.</p><button class="primary-btn" id="resumeBtn">경기 계속하기</button><button class="secondary-btn" id="helpGame">조작 방법 보기</button><button class="secondary-btn" id="restartBtn">현재 경기 다시 시작</button><button class="secondary-btn" id="homeBtn">팀 선택으로 돌아가기</button></div></div>
 <div class="modal" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="modal-card result-card"><section class="result-left"><div class="modal-eyebrow" id="resultEyebrow">ROUND CLEAR</div><h2 id="resultTitle">멋진 승리!</h2><canvas class="result-art" id="resultArt" width="483" height="160"></canvas><div class="result-badge" id="resultBadge"></div><p id="resultBody"></p><div class="result-stats"><div><b id="statDamage">0</b><span>입힌 피해</span></div><div><b id="statCatch">0</b><span>잡기 성공</span></div><div><b id="statUlt">0</b><span>필살기</span></div></div></section><section class="result-right"><span class="setup-eyebrow">HP → MERIT</span><h3>남은 체력이 군공으로!</h3><div id="hpScoreRows"></div><div id="scoreBreakdown"></div><div class="result-reward"><span>이번 경기 획득</span><strong id="earnedMerit">+0</strong><small>군공</small></div><p class="score-formula">장수별 남은 체력 비율 × 100(각각 버림) 후 합산<br>경기 완료 +60 · 승리 +100</p><button class="primary-btn" id="nextBtn">군공 상점 · 다음 경기 →</button><button class="secondary-btn" id="resultHome">진영 선택으로</button></section></div></div><div class="modal shop-modal" id="shopModal" role="dialog" aria-modal="true" aria-labelledby="shopTitle" aria-hidden="true"><div class="shop-card">
 <header class="shop-header"><div><span class="setup-eyebrow">ARMORY & ARCHIVES</span><h2 id="shopTitle">군공 보급소</h2><p>아이템은 아군 3명에게 적용 · 서로 다른 종류 최대 3개 · 1~2경기 후 소멸</p></div><div class="shop-balance">보유 군공 <strong id="shopWallet">0</strong><button id="shopClose" aria-label="상점 닫기">×</button></div></header>
@@ -750,14 +837,41 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <noscript><div class="fallback">이 게임은 JavaScript가 켜진 브라우저에서 실행할 수 있습니다.</div></noscript>
 </main>
+<section id="modeHub" class="mode-hub" aria-labelledby="modeHubTitle">
+ <div class="hub-shell">
+  <header class="hub-header"><div><div class="hub-brandline">THREE KINGDOMS · DODGEBALL <span>9.7</span></div><h1 id="modeHubTitle">삼국지 <em>피구대전</em></h1><p>게임 모드를 먼저 선택하세요.</p></div><div class="hub-actions"><button type="button" class="sound-toggle" aria-label="효과음 설정">♪</button><button type="button" class="fullscreen-toggle" aria-label="전체 화면">⛶</button></div></header>
+  <div class="hub-cards" role="group" aria-label="게임 모드 선택">
+   <article class="hub-card conquest">
+    <button type="button" class="mode-choice" data-entry-mode="conquest" aria-label="점령전 선택 후 진영 고르기">
+     <div class="mode-art" aria-hidden="true"><svg viewBox="0 0 260 140" fill="none"><path d="m23 84 26-48 47 7 26-23 41 20 32-4 39 30-24 53-51 7-24-14-52 12-44-19Z" fill="#76b39b15" stroke="#97c2a866" stroke-width="2"/><path d="m55 83 46-25 37 34 51-21m-88-13 48-12 40 25M55 83l23 23 60-14" stroke="#b3d5b58c" stroke-width="2" stroke-dasharray="4 6"/><circle cx="55" cy="83" r="9" fill="#1c4b42" stroke="#aae4ba" stroke-width="2"/><circle cx="101" cy="58" r="11" fill="#1c4b42" stroke="#c9e8be" stroke-width="2"/><circle cx="138" cy="92" r="9" fill="#365c59" stroke="#abd3b0" stroke-width="2"/><circle cx="189" cy="71" r="10" fill="#9b8150" stroke="#f4d58f" stroke-width="2"/><circle cx="78" cy="106" r="5" fill="#8fbaa4"/><path d="M147 51V14m0 1h33l-7 10 7 10h-33" stroke="#f2d899" stroke-width="2.5" fill="#c7a958"/><path d="m147 15 4-5 4 5" stroke="#f2d899" stroke-width="2"/></svg></div>
+     <span class="mode-number">01 · CONQUEST</span><h2>점령전</h2><p>지도에서 인접 도시를 공격하고<br>장수를 영입해 천하를 통일하세요.</p><span class="mode-tags">51개 거점 · 영입 · 턴제 진행</span><span class="mode-call">진영 선택 <b aria-hidden="true">→</b></span>
+    </button>
+   </article>
+   <article class="hub-card single">
+    <button type="button" class="mode-choice" data-entry-mode="single" aria-label="평가전 선택 후 진영 고르기">
+     <div class="mode-art" aria-hidden="true"><svg viewBox="0 0 260 140" fill="none"><rect x="19" y="19" width="222" height="106" rx="8" fill="#71a5c91a" stroke="#acd4e99c" stroke-width="2"/><path d="M130 20v104" stroke="#cee5eb99" stroke-width="2"/><ellipse cx="130" cy="72" rx="26" ry="23" stroke="#cee5eb66" stroke-width="2"/><g fill="#addfda" stroke="#e3f4e5" stroke-width="2"><circle cx="68" cy="44" r="10"/><circle cx="49" cy="85" r="10"/><circle cx="93" cy="102" r="10"/></g><g fill="#a8bff0" stroke="#e0e8ff" stroke-width="2"><circle cx="198" cy="46" r="10"/><circle cx="210" cy="88" r="10"/><circle cx="170" cy="102" r="10"/></g><path d="m93 51 32 4m-26-14 24 8" stroke="#f0d097" stroke-width="3" stroke-linecap="round"/><circle cx="146" cy="58" r="15" fill="#d7a451" stroke="#ffe7a6" stroke-width="2"/><path d="M132 58h28m-16-14q-9 14 2 28" stroke="#fff0be" stroke-width="2"/></svg></div>
+     <span class="mode-number">02 · EXHIBITION</span><h2>평가전</h2><p>상대와 구장을 자유롭게 고르고<br>가볍게 한 경기를 즐기세요.</p><span class="mode-tags">한 경기 · 홈 / 어웨이 선택</span><span class="mode-call">진영 선택 <b aria-hidden="true">→</b></span>
+    </button>
+   </article>
+   <article class="hub-card tour">
+    <button type="button" class="mode-choice" data-entry-mode="tour" aria-label="군웅 제패전 선택 후 진영 고르기">
+     <div class="mode-art" aria-hidden="true"><svg viewBox="0 0 260 140" fill="none"><path d="m74 36 8 42q47 40 96 0l8-42-35 15-21-33-22 33Z" fill="#cfaa5333" stroke="#f3d595" stroke-width="3" stroke-linejoin="round"/><path d="M94 91h72M99 101h62" stroke="#e3c583" stroke-width="4" stroke-linecap="round"/><circle cx="130" cy="66" r="9" fill="#f1d699"/><path d="M47 56q-28 38 9 67m-15-55-12-9m10 28-13-1m18 18-12 5m18 9-9 9M213 56q28 38-9 67m15-55 12-9m-10 28 13-1m-18 18 12 5m-18 9 9 9" stroke="#d6b96d" stroke-width="3" stroke-linecap="round"/><path d="m76 118 16 7h77l15-7" stroke="#b79851" stroke-width="2"/><circle cx="74" cy="33" r="4" fill="#f1d699"/><circle cx="186" cy="33" r="4" fill="#f1d699"/><circle cx="130" cy="15" r="4" fill="#f1d699"/></svg></div>
+     <span class="mode-number">03 · TOURNAMENT</span><h2>군웅 제패전</h2><p>다른 진영과 차례로 대결하며<br>선수와 아이템을 준비하세요.</p><span class="mode-tags">16경기 · 선수 교체 · 군공 상점</span><span class="mode-call">진영 선택 <b aria-hidden="true">→</b></span>
+    </button>
+   </article>
+  </div>
+  <footer class="hub-footer"><span>모드 선택 → 진영·장수 선택 → 출전<br>17개 진영 · 99명 장수 · 가로 화면 권장</span><div class="hub-footer-actions"><button id="hubResume" type="button" class="hub-resume" hidden><span id="hubResumeLabel">점령전 계속</span> <span id="hubResumeInfo"></span></button><button type="button" id="hubImport">기록 불러오기</button></div></footer>
+ </div>
+</section>
+
 <div class="rotate-note"><strong>휴대폰을 가로로 돌려주세요 ↻</strong>넓은 코트에서 장수들의 액션을 즐길 수 있어요.<br>아래 화면은 가로 게임의 축소 화면입니다.</div><div class="device-note">가로형 3대3 피구 · 체력이 0이 되면 아웃 · PC 키보드 / 모바일 터치 지원</div>
 <script>
 'use strict';
 (()=>{
 const $=id=>document.getElementById(id), W=1280,H=720, TAU=Math.PI*2;
-// v9.6: one shared geometry for floor drawing, movement bounds, ball walls and pointer hits.
-// Character/ball artwork is NOT vertically stretched; it keeps the original clean proportions.
-const COURT_VIEW=Object.freeze({backgroundLift:102,floorTop:206,floorBottom:614,lineTop:217,lineBottom:604,moveTop:284,moveBottom:565,wallTop:174,wallBottom:603,hudHeight:64});
+// v9.7: high oblique court view. Ground has near-parallel edges and much less perspective compression.
+// Artwork uses uniform scale (no vertical stretching); collision / pointer coordinates remain in one space.
+const COURT_VIEW=Object.freeze({angle:'high-oblique',backgroundLift:172,floorTop:136,floorBottom:614,lineTop:148,lineBottom:604,moveTop:246,moveBottom:565,wallTop:136,wallBottom:603,hudHeight:64,actorScale:1.36,groundRatio:.74});
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),lerp=(a,b,t)=>a+(b-a)*t,rand=(a,b)=>a+Math.random()*(b-a),distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
 const reduced=!!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 const TEAMS={
@@ -851,6 +965,7 @@ const WORLD_DATA={schemaVersion:WORLD_SCHEMA_VERSION,scenario:'cross-era-exhibit
 function createConquestSeed(){return {schemaVersion:WORLD_SCHEMA_VERSION,mode:'conquest',ready:false,turn:0,owners:Object.fromEntries(Object.values(CITY_CATALOG).filter(c=>c.conquestEligible).map(c=>[c.id,c.defaultOwner])),routesVerified:false};}
 
 let entrySide='home',firstOpponent='wei',selectedVenue='chengdu',matchMode='tour';
+let entryScreen='modes';
 Object.assign(HEROES.cao,{skill:'군령 유도구',skillDesc:'유도 + 명중 상대 둔화',ult:'패왕 군령구',ultDesc:'서로 다른 상대를 쫓는 3개의 군령구'});
 Object.assign(HEROES.xia,{skill:'독안 월아구',skillDesc:'초승달 궤적 · 빠른 관통',ult:'창천 월아구',ultDesc:'3.7배 피해 · 초고속 다중 관통'});
 Object.assign(HEROES.xu,{skill:'호왕 철벽구',skillDesc:'커다란 공 + 강한 밀어내기',ult:'호왕 대포구',ultDesc:'4.2배 피해 · 주변 지진 충격파'});
@@ -1222,12 +1337,12 @@ function drawWideFloor(c,A,host,guest){
  const base=A.base||A.theme,river=base==='river',plains=base==='plains';
  rect(c,0,top-17,W,19,gradient(c,0,top-17,0,top+2,'#dbc79e','#78877f'));
  line(c,0,top-16,W,top-16,'#f2dfb2',3);
- poly(c,[[39,top],[1241,top],[W,bottom],[0,bottom]],gradient(c,0,top,0,bottom,...A.floor));
- c.save();c.beginPath();c.moveTo(39,top);c.lineTo(1241,top);c.lineTo(W,bottom);c.lineTo(0,bottom);c.closePath();c.clip();
- // Low-angle projected paving: close rows spread out, far rows stay fine.
- const rows=11,cols=18;
- const yAt=t=>top+(bottom-top)*Math.pow(t,1.35);
- const xAt=(j,y)=>{const depth=(y-top)/(bottom-top),inset=39*(1-depth);return inset+(W-2*inset)*j/cols;};
+ poly(c,[[12,top],[1268,top],[W,bottom],[0,bottom]],gradient(c,0,top,0,bottom,...A.floor));
+ c.save();c.beginPath();c.moveTo(12,top);c.lineTo(1268,top);c.lineTo(W,bottom);c.lineTo(0,bottom);c.closePath();c.clip();
+ // High viewpoint: tile depth is near-uniform and side edges are almost parallel.
+ const rows=9,cols=18;
+ const yAt=t=>top+(bottom-top)*Math.pow(t,1.045);
+ const xAt=(j,y)=>{const depth=(y-top)/(bottom-top),inset=12*(1-depth);return inset+(W-2*inset)*j/cols;};
  for(let r=0;r<rows;r++){
   const y0=yAt(r/rows),y1=yAt((r+1)/rows);
   for(let j=0;j<cols;j++){
@@ -1240,23 +1355,23 @@ function drawWideFloor(c,A,host,guest){
    else if(plains&&((r+j)%4===0))path(c,`M${x0+8} ${y0+11}q14-3 28 0`,null,'#dacf9b38',1);
   }
  }
- // Clear, restrained court markings; flatter circles convey the lower camera angle.
+ // High-angle court markings: a rounder centre emblem and wider front-to-back spacing.
  const rear=COURT_VIEW.lineTop,front=COURT_VIEW.lineBottom;
- path(c,`M63 ${rear}H1217L1260 ${front}H20Z`,null,'#a49772',7);
- path(c,`M63 ${rear}H1217L1260 ${front}H20Z`,null,'#f6dfac',2.4);
- path(c,`M73 ${rear+10}H1207L1247 ${front-10}H33Z`,null,'#f9eed14a',1.2);
+ path(c,`M29 ${rear}H1251L1260 ${front}H20Z`,null,'#a49772',7);
+ path(c,`M29 ${rear}H1251L1260 ${front}H20Z`,null,'#f6dfac',2.4);
+ path(c,`M40 ${rear+10}H1240L1247 ${front-10}H33Z`,null,'#f9eed14a',1.2);
  line(c,640,rear,640,front,'#f8e6b6a3',2);
- const cy=418;
- ellipse(c,640,cy,118,48,null,'#ecdaa88c',2.6);ellipse(c,640,cy,110,43,null,'#ecdaa85e',1.3);
- c.save();c.translate(640,cy);c.scale(1,.67);txt(c,host.han,0,0,71,'#f2e5b366','center',700);c.restore();
- for(let i=0;i<16;i++){const a=i*TAU/16;line(c,640+Math.cos(a)*123,cy+Math.sin(a)*53,640+Math.cos(a)*128,cy+Math.sin(a)*56,'#efdca066',1.5);}
+ const cy=(rear+front)/2;
+ ellipse(c,640,cy,114,84,null,'#ecdaa88c',2.6);ellipse(c,640,cy,106,78,null,'#ecdaa85e',1.3);
+ c.save();c.translate(640,cy);c.scale(1,.88);txt(c,host.han,0,0,71,'#f2e5b366','center',700);c.restore();
+ for(let i=0;i<16;i++){const a=i*TAU/16;line(c,640+Math.cos(a)*119,cy+Math.sin(a)*88,640+Math.cos(a)*124,cy+Math.sin(a)*92,'#efdca066',1.5);}
  // Subtle side-zone crests, not panels, so the field stays readable.
  c.globalAlpha=.10;txt(c,host.han,231,580,30,'#fff3cd');txt(c,guest.han,1049,580,30,'#fff3cd');c.globalAlpha=1;
  c.restore();
  for(let side=0;side<2;side++){
-  const x=side?1250:30,dx=side?17:-17;
+  const x=side?1260:20,dx=side?7:-7;
   line(c,x,top-2,x+dx,bottom,'#cbb48a',3.5);
-  for(let i=0;i<6;i++){const y=top+23+i*66,xx=x+dx*(y-top)/(bottom-top);rr(c,xx-4,y-4,8,12,2,river?'#856550':'#a2aa99','#54706f',1);rr(c,xx-6,y-6,12,4,1,'#f2dbaa');}
+  for(let i=0;i<6;i++){const y=top+23+i*83,xx=x+dx*(y-top)/(bottom-top);rr(c,xx-4,y-4,8,12,2,river?'#856550':'#a2aa99','#54706f',1);rr(c,xx-6,y-6,12,4,1,'#f2dbaa');}
  }
  const vign=c.createRadialGradient(640,405,225,640,391,780);vign.addColorStop(0,'#081d2d00');vign.addColorStop(.85,'#081d2d00');vign.addColorStop(1,'#081d2d32');rect(c,0,top,W,bottom-top,vign);
 }
@@ -1341,7 +1456,7 @@ function alive(side){return G.actors.filter(a=>a.side===side&&!a.out)}
 function active(){return G.actors.find(a=>a.id===G.activeId&&!a.out)}
 function actor(id){return G.actors.find(a=>a.id===id)}
 function targetOf(a){const es=alive(1-a.side);if(!es.length)return null;return a.side===G.playerSide&&es.find(b=>b.id===G.targetId)||es.slice().sort((u,v)=>distance(a,u)-distance(a,v))[0]}
-function makeActor(id,side,i){const d=HEROES[id],xs=side===0?[426,207,419]:[855,1067,866],ys=[298,430,558];return{id:`${side}_${id}`,def:d,side,index:i,x:xs[i],y:ys[i],homeX:xs[i],homeY:ys[i],hp:d.maxHp,qi:35,out:false,outT:0,inv:0,hitT:0,dashT:0,dashCD:0,catchT:0,catchCD:0,skillCD:0,skillSkipAttacks:0,attackT:0,shot:null,dx:0,dy:0,moveX:0,moveY:0,moving:false,runPhase:i*2,dustT:0,echoT:0,holdT:0,wait:rand(...LEVELS[difficulty].wait),evadeT:0,evadeDir:1,seen:0,aiCatch:false,aiDodge:false,face:side===0?1:-1};}
+function makeActor(id,side,i){const d=HEROES[id],xs=side===0?[426,207,419]:[855,1067,866],ys=[266,411,554];return{id:`${side}_${id}`,def:d,side,index:i,x:xs[i],y:ys[i],homeX:xs[i],homeY:ys[i],hp:d.maxHp,qi:35,out:false,outT:0,inv:0,hitT:0,dashT:0,dashCD:0,catchT:0,catchCD:0,skillCD:0,skillSkipAttacks:0,attackT:0,shot:null,dx:0,dy:0,moveX:0,moveY:0,moving:false,runPhase:i*2,dustT:0,echoT:0,holdT:0,wait:rand(...LEVELS[difficulty].wait),evadeT:0,evadeDir:1,seen:0,aiCatch:false,aiDodge:false,face:side===0?1:-1};}
 function resetInput(){keys.clear();courtPointer=null;stopFloatingJoystick();}
 function startTournament(){
  closeSetup(false);initAudio();renderMatchOptions();G.matchId=null;G.round=0;G.matchMode=matchMode;G.entrySide=entrySide;G.firstArena=selectedVenue;
@@ -1367,7 +1482,7 @@ function startRound(reuseMatch=false){
 
 
 $('startBtn').onclick=startTournament;
-function home(){$('menu').inert=false;$('game').inert=false;G.phase='menu';closeSetup(false);resetInput();document.querySelectorAll('.modal').forEach(m=>m.classList.remove('show'));$('game').classList.remove('active');$('menu').classList.add('active');G.cutin=null;G.ball=null;G.extras=[];backdrop=null;renderMenu()}
+function home(){$('menu').inert=false;$('game').inert=false;G.phase='menu';closeSetup(false);resetInput();document.querySelectorAll('.modal').forEach(m=>m.classList.remove('show'));$('game').classList.remove('active');$('menu').classList.add('active');G.cutin=null;G.ball=null;G.extras=[];backdrop=null;renderMenu();showModeHub()}
 function makeRoster(){
  [0,1].forEach(side=>{const team=TEAMS[side===0?G.homeTeam:G.awayTeam],prefix=side===0?'ally':'enemy',mine=side===G.playerSide;
  $(prefix+'Name').textContent=(side===0?'HOME':'AWAY')+' · '+team.name+' · '+(mine?'우리':'상대');
@@ -1743,14 +1858,14 @@ function update(dt){updateVisuals(dt);if(G.phase==='countdown'){G.count-=dt;if(G
 // Rendering uses smooth 2x vector artwork and crisp, readable Korean UI text.
 function poseOf(a){if(a.out)return{state:'out',f:(1-a.outT/1.05)*9.8,jump:Math.sin((1-a.outT/1.05)*Math.PI)*25};if(a.hitT>0){const t=1-a.hitT/(a.hitMax||.38);return{state:'hurt',f:t*7.8,jump:Math.sin(t*Math.PI)*(a.hitMax>.4?17:8)}}if(a.dashT>0)return{state:'dash',f:(.32-a.dashT)/.32*11.9,jump:Math.sin(a.dashT/.32*Math.PI)*33};if(a.attackT>0){const t=1-a.attackT/(a.attackMax||.68),sup=a.attackKind==='ult';const phase=sup?(t<.348?t/.348*.42:.42+(t-.348)/.652*.58):t;return{state:sup?'ult':'throw',f:phase*(sup?15.9:13.9),jump:Math.sin(t*Math.PI)*(sup?29:8)}}if(a.braceT>0)return{state:'catch',f:(1-a.braceT/a.braceMax)*7.9,jump:0};if(a.catchT>0)return{state:'catch',f:G.visualTime*17,jump:2};if(a.moving||(a.visualSpeed||0)>12)return{state:'run',f:a.runPhase,jump:0};return{state:'idle',f:G.visualTime*9+a.index*3,jump:0}}
 function drawActor(a){const pose=poseOf(a);if(a.out&&a.outT<=0)return;const alpha=a.out?clamp(a.outT*1.2,0,1):1;
- ellipse(ctx,a.x,a.y+3,40-pose.jump*.25,9,'#113c4655');ellipse(ctx,a.x,a.y+3,27-pose.jump*.15,5,'#12384833');
- if(a.id===G.activeId&&!a.out){ellipse(ctx,a.x,a.y+4,43,11,'#ffe4a614','#fff0b4',2);ctx.save();ctx.translate(a.x,a.y+4);ctx.scale(1,.28);ctx.rotate(G.visualTime*.7);ctx.setLineDash([15,45]);ellipse(ctx,0,0,46,46,null,'#ffdf70',2);ctx.restore()}
+ ellipse(ctx,a.x,a.y+3,34-pose.jump*.19,17,'#113c4650');ellipse(ctx,a.x,a.y+3,23-pose.jump*.12,11,'#12384827');
+ if(a.id===G.activeId&&!a.out){ellipse(ctx,a.x,a.y+4,39,24,'#ffe4a614','#fff0b4',2);ctx.save();ctx.translate(a.x,a.y+4);ctx.scale(.90,.55);ctx.rotate(G.visualTime*.7);ctx.setLineDash([15,45]);ellipse(ctx,0,0,46,46,null,'#ffdf70',2);ctx.restore()}
  if(a.qi>=100&&!a.out){ctx.save();const g=ctx.createRadialGradient(a.x,a.y-50,20,a.x,a.y-50,96);g.addColorStop(0,'#ffd74c20');g.addColorStop(1,'#ffd74c00');ellipse(ctx,a.x,a.y-50,96,92,g);for(let i=0;i<4;i++){const q=G.visualTime*2+i*TAU/4;star(ctx,a.x+Math.cos(q)*46,a.y-63+Math.sin(q)*55,3.4,'#ffe59d',q)}ctx.restore()}
  if(a.moving&&a.dashT>0){ctx.save();ctx.globalAlpha=.24;for(let i=0;i<4;i++){line(ctx,a.x-a.moveX*25,a.y-31-i*13,a.x-a.moveX*(92+i*10),a.y-31-i*13,'#d7f6ff',4-i*.5)}ctx.restore()}
- drawHero(ctx,a.def,a.x,a.y-pose.jump,1.53,pose.state,pose.f,a.face,alpha,clamp((a.visualSpeed||0)/155,.25,1));
- if(!a.out){const hp=a.hp/a.def.maxHp,barY=a.y-151;rr(ctx,a.x-37,barY,74,9,4,'#112837','#dee2c696',1.1);rr(ctx,a.x-34,barY+2,68*hp,5,2,gradient(ctx,0,barY,0,barY+9,hp<.3?'#ffb090':'#abedaa',hp<.3?'#e86752':'#4eb787'));rr(ctx,a.x-34,barY+11,68,3,1,'#092d37');rr(ctx,a.x-34,barY+11,68*a.qi/100,3,1,'#f6c761');
+ drawHero(ctx,a.def,a.x,a.y-pose.jump,COURT_VIEW.actorScale,pose.state,pose.f,a.face,alpha,clamp((a.visualSpeed||0)/155,.25,1));
+ if(!a.out){const hp=a.hp/a.def.maxHp,barY=a.y-137;rr(ctx,a.x-37,barY,74,9,4,'#112837','#dee2c696',1.1);rr(ctx,a.x-34,barY+2,68*hp,5,2,gradient(ctx,0,barY,0,barY+9,hp<.3?'#ffb090':'#abedaa',hp<.3?'#e86752':'#4eb787'));rr(ctx,a.x-34,barY+11,68,3,1,'#092d37');rr(ctx,a.x-34,barY+11,68*a.qi/100,3,1,'#f6c761');
   rr(ctx,a.x-34,a.y+14,68,21,10,a.side===G.playerSide?'#153d44de':'#1e374cde');txt(ctx,a.def.name,a.x,a.y+24,13.5,'#fff2d9');
-  if(a.id===G.activeId){poly(ctx,[[a.x-6,barY-7],[a.x+6,barY-7],[a.x,barY-1]],'#ffe3a0','#1c3e46',1.2);rr(ctx,a.x-17,barY-30,34,21,6,'#133f42','#7cbf98',1);txt(ctx,'1P',a.x,barY-19,15,'#d9ffe8')}
+  if(a.id===G.activeId){rr(ctx,a.x-78,barY-2,33,21,6,'#133f42','#7cbf98',1);txt(ctx,'1P',a.x-61.5,barY+9,14,'#d9ffe8');poly(ctx,[[a.x-43,barY+4],[a.x-38,barY+8],[a.x-43,barY+12]],'#ffe3a0',null)}
   if(a.side!==G.playerSide&&((G.ball.mode==='held'&&G.ball.owner===a.id&&a.holdT>a.wait-.45)||a.shot)){rr(ctx,a.x+30,a.y-149,29,29,9,'#fff5d8','#8a7351',1.4);poly(ctx,[[a.x+35,a.y-121],[a.x+43,a.y-153],[a.x+32,a.y-115]],'#fff5d8');txt(ctx,a.shot?.kind==='ult'?'!!':'!',a.x+44,a.y-134,19,'#9a5631')}
   if(a.catchT>0){const perfect=(a.catchMax||.27)-a.catchT<.135,col=perfect?'#ffe5a0':'#cbfaff';ctx.save();ctx.globalAlpha=.75;ellipse(ctx,a.x+a.face*22,a.y-42,38,42,null,col,3);ctx.setLineDash([12,15]);ellipse(ctx,a.x+a.face*22,a.y-42,43,48,null,col,1);ctx.restore()}
   if((a.dodgeInv||0)>0&&a.dashT<=0){ctx.save();ctx.globalAlpha=.24;ellipse(ctx,a.x,a.y-56,52,68,null,'#c1f3ff',2);ctx.restore()}
@@ -1779,7 +1894,7 @@ function drawCutin(){if(!G.cutin)return;const q=G.cutin,k=1-q.life/q.max,alpha=c
  const g=gradient(ctx,0,y,1280,y+95,'#0b283ce6','#192c46ed');poly(ctx,[[235,y],[1065,y],[1024,y+98],[208,y+98]],g,'#eace86',2);for(let i=0;i<15;i++){const x=220+i*67-(G.visualTime*210%67);poly(ctx,[[x,y+4],[x+21,y+4],[x-19,y+93],[x-42,y+93]],'#f3db8b0c')}
  ctx.save();ctx.beginPath();ctx.rect(220,y+2,840,94);ctx.clip();drawHero(ctx,q.hero,364,y+161,1.7,'ult',9,1);ctx.restore();txt(ctx,`${q.side===G.playerSide?'우리 팀':'상대 팀'} · ${q.hero.name}`,704,y+21,13,'#e3c796');txt(ctx,q.name,704,y+55,32,'#ffe4a0');txt(ctx,q.hero.ultDesc,704,y+83,12,'#dbe5d7');star(ctx,451,y+48,8,'#ffe39a',G.visualTime);ctx.restore()}
 function render(){ctx.setTransform(renderScale,0,0,renderScale,0,0);renderBackdrop();if(G.phase==='menu')return;ctx.save();if(G.shake>0&&!reduced)ctx.translate(Math.sin(G.visualTime*94)*G.shake*23,Math.cos(G.visualTime*77)*G.shake*16);drawAim();
- G.echoes.forEach(e=>drawHero(ctx,e.def,e.x,e.y-e.jump,1.53,e.state||'dash',e.phase,e.face,e.life/(e.max||.23)*(e.alpha||.18)));
+ G.echoes.forEach(e=>drawHero(ctx,e.def,e.x,e.y-e.jump,COURT_VIEW.actorScale,e.state||'dash',e.phase,e.face,e.life/(e.max||.23)*(e.alpha||.18)));
  drawCatchGroundFX();
  const low=G.particles.filter(p=>p.cloud&&!p.receive);for(const p of low){ctx.save();ctx.globalAlpha=clamp(p.life/p.max,0,1)*.7;const r=p.r*(1.5-p.life/p.max*.3);ellipse(ctx,p.x,p.y,r*1.3,r*.65,p.color);ellipse(ctx,p.x-5,p.y-4,r*.85,r*.65,p.color);ctx.restore()}
  [...G.actors].sort((a,b)=>a.y-b.y).forEach(drawActor);drawReceiveDust();drawProjectile(G.ball);G.extras.forEach(drawProjectile);(G.impacts||[]).forEach(drawImpact);drawWallFX();drawStatusFX();
@@ -2865,7 +2980,7 @@ makeRoster=function(){
 const v9UpdateHUD=updateHUD;
 updateHUD=function(){v9UpdateHUD();if(!['play','countdown','paused'].includes(G.phase))return;const a=active();if(a){const s=a.traits?.region>0?'+5%':'−5%';$('activeRole').textContent=unitFor(a.def).name+' · 지역 '+s+(G.lordAura?.[a.side]?' · 군주 +3%':'');}if(G.reserveState?.total)$('allyTeam').querySelector('.hud-heading small').textContent='지원병 '+G.reserveState.queue.length+' / '+G.reserveState.total;};
 const v9DrawActor=drawActor;
-drawActor=function(a){v9DrawActor(a);if(a.out)return;const u=unitFor(a.def);rr(ctx,a.x+40,a.y-134,21,21,5,'#18323eea',u.color,1);txt(ctx,u.symbol,a.x+50,a.y-123,13,u.color);};
+drawActor=function(a){v9DrawActor(a);if(a.out)return;const u=unitFor(a.def);rr(ctx,a.x+38,a.y-119,21,21,5,'#18323eea',u.color,1);txt(ctx,u.symbol,a.x+48,a.y-108,13,u.color);};
 const v9StartRound=startRound;
 startRound=function(reuse=false){if(G.matchMode==='conquest'&&campaign){difficulty=campaign.difficulty||'normal';}v9StartRound(reuse);startReserves();makeRoster();updateHUD();};
 scoreMatch=function(win){
@@ -3801,8 +3916,8 @@ $('resumeConquest').onclick=()=>showCampaign();$('nextBtn').onclick=()=>openShop
 $('shopContinue').onclick=()=>advanceAfterShop();
 
 // Per-campaign currency is in campaign.economy, never in a common top-level account.
-function exportV94Payload(){return {game:'samguk-dodgeball',version:'9.6.0',economySchema:2,profile:freshProfile(),campaign:campaign?copyData(campaign):null};}
-exportV9=function(){if(campaign)saveCampaign();downloadJSON('삼국지피구_천하도_v9_5.json',exportV94Payload());toast('점령전 전용 군공·아이템과 지도·군영을 저장했습니다.');};
+function exportV94Payload(){return {game:'samguk-dodgeball',version:'9.7.0',economySchema:2,profile:freshProfile(),campaign:campaign?copyData(campaign):null};}
+exportV9=function(){if(campaign)saveCampaign();downloadJSON('삼국지피구_천하도_v9_7.json',exportV94Payload());toast('점령전 전용 군공·아이템과 지도·군영을 저장했습니다.');};
 exportV8=exportV9;$('exportSave').onclick=()=>exportV9();$('conquestExport').onclick=()=>exportV9();
 const v94OpenSave=openSave;
 openSave=function(){
@@ -3963,7 +4078,7 @@ const v95OpenSetup=openSetup;openSetup=function(){setupPage='roster';v95OpenSetu
 const v95Guide=openV9Guide;
 openV9Guide=function(id=null){v95Guide(id);if(id===null){const p=document.createElement('section');p.className='v93-guide-extra';p.innerHTML='<h3>v9.5 · 특징 기술은 기를 소비합니다</h3><p>E를 실제로 던지면 기 12를 소모합니다. 그 장수의 다음 투구에서는 E를 사용할 수 없습니다. J 또는 R로 한 번 투구하면 해제되며, 명중 여부는 상관없습니다. 잡기·공 회수·패스·교대·대기만으로는 해제되지 않습니다. 상대 AI에도 동일하게 적용합니다. E는 기 100에서도 특징 기술, J는 기존처럼 기 100일 때 자동 필살기를 사용합니다. 경기 시작/재시작에서는 사용 제한을 초기화합니다.</p><p>경기 설정·점령전 출전·제패전 선수 교체는 화면의 실제 크기에 맞춰 카드와 기술 설명을 배치합니다. 최대 9명을 내부 스크롤 없이 함께 보여줍니다.</p>';$('v9GuideContent').append(p);}};
 $('troopGuideBtn').onclick=()=>openV9Guide();$('conquestGuideBtn').onclick=()=>openV9Guide();
-Object.assign(window.SamgukDodgeball,{version:'9.6.0',skillRules:SKILL_RULES,setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:id=>openV9Guide(id)});
+Object.assign(window.SamgukDodgeball,{version:'9.7.0',skillRules:SKILL_RULES,setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:id=>openV9Guide(id)});
 Object.assign(window.SamgukDodgeball.diagnostics,{
  canShoot:(...args)=>canShoot(...args),queueShot:(...args)=>queueShot(...args),releaseShot:(...args)=>releaseShot(...args),
  skillUnavailableReason,shootAction:kind=>shootAction(kind),updateHUD:()=>updateHUD(),fitSelectionDialogs,
@@ -3975,7 +4090,68 @@ fitSelectionDialogs();
 
 Object.assign(window.SamgukDodgeball,{courtView:COURT_VIEW});
 Object.assign(window.SamgukDodgeball.diagnostics,{bounds,makeActor,makeBackdrop:()=>makeBackdrop(),renderBackdrop:()=>renderBackdrop()});
-fitStage();renderMenu();render();requestAnimationFrame(frame);
+/* v9.7 — Mode selection is the entry point, not a second dropdown during setup. */
+const ENTRY_MODES=Object.freeze({conquest:{name:'점령전',detail:'점령전 · 51개 거점'},single:{name:'평가전',detail:'평가전 · 한 경기'},tour:{name:'군웅 제패전',detail:'군웅 제패전 · 16경기'}});
+function syncModeNavigation(){
+ const m=ENTRY_MODES[matchMode]||ENTRY_MODES.tour;
+ $('entryModeName').textContent=m.name+' · 진영 선택';
+ $('setupModeValue').textContent=m.detail;
+ $('modeSelect').value=matchMode;
+ $('lineupKicker').textContent=m.name+' · 진영과 출전 장수 선택';
+ $('configureBtn').innerHTML='출전·경기 설정 <span>→</span>';
+ if(matchMode==='single')$('startBtn').innerHTML='평가전 시작<span>→</span>';
+}
+function refreshModeHub(){
+ const c=campaign,btn=$('hubResume');btn.hidden=!c;
+ if(c){const cities=Object.values(c.owners||{}).filter(x=>x===c.player).length;
+  $('hubResumeLabel').textContent=c.ended?'점령전 결과':'점령전 계속';
+  $('hubResumeInfo').textContent='· '+(TEAMS[c.player]?.name||'')+' '+c.turn+'턴'+(c.ended?'':' / '+cities+'도시');
+ }
+}
+function hideModeHub(){
+ entryScreen='factions';$('modeHub').hidden=true;$('modeHub').setAttribute('aria-hidden','true');
+ $('menu').inert=false;document.body.classList.remove('mode-hub-open');
+}
+function showModeHub(){
+ if(G.phase!=='menu')return;
+ closeSetup(false);resetInput();entryScreen='modes';
+ $('modeHub').hidden=false;$('modeHub').setAttribute('aria-hidden','false');
+ $('menu').inert=true;document.body.classList.add('mode-hub-open');refreshModeHub();
+}
+function chooseEntryMode(mode){
+ if(!ENTRY_MODES[mode]||G.phase!=='menu')return false;
+ matchMode=mode;hideModeHub();renderMenu();sfx('click');return true;
+}
+const v97MenuRender=renderMenu;
+renderMenu=function(){v97MenuRender();syncModeNavigation();refreshModeHub();if(entryScreen==='modes'&&G.phase==='menu')$('menu').inert=true;};
+const v97MatchOptions=renderMatchOptions;
+renderMatchOptions=function(){v97MatchOptions();syncModeNavigation();};
+const v97OpenSetup=openSetup;
+openSetup=function(){if(G.phase!=='menu')return;hideModeHub();v97OpenSetup();syncModeNavigation();fitSelectionDialogs();};
+const v97StartTournament=startTournament;
+startTournament=function(){hideModeHub();v97StartTournament();};
+const v97StartRound=startRound;
+startRound=function(reuse=false){hideModeHub();v97StartRound(reuse);$('homeBtn').textContent=G.matchMode==='conquest'?'점령 지도로 돌아가기':'게임 모드로 돌아가기';};
+const v97ShowCampaign=showCampaign;
+showCampaign=function(){if(!campaign)return;hideModeHub();v97ShowCampaign();};
+$('backToModes').onclick=()=>{if(G.phase==='menu'){showModeHub();sfx('click');}};
+$('modeHub').querySelectorAll('[data-entry-mode]').forEach(b=>b.onclick=()=>chooseEntryMode(b.dataset.entryMode));
+$('hubResume').onclick=()=>{if(campaign){matchMode='conquest';hideModeHub();showCampaign();}};
+$('hubImport').onclick=()=>{chooseEntryMode('conquest');openSave();};
+window.addEventListener('keydown',e=>{
+ if(G.phase!=='menu'||document.querySelector('.modal.show'))return;
+ if(entryScreen==='modes'){
+  if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){
+   const buttons=[...$('modeHub').querySelectorAll('[data-entry-mode]')];let i=buttons.indexOf(document.activeElement);
+   i=i<0?0:(i+(['ArrowLeft','ArrowUp'].includes(e.key)?2:1))%3;
+   e.preventDefault();e.stopImmediatePropagation();buttons[i].focus({preventScroll:true});
+  }
+ }else if(e.key==='Escape'){e.preventDefault();showModeHub();}
+},true);
+Object.assign(window.SamgukDodgeball,{version:'9.7.0',configure:o=>setMatchOptions(o),entry:{choose:chooseEntryMode,show:showModeHub,state:()=>({screen:entryScreen,mode:matchMode}),refresh:refreshModeHub}});
+window.SamgukDodgeball.conquest.show=()=>showCampaign();
+
+fitStage();renderMenu();showModeHub();render();requestAnimationFrame(frame);
 })();
 
 </script>
