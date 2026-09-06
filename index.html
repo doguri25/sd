@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#102b38">
-<title>삼국지 피구대전 — 천하도 v9.5.1 · 점령전 팝업 / 버튼 글자 맞춤</title>
+<title>삼국지 피구대전 — 천하도 v9.6 · 와이드 코트 / 컴팩트 HUD</title>
 <style>
 :root{--gold:#efce87;--cream:#fff5dc;--muted:#adbbc0;--navy:#102632;--team:#3b9b7e;--teamLight:#78dcaf;--font:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}body{background:#091920;color:var(--cream);font-family:var(--font);display:grid;place-items:center;user-select:none;-webkit-user-select:none}button{font:inherit;border:0;cursor:pointer;color:inherit;touch-action:manipulation;user-select:none;-webkit-user-select:none}button:focus-visible{outline:3px solid #fff4ae;outline-offset:4px}button:active{filter:brightness(1.2)}button:disabled{cursor:default}#stage{position:absolute;width:1280px;height:720px;transform-origin:center;overflow:hidden;background:#213f46;box-shadow:0 0 0 1px #71877b,0 20px 80px #000b;touch-action:none}canvas{image-rendering:pixelated;display:block}.scene{position:absolute;inset:0;width:1280px;height:720px}.screen{position:absolute;inset:0;display:none}.screen.active{display:block}.menu-shade{position:absolute;inset:0;background:linear-gradient(90deg,#061e2cee 0%,#0c2936b8 36%,#0c2530e8 55%,#0b2430f5 100%)}.menu-top{position:absolute;left:40px;right:40px;top:24px;display:flex;align-items:center;justify-content:space-between}.eyebrow{font-size:12px;letter-spacing:3px;color:#a8cbd0;font-weight:850}.top-buttons{display:flex;gap:9px}.icon-btn{min-width:37px;height:34px;border:1px solid #809b9b6b;background:#142e3fd9;color:#eee0ba;border-radius:5px;font-size:15px;display:grid;place-items:center}.hero-copy{position:absolute;left:51px;top:96px;pointer-events:none}.edition{display:inline-block;padding:6px 13px;border:1px solid #d4b37370;background:#302d24a1;font-weight:800;color:#f4d191;letter-spacing:4px;font-size:13px}h1{font-weight:1000;font-size:78px;line-height:1.02;letter-spacing:-5px;margin:17px 0 12px;text-shadow:0 6px 0 #0c1823,3px 0 0 #132b35,-3px 0 0 #132b35}h1 strong{display:block;font-size:91px;color:#f4d392;letter-spacing:-6px;text-shadow:0 6px 0 #71563c,0 10px 0 #10242e}.hero-sub{font-size:16px;color:#c4d5d4;line-height:1.8;margin:20px 0 0}.menu-heroes{position:absolute;left:22px;top:341px;width:568px;height:253px;pointer-events:none}.hero-notes{position:absolute;left:50px;top:610px;display:flex;gap:16px;align-items:center;font-size:12px;color:#becfcf}.hero-notes span{border-left:2px solid #c7af6c;padding-left:10px;line-height:1.7}.select-panel{position:absolute;top:97px;right:44px;width:623px;bottom:37px;padding:22px 24px;background:linear-gradient(145deg,#1a3846ed,#0e2735f5);border:1px solid #8b9f9254;box-shadow:0 7px 0 #051b2673,inset 0 0 0 4px #abc1b509;display:flex;flex-direction:column;border-radius:7px}.select-heading{display:flex;justify-content:space-between;align-items:center}.select-heading h2{font-size:21px;letter-spacing:-.7px;margin:0}.select-heading span{font-size:11px;color:#aec3c7}.number{color:#e4c27c;letter-spacing:1px;margin-right:8px;font-size:13px}.team-tabs{display:flex;gap:10px;margin-top:17px}.team-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;background:#0c2330;border:1px solid #5e797b;color:#a5b9be;padding:10px 6px;border-radius:4px}.team-tab.selected{border-color:var(--teamLight);background:linear-gradient(100deg,#255948,#173847);box-shadow:0 3px 0 var(--team)}.team-seal{width:36px;height:42px;background:var(--team);border:1px solid #efd18b96;display:grid;place-items:center;font-family:serif;font-size:27px;font-weight:900;color:#fff0bd;clip-path:polygon(0 0,100% 0,100% 83%,50% 100%,0 83%)}.team-name{font-size:22px;font-weight:1000;text-align:left;line-height:1.1}.team-name small{font-size:10px;font-weight:500;display:block;margin-top:6px;color:#b3c5c6}.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 12px}.hero-card{position:relative;min-height:162px;border:1px solid #536e74;border-radius:4px;background:linear-gradient(155deg,#304e55,#182f3c);padding:0 0 9px;text-align:center;overflow:hidden}.hero-card.selected{border-color:#efd18c;box-shadow:0 0 0 1px #efd18c,inset 0 0 22px #87ad8940}.hero-card:after{content:"";position:absolute;left:8px;right:8px;top:98px;height:1px;background:#c8dcd222}.portrait{width:100%;height:110px}.hero-card b{display:block;font-size:17px}.hero-card .hero-meta{font-size:10px;color:#c4d7d5;display:block;margin-top:4px}.hp-label{position:absolute;top:8px;left:9px;font-size:9px;color:#c2decf;font-weight:800;background:#10232caa;padding:3px 5px}.ability-panel{border-left:3px solid #d9bc7c;background:#0b2430b0;padding:11px 13px;min-height:79px;font-size:12px;line-height:1.65;color:#bfd1cf}.ability-panel strong{color:#fff0ca;font-size:13px}.ability-panel .tag{font-size:10px;background:#315c50;color:#b7efcd;padding:2px 5px;margin-right:7px;font-weight:800}.ability-panel .tag.gold{background:#664f2d;color:#ffe2a0}.ability-panel .desc{margin-left:7px;color:#a1b9be;font-size:11px}.match-options{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:13px 0 11px;font-size:12px}.difficulty{display:flex;gap:4px;padding:3px;background:#091e2b;border-radius:5px}.difficulty button{background:transparent;color:#a0b4ba;padding:6px 14px;border-radius:3px;font-size:11px}.difficulty button.selected{background:#d6bd87;color:#21343a;font-weight:900}.start-btn{position:relative;height:52px;min-height:52px;border:2px solid #ffdc8c;background:linear-gradient(#eed39a,#dab26c);box-shadow:0 4px 0 #85653d,inset 0 0 0 2px #fbe3b05c;color:#26353a;font-size:20px;font-weight:1000;letter-spacing:-.5px;border-radius:4px}.start-btn span{position:absolute;right:18px;font-size:23px}.route-note{text-align:center;margin:12px 0 0;font-size:10px;color:#93adb4;letter-spacing:.1px}.menu-foot{position:absolute;left:42px;bottom:21px;font-size:9px;color:#78979f;letter-spacing:1px}
@@ -629,6 +629,52 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
  #conquestNewModal button{min-height:31px;padding:5px 8px;margin-top:5px;font-size:12px;}
 }
 </style>
+<style>
+/* v9.6 — Compact match-only HUD. Selection/map dialogs retain their viewport layout. */
+#game .hud-team{top:8px;height:64px;width:425px;padding:4px 8px;gap:7px;border-width:1.5px;border-radius:10px;box-shadow:0 3px 8px #081d3244,inset 0 1px #ffffff1a}
+#game .hud-team.ally{left:12px}#game .hud-team.enemy{right:12px}
+#game .hud-team.controlled{box-shadow:0 0 0 1px #a6f1d866,0 3px 8px #081d3244}
+#game .hud-team .banner{width:40px;min-width:40px;height:53px;padding:3px 0 0;font-size:27px;line-height:30px;border-width:1px;border-radius:4px;clip-path:none}
+#game .banner small{font-size:8px;line-height:11px;letter-spacing:.4px;margin:0}
+#game .hud-heading{height:13px;line-height:13px;margin:0 0 3px;font-size:12px;letter-spacing:0;overflow:hidden;white-space:nowrap}
+#game .hud-heading small{font-size:8px;letter-spacing:0;line-height:13px}
+#game .roster-cards{gap:5px}
+#game .roster-card{height:38px;border-radius:5px;overflow:hidden;box-shadow:none}
+#game .roster-face{left:0;top:-2px;width:34px;height:33px}
+#game .roster-name{left:34px;right:2px;top:1px;max-width:none;text-align:center;font-size:12px;line-height:13px;white-space:nowrap;letter-spacing:-.3px}
+#game .roster-value{left:34px;right:2px;top:15px;text-align:center;font-size:8px;line-height:9px;white-space:nowrap;font-variant-numeric:tabular-nums}
+#game .bar.hp{height:5px;bottom:6px;left:4px;right:4px;border:0}
+#game .bar.qi{height:3px;bottom:1px;left:4px;right:4px}
+#game .scoreboard{top:8px;left:450px;width:380px;height:64px;border-width:1.5px;border-radius:9px;clip-path:polygon(2% 0,98% 0,100% 18%,98% 90%,94% 100%,6% 100%,2% 90%,0 18%)}
+#game .round-label{font-size:10px;line-height:12px;letter-spacing:1px;margin-top:4px}
+#game .score-main{height:39px;gap:31px}
+#game .score-number{font-size:34px;line-height:38px}
+#game .clock{font-size:29px;line-height:38px;letter-spacing:2px}
+#game .score-caption{display:none}
+#game .arena-name{top:78px;left:448px;width:384px;padding:3px 10px;height:23px;line-height:15px;font-size:11px;border-radius:6px;letter-spacing:.3px;background:#102738d9}
+#game .game-tools{top:79px;right:13px;gap:6px}
+#game .game-tools .icon-btn{height:29px;min-width:31px;background:#122e3ec9}
+#game .match-items{top:78px;left:14px;max-width:423px;gap:4px}
+#game .match-items span{font-size:9px;padding:3px 5px;gap:3px}
+#game .match-items svg{width:15px;height:15px}
+#game .controls{height:106px;border-top-width:2px;box-shadow:0 -2px 0 #b7a77955,inset 0 1px #faf2d233;background:linear-gradient(#234250f3,#102638)}
+#game .joystick{width:94px;height:94px;left:24px;bottom:5px}
+#game .joystick .stick{left:24px;top:24px;width:40px;height:40px}
+#game .joystick .joy-arrow.up,#game .joystick .joy-arrow.down{left:38px}
+#game .joystick .joy-arrow.left,#game .joystick .joy-arrow.right{top:34px}
+#game .active-panel{bottom:8px;height:82px}
+#game .active-portrait{width:64px;height:70px}
+#game .active-info b{font-size:17px}
+#game .active-info .role{font-size:9px;white-space:nowrap}
+#game .ult-button{bottom:8px;height:82px;padding:7px 10px}
+#game .ult-button strong{margin-top:8px;font-size:18px}
+#game .action-row{bottom:7px;height:86px;gap:8px}
+#game .action svg{width:33px;height:33px}
+#game .action b{font-size:13px;line-height:15px}
+#game .action small{font-size:9px}
+#game .game-notice{top:590px;left:370px;width:540px;max-height:20px;height:20px;line-height:14px;padding:2px 9px;font-size:10px;opacity:.93;background:#102c38b8}
+#game .keyline{bottom:0;line-height:9px;font-size:7px}
+</style>
 </head>
 <body>
 <main id="stage" aria-label="삼국지 피구대전 가로형 게임">
@@ -638,7 +684,7 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <header class="menu-top"><div class="menu-brand"><span>THREE KINGDOMS · DODGEBALL</span><h1>삼국지 <strong>피구대전</strong></h1></div><div class="top-buttons"><span class="wallet-pill">軍功 <b id="menuWallet">0</b></span><button id="troopGuideBtn">병종·지역 도감</button><button id="resumeConquest" class="menu-utility" hidden>점령전 계속</button><button id="menuShop" class="menu-utility">군공 상점</button><button id="saveMenu" class="menu-utility">기록</button><button class="icon-btn sound-toggle" aria-label="효과음 설정">♪</button><button class="icon-btn fullscreen-toggle" aria-label="전체 화면">⛶</button><button class="icon-btn" id="helpMenu" aria-label="게임 방법">?</button></div></header>
 <aside class="nation-browser"><div class="browser-heading"><h2>진영 선택</h2><span id="factionCount">17개 진영</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="factionSearch" type="search" placeholder="진영 · 장수 검색" aria-label="진영 또는 장수 검색" autocomplete="off" maxlength="40"></label><div id="teamTabs" class="nation-list" role="group" aria-label="확장형 진영 목록"></div><p class="browser-foot">목록을 스크롤해 다른 진영을 찾아보세요.</p></aside>
 <section class="lineup-preview"><header class="lineup-heading"><div><span class="lineup-kicker" id="lineupKicker">SHU</span><h2 id="lineupName">촉</h2></div><p id="lineupMotto">뜨거운 의리</p><span class="lineup-seal" id="lineupSeal">蜀</span></header><div class="lineup-heroes" id="lineupHeroes"></div><footer class="lineup-footer"><div><b id="lineupCities"></b><span id="loadoutNote">장수를 선택한 뒤 경기 설정을 열어주세요.</span></div><button id="configureBtn" class="start-btn">경기 설정 <span>→</span></button></footer></section>
-<div class="menu-version">천하도 9.5.1 · 점령전 팝업 / 버튼 글자 맞춤 · 유동형 조이스틱</div>
+<div class="menu-version">천하도 9.6 · 와이드 코트 / 컴팩트 HUD · 유동형 조이스틱</div>
 </section>
 <section id="game" class="screen" aria-label="피구 경기 조작 화면">
 <div class="hud-team ally" id="allyTeam"><div class="banner" id="allyBanner">蜀</div><div class="hud-roster"><div class="hud-heading"><span id="allyName">촉 · 우리</span><small>CLICK TO SWITCH</small></div><div class="roster-cards" id="allyRoster"></div></div></div>
@@ -654,7 +700,7 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <button id="dodgeBtn" class="action"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M2 15h12M0 23h10M5 31h9" stroke="#d3f2f5" stroke-width="2"/><circle cx="26" cy="7" r="5" fill="#c8f4f5"/><path d="M22 14l-7 8 7 6-5 9M23 16l7 8h8M21 27l10 9" fill="none" stroke="#c8f4f5" stroke-width="5" stroke-linecap="round"/></svg><b>회피</b><small>L / SHIFT</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="skillBtn" class="action skill"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M30 2L10 21l9 2-6 15 20-20-11-1z" fill="#fff1aa" stroke="#d2fff0" stroke-width="1.5"/><path d="M7 9l-4 9M35 26l-4 7" stroke="#a6f9df" stroke-width="2"/></svg><b>특징 기술</b><small>E</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="switchBtn" class="action switch"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="15" r="6" fill="#a7d9df"/><circle cx="30" cy="23" r="6" fill="#d4eded"/><path d="M1 33v-7q9-9 19 0v7M20 38v-5q10-9 19 0v5" fill="#a7d9df"/><path d="M19 5h13l-4-4M33 5l-4 5" fill="none" stroke="#f2d99b" stroke-width="2.5"/></svg><b>교대 / 패스</b><small>Q · 1 / 2 / 3</small></button>
-</div><div class="keyline">v9.5 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
+</div><div class="keyline">v9.6 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
 </section>
 <div class="modal setup-modal" id="setupModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="setupTitle" aria-describedby="setupHint">
 <div class="modal-card setup-card">
@@ -709,6 +755,9 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 'use strict';
 (()=>{
 const $=id=>document.getElementById(id), W=1280,H=720, TAU=Math.PI*2;
+// v9.6: one shared geometry for floor drawing, movement bounds, ball walls and pointer hits.
+// Character/ball artwork is NOT vertically stretched; it keeps the original clean proportions.
+const COURT_VIEW=Object.freeze({backgroundLift:102,floorTop:206,floorBottom:614,lineTop:217,lineBottom:604,moveTop:284,moveBottom:565,wallTop:174,wallBottom:603,hudHeight:64});
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),lerp=(a,b,t)=>a+(b-a)*t,rand=(a,b)=>a+Math.random()*(b-a),distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
 const reduced=!!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 const TEAMS={
@@ -1072,6 +1121,7 @@ function makeBackdrop(){
  const id=G.phase==='menu'?selectedVenue:G.arenaId,A=ARENAS[id]||ARENAS.chengdu;
  const host=TEAMS[G.phase==='menu'?menuHost():G.homeTeam],guest=TEAMS[G.phase==='menu'?(entrySide==='home'?firstOpponent:selectedTeam):G.awayTeam];
  const off=document.createElement('canvas');off.width=W*2;off.height=H*2;const c=off.getContext('2d');c.scale(2,2);
+ const wide=G.phase!=='menu';c.save();if(wide)c.translate(0,-COURT_VIEW.backgroundLift);
  const base=A.base||A.theme,river=base==='river',plains=base==='plains',palace=base==='palace'||base==='golden',fortress=base==='fortress',citadel=base==='citadel',golden=base==='golden';
  rect(c,0,0,W,H,gradient(c,0,0,0,316,...A.sky));
  // Atmospheric mountains use different silhouettes and distances for each location.
@@ -1148,6 +1198,8 @@ function makeBackdrop(){
  function sign(x,y,w,label){path(c,`M${x} ${y}Q${x+w/2} ${y+6} ${x+w} ${y}L${x+w-2} ${y+31}Q${x+w/2} ${y+28} ${x+2} ${y+32}Z`,river?'#e4ca9f':'#eee1c0','#a79676',1);txt(c,label,x+w/2,y+17,13,'#344b54')}
  sign(129,256,178,A.sign?A.short+'에서 힘차게 한 판!':golden?'황금 군기 아래, 한 판!':fortress?'천하무쌍! 하비의 기세!':citadel?'철옹성에서 피구 한 판!':palace?'천하의 수도, 낙양!':plains?'바람을 타고, 한 판!':river?'강동의 파도를 넘어!':'함께 달리는 촉의 영웅!');
  sign(953,255,208,'한 공으로 만나는 삼국!');
+ c.restore();
+ if(wide){drawWideFloor(c,A,host,guest);}else{
  // Perspective court with a real perimeter corresponding to the ball's collision model.
  rect(c,0,292,W,19,gradient(c,0,292,0,309,'#ddc9a0','#9d9279'));rect(c,0,290,W,4,'#efdab1');
  const floor=gradient(c,0,306,0,608,...A.floor);poly(c,[[48,308],[1232,308],[1280,608],[0,608]],floor);
@@ -1160,10 +1212,57 @@ function makeBackdrop(){
  for(let side of [0,1]){const x=side?1251:29;line(c,x,307,x+(side?17:-17),598,'#cfb68b',5);for(let y=327;y<582;y+=63){const xx=x+(side?1:-1)*(y-307)*.05;rr(c,xx-5,y-4,10,16,2,river?'#785b4c':'#a6ab9b','#465d60',1);rr(c,xx-7,y-7,14,5,2,'#eed6a4')}}
  for(let x of [14,1266]){rr(c,x-6,263,12,42,1,'#465667','#233948',1.2);ellipse(c,x,263,16,5,'#4e535b','#b69a64',2);rr(c,x-14,302,28,7,1,'#56646a')}
  const vign=c.createRadialGradient(640,421,200,640,389,795);vign.addColorStop(0,'#081d2d00');vign.addColorStop(.8,'#081d2d00');vign.addColorStop(1,'#081d2d55');rect(c,0,0,W,H,vign);
+
+ }
  return off;
 }
+
+function drawWideFloor(c,A,host,guest){
+ const top=COURT_VIEW.floorTop,bottom=COURT_VIEW.floorBottom;
+ const base=A.base||A.theme,river=base==='river',plains=base==='plains';
+ rect(c,0,top-17,W,19,gradient(c,0,top-17,0,top+2,'#dbc79e','#78877f'));
+ line(c,0,top-16,W,top-16,'#f2dfb2',3);
+ poly(c,[[39,top],[1241,top],[W,bottom],[0,bottom]],gradient(c,0,top,0,bottom,...A.floor));
+ c.save();c.beginPath();c.moveTo(39,top);c.lineTo(1241,top);c.lineTo(W,bottom);c.lineTo(0,bottom);c.closePath();c.clip();
+ // Low-angle projected paving: close rows spread out, far rows stay fine.
+ const rows=11,cols=18;
+ const yAt=t=>top+(bottom-top)*Math.pow(t,1.35);
+ const xAt=(j,y)=>{const depth=(y-top)/(bottom-top),inset=39*(1-depth);return inset+(W-2*inset)*j/cols;};
+ for(let r=0;r<rows;r++){
+  const y0=yAt(r/rows),y1=yAt((r+1)/rows);
+  for(let j=0;j<cols;j++){
+   const x0=xAt(j,y0),x1=xAt(j+1,y0),x2=xAt(j+1,y1),x3=xAt(j,y1);
+   c.globalAlpha=.025+((j*5+r*3)%5)*.009;
+   poly(c,[[x0+1,y0+1],[x1-1,y0+1],[x2-1,y1-1],[x3+1,y1-1]],(r+j)%3===0?'#092b40':'#f7e5c7');
+   c.globalAlpha=1;
+   line(c,x0,y0,x1,y0,'#153b472b',1);line(c,x0,y0,x3,y1,'#17364320',.8);
+   if(river){for(let n=0;n<2;n++){const yy=y0+(y1-y0)*(.3+n*.3);path(c,`M${x0+7} ${yy}q23 ${n?2:-2} ${Math.max(15,x1-x0-16)} 0`,null,'#533d3825',.8);}}
+   else if(plains&&((r+j)%4===0))path(c,`M${x0+8} ${y0+11}q14-3 28 0`,null,'#dacf9b38',1);
+  }
+ }
+ // Clear, restrained court markings; flatter circles convey the lower camera angle.
+ const rear=COURT_VIEW.lineTop,front=COURT_VIEW.lineBottom;
+ path(c,`M63 ${rear}H1217L1260 ${front}H20Z`,null,'#a49772',7);
+ path(c,`M63 ${rear}H1217L1260 ${front}H20Z`,null,'#f6dfac',2.4);
+ path(c,`M73 ${rear+10}H1207L1247 ${front-10}H33Z`,null,'#f9eed14a',1.2);
+ line(c,640,rear,640,front,'#f8e6b6a3',2);
+ const cy=418;
+ ellipse(c,640,cy,118,48,null,'#ecdaa88c',2.6);ellipse(c,640,cy,110,43,null,'#ecdaa85e',1.3);
+ c.save();c.translate(640,cy);c.scale(1,.67);txt(c,host.han,0,0,71,'#f2e5b366','center',700);c.restore();
+ for(let i=0;i<16;i++){const a=i*TAU/16;line(c,640+Math.cos(a)*123,cy+Math.sin(a)*53,640+Math.cos(a)*128,cy+Math.sin(a)*56,'#efdca066',1.5);}
+ // Subtle side-zone crests, not panels, so the field stays readable.
+ c.globalAlpha=.10;txt(c,host.han,231,580,30,'#fff3cd');txt(c,guest.han,1049,580,30,'#fff3cd');c.globalAlpha=1;
+ c.restore();
+ for(let side=0;side<2;side++){
+  const x=side?1250:30,dx=side?17:-17;
+  line(c,x,top-2,x+dx,bottom,'#cbb48a',3.5);
+  for(let i=0;i<6;i++){const y=top+23+i*66,xx=x+dx*(y-top)/(bottom-top);rr(c,xx-4,y-4,8,12,2,river?'#856550':'#a2aa99','#54706f',1);rr(c,xx-6,y-6,12,4,1,'#f2dbaa');}
+ }
+ const vign=c.createRadialGradient(640,405,225,640,391,780);vign.addColorStop(0,'#081d2d00');vign.addColorStop(.85,'#081d2d00');vign.addColorStop(1,'#081d2d32');rect(c,0,top,W,bottom-top,vign);
+}
+
 function renderBackdrop(){
- if(!backdrop)backdrop=makeBackdrop();ctx.drawImage(backdrop,0,0,W,H);
+ if(!backdrop)backdrop=makeBackdrop();ctx.drawImage(backdrop,0,0,W,H);ctx.save();if(G.phase!=='menu')ctx.translate(0,-COURT_VIEW.backgroundLift);
  const t=G.visualTime,A=ARENAS[G.phase==='menu'?selectedVenue:G.arenaId]||ARENAS.chengdu,homeTeam=TEAMS[G.phase==='menu'?menuHost():G.homeTeam];
  drawExpansionWeather(A,t);
  // Animated pennant tips, cheering arms, river glints and local weather are independent of AI ticks.
@@ -1177,6 +1276,7 @@ function renderBackdrop(){
  if(['palace','golden'].includes(A.theme)){for(let i=0;i<8;i++)star(ctx,(i*139+180)%1280,182+(i*31)%78,1.3+Math.sin(t*1.2+i)*.4,'#ffebac70',t*.5)}
  }
  for(let x of [14,1266]){ctx.save();ctx.translate(x,258);const glow=ctx.createRadialGradient(0,-9,0,0,-9,32);glow.addColorStop(0,'#ffc86f5e');glow.addColorStop(1,'#ffc86f00');ellipse(ctx,0,-9,30,37,glow);path(ctx,`M-11 0Q-14-12-3-22Q2-27 ${5+Math.sin(t*6)*3}-37Q14-20 11-11Q15-9 9 0Z`,'#f39642',null);path(ctx,'M-6 0Q-8-12 0-20Q4-12 6-27Q10-12 5 0Z','#ffe07e',null);ctx.restore()}
+ ctx.restore();
 }
 
 
@@ -1236,12 +1336,12 @@ window.addEventListener('keydown',e=>{
  }
 },true);
 $('difficulty').onclick=e=>{const b=e.target.closest('[data-level]');if(!b)return;difficulty=b.dataset.level;document.querySelectorAll('[data-level]').forEach(el=>{el.classList.toggle('selected',el.dataset.level===difficulty);el.setAttribute('aria-pressed',el.dataset.level===difficulty)});sfx('click')};
-function bounds(side){return side===0?{minX:88,maxX:570,minY:350,maxY:551}:{minX:710,maxX:1192,minY:350,maxY:551}}
+function bounds(side){return side===0?{minX:88,maxX:570,minY:COURT_VIEW.moveTop,maxY:COURT_VIEW.moveBottom}:{minX:710,maxX:1192,minY:COURT_VIEW.moveTop,maxY:COURT_VIEW.moveBottom}}
 function alive(side){return G.actors.filter(a=>a.side===side&&!a.out)}
 function active(){return G.actors.find(a=>a.id===G.activeId&&!a.out)}
 function actor(id){return G.actors.find(a=>a.id===id)}
 function targetOf(a){const es=alive(1-a.side);if(!es.length)return null;return a.side===G.playerSide&&es.find(b=>b.id===G.targetId)||es.slice().sort((u,v)=>distance(a,u)-distance(a,v))[0]}
-function makeActor(id,side,i){const d=HEROES[id],xs=side===0?[426,207,419]:[855,1067,866],ys=[365,459,550];return{id:`${side}_${id}`,def:d,side,index:i,x:xs[i],y:ys[i],homeX:xs[i],homeY:ys[i],hp:d.maxHp,qi:35,out:false,outT:0,inv:0,hitT:0,dashT:0,dashCD:0,catchT:0,catchCD:0,skillCD:0,skillSkipAttacks:0,attackT:0,shot:null,dx:0,dy:0,moveX:0,moveY:0,moving:false,runPhase:i*2,dustT:0,echoT:0,holdT:0,wait:rand(...LEVELS[difficulty].wait),evadeT:0,evadeDir:1,seen:0,aiCatch:false,aiDodge:false,face:side===0?1:-1};}
+function makeActor(id,side,i){const d=HEROES[id],xs=side===0?[426,207,419]:[855,1067,866],ys=[298,430,558];return{id:`${side}_${id}`,def:d,side,index:i,x:xs[i],y:ys[i],homeX:xs[i],homeY:ys[i],hp:d.maxHp,qi:35,out:false,outT:0,inv:0,hitT:0,dashT:0,dashCD:0,catchT:0,catchCD:0,skillCD:0,skillSkipAttacks:0,attackT:0,shot:null,dx:0,dy:0,moveX:0,moveY:0,moving:false,runPhase:i*2,dustT:0,echoT:0,holdT:0,wait:rand(...LEVELS[difficulty].wait),evadeT:0,evadeDir:1,seen:0,aiCatch:false,aiDodge:false,face:side===0?1:-1};}
 function resetInput(){keys.clear();courtPointer=null;stopFloatingJoystick();}
 function startTournament(){
  closeSetup(false);initAudio();renderMatchOptions();G.matchId=null;G.round=0;G.matchMode=matchMode;G.entrySide=entrySide;G.firstArena=selectedVenue;
@@ -1553,12 +1653,12 @@ function updateActor(a,dt){
 
 
 function segmentDistance(x1,y1,x2,y2,cx,cy){const dx=x2-x1,dy=y2-y1,len=dx*dx+dy*dy,t=len?clamp(((cx-x1)*dx+(cy-y1)*dy)/len,0,1):0;return Math.hypot(cx-(x1+dx*t),cy-(y1+dy*t));}
-const WALL={left:44,right:1236,top:244,bottom:592};
+const WALL={left:44,right:1236,top:COURT_VIEW.wallTop,bottom:COURT_VIEW.wallBottom};
 function reflectAsDead(p,nx,ny){
  if(nx)p.vx=-p.vx*.74;if(ny)p.vy=-p.vy*.74;
  const first=!p.dead;p.dead=true;p.mode='dead';p.damage=0;p.accel=0;p.shieldBreak=false;p.seek=0;p.amp=0;p.pierce=0;p.repeat=false;p.splash=0;p.slow=0;p.stun=0;p.knock=0;p.target=null;p.returning=false;p.style='dead';p.color='#bfdeeb';p.deadAge=p.deadAge||0;p.bounces=(p.bounces||0)+1;p.trail=[];
  G.wallFX??=[];G.wallFX.push({x:p.x+(nx?nx*p.r:0),y:p.y+(ny?ny*p.r:0),nx,ny,life:.55,max:.55});
- if(first){G.deadBounces++;addText('데드볼',clamp(p.x,94,1186),clamp(p.y-38,274,540),'#d3eeff',19,.75)}
+ if(first){G.deadBounces++;addText('데드볼',clamp(p.x,94,1186),clamp(p.y-38,114,COURT_VIEW.moveBottom-12),'#d3eeff',19,.75)}
  if(G.wallFX.length>16)G.wallFX.shift();sfx('bounce');
 }
 function deadStep(p,dt){
@@ -1627,7 +1727,7 @@ function updateBall(dt){
   const closest=alive(b.side).slice().sort((u,v)=>Math.hypot(u.x-b.x,u.y-32-b.y)-Math.hypot(v.x-b.x,v.y-32-b.y))[0];
   if(closest&&((Math.hypot(closest.x-b.x,closest.y-32-b.y)<34&&b.age>.06)||b.age>2.4))acquire(closest);
  }else if(b.mode==='flight'||b.mode==='dead'){
-  const res=projectileStep(b,dt);if(res==='end'&&G.ball===b)dropBall(clamp(b.x,86,1194),clamp(b.y,304,526),b.x<640?0:1);
+  const res=projectileStep(b,dt);if(res==='end'&&G.ball===b)dropBall(clamp(b.x,86,1194),clamp(b.y,COURT_VIEW.moveTop-32,COURT_VIEW.moveBottom-32),b.x<640?0:1);
  }
  // Extra skill orbs have no possession. They also become harmless at their first wall contact.
  for(const p of [...G.extras]){if(!G.extras.includes(p))continue;const result=projectileStep(p,dt);if(result!=='keep')G.extras=G.extras.filter(q=>q!==p)}
@@ -1675,7 +1775,7 @@ function drawProjectileBase(p){if(!p)return;let x=p.x,y=p.y;
  if(ult){ctx.save();ctx.translate(x,y);ctx.rotate((p.rotation||0)*.8);ctx.strokeStyle='#fff8c5';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(0,0,r+4,.2,4.7);ctx.stroke();ctx.restore();if(p.style==='dragon'){ctx.save();ctx.globalAlpha=.58;ctx.translate(x,y);ctx.scale(r/44,r/44);path(ctx,'M-12-21Q10-35 21-14L13-11 22-4 14 4Q28 22 5 29Q-11 24-4 14Q-20 15-22 0Q-25-15-12-21 M-5-14Q3-22 10-16 L9-7 0-2Q-10 2-2 9',null,'#fff9be',1.8);ctx.restore()}}
  ctx.restore();
 }
-function drawCutin(){if(!G.cutin)return;const q=G.cutin,k=1-q.life/q.max,alpha=clamp(Math.min(k*10,(1-k)*7),0,1);ctx.save();ctx.globalAlpha=alpha;const y=151;
+function drawCutin(){if(!G.cutin)return;const q=G.cutin,k=1-q.life/q.max,alpha=clamp(Math.min(k*10,(1-k)*7),0,1);ctx.save();ctx.globalAlpha=alpha;const y=105;
  const g=gradient(ctx,0,y,1280,y+95,'#0b283ce6','#192c46ed');poly(ctx,[[235,y],[1065,y],[1024,y+98],[208,y+98]],g,'#eace86',2);for(let i=0;i<15;i++){const x=220+i*67-(G.visualTime*210%67);poly(ctx,[[x,y+4],[x+21,y+4],[x-19,y+93],[x-42,y+93]],'#f3db8b0c')}
  ctx.save();ctx.beginPath();ctx.rect(220,y+2,840,94);ctx.clip();drawHero(ctx,q.hero,364,y+161,1.7,'ult',9,1);ctx.restore();txt(ctx,`${q.side===G.playerSide?'우리 팀':'상대 팀'} · ${q.hero.name}`,704,y+21,13,'#e3c796');txt(ctx,q.name,704,y+55,32,'#ffe4a0');txt(ctx,q.hero.ultDesc,704,y+83,12,'#dbe5d7');star(ctx,451,y+48,8,'#ffe39a',G.visualTime);ctx.restore()}
 function render(){ctx.setTransform(renderScale,0,0,renderScale,0,0);renderBackdrop();if(G.phase==='menu')return;ctx.save();if(G.shake>0&&!reduced)ctx.translate(Math.sin(G.visualTime*94)*G.shake*23,Math.cos(G.visualTime*77)*G.shake*16);drawAim();
@@ -1686,7 +1786,7 @@ function render(){ctx.setTransform(renderScale,0,0,renderScale,0,0);renderBackdr
  for(const p of G.particles){if(p.cloud)continue;ctx.save();ctx.globalAlpha=clamp(p.life/p.max,0,1);if(p.star)star(ctx,p.x,p.y,p.r,p.color,p.rot);else{ellipse(ctx,p.x,p.y,p.r*.6,p.r*.4,p.color);line(ctx,p.x,p.y,p.x-p.vx*.035,p.y-p.vy*.035,p.color,p.r*.35)}ctx.restore()}
  if(G.pointer){ellipse(ctx,G.pointer.x,G.pointer.y+3,15,6,null,'#fff0b7',1.5)}
  for(const t of G.texts){ctx.save();ctx.globalAlpha=Math.min(1,t.life*4);ctx.font=`900 ${t.size}px "Malgun Gothic","Apple SD Gothic Neo",sans-serif`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.lineWidth=t.size>30?4.5:3;ctx.strokeStyle='#163343';ctx.lineJoin='round';ctx.strokeText(t.msg,t.x,t.y);ctx.fillStyle=t.color;ctx.fillText(t.msg,t.x,t.y);ctx.restore()}
- if(G.phase==='countdown'){rect(ctx,0,302,W,292,'#193a4938');const n=G.count>1.65?'3':G.count>.9?'2':G.count>.18?'1':'출전!';rr(ctx,515,362,250,135,30,'#143548d9','#edd79b',2);txt(ctx,n,640,409,n==='출전!'?58:80,'#ffe8b2');txt(ctx,`${TEAMS[G.homeTeam].name} HOME  vs  ${TEAMS[G.awayTeam].name} AWAY`,640,468,21,'#e9f3d5');txt(ctx,'달리고, 잡고, 피하고! 체력 0이면 아웃',640,528,15,'#fff0c9')}
+ if(G.phase==='countdown'){rect(ctx,0,COURT_VIEW.floorTop,W,COURT_VIEW.floorBottom-COURT_VIEW.floorTop,'#193a4938');const n=G.count>1.65?'3':G.count>.9?'2':G.count>.18?'1':'출전!';rr(ctx,515,362,250,135,30,'#143548d9','#edd79b',2);txt(ctx,n,640,409,n==='출전!'?58:80,'#ffe8b2');txt(ctx,`${TEAMS[G.homeTeam].name} HOME  vs  ${TEAMS[G.awayTeam].name} AWAY`,640,468,21,'#e9f3d5');txt(ctx,'달리고, 잡고, 피하고! 체력 0이면 아웃',640,528,15,'#fff0c9')}
  drawCutin();ctx.restore();}
 function finishRound(win){if(G.roundSettled||G.phase==='result')return;G.phase='result';G.won=win;G.cutin=null;resetInput();const champion=win&&G.round===G.opponents.length-1&&G.matchMode==='tour';$('resultEyebrow').textContent=champion?'WARLORDS CHAMPION':win?'ROUND CLEAR':'GOOD GAME';$('resultTitle').textContent=champion?'군웅 제패!':win?'멋진 승리!':'다시, 힘찬 한 판!';$('resultBadge').textContent=`${TEAMS[selectedTeam].name} · ${G.playerSide===0?'HOME':'AWAY'} · ${ARENAS[G.arenaId].name} · ${LEVELS[difficulty].label} · ${Math.floor(G.time/60)}분 ${Math.floor(G.time%60)}초`;$('resultBody').textContent=win&&G.matchMode==='single'?'한 경기 승리! 다른 구장이나 반대 진영에도 도전해 보세요.':champion?`다른 ${G.opponents.length}개 진영을 모두 이겼어요. 99명 장수의 피구 천하를 평정했습니다!`:win?`${TEAMS[G.opponents[G.round]].name} 진영을 이겼어요! 다음 경기에는 세 장수의 체력이 모두 회복됩니다.`:'이번에는 상대 팀의 승리예요. 잡기와 회피를 활용해 체력을 지키고 다시 도전하세요.';$('statDamage').textContent=G.stats.damage;$('statCatch').textContent=G.stats.catches;$('statUlt').textContent=G.stats.ults;$('nextBtn').textContent=G.matchMode==='single'?'같은 조건으로 다시 경기 ↻':champion?'한 번 더 제패하기 ↻':win?'다음 진영과 대결 →':'같은 상대에게 재도전 ↻';$('resultModal').classList.add('show');if(champion)saveSet('samguk_action_wins_'+selectedTeam,saveGet('samguk_action_wins_'+selectedTeam,0)+1);showSettlement(settleMatch(win));drawResult();sfx(win?'win':'lose');updateHUD();}
 function drawResult(){const c=$('resultArt'),g=c.getContext('2d');g.clearRect(0,0,c.width,c.height);const team=TEAMS[selectedTeam];ellipse(g,241,132,205,13,'#0a233090');for(let i=0;i<3;i++){let x=[243,100,382][i];drawHero(g,HEROES[team.ids[i]],x,i===0?124:132,i===0?1.35:1.15,G.won?'win':'idle',G.visualTime*6+i,i===2?-1:1);}if(G.won)for(let i=0;i<15;i++)star(g,22+i*31,10+(i*41)%101,3+i%3,'#edd296',G.visualTime+i);}
@@ -1697,7 +1797,7 @@ $('pauseBtn').onclick=pause;$('resumeBtn').onclick=resume;
 function showHelp(inGame){helpFromGame=inGame;if(inGame){pause();$('pauseModal').classList.remove('show')}$('helpModal').classList.add('show')}
 $('helpMenu').onclick=()=>showHelp(false);$('helpGame').onclick=()=>showHelp(true);$('helpClose').onclick=()=>{$('helpModal').classList.remove('show');if(helpFromGame)resume()};
 let uiScale=1,renderScale=2;
-function fitStage(){const vw=window.innerWidth,vh=window.innerHeight;uiScale=Math.min(vw/W,vh/H);const resolution=clamp(uiScale*(window.devicePixelRatio||1),1,2);if(Math.abs(renderScale-resolution)>.001){renderScale=resolution;canvas.width=Math.round(W*renderScale);canvas.height=Math.round(H*renderScale);}$('stage').style.left='50%';$('stage').style.top='50%';$('stage').style.transform=`translate(-50%,-50%) scale(${uiScale})`;}
+function fitStage(){const v=window.visualViewport,vw=Math.max(1,Math.min(window.innerWidth,document.documentElement.clientWidth||window.innerWidth,v?.width||window.innerWidth)),vh=Math.max(1,Math.min(window.innerHeight,document.documentElement.clientHeight||window.innerHeight,v?.height||window.innerHeight));uiScale=Math.min(vw/W,vh/H);const resolution=clamp(uiScale*(window.devicePixelRatio||1),1,2);if(Math.abs(renderScale-resolution)>.001){renderScale=resolution;canvas.width=Math.round(W*renderScale);canvas.height=Math.round(H*renderScale);}$('stage').style.left=((v?.offsetLeft||0)+vw/2)+'px';$('stage').style.top=((v?.offsetTop||0)+vh/2)+'px';$('stage').style.transform=`translate(-50%,-50%) scale(${uiScale})`;}
 window.addEventListener('resize',()=>{fitStage();resizeFloatingJoystick()});
 async function fullscreen(){try{if(document.fullscreenElement){await document.exitFullscreen?.();return}if(!document.documentElement.requestFullscreen){toast('이 브라우저에서는 기기를 가로로 돌려 플레이하세요.');return}await document.documentElement.requestFullscreen();try{await screen.orientation?.lock?.('landscape')}catch{}fitStage();}catch{toast('전체 화면을 열 수 없어요. 브라우저 창을 넓혀 플레이하세요.')}}
 document.querySelectorAll('.fullscreen-toggle').forEach(b=>b.onclick=fullscreen);document.addEventListener('fullscreenchange',fitStage);
@@ -1867,7 +1967,7 @@ window.visualViewport?.addEventListener('resize',()=>{fitStage();resizeFloatingJ
 syncMovementSurface();
 
 function courtPoint(e){const r=$('stage').getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*W,y:(e.clientY-r.top)/r.height*H}}
-$('game').addEventListener('pointerdown',e=>{if(G.phase!=='play'||e.target.closest('button,.controls,.hud-team,.scoreboard,.game-tools'))return;const p=courtPoint(e);if(p.y<278||p.y>595)return;const enemy=alive(1-G.playerSide).find(a=>Math.hypot(a.x-p.x,a.y-44-p.y)<58);if(enemy){G.targetId=enemy.id;burst(enemy.x,enemy.y-38,'#fff0b0',5,60);return}const ally=alive(G.playerSide).find(a=>Math.hypot(a.x-p.x,a.y-44-p.y)<45);if(ally){selectActor(ally.id);return}if(e.pointerType==='touch'||e.pointerType==='pen')return;const bd=bounds(G.playerSide);G.pointer={x:clamp(p.x,bd.minX,bd.maxX),y:clamp(p.y+20,bd.minY,bd.maxY)};courtPointer=e.pointerId;$('game').setPointerCapture?.(e.pointerId);e.preventDefault();});
+$('game').addEventListener('pointerdown',e=>{if(G.phase!=='play'||e.target.closest('button,.controls,.hud-team,.scoreboard,.game-tools'))return;const p=courtPoint(e);if(p.y<COURT_VIEW.moveTop-151||p.y>COURT_VIEW.floorBottom)return;const enemy=alive(1-G.playerSide).find(a=>Math.hypot(a.x-p.x,a.y-44-p.y)<58);if(enemy){G.targetId=enemy.id;burst(enemy.x,enemy.y-38,'#fff0b0',5,60);return}const ally=alive(G.playerSide).find(a=>Math.hypot(a.x-p.x,a.y-44-p.y)<45);if(ally){selectActor(ally.id);return}if(e.pointerType==='touch'||e.pointerType==='pen')return;const bd=bounds(G.playerSide);G.pointer={x:clamp(p.x,bd.minX,bd.maxX),y:clamp(p.y+20,bd.minY,bd.maxY)};courtPointer=e.pointerId;$('game').setPointerCapture?.(e.pointerId);e.preventDefault();});
 $('game').addEventListener('pointermove',e=>{if(e.pointerId!==courtPointer||G.phase!=='play')return;const p=courtPoint(e),bd=bounds(G.playerSide);G.pointer={x:clamp(p.x,bd.minX,bd.maxX),y:clamp(p.y+20,bd.minY,bd.maxY)};});['pointerup','pointercancel','lostpointercapture'].forEach(event=>$('game').addEventListener(event,e=>{if(e.pointerId===courtPointer)courtPointer=null}));
 window.addEventListener('keydown',e=>{const k=e.key.length===1?e.key.toLowerCase():e.key;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' ','Tab'].includes(k)&&G.phase!=='menu')e.preventDefault();if(k==='f'&&!e.repeat){fullscreen();return}if(['Escape','p'].includes(k)){if(e.repeat)return;if($('helpModal').classList.contains('show')){$('helpClose').click()}else if(G.phase==='paused')resume();else pause();return}if(G.phase!=='play')return;keys.add(k);if(e.repeat)return;initAudio();if(k==='j'||k==='Enter')shootAction('normal');else if(k==='k'||k===' ')catchAction();else if(k==='l'||k==='Shift')dodgeAction();else if(k==='e')shootAction('skill');else if(k==='r')shootAction('ult');else if(k==='q'||k==='Tab')cycle();else if(['1','2','3'].includes(k)){const a=G.actors.filter(a=>a.side===G.playerSide)[Number(k)-1];if(a)selectActor(a.id)}});
 window.addEventListener('keyup',e=>keys.delete(e.key.length===1?e.key.toLowerCase():e.key));window.addEventListener('blur',()=>{resetInput();pause()});document.addEventListener('visibilitychange',()=>{if(document.hidden){resetInput();pause()}});
@@ -1927,7 +2027,7 @@ function drawProjectile(p){
   for(let i=1;i<p.trail.length;i++){const a=p.trail[i-1],b=p.trail[i];ctx.globalAlpha=alpha*i/p.trail.length*.22;line(ctx,a.x,a.y,b.x,b.y,'#c2e1f8',Math.max(1,i/p.trail.length*8))}
   ctx.globalAlpha=alpha;ballArt(ctx,p.x,p.y,p.r||23,'#bbcad2',p);
   ctx.setLineDash([5,6]);ellipse(ctx,p.x,p.y,(p.r||23)+5,(p.r||23)+5,null,'#e8f5ff85',1.3);ctx.setLineDash([]);
-  const lx=clamp(p.x,94,1186),ly=clamp(p.y-(p.r||23)-28,275,526);
+  const lx=clamp(p.x,94,1186),ly=clamp(p.y-(p.r||23)-28,114,COURT_VIEW.moveBottom-15);
   rr(ctx,lx-53,ly-10,106,23,8,'#19384ad9','#b6d7e0',1);txt(ctx,'데드볼 · 피해 0',lx,ly+1,11,'#e0f4ff');ctx.restore();return;
  }
  drawProjectileBase(p);
@@ -3701,7 +3801,7 @@ $('resumeConquest').onclick=()=>showCampaign();$('nextBtn').onclick=()=>openShop
 $('shopContinue').onclick=()=>advanceAfterShop();
 
 // Per-campaign currency is in campaign.economy, never in a common top-level account.
-function exportV94Payload(){return {game:'samguk-dodgeball',version:'9.5.1',economySchema:2,profile:freshProfile(),campaign:campaign?copyData(campaign):null};}
+function exportV94Payload(){return {game:'samguk-dodgeball',version:'9.6.0',economySchema:2,profile:freshProfile(),campaign:campaign?copyData(campaign):null};}
 exportV9=function(){if(campaign)saveCampaign();downloadJSON('삼국지피구_천하도_v9_5.json',exportV94Payload());toast('점령전 전용 군공·아이템과 지도·군영을 저장했습니다.');};
 exportV8=exportV9;$('exportSave').onclick=()=>exportV9();$('conquestExport').onclick=()=>exportV9();
 const v94OpenSave=openSave;
@@ -3728,7 +3828,7 @@ $('importFile').onchange=async e=>{
 const ULT_TIMING=Object.freeze({maxFlight:2.4,returnFlight:2.7,spentTail:.22,echoDeadFade:.18,deadPickup:.28});
 function expireSuperOrb(p){
  if(p.phantom){p.dead=true;p.damage=0;p.seek=0;p.amp=0;p.pierce=0;p.splash=0;p.repeat=false;return 'remove';}
- Object.assign(p,{dead:true,mode:'dead',damage:0,accel:0,shieldBreak:false,seek:0,amp:0,pierce:0,repeat:false,splash:0,slow:0,stun:0,knock:0,target:null,returning:false,style:'dead',color:'#bfdeeb',trail:[],deadAge:.02,retiredUlt:true});p.r=Math.min(p.r||23,30);addText('데드볼',clamp(p.x,94,1186),clamp(p.y-38,274,540),'#d3eeff',17,.5);return 'keep';
+ Object.assign(p,{dead:true,mode:'dead',damage:0,accel:0,shieldBreak:false,seek:0,amp:0,pierce:0,repeat:false,splash:0,slow:0,stun:0,knock:0,target:null,returning:false,style:'dead',color:'#bfdeeb',trail:[],deadAge:.02,retiredUlt:true});p.r=Math.min(p.r||23,30);addText('데드볼',clamp(p.x,94,1186),clamp(p.y-38,114,COURT_VIEW.moveBottom-12),'#d3eeff',17,.5);return 'keep';
 }
 const v94ProjectileStep=projectileStep;
 projectileStep=function(p,dt){
@@ -3863,7 +3963,7 @@ const v95OpenSetup=openSetup;openSetup=function(){setupPage='roster';v95OpenSetu
 const v95Guide=openV9Guide;
 openV9Guide=function(id=null){v95Guide(id);if(id===null){const p=document.createElement('section');p.className='v93-guide-extra';p.innerHTML='<h3>v9.5 · 특징 기술은 기를 소비합니다</h3><p>E를 실제로 던지면 기 12를 소모합니다. 그 장수의 다음 투구에서는 E를 사용할 수 없습니다. J 또는 R로 한 번 투구하면 해제되며, 명중 여부는 상관없습니다. 잡기·공 회수·패스·교대·대기만으로는 해제되지 않습니다. 상대 AI에도 동일하게 적용합니다. E는 기 100에서도 특징 기술, J는 기존처럼 기 100일 때 자동 필살기를 사용합니다. 경기 시작/재시작에서는 사용 제한을 초기화합니다.</p><p>경기 설정·점령전 출전·제패전 선수 교체는 화면의 실제 크기에 맞춰 카드와 기술 설명을 배치합니다. 최대 9명을 내부 스크롤 없이 함께 보여줍니다.</p>';$('v9GuideContent').append(p);}};
 $('troopGuideBtn').onclick=()=>openV9Guide();$('conquestGuideBtn').onclick=()=>openV9Guide();
-Object.assign(window.SamgukDodgeball,{version:'9.5.1',skillRules:SKILL_RULES,setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:id=>openV9Guide(id)});
+Object.assign(window.SamgukDodgeball,{version:'9.6.0',skillRules:SKILL_RULES,setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:id=>openV9Guide(id)});
 Object.assign(window.SamgukDodgeball.diagnostics,{
  canShoot:(...args)=>canShoot(...args),queueShot:(...args)=>queueShot(...args),releaseShot:(...args)=>releaseShot(...args),
  skillUnavailableReason,shootAction:kind=>shootAction(kind),updateHUD:()=>updateHUD(),fitSelectionDialogs,
@@ -3873,6 +3973,8 @@ Object.assign(window.SamgukDodgeball.diagnostics,{
 });
 fitSelectionDialogs();
 
+Object.assign(window.SamgukDodgeball,{courtView:COURT_VIEW});
+Object.assign(window.SamgukDodgeball.diagnostics,{bounds,makeActor,makeBackdrop:()=>makeBackdrop(),renderBackdrop:()=>renderBackdrop()});
 fitStage();renderMenu();render();requestAnimationFrame(frame);
 })();
 
