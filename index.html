@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#102b38">
-<title>삼국지 피구대전 — 천하도 v9.5 · 기술 기 소모 / 자동 맞춤 출전창</title>
+<title>삼국지 피구대전 — 천하도 v9.5.1 · 점령전 팝업 / 버튼 글자 맞춤</title>
 <style>
 :root{--gold:#efce87;--cream:#fff5dc;--muted:#adbbc0;--navy:#102632;--team:#3b9b7e;--teamLight:#78dcaf;--font:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}body{background:#091920;color:var(--cream);font-family:var(--font);display:grid;place-items:center;user-select:none;-webkit-user-select:none}button{font:inherit;border:0;cursor:pointer;color:inherit;touch-action:manipulation;user-select:none;-webkit-user-select:none}button:focus-visible{outline:3px solid #fff4ae;outline-offset:4px}button:active{filter:brightness(1.2)}button:disabled{cursor:default}#stage{position:absolute;width:1280px;height:720px;transform-origin:center;overflow:hidden;background:#213f46;box-shadow:0 0 0 1px #71877b,0 20px 80px #000b;touch-action:none}canvas{image-rendering:pixelated;display:block}.scene{position:absolute;inset:0;width:1280px;height:720px}.screen{position:absolute;inset:0;display:none}.screen.active{display:block}.menu-shade{position:absolute;inset:0;background:linear-gradient(90deg,#061e2cee 0%,#0c2936b8 36%,#0c2530e8 55%,#0b2430f5 100%)}.menu-top{position:absolute;left:40px;right:40px;top:24px;display:flex;align-items:center;justify-content:space-between}.eyebrow{font-size:12px;letter-spacing:3px;color:#a8cbd0;font-weight:850}.top-buttons{display:flex;gap:9px}.icon-btn{min-width:37px;height:34px;border:1px solid #809b9b6b;background:#142e3fd9;color:#eee0ba;border-radius:5px;font-size:15px;display:grid;place-items:center}.hero-copy{position:absolute;left:51px;top:96px;pointer-events:none}.edition{display:inline-block;padding:6px 13px;border:1px solid #d4b37370;background:#302d24a1;font-weight:800;color:#f4d191;letter-spacing:4px;font-size:13px}h1{font-weight:1000;font-size:78px;line-height:1.02;letter-spacing:-5px;margin:17px 0 12px;text-shadow:0 6px 0 #0c1823,3px 0 0 #132b35,-3px 0 0 #132b35}h1 strong{display:block;font-size:91px;color:#f4d392;letter-spacing:-6px;text-shadow:0 6px 0 #71563c,0 10px 0 #10242e}.hero-sub{font-size:16px;color:#c4d5d4;line-height:1.8;margin:20px 0 0}.menu-heroes{position:absolute;left:22px;top:341px;width:568px;height:253px;pointer-events:none}.hero-notes{position:absolute;left:50px;top:610px;display:flex;gap:16px;align-items:center;font-size:12px;color:#becfcf}.hero-notes span{border-left:2px solid #c7af6c;padding-left:10px;line-height:1.7}.select-panel{position:absolute;top:97px;right:44px;width:623px;bottom:37px;padding:22px 24px;background:linear-gradient(145deg,#1a3846ed,#0e2735f5);border:1px solid #8b9f9254;box-shadow:0 7px 0 #051b2673,inset 0 0 0 4px #abc1b509;display:flex;flex-direction:column;border-radius:7px}.select-heading{display:flex;justify-content:space-between;align-items:center}.select-heading h2{font-size:21px;letter-spacing:-.7px;margin:0}.select-heading span{font-size:11px;color:#aec3c7}.number{color:#e4c27c;letter-spacing:1px;margin-right:8px;font-size:13px}.team-tabs{display:flex;gap:10px;margin-top:17px}.team-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;background:#0c2330;border:1px solid #5e797b;color:#a5b9be;padding:10px 6px;border-radius:4px}.team-tab.selected{border-color:var(--teamLight);background:linear-gradient(100deg,#255948,#173847);box-shadow:0 3px 0 var(--team)}.team-seal{width:36px;height:42px;background:var(--team);border:1px solid #efd18b96;display:grid;place-items:center;font-family:serif;font-size:27px;font-weight:900;color:#fff0bd;clip-path:polygon(0 0,100% 0,100% 83%,50% 100%,0 83%)}.team-name{font-size:22px;font-weight:1000;text-align:left;line-height:1.1}.team-name small{font-size:10px;font-weight:500;display:block;margin-top:6px;color:#b3c5c6}.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 12px}.hero-card{position:relative;min-height:162px;border:1px solid #536e74;border-radius:4px;background:linear-gradient(155deg,#304e55,#182f3c);padding:0 0 9px;text-align:center;overflow:hidden}.hero-card.selected{border-color:#efd18c;box-shadow:0 0 0 1px #efd18c,inset 0 0 22px #87ad8940}.hero-card:after{content:"";position:absolute;left:8px;right:8px;top:98px;height:1px;background:#c8dcd222}.portrait{width:100%;height:110px}.hero-card b{display:block;font-size:17px}.hero-card .hero-meta{font-size:10px;color:#c4d7d5;display:block;margin-top:4px}.hp-label{position:absolute;top:8px;left:9px;font-size:9px;color:#c2decf;font-weight:800;background:#10232caa;padding:3px 5px}.ability-panel{border-left:3px solid #d9bc7c;background:#0b2430b0;padding:11px 13px;min-height:79px;font-size:12px;line-height:1.65;color:#bfd1cf}.ability-panel strong{color:#fff0ca;font-size:13px}.ability-panel .tag{font-size:10px;background:#315c50;color:#b7efcd;padding:2px 5px;margin-right:7px;font-weight:800}.ability-panel .tag.gold{background:#664f2d;color:#ffe2a0}.ability-panel .desc{margin-left:7px;color:#a1b9be;font-size:11px}.match-options{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:13px 0 11px;font-size:12px}.difficulty{display:flex;gap:4px;padding:3px;background:#091e2b;border-radius:5px}.difficulty button{background:transparent;color:#a0b4ba;padding:6px 14px;border-radius:3px;font-size:11px}.difficulty button.selected{background:#d6bd87;color:#21343a;font-weight:900}.start-btn{position:relative;height:52px;min-height:52px;border:2px solid #ffdc8c;background:linear-gradient(#eed39a,#dab26c);box-shadow:0 4px 0 #85653d,inset 0 0 0 2px #fbe3b05c;color:#26353a;font-size:20px;font-weight:1000;letter-spacing:-.5px;border-radius:4px}.start-btn span{position:absolute;right:18px;font-size:23px}.route-note{text-align:center;margin:12px 0 0;font-size:10px;color:#93adb4;letter-spacing:.1px}.menu-foot{position:absolute;left:42px;bottom:21px;font-size:9px;color:#78979f;letter-spacing:1px}
@@ -574,6 +574,61 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 }
 
 </style>
+
+<style id="v951ConquestPromptStyles">
+/* A nested confirmation must be above body-mounted selection dialogs (z=230). */
+#conquestNewModal.v95-secondary{
+ z-index:270;align-items:start;justify-items:center;
+ padding-top:max(10px,min(7vh,52px),env(safe-area-inset-top));
+ padding-right:max(10px,env(safe-area-inset-right));
+ padding-bottom:max(10px,env(safe-area-inset-bottom));
+ padding-left:max(10px,env(safe-area-inset-left));
+ background:#061723d6;isolation:isolate;
+}
+#conquestNewModal .modal-card{
+ width:min(520px,100%);max-width:100%;max-height:100%;min-width:0;margin:0;
+ padding:clamp(14px,2.6vh,24px) clamp(14px,2.6vw,28px);
+ border-radius:12px;overflow-y:auto;overscroll-behavior:contain;
+ box-shadow:0 14px 44px #0008;
+}
+#conquestNewModal .setup-eyebrow{font-size:10px;line-height:1.2;letter-spacing:1.5px;}
+#conquestNewModal h2{font-size:clamp(18px,2.6vw,25px);line-height:1.3;letter-spacing:-.5px;margin:8px 0 10px;word-break:keep-all;overflow-wrap:anywhere;}
+#conquestNewModal p{font-size:clamp(12px,1.45vw,14px);line-height:1.55;margin:0 0 12px;word-break:keep-all;overflow-wrap:anywhere;}
+#conquestNewModal button{
+ width:100%;max-width:100%;min-width:0;min-height:40px;height:auto;
+ padding:8px 12px;margin-top:9px;font-size:clamp(13px,1.65vw,16px);
+ line-height:1.3;letter-spacing:-.25px;white-space:normal;word-break:keep-all;overflow-wrap:anywhere;
+ border-radius:7px;touch-action:manipulation;
+}
+/* Override the old fixed 22px start label, not the roster's adaptive sizing. */
+#setupModal.v95-selection .setup-footer #startBtn,
+#setupModal.v95-selection .setup-footer #setupNextPage{
+ display:flex;align-items:center;justify-content:center;gap:6px;
+ min-width:0;height:auto;min-height:var(--button);padding:5px 9px;
+ font-size:clamp(12px,1.3vw,17px);line-height:1.2;letter-spacing:-.3px;
+ white-space:normal;word-break:keep-all;overflow-wrap:anywhere;
+}
+#setupModal.v95-selection .setup-footer #startBtn span{
+ position:static;flex:none;min-width:1em;margin-left:0;font-size:inherit;line-height:inherit;
+}
+#setupModal.v95-selection .setup-footer #startBtn[hidden],
+#setupModal.v95-selection .setup-footer #setupNextPage[hidden]{display:none;}
+@media(max-height:440px){
+ #conquestNewModal.v95-secondary{padding-top:max(10px,env(safe-area-inset-top));}
+ #conquestNewModal .modal-card{padding:12px 18px;}
+ #conquestNewModal h2{font-size:20px;margin:5px 0 7px;}
+ #conquestNewModal p{font-size:12px;line-height:1.45;margin:0 0 7px;}
+ #conquestNewModal button{min-height:36px;margin-top:7px;padding:7px 10px;font-size:13px;}
+}
+@media(max-height:300px){
+ #conquestNewModal.v95-secondary{padding-top:max(6px,env(safe-area-inset-top));padding-bottom:max(6px,env(safe-area-inset-bottom));}
+ #conquestNewModal .modal-card{padding:8px 12px;}
+ #conquestNewModal .setup-eyebrow{display:none;}
+ #conquestNewModal h2{font-size:17px;margin:3px 0 5px;}
+ #conquestNewModal p{font-size:11px;line-height:1.35;margin-bottom:5px;}
+ #conquestNewModal button{min-height:31px;padding:5px 8px;margin-top:5px;font-size:12px;}
+}
+</style>
 </head>
 <body>
 <main id="stage" aria-label="삼국지 피구대전 가로형 게임">
@@ -583,7 +638,7 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <header class="menu-top"><div class="menu-brand"><span>THREE KINGDOMS · DODGEBALL</span><h1>삼국지 <strong>피구대전</strong></h1></div><div class="top-buttons"><span class="wallet-pill">軍功 <b id="menuWallet">0</b></span><button id="troopGuideBtn">병종·지역 도감</button><button id="resumeConquest" class="menu-utility" hidden>점령전 계속</button><button id="menuShop" class="menu-utility">군공 상점</button><button id="saveMenu" class="menu-utility">기록</button><button class="icon-btn sound-toggle" aria-label="효과음 설정">♪</button><button class="icon-btn fullscreen-toggle" aria-label="전체 화면">⛶</button><button class="icon-btn" id="helpMenu" aria-label="게임 방법">?</button></div></header>
 <aside class="nation-browser"><div class="browser-heading"><h2>진영 선택</h2><span id="factionCount">17개 진영</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="factionSearch" type="search" placeholder="진영 · 장수 검색" aria-label="진영 또는 장수 검색" autocomplete="off" maxlength="40"></label><div id="teamTabs" class="nation-list" role="group" aria-label="확장형 진영 목록"></div><p class="browser-foot">목록을 스크롤해 다른 진영을 찾아보세요.</p></aside>
 <section class="lineup-preview"><header class="lineup-heading"><div><span class="lineup-kicker" id="lineupKicker">SHU</span><h2 id="lineupName">촉</h2></div><p id="lineupMotto">뜨거운 의리</p><span class="lineup-seal" id="lineupSeal">蜀</span></header><div class="lineup-heroes" id="lineupHeroes"></div><footer class="lineup-footer"><div><b id="lineupCities"></b><span id="loadoutNote">장수를 선택한 뒤 경기 설정을 열어주세요.</span></div><button id="configureBtn" class="start-btn">경기 설정 <span>→</span></button></footer></section>
-<div class="menu-version">천하도 9.5 · 기술 기 소모 / 자동 맞춤 출전창 · 유동형 조이스틱</div>
+<div class="menu-version">천하도 9.5.1 · 점령전 팝업 / 버튼 글자 맞춤 · 유동형 조이스틱</div>
 </section>
 <section id="game" class="screen" aria-label="피구 경기 조작 화면">
 <div class="hud-team ally" id="allyTeam"><div class="banner" id="allyBanner">蜀</div><div class="hud-roster"><div class="hud-heading"><span id="allyName">촉 · 우리</span><small>CLICK TO SWITCH</small></div><div class="roster-cards" id="allyRoster"></div></div></div>
@@ -1170,7 +1225,7 @@ function closeSetup(restoreFocus=true){
 $('setupClose').onclick=()=>closeSetup();$('setupBack').onclick=()=>closeSetup();
 $('setupModal').addEventListener('click',e=>{if(e.target===$('setupModal'))closeSetup()});
 window.addEventListener('keydown',e=>{
- if(!$('setupModal').classList.contains('show'))return;
+ if(!$('setupModal').classList.contains('show')||$('conquestNewModal')?.classList.contains('show'))return;
  // Keep native select/Enter behavior, while preventing game shortcuts underneath the dialog.
  e.stopImmediatePropagation();
  if(e.key==='Escape'){e.preventDefault();closeSetup();return}
@@ -2459,7 +2514,21 @@ function loadCampaign(){try{const raw=localStorage.getItem(CONQUEST_KEY);return 
 let campaign=loadCampaign(),campaignSaved=true,cSelectedFrom=null,cSelectedTo=null,battleDraftSquad=[],mapZoom=1,mapPan={x:0,y:0};
 function saveCampaign(){try{if(campaign)localStorage.setItem(CONQUEST_KEY,JSON.stringify(campaign));else localStorage.removeItem(CONQUEST_KEY);campaignSaved=true}catch{campaignSaved=false}}
 function escapeHTML(v){return String(v).replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]))}
-function openConquestPrompt(){$('conquestNewModal').classList.add('show');$('conquestNewModal').setAttribute('aria-hidden','false');$('newConquestCancel').focus({preventScroll:true})}
+// This confirmation is a viewport overlay above setup, never inside the scaled stage.
+function openConquestPrompt(){
+ const el=$('conquestNewModal');
+ resetInput();fitSelectionDialogs();el.classList.add('show');el.setAttribute('aria-hidden','false');
+ $('setupModal').inert=true;
+ $('newConquestCancel').focus({preventScroll:true});
+}
+function closeConquestPrompt(restoreFocus=true){
+ $('conquestNewModal').classList.remove('show');$('conquestNewModal').setAttribute('aria-hidden','true');
+ $('setupModal').inert=false;
+ if(restoreFocus&&$('setupModal').classList.contains('show')){
+  const target=$('startBtn').hidden?$('setupNextPage'):$('startBtn');
+  target.focus({preventScroll:true});
+ }
+}
 function newConquest(seed){
  if(fieldSquad().length!==3){toast('출전 장수 3명을 선택하세요.');return}
  campaign=createCampaign(selectedTeam,seed??(Date.now()>>>0));mapZoom=1;mapPan={x:0,y:0};cSelectedFrom=campaign.selected;cSelectedTo=null;saveCampaign();showCampaign();
@@ -2565,8 +2634,8 @@ $('resumeConquest').onclick=()=>showCampaign();$('conquestHome').onclick=()=>{sa
 $('conquestAdvance').onclick=()=>campaignAdvance(false);$('conquestAuto').onclick=()=>campaignAdvance(true);$('conquestPass').onclick=campaignPass;$('conquestAttack').onclick=openCampaignBattle;$('conquestResumeBattle').onclick=openCampaignBattle;
 $('campaignBattleBack').onclick=closeBattleDraft;$('campaignBattleStart').onclick=launchCampaignBattle;
 $('conquestShop').onclick=()=>openShop('campaign');$('conquestExport').onclick=()=>exportV8();
-$('newConquestCancel').onclick=()=>{$('conquestNewModal').classList.remove('show')};$('newConquestConfirm').onclick=()=>{$('conquestNewModal').classList.remove('show');newConquest()};
-$('newConquestContinue').onclick=()=>{$('conquestNewModal').classList.remove('show');showCampaign()};
+$('newConquestCancel').onclick=()=>closeConquestPrompt();$('newConquestConfirm').onclick=()=>{closeConquestPrompt(false);newConquest()};
+$('newConquestContinue').onclick=()=>{closeConquestPrompt(false);showCampaign()};
 
 /* Map zoom and touch/keyboard input; game controls never steal focus on the map. */
 function applyMapTransform(){const el=$('mapTransform');if(el)el.setAttribute('transform',`translate(${mapPan.x} ${mapPan.y}) translate(500 325) scale(${mapZoom}) translate(-500 -325)`)}
@@ -2586,7 +2655,7 @@ window.addEventListener('keydown',e=>{
  if(!$('campaignBattle').classList.contains('show')&&!$('conquestNewModal').classList.contains('show')&&G.phase!=='campaign')return;
  e.stopImmediatePropagation();const modal=$('campaignBattle').classList.contains('show')?$('campaignBattle'):$('conquestNewModal').classList.contains('show')?$('conquestNewModal'):null;
  if(!modal&&(e.key==='Enter'||e.key===' ')&&document.activeElement?.dataset.city){e.preventDefault();mapCellClick(document.activeElement.dataset.city);return}
- if(e.key==='Escape'){e.preventDefault();if(modal?.id==='campaignBattle')closeBattleDraft();else if(modal)modal.classList.remove('show');return}
+ if(e.key==='Escape'){e.preventDefault();if(modal?.id==='campaignBattle')closeBattleDraft();else if(modal)closeConquestPrompt();return}
  if(modal&&e.key==='Tab'){const els=[...modal.querySelectorAll('button:not(:disabled)')],first=els[0],last=els[els.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
 },true);
 
@@ -3632,7 +3701,7 @@ $('resumeConquest').onclick=()=>showCampaign();$('nextBtn').onclick=()=>openShop
 $('shopContinue').onclick=()=>advanceAfterShop();
 
 // Per-campaign currency is in campaign.economy, never in a common top-level account.
-function exportV94Payload(){return {game:'samguk-dodgeball',version:'9.5.0',economySchema:2,profile:freshProfile(),campaign:campaign?copyData(campaign):null};}
+function exportV94Payload(){return {game:'samguk-dodgeball',version:'9.5.1',economySchema:2,profile:freshProfile(),campaign:campaign?copyData(campaign):null};}
 exportV9=function(){if(campaign)saveCampaign();downloadJSON('삼국지피구_천하도_v9_5.json',exportV94Payload());toast('점령전 전용 군공·아이템과 지도·군영을 저장했습니다.');};
 exportV8=exportV9;$('exportSave').onclick=()=>exportV9();$('conquestExport').onclick=()=>exportV9();
 const v94OpenSave=openSave;
@@ -3733,7 +3802,7 @@ updateHUD=function(){
 // This keeps every card and the confirm buttons within the visual viewport.
 const selectionIds=['setupModal','campaignBattle','tourLineupModal'];
 for(const id of selectionIds){const el=$(id);el.classList.add('v95-selection');document.body.append(el);}
-for(const id of ['officerInfoModal','exitConfirmModal']){const el=$(id);el.classList.add('v95-secondary');document.body.append(el);}
+for(const id of ['officerInfoModal','exitConfirmModal','conquestNewModal']){const el=$(id);el.classList.add('v95-secondary');document.body.append(el);}
 // Messages from a full squad / insufficient qi must remain above a viewport dialog.
 document.body.append($('toast'));$('toast').classList.add('v95-toast');
 $('setupModal').querySelector('.setup-header').insertAdjacentHTML('afterend','<nav class="v95-setup-tabs" role="tablist" aria-label="경기 준비 단계"><button type="button" data-setup-page-button="roster" role="tab">1 · 장수 선택</button><button type="button" data-setup-page-button="settings" role="tab">2 · 경기 설정</button></nav>');
@@ -3751,7 +3820,7 @@ const v95Tip=$('tourLineupModal').querySelector('.v93-tip');v95Tip.textContent='
 
 function fitSelectionDialogs(){
  const v=window.visualViewport,w=Math.max(240,Math.min(document.documentElement.clientWidth||window.innerWidth,window.innerWidth,v?.width||window.innerWidth)),h=Math.max(180,Math.min(document.documentElement.clientHeight||window.innerHeight,window.innerHeight,v?.height||window.innerHeight));
- for(const id of [...selectionIds,'officerInfoModal','exitConfirmModal']){
+ for(const id of [...selectionIds,'officerInfoModal','exitConfirmModal','conquestNewModal']){
   const el=$(id);el.style.setProperty('--v95-vw',w+'px');el.style.setProperty('--v95-vh',h+'px');el.style.left=(v?.offsetLeft||0)+'px';el.style.top=(v?.offsetTop||0)+'px';
   el.dataset.layout=h>w*1.04?'portrait':h<500?'compact':'wide';
   el.dataset.dense=String(h>w&&h<670);el.dataset.tiny=String(w>h&&h<350);
@@ -3794,7 +3863,7 @@ const v95OpenSetup=openSetup;openSetup=function(){setupPage='roster';v95OpenSetu
 const v95Guide=openV9Guide;
 openV9Guide=function(id=null){v95Guide(id);if(id===null){const p=document.createElement('section');p.className='v93-guide-extra';p.innerHTML='<h3>v9.5 · 특징 기술은 기를 소비합니다</h3><p>E를 실제로 던지면 기 12를 소모합니다. 그 장수의 다음 투구에서는 E를 사용할 수 없습니다. J 또는 R로 한 번 투구하면 해제되며, 명중 여부는 상관없습니다. 잡기·공 회수·패스·교대·대기만으로는 해제되지 않습니다. 상대 AI에도 동일하게 적용합니다. E는 기 100에서도 특징 기술, J는 기존처럼 기 100일 때 자동 필살기를 사용합니다. 경기 시작/재시작에서는 사용 제한을 초기화합니다.</p><p>경기 설정·점령전 출전·제패전 선수 교체는 화면의 실제 크기에 맞춰 카드와 기술 설명을 배치합니다. 최대 9명을 내부 스크롤 없이 함께 보여줍니다.</p>';$('v9GuideContent').append(p);}};
 $('troopGuideBtn').onclick=()=>openV9Guide();$('conquestGuideBtn').onclick=()=>openV9Guide();
-Object.assign(window.SamgukDodgeball,{version:'9.5.0',skillRules:SKILL_RULES,setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:id=>openV9Guide(id)});
+Object.assign(window.SamgukDodgeball,{version:'9.5.1',skillRules:SKILL_RULES,setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:id=>openV9Guide(id)});
 Object.assign(window.SamgukDodgeball.diagnostics,{
  canShoot:(...args)=>canShoot(...args),queueShot:(...args)=>queueShot(...args),releaseShot:(...args)=>releaseShot(...args),
  skillUnavailableReason,shootAction:kind=>shootAction(kind),updateHUD:()=>updateHUD(),fitSelectionDialogs,
