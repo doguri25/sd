@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#102b38">
-<title>삼국지 피구대전 — 천하도 v9.1 · 유동형 조이스틱</title>
+<title>삼국지 피구대전 — 천하도 v9.2 · 장수 영입과 행군</title>
 <style>
 :root{--gold:#efce87;--cream:#fff5dc;--muted:#adbbc0;--navy:#102632;--team:#3b9b7e;--teamLight:#78dcaf;--font:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}body{background:#091920;color:var(--cream);font-family:var(--font);display:grid;place-items:center;user-select:none;-webkit-user-select:none}button{font:inherit;border:0;cursor:pointer;color:inherit;touch-action:manipulation;user-select:none;-webkit-user-select:none}button:focus-visible{outline:3px solid #fff4ae;outline-offset:4px}button:active{filter:brightness(1.2)}button:disabled{cursor:default}#stage{position:absolute;width:1280px;height:720px;transform-origin:center;overflow:hidden;background:#213f46;box-shadow:0 0 0 1px #71877b,0 20px 80px #000b;touch-action:none}canvas{image-rendering:pixelated;display:block}.scene{position:absolute;inset:0;width:1280px;height:720px}.screen{position:absolute;inset:0;display:none}.screen.active{display:block}.menu-shade{position:absolute;inset:0;background:linear-gradient(90deg,#061e2cee 0%,#0c2936b8 36%,#0c2530e8 55%,#0b2430f5 100%)}.menu-top{position:absolute;left:40px;right:40px;top:24px;display:flex;align-items:center;justify-content:space-between}.eyebrow{font-size:12px;letter-spacing:3px;color:#a8cbd0;font-weight:850}.top-buttons{display:flex;gap:9px}.icon-btn{min-width:37px;height:34px;border:1px solid #809b9b6b;background:#142e3fd9;color:#eee0ba;border-radius:5px;font-size:15px;display:grid;place-items:center}.hero-copy{position:absolute;left:51px;top:96px;pointer-events:none}.edition{display:inline-block;padding:6px 13px;border:1px solid #d4b37370;background:#302d24a1;font-weight:800;color:#f4d191;letter-spacing:4px;font-size:13px}h1{font-weight:1000;font-size:78px;line-height:1.02;letter-spacing:-5px;margin:17px 0 12px;text-shadow:0 6px 0 #0c1823,3px 0 0 #132b35,-3px 0 0 #132b35}h1 strong{display:block;font-size:91px;color:#f4d392;letter-spacing:-6px;text-shadow:0 6px 0 #71563c,0 10px 0 #10242e}.hero-sub{font-size:16px;color:#c4d5d4;line-height:1.8;margin:20px 0 0}.menu-heroes{position:absolute;left:22px;top:341px;width:568px;height:253px;pointer-events:none}.hero-notes{position:absolute;left:50px;top:610px;display:flex;gap:16px;align-items:center;font-size:12px;color:#becfcf}.hero-notes span{border-left:2px solid #c7af6c;padding-left:10px;line-height:1.7}.select-panel{position:absolute;top:97px;right:44px;width:623px;bottom:37px;padding:22px 24px;background:linear-gradient(145deg,#1a3846ed,#0e2735f5);border:1px solid #8b9f9254;box-shadow:0 7px 0 #051b2673,inset 0 0 0 4px #abc1b509;display:flex;flex-direction:column;border-radius:7px}.select-heading{display:flex;justify-content:space-between;align-items:center}.select-heading h2{font-size:21px;letter-spacing:-.7px;margin:0}.select-heading span{font-size:11px;color:#aec3c7}.number{color:#e4c27c;letter-spacing:1px;margin-right:8px;font-size:13px}.team-tabs{display:flex;gap:10px;margin-top:17px}.team-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;background:#0c2330;border:1px solid #5e797b;color:#a5b9be;padding:10px 6px;border-radius:4px}.team-tab.selected{border-color:var(--teamLight);background:linear-gradient(100deg,#255948,#173847);box-shadow:0 3px 0 var(--team)}.team-seal{width:36px;height:42px;background:var(--team);border:1px solid #efd18b96;display:grid;place-items:center;font-family:serif;font-size:27px;font-weight:900;color:#fff0bd;clip-path:polygon(0 0,100% 0,100% 83%,50% 100%,0 83%)}.team-name{font-size:22px;font-weight:1000;text-align:left;line-height:1.1}.team-name small{font-size:10px;font-weight:500;display:block;margin-top:6px;color:#b3c5c6}.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 12px}.hero-card{position:relative;min-height:162px;border:1px solid #536e74;border-radius:4px;background:linear-gradient(155deg,#304e55,#182f3c);padding:0 0 9px;text-align:center;overflow:hidden}.hero-card.selected{border-color:#efd18c;box-shadow:0 0 0 1px #efd18c,inset 0 0 22px #87ad8940}.hero-card:after{content:"";position:absolute;left:8px;right:8px;top:98px;height:1px;background:#c8dcd222}.portrait{width:100%;height:110px}.hero-card b{display:block;font-size:17px}.hero-card .hero-meta{font-size:10px;color:#c4d7d5;display:block;margin-top:4px}.hp-label{position:absolute;top:8px;left:9px;font-size:9px;color:#c2decf;font-weight:800;background:#10232caa;padding:3px 5px}.ability-panel{border-left:3px solid #d9bc7c;background:#0b2430b0;padding:11px 13px;min-height:79px;font-size:12px;line-height:1.65;color:#bfd1cf}.ability-panel strong{color:#fff0ca;font-size:13px}.ability-panel .tag{font-size:10px;background:#315c50;color:#b7efcd;padding:2px 5px;margin-right:7px;font-weight:800}.ability-panel .tag.gold{background:#664f2d;color:#ffe2a0}.ability-panel .desc{margin-left:7px;color:#a1b9be;font-size:11px}.match-options{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:13px 0 11px;font-size:12px}.difficulty{display:flex;gap:4px;padding:3px;background:#091e2b;border-radius:5px}.difficulty button{background:transparent;color:#a0b4ba;padding:6px 14px;border-radius:3px;font-size:11px}.difficulty button.selected{background:#d6bd87;color:#21343a;font-weight:900}.start-btn{position:relative;height:52px;min-height:52px;border:2px solid #ffdc8c;background:linear-gradient(#eed39a,#dab26c);box-shadow:0 4px 0 #85653d,inset 0 0 0 2px #fbe3b05c;color:#26353a;font-size:20px;font-weight:1000;letter-spacing:-.5px;border-radius:4px}.start-btn span{position:absolute;right:18px;font-size:23px}.route-note{text-align:center;margin:12px 0 0;font-size:10px;color:#93adb4;letter-spacing:.1px}.menu-foot{position:absolute;left:42px;bottom:21px;font-size:9px;color:#78979f;letter-spacing:1px}
@@ -221,6 +221,70 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
   .joystick .joy-arrow.down{display:none}
 }
 
+
+/* v9.2 – touch-safe choices, clearer atlas, and campaign personnel. */
+.v92-side-field{font-size:17px;font-weight:750;color:#d9e7e5}.v92-side-field>span{display:block}
+#sideSelect[hidden]{display:none!important}#sideButtons{display:flex;gap:7px;margin-top:8px}
+#sideButtons button{flex:1;min-height:49px;background:#0e293b;color:#cadbdc;border:1px solid #74959b;border-radius:10px;font-size:16px;font-weight:850;line-height:1.1}
+#sideButtons small{display:inline-block;font-size:14px;margin-left:6px;font-weight:650}#sideButtons [aria-pressed=true]{background:#436259;color:#fff0bf;border-color:#e2c789;box-shadow:inset 0 0 0 1px #e2c789}
+#sideButtons button:disabled{opacity:.42;cursor:default}#setupTitle:focus{outline:none}
+.conquest-body{grid-template-columns:minmax(0,1fr) 263px;gap:14px}.conquest-header{gap:15px}.conquest-metrics{gap:18px;margin-left:5px}
+.conquest-header-buttons{gap:5px}.conquest-header-buttons button{font-size:12px;min-height:37px;padding:7px 8px;white-space:nowrap}
+#conquestRecruit{background:#47695b;border-color:#c9b984;color:#fff0bf;font-weight:850}
+.conquest-map-panel{position:relative}.map-heading{min-height:39px;height:39px}.map-heading>div:first-child{font-size:15px}.map-zoom button{min-width:32px;height:29px;font-size:13px}
+.v92-map-tools{height:39px;display:flex;align-items:center;gap:9px;flex-shrink:0;padding:4px 10px;background:#f2ecdb;border-bottom:1px solid #cbc5ad}
+#citySearch{width:195px;min-width:100px;min-height:29px;font-family:var(--font);font-size:14px;font-weight:650;padding:3px 8px;border:1px solid #b8b49b;border-radius:4px;background:#fffdf4;color:#253e3a;user-select:text;touch-action:manipulation}
+.v92-map-tools>div{display:flex;gap:5px}.v92-map-tools button{font-size:13px;padding:4px 8px;color:#39584b;background:#fff9e9;border:1px solid #b6b49d;border-radius:4px;min-height:29px}
+.v92-map-tools [aria-pressed=true]{color:#fff9e0;background:#3d6659;border-color:#3d6659}#citySearchCount{font-size:12px;color:#52695b;margin-left:auto}
+#conquestMap .atlas-city-label{font-size:19px;font-weight:900;letter-spacing:-.55px;fill:#182f30;stroke:none}
+#conquestMap .v92-city-owner{font-size:12px;font-weight:800;fill:#435a52;stroke:none;letter-spacing:-.25px}
+#conquestMap .atlas-city rect.v92-nameplate{stroke:#899985;stroke-width:1.35}
+#conquestMap .atlas-city.mine rect.v92-nameplate{stroke:#2e7965;stroke-width:1.8}
+#conquestMap .atlas-city.selected rect.v92-nameplate{stroke:#195b48;stroke-width:3}
+#conquestMap .atlas-city.target rect.v92-nameplate{stroke:#b25536;stroke-width:3}
+#conquestMap .atlas-city.attackable rect.v92-nameplate{stroke:#b4772d;stroke-width:2.2}
+#conquestMap .atlas-city:hover rect.v92-nameplate,#conquestMap .atlas-city:focus rect.v92-nameplate{stroke:#153d32;stroke-width:3;fill:#fffcdb}
+#conquestMap .atlas-city.dim{opacity:.15}.atlas-region-names text{opacity:.12}
+#conquestMapWrap.list-view{overflow:auto;touch-action:pan-y;background:#f6f1e1}
+.v92-city-table{width:100%;border-collapse:collapse;color:#274238;background:#fbf7eb;font-size:17px;text-align:left}
+.v92-city-table th{font-size:14px;position:sticky;top:0;background:#e5e4d0;padding:11px 12px;z-index:2;box-shadow:0 1px #bcc6b8}
+.v92-city-table td{padding:10px 12px;border-bottom:1px solid #d8dece;vertical-align:middle}
+.v92-city-table tr:nth-child(even){background:#edf1e5}.v92-city-table tr.selected{background:#d8ebd8}
+.v92-city-table button{font-size:18px;font-weight:900;border:0;padding:4px 0;min-height:32px;color:#153e34;background:none;text-align:left}
+.v92-city-table .city-owner-dot{display:inline-block;width:9px;height:15px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.v92-city-table .city-state{font-size:13px;font-weight:800;color:#557565}.v92-city-table .city-state.can{color:#aa582c}
+.v92-empty{padding:30px;color:#466156;font-size:19px;text-align:center}.map-caption{font-size:10px;padding:3px 10px}.conquest-actions{height:53px}
+.v92-march-announcement{position:absolute;z-index:15;left:14px;right:14px;top:88px;pointer-events:none;display:flex;align-items:center;gap:11px;padding:12px 14px;border-radius:7px;border:1px solid #d3bc84;background:#173c36f5;color:#f7e9c3;box-shadow:0 5px 18px #09272845}
+.v92-march-announcement[hidden]{display:none}.v92-march-announcement .march-seal{font-size:25px;font-weight:900;min-width:39px;text-align:center;border-right:1px solid #dacb9b5c;padding-right:9px}
+.v92-march-announcement strong{font-size:18px}.v92-march-announcement small{display:block;font-size:13px;color:#c7dace;margin-top:4px}
+.v92-march-announcement .march-copy{flex:1}.v92-march-announcement button{pointer-events:auto;color:#f8edca;background:#304f46;border:1px solid #aabc9f;border-radius:4px;font-size:13px;padding:8px;min-height:35px}
+.v92-march-progress{position:absolute;height:3px;left:0;bottom:0;background:#e6c578;transition:none}
+.v92-recruit-modal{background:#061a27d9;backdrop-filter:blur(5px);z-index:85}
+.v92-recruit-card{width:1150px;height:648px;padding:22px 25px;background:linear-gradient(125deg,#244553,#102d3d);border:1px solid #c7b685;border-radius:16px;box-shadow:0 20px 55px #03121bd9;display:flex;flex-direction:column;text-align:left}
+.v92-recruit-card header{display:flex;justify-content:space-between;gap:20px;align-items:center;border-bottom:1px solid #819d9d55;padding-bottom:13px}
+.v92-recruit-card h2{font-size:30px;margin:4px 0;letter-spacing:-1px}.v92-recruit-card header p{font-size:14px;color:#c1d3d1;margin:0}.v92-recruit-count{font-size:25px;font-weight:900;color:#ffe2a0}
+.v92-recruit-top-right{display:flex;align-items:center;gap:18px}.v92-recruit-body{display:grid;grid-template-columns:1fr 1fr;gap:25px;flex:1;min-height:0;padding-top:15px}
+.v92-recruit-section{display:flex;flex-direction:column;min-height:0;min-width:0}.v92-recruit-section h3{font-size:20px;margin:0 0 6px}.v92-recruit-section>p{font-size:13px;color:#a9c6ce;margin:0 0 12px;line-height:1.4;min-height:18px}
+.v92-officer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;overflow:auto;align-content:start;padding:2px 5px 9px 2px;min-height:0;touch-action:pan-y;scrollbar-width:thin;scrollbar-color:#789b96 #16333d}
+.v92-officer{min-width:0;position:relative;border:1px solid #75928c74;border-radius:8px;background:linear-gradient(135deg,#2e505b,#1b3848);padding:5px 7px 8px;text-align:center;min-height:158px}
+.v92-officer.original{border-color:#bda97291}.v92-officer.armed{border:2px solid #f1d58e;background:#3d5650;padding:4px 6px 7px}
+.v92-officer canvas{width:100%;height:73px;object-fit:contain;display:block}.v92-officer h4{font-size:19px;line-height:1.2;margin:0 0 4px}.v92-officer p{font-size:12px;line-height:1.3;color:#c4d9da;margin:0 0 7px}
+.v92-officer .officer-origin{position:absolute;top:5px;left:5px;font-size:10px;color:#f2dfb1;padding:2px 4px;background:#17343e;border-radius:3px}
+.v92-officer .officer-label{position:absolute;top:5px;right:5px;font-size:10px;color:#e1e8cd}
+.v92-officer button{font-size:13px;font-weight:850;min-height:30px;width:100%;border-radius:4px;background:#b4cfb0;color:#123830;border:1px solid #d1e0bd;padding:4px}
+.v92-officer button.release{background:#223c45;color:#d4dcd0;border-color:#6b8487}.v92-officer button:disabled{background:#213b40;color:#8baba5;border-color:#4f6966;opacity:.7;cursor:default}
+.v92-officer-grid .v92-empty{grid-column:1/-1;color:#b4cbd0;font-size:16px;line-height:1.7;padding:38px 14px}
+.v92-recruit-footer{margin-top:11px;border-top:1px solid #819d9d55;padding-top:12px;display:flex;align-items:center;gap:12px;min-height:55px}.v92-recruit-message{font-size:14px;color:#d2e0d5;flex:1;line-height:1.5}.v92-recruit-footer button{padding:9px 17px;border:1px solid #b8c5b4;border-radius:6px;color:#e9e8cc;background:#30544e;min-height:39px;font-size:16px}.v92-recruit-footer button.primary{color:#203b32;background:#edcd86;border-color:#edcd86;font-weight:900}
+.v92-recruit-footer button[hidden]{display:none}.v92-recruit-message b{color:#ffe3a0}
+.v92-recruit-hint{font-size:12px;color:#b6d0ce;margin-top:4px}.v92-recruit-badge{display:block;color:#edd397;font-size:11px;line-height:1.2}
+.campaign-battle-card .battle-roster{grid-auto-rows:145px;overflow-y:auto;touch-action:pan-y;max-height:315px}.campaign-battle-card{overflow:auto}.v92-battle-roster-note{font-size:12px;color:#dece9e}
+@media(max-width:950px){.v92-recruit-card{width:1190px;padding:17px 21px;height:665px}.v92-recruit-card h2{font-size:32px}.v92-officer h4{font-size:22px}.v92-officer button{font-size:17px;min-height:38px}.v92-officer p{font-size:14px}.v92-officer{min-height:175px}.v92-recruit-body{gap:18px}.v92-recruit-message{font-size:17px}.v92-recruit-footer button{font-size:19px;min-height:45px}.v92-city-table{font-size:21px}.v92-city-table button{font-size:23px;min-height:43px}.v92-city-table th{font-size:18px}.v92-city-table td{padding:11px 13px}.v92-city-table .city-state{font-size:17px}.v92-march-announcement strong{font-size:22px}.v92-march-announcement small{font-size:16px}.v92-march-announcement button{font-size:17px;min-height:43px}}
+@media(prefers-reduced-motion:reduce){.v92-march-announcement{box-shadow:none}}
+/* Keep march information off the city labels, even for northern destinations. */
+.conquest-sidebar .v92-march-announcement{position:relative;top:auto;left:auto;right:auto;display:grid;grid-template-columns:38px minmax(0,1fr);gap:9px;min-height:186px;max-height:230px;overflow:auto;padding:14px 12px;margin:7px 0 10px;box-shadow:none;flex-shrink:0}
+.conquest-sidebar .v92-march-announcement[hidden]{display:none}.conquest-sidebar .v92-march-announcement strong{font-size:20px;line-height:1.65;word-break:keep-all}.conquest-sidebar .v92-march-announcement small{font-size:14px;line-height:1.6;margin-top:8px}.conquest-sidebar .v92-march-announcement .march-seal{align-self:start;margin-top:5px}.conquest-sidebar .v92-march-announcement button{grid-column:1/-1;min-height:32px;font-size:13px}
+.conquest-sidebar.following-march .conquest-selected{display:none}
+
 </style>
 </head>
 <body>
@@ -231,7 +295,7 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <header class="menu-top"><div class="menu-brand"><span>THREE KINGDOMS · DODGEBALL</span><h1>삼국지 <strong>피구대전</strong></h1></div><div class="top-buttons"><span class="wallet-pill">軍功 <b id="menuWallet">0</b></span><button id="troopGuideBtn">병종·지역 도감</button><button id="resumeConquest" class="menu-utility" hidden>점령전 계속</button><button id="menuShop" class="menu-utility">군공 상점</button><button id="saveMenu" class="menu-utility">기록</button><button class="icon-btn sound-toggle" aria-label="효과음 설정">♪</button><button class="icon-btn fullscreen-toggle" aria-label="전체 화면">⛶</button><button class="icon-btn" id="helpMenu" aria-label="게임 방법">?</button></div></header>
 <aside class="nation-browser"><div class="browser-heading"><h2>진영 선택</h2><span id="factionCount">17개 진영</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="factionSearch" type="search" placeholder="진영 · 장수 검색" aria-label="진영 또는 장수 검색" autocomplete="off" maxlength="40"></label><div id="teamTabs" class="nation-list" role="group" aria-label="확장형 진영 목록"></div><p class="browser-foot">목록을 스크롤해 다른 진영을 찾아보세요.</p></aside>
 <section class="lineup-preview"><header class="lineup-heading"><div><span class="lineup-kicker" id="lineupKicker">SHU</span><h2 id="lineupName">촉</h2></div><p id="lineupMotto">뜨거운 의리</p><span class="lineup-seal" id="lineupSeal">蜀</span></header><div class="lineup-heroes" id="lineupHeroes"></div><footer class="lineup-footer"><div><b id="lineupCities"></b><span id="loadoutNote">장수를 선택한 뒤 경기 설정을 열어주세요.</span></div><button id="configureBtn" class="start-btn">경기 설정 <span>→</span></button></footer></section>
-<div class="menu-version">천하도 9.1 · 유동형 조이스틱 · 51개 거점 / 7병종</div>
+<div class="menu-version">천하도 9.2 · 장수 영입 / 행군 지도 · 유동형 조이스틱</div>
 </section>
 <section id="game" class="screen" aria-label="피구 경기 조작 화면">
 <div class="hud-team ally" id="allyTeam"><div class="banner" id="allyBanner">蜀</div><div class="hud-roster"><div class="hud-heading"><span id="allyName">촉 · 우리</span><small>CLICK TO SWITCH</small></div><div class="roster-cards" id="allyRoster"></div></div></div>
@@ -247,7 +311,7 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <button id="dodgeBtn" class="action"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M2 15h12M0 23h10M5 31h9" stroke="#d3f2f5" stroke-width="2"/><circle cx="26" cy="7" r="5" fill="#c8f4f5"/><path d="M22 14l-7 8 7 6-5 9M23 16l7 8h8M21 27l10 9" fill="none" stroke="#c8f4f5" stroke-width="5" stroke-linecap="round"/></svg><b>회피</b><small>L / SHIFT</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="skillBtn" class="action skill"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M30 2L10 21l9 2-6 15 20-20-11-1z" fill="#fff1aa" stroke="#d2fff0" stroke-width="1.5"/><path d="M7 9l-4 9M35 26l-4 7" stroke="#a6f9df" stroke-width="2"/></svg><b>특징 기술</b><small>E</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="switchBtn" class="action switch"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="15" r="6" fill="#a7d9df"/><circle cx="30" cy="23" r="6" fill="#d4eded"/><path d="M1 33v-7q9-9 19 0v7M20 38v-5q10-9 19 0v5" fill="#a7d9df"/><path d="M19 5h13l-4-4M33 5l-4 5" fill="none" stroke="#f2d99b" stroke-width="2.5"/></svg><b>교대 / 패스</b><small>Q · 1 / 2 / 3</small></button>
-</div><div class="keyline">v9.1 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
+</div><div class="keyline">v9.2 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
 </section>
 <div class="modal setup-modal" id="setupModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="setupTitle" aria-describedby="setupHint">
 <div class="modal-card setup-card">
@@ -256,7 +320,7 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 <section class="setup-lineup" aria-label="선발 장수 선택"><h3>출전할 장수 3명</h3><p id="setupHint">함께 출전하는 세 장수 중 한 명을 선택하세요.</p><div class="hero-cards" id="heroCards"></div><div class="ability-panel" id="abilityPanel"></div></section>
 <section class="setup-settings" aria-label="경기 설정">
 <div class="match-setup">
-<label for="sideSelect">내 출전 위치<select id="sideSelect"><option value="home">HOME · 왼쪽</option><option value="away">AWAY · 오른쪽</option></select></label>
+<div class="v92-side-field"><span id="sideLabel">내 출전 위치</span><select id="sideSelect" hidden aria-hidden="true" tabindex="-1"><option value="home">HOME · 왼쪽</option><option value="away">AWAY · 오른쪽</option></select><div id="sideButtons" role="group" aria-labelledby="sideLabel"><button type="button" data-side="home" aria-pressed="true">HOME<small>왼쪽</small></button><button type="button" data-side="away" aria-pressed="false">AWAY<small>오른쪽</small></button></div></div>
 <label for="rivalSelect">첫 경기 상대<select id="rivalSelect"></select></label>
 <label for="venueSelect">홈 구장<select id="venueSelect"></select></label>
 <label for="modeSelect">대전 방식<select id="modeSelect"><option value="tour">군웅 제패 · 16경기</option><option value="single">한 경기</option><option value="conquest">점령전 · 51개 거점</option></select></label>
@@ -275,14 +339,22 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 </div></div>
 <div class="modal" id="saveModal" role="dialog" aria-modal="true" aria-labelledby="saveTitle" aria-hidden="true"><div class="modal-card save-card"><div class="modal-eyebrow">RECORDS & DATA</div><h2 id="saveTitle">나의 군공 기록</h2><p id="saveInfo"></p><p id="savePolicy">군공과 남은 아이템 횟수는 이 브라우저에 자동 저장됩니다. 다른 기기로 옮길 때는 저장 파일을 이용하세요.</p><div class="save-actions"><button id="exportSave" class="primary-btn">기록 파일 내보내기</button><button id="importSave" class="secondary-btn">기록 파일 불러오기</button><input id="importFile" type="file" accept="application/json,.json" hidden></div><div class="world-note"><b>점령전 지도와 기록</b><p id="worldNote"></p><span>도시 소유권은 점령전 경기 결과로만 변경됩니다.</span></div><button id="saveClose" class="secondary-btn">닫기</button></div></div>
 <section id="campaignScreen" class="screen conquest-screen" aria-label="점령전 지도">
-<header class="conquest-header"><div><span class="setup-eyebrow">천하도 · CLASSIC ATLAS</span><h1><strong id="conquestFaction">촉</strong>의 천하 통일</h1></div><div class="conquest-metrics"><span><small>전체턴</small><b id="conquestTurn">제 1턴</b></span><span><small>내 지역</small><b id="conquestCount">3 / 51</b></span><span><small>보유 군공</small><b id="conquestWallet">0</b></span></div><div class="conquest-header-buttons"><button id="conquestGuideBtn">병종·규칙</button><button id="conquestShop">군공 상점</button><button id="conquestExport">기록 저장</button><button id="conquestHome">메인</button></div></header>
-<div class="conquest-body"><section class="conquest-map-panel"><div class="map-heading"><div id="conquestStatus" aria-live="polite">내 차례 · 이웃 지역을 선택하세요</div><div class="map-zoom"><button id="mapRoutes" title="전체 인접 연결선 표시">연결</button><button id="mapTerrain" title="영역을 지형별 색으로 표시">지형</button><button id="mapZoomOut" aria-label="지도 축소">−</button><button id="mapZoomReset">전체</button><button id="mapZoomIn" aria-label="지도 확대">＋</button></div></div><div id="conquestMapWrap"></div><div class="map-caption">내 도시 → 연결된 이웃 도시 → 출전 · 왕관은 대도시 · 확대 후 드래그<br>역사 지리 참고 도식: 영역·도로·±5% 상성은 게임용이며 실제 경계·전투 수치가 아닙니다.</div><div class="conquest-actions"><button id="conquestPass" class="secondary-btn">공격 없이 턴 넘기기</button><button id="conquestAdvance" class="secondary-btn">다음 순서 진행</button><button id="conquestAuto" class="primary-btn">내 차례 / 방어까지 →</button></div></section>
+<header class="conquest-header"><div><span class="setup-eyebrow">천하도 · CLASSIC ATLAS</span><h1><strong id="conquestFaction">촉</strong>의 천하 통일</h1></div><div class="conquest-metrics"><span><small>전체턴</small><b id="conquestTurn">제 1턴</b></span><span><small>내 지역</small><b id="conquestCount">3 / 51</b></span><span><small>보유 군공</small><b id="conquestWallet">0</b></span></div><div class="conquest-header-buttons"><button id="conquestRecruit">군영 · 영입</button><button id="conquestGuideBtn">병종·규칙</button><button id="conquestShop">군공 상점</button><button id="conquestExport">기록 저장</button><button id="conquestHome">메인</button></div></header>
+<div class="conquest-body"><section class="conquest-map-panel"><div class="map-heading"><div id="conquestStatus" aria-live="polite">내 차례 · 이웃 지역을 선택하세요</div><div class="map-zoom"><button id="mapListToggle" aria-pressed="false">도시 목록</button><button id="mapRoutes" title="전체 인접 연결선 표시">연결</button><button id="mapTerrain" title="영역을 지형별 색으로 표시">지형</button><button id="mapZoomOut" aria-label="지도 축소">−</button><button id="mapZoomReset">전체</button><button id="mapZoomIn" aria-label="지도 확대">＋</button></div></div><div class="v92-map-tools"><input id="citySearch" type="search" placeholder="도시 · 세력 찾기" aria-label="도시 또는 세력 검색" autocomplete="off"><div role="group" aria-label="도시 표시 필터"><button data-city-filter="all" aria-pressed="true">전체</button><button data-city-filter="mine" aria-pressed="false">내 도시</button><button data-city-filter="attack" aria-pressed="false">공격 가능</button></div><span id="citySearchCount"></span></div><div id="conquestMapWrap"></div><div id="marchAnnouncement" class="v92-march-announcement" role="status" hidden></div><div class="map-caption">도시 이름 아래 소유 세력 표시 · 내 도시 → 이웃 도시 → 출전 · 확대 / 두 손가락 확대 지원<br>역사 지리 참고 도식: 영역·도로·±5% 상성은 게임용이며 실제 경계·전투 수치가 아닙니다.</div><div class="conquest-actions"><button id="conquestPass" class="secondary-btn">공격 없이 턴 넘기기</button><button id="conquestAdvance" class="secondary-btn">다음 순서 진행</button><button id="conquestAuto" class="primary-btn">내 차례 / 방어까지 →</button></div></section>
 <aside class="conquest-sidebar"><div id="conquestSelected" class="conquest-selected"></div><button id="conquestAttack" class="primary-btn">공격할 지역 선택</button><button id="conquestResumeBattle" class="secondary-btn" hidden>대기 중인 전투 열기</button><h3 class="side-heading">이번 턴 순서 <small>공격 1회 · 방어 1회</small></h3><div id="conquestTurnList" class="conquest-turn-list"></div><h3 class="side-heading log-heading">전황 기록</h3><div id="conquestLog" class="conquest-log"></div></aside></div>
-<footer class="conquest-footer"><span>턴당 공격 1회 · 방어 1회 · 공격 실패 시 영토 유지 · 한 전체턴 휴식 시 체력 100%</span><span id="conquestSaveStatus">자동 저장</span></footer>
+<footer class="conquest-footer"><span>턴당 공격 1회 · 방어 1회 · 공격 실패 시 영토 유지 · 다음 전체턴 시작 시 체력 100%</span><span id="conquestSaveStatus">자동 저장</span></footer>
 </section>
 <div class="modal" id="campaignBattle" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="campaignBattleTitle"><div class="campaign-battle-card"><header><div><span class="setup-eyebrow">DEPLOYMENT · 3 ON 3</span><h2 id="campaignBattleTitle">지역 공격전</h2></div><div id="campaignBattleSides" class="campaign-battle-sides"></div></header><p id="campaignBattleRule"></p><div class="battle-roster-heading"><b>출전할 장수 3명 선택</b><span id="battleRosterCount">출전 3 / 3명</span></div><div id="battleRoster" class="battle-roster"></div><footer><button id="campaignBattleBack" class="secondary-btn">지도에서 대기</button><button id="campaignBattleStart" class="primary-btn">출전 →</button></footer></div></div>
 <div class="modal" id="conquestNewModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="conquestNewTitle"><div class="modal-card"><span class="setup-eyebrow">SAVED CAMPAIGN</span><h2 id="conquestNewTitle">진행 중인 점령전이 있어요</h2><p>새 점령전을 시작하면 현재 지도와 점령전 진행을 교체합니다.<br>보유 군공과 아이템은 그대로 유지합니다.</p><button id="newConquestContinue" class="primary-btn">기존 점령전 계속하기</button><button id="newConquestConfirm" class="secondary-btn">선택한 진영으로 새로 시작</button><button id="newConquestCancel" class="secondary-btn">취소</button></div></div>
 
+
+<div class="modal v92-recruit-modal" id="recruitModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="recruitTitle">
+ <div class="v92-recruit-card">
+  <header><div><span class="setup-eyebrow">OFFICERS · RECRUITMENT</span><h2 id="recruitTitle" tabindex="-1">군영 · 장수 영입</h2><p>기존 장수는 하야 불가 · 점령전에서만 편성 · 출전은 3명</p></div><div class="v92-recruit-top-right"><span id="recruitCount" class="v92-recruit-count">6 / 9명</span><button class="setup-close" id="recruitClose" aria-label="군영 닫기">×</button></div></header>
+  <div class="v92-recruit-body"><section class="v92-recruit-section"><h3>우리 군영</h3><p id="recruitRosterHint">기존 장수는 유지하고 영입 장수만 교체합니다.</p><div id="recruitRoster" class="v92-officer-grid"></div></section><section class="v92-recruit-section"><h3>영입 가능한 장수 <span id="recruitPoolCount"></span></h3><p id="recruitPoolHint">마지막 도시를 직접 점령한 세력의 장수입니다.</p><div id="recruitCandidates" class="v92-officer-grid"></div></section></div>
+  <footer class="v92-recruit-footer"><div id="recruitMessage" class="v92-recruit-message" role="status" aria-live="polite"></div><button id="recruitConfirm" class="primary" hidden>확인</button><button id="recruitCancel" hidden>선택 취소</button><button id="recruitDone">지도로 돌아가기</button></footer>
+ </div>
+</div>
 
 <div class="modal" id="v9Guide" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="v9GuideTitle"><div class="v9-guide-card"><span class="setup-eyebrow">ATLAS · TROOPS & CONDITION</span><h2 id="v9GuideTitle">병종·지역 도감</h2><div id="v9GuideContent" class="v9-guide-content"></div><button class="secondary-btn" id="v9GuideClose">닫기</button></div></div>
 <div class="modal" id="v9Elimination" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="v9ElimTitle"><div class="v9-elim-card"><span class="setup-eyebrow">FACTION ELIMINATED</span><div class="seal" id="v9ElimSeal"></div><h2 id="v9ElimTitle"></h2><p id="v9ElimBody"></p><button class="primary-btn" id="v9ElimClose">전황 지도로 돌아가기</button></div></div>
@@ -801,7 +873,7 @@ $('configureBtn').onclick=()=>{renderSetupHeroes();renderMatchOptions();openSetu
 
 function openSetup(){
  if(G.phase!=='menu')return;
- resetInput();$('setupModal').classList.add('show');$('setupModal').setAttribute('aria-hidden','false');$('menu').inert=true;drawMenuArt();$('sideSelect').focus({preventScroll:true});
+ resetInput();$('setupModal').classList.add('show');$('setupModal').setAttribute('aria-hidden','false');$('menu').inert=true;drawMenuArt();$('setupTitle').setAttribute('tabindex','-1');$('setupTitle').focus({preventScroll:true});
 }
 function closeSetup(restoreFocus=true){
  $('setupModal').classList.remove('show');$('setupModal').setAttribute('aria-hidden','true');$('menu').inert=false;
@@ -815,7 +887,7 @@ window.addEventListener('keydown',e=>{
  e.stopImmediatePropagation();
  if(e.key==='Escape'){e.preventDefault();closeSetup();return}
  if(e.key==='Tab'){
-  const list=[...$('setupModal').querySelectorAll('button:not(:disabled),select:not(:disabled)')],first=list[0],last=list[list.length-1];
+  const list=[...$('setupModal').querySelectorAll('button:not(:disabled),select:not(:disabled)')].filter(el=>!el.hidden&&el.getClientRects().length),first=list[0],last=list[list.length-1];
   if(e.shiftKey&&(document.activeElement===first||!$('setupModal').contains(document.activeElement))){e.preventDefault();last.focus()}
   else if(!e.shiftKey&&(document.activeElement===last||!$('setupModal').contains(document.activeElement))){e.preventDefault();first.focus()}
  }
@@ -1984,7 +2056,7 @@ startRound=function(reuse=false){
  if(G.matchMode==='conquest'&&campaign?.pending){campaign.pending.matchId=G.matchId;campaign.pending.matchLoadout=copyData(G.matchLoadout||[]);campaign.pending.launched=true;saveCampaign()}
 };
 const oldOpenSetupV8=openSetup;
-openSetup=function(){oldOpenSetupV8();if(matchMode==='conquest')$('modeSelect').focus({preventScroll:true})};
+openSetup=function(){oldOpenSetupV8();$('setupTitle').setAttribute('tabindex','-1');$('setupTitle').focus({preventScroll:true})};
 const oldStartTournament=startTournament;
 startTournament=function(){
  if(fieldSquad().length!==3){toast('출전 장수 3명을 선택하세요.');return}
@@ -2099,9 +2171,9 @@ function newConquest(seed){
 }
 function showCampaign(){
  if(!campaign)return;resetInput();toastT=0;$('toast').classList.remove('show');$('campaignScreen').inert=false;document.querySelectorAll('.modal').forEach(m=>{m.classList.remove('show');m.setAttribute('aria-hidden','true')});$('menu').inert=false;$('game').inert=false;
- selectedTeam=campaign.player;setSquad(selectedTeam,campaign.squad);G.phase='campaign';$('menu').classList.remove('active');$('game').classList.remove('active');$('campaignScreen').classList.add('active');G.cutin=null;
+ selectedTeam=campaign.player;selectedHero=campaign.squad[0];G.phase='campaign';$('menu').classList.remove('active');$('game').classList.remove('active');$('campaignScreen').classList.add('active');G.cutin=null;
  cSelectedFrom=MAP_BY_ID[cSelectedFrom]&&campaign.owners[cSelectedFrom]===campaign.player?cSelectedFrom:cOwned(campaign,campaign.player)[0]?.id||null;cSelectedTo=null;renderCampaign();
- if(campaign.pending)openCampaignBattle();
+ if(campaign.pending){if(battleIncludesPlayer(campaign.pending,campaign))openCampaignBattle();else campaignAdvance(false);}
 }
 function mapCellClick(id){
  if(!campaign||campaign.pending||campaign.ended)return;
@@ -2142,7 +2214,7 @@ function openCampaignBattle(){
  const c=campaign;if(!c)return;const planned=c.pending||cAttacks(c).find(a=>a.from===cSelectedFrom&&a.to===cSelectedTo);if(!planned)return;
  battleDraftSquad=[...c.squad];$('campaignBattle').classList.add('show');$('campaignBattle').setAttribute('aria-hidden','false');$('campaignScreen').inert=true;renderBattleDraft();$('campaignBattleStart').focus({preventScroll:true});
 }
-function toggleBattleHero(id){if(!campaign||!TEAMS[campaign.player].ids.includes(id))return;const i=battleDraftSquad.indexOf(id);if(i>=0)battleDraftSquad.splice(i,1);else if(battleDraftSquad.length<3)battleDraftSquad.push(id);else{toast('교체할 출전 장수를 먼저 해제하세요.');return}renderBattleDraft()}
+function toggleBattleHero(id){if(!campaign||!campaignRoster(campaign,campaign.player).includes(id))return;const i=battleDraftSquad.indexOf(id);if(i>=0)battleDraftSquad.splice(i,1);else if(battleDraftSquad.length<3)battleDraftSquad.push(id);else{toast('교체할 출전 장수를 먼저 해제하세요.');return}renderBattleDraft()}
 function renderBattleDraft(){
  const b=campaign.pending||cAttacks(campaign).find(a=>a.from===cSelectedFrom&&a.to===cSelectedTo);if(!b)return;
  const defend=b.defender===campaign.player;
@@ -2158,7 +2230,7 @@ function closeBattleDraft(){$('campaignBattle').classList.remove('show');$('camp
 function launchCampaignBattle(){
  if(!campaign||battleDraftSquad.length!==3)return;
  if(!campaign.pending){try{cBegin(campaign,cSelectedFrom,cSelectedTo)}catch(e){toast(e.message);return}}
- const b=campaign.pending,foe=b.attacker===campaign.player?b.defender:b.attacker;campaign.squad=[...battleDraftSquad];selectedTeam=campaign.player;setSquad(selectedTeam,campaign.squad);
+ const b=campaign.pending,foe=b.attacker===campaign.player?b.defender:b.attacker;campaign.squad=[...battleDraftSquad];selectedTeam=campaign.player;selectedHero=campaign.squad[0];
  G.matchMode='conquest';G.round=0;G.opponents=[foe];G.entrySide=b.defender===campaign.player?'home':'away';G.firstArena=b.to;G.conquestBattle=copyData(b);G.battleLineups={[selectedTeam]:[...campaign.squad],[foe]:[...b.enemySquad]};
  const reuse=!!(b.launched&&b.matchId);G.matchId=reuse?b.matchId:null;G.matchLoadout=reuse?copyData(b.matchLoadout||[]):null;G.roundSettled=false;
  closeBattleDraft();$('campaignScreen').inert=false;saveCampaign();startRound(reuse);
@@ -2215,7 +2287,7 @@ function bindMapInput(){
  svg.addEventListener('pointerup',e=>{if(!mapDrag||e.pointerId!==mapDrag.id)return;const d=mapDrag;mapDrag=null;if(!d.moved&&d.city)mapCellClick(d.city)});svg.addEventListener('pointercancel',()=>mapDrag=null);
 }
 window.addEventListener('keydown',e=>{
- if($('v9Guide')?.classList.contains('show')||$('v9Elimination')?.classList.contains('show'))return;
+ if($('v9Guide')?.classList.contains('show')||$('v9Elimination')?.classList.contains('show')||$('recruitModal')?.classList.contains('show'))return;
  if(!$('campaignBattle').classList.contains('show')&&!$('conquestNewModal').classList.contains('show')&&G.phase!=='campaign')return;
  e.stopImmediatePropagation();const modal=$('campaignBattle').classList.contains('show')?$('campaignBattle'):$('conquestNewModal').classList.contains('show')?$('conquestNewModal'):null;
  if(!modal&&(e.key==='Enter'||e.key===' ')&&document.activeElement?.dataset.city){e.preventDefault();mapCellClick(document.activeElement.dataset.city);return}
@@ -2337,10 +2409,10 @@ scoreMatch=function(win){
  const hpPoints=rows.reduce((n,r)=>n+r.points,0),participation=60,winBonus=win?100:0;return{rows,hpPoints,participation,winBonus,total:hpPoints+participation+winBonus};
 };
 
-/* Persistent campaign condition. A full round with no deployment restores 100% at its end. */
+/* Persistent campaign condition. Every next global-round boundary restores 100%. */
 function ensureHealth(c){c.heroHealth??={};c.difficulty=LEVELS[c.difficulty]?c.difficulty:'normal';for(const id of v9BaseHeroIDs){const r=c.heroHealth[id]||{};c.heroHealth[id]={ratio:clamp(Number.isFinite(r.ratio)?r.ratio:1,0,1),lastDeployedTurn:Number.isSafeInteger(r.lastDeployedTurn)?Math.max(0,r.lastDeployedTurn):0};}c.eliminated??=[];c.notices??=[];return c;}
 function healthRatio(c,id){return c.heroHealth?.[id]?.ratio??1}
-function recoverAfterRound(c,completedTurn){ensureHealth(c);let count=0;for(const r of Object.values(c.heroHealth))if(r.lastDeployedTurn<completedTurn&&r.ratio<1){r.ratio=1;count++;}return count;}
+function recoverAfterRound(c,completedTurn){ensureHealth(c);let count=0;for(const r of Object.values(c.heroHealth))if(r.lastDeployedTurn<=completedTurn&&r.ratio<1){r.ratio=1;count++;}return count;}
 function recordBattleHealth(c,lineups,health){
  ensureHealth(c);const floor=RECOVERY_FLOOR[c.difficulty];for(const t of Object.keys(lineups))for(const id of lineups[t]){const ratio=Number.isFinite(health[id])?clamp(health[id],0,1):healthRatio(c,id);c.heroHealth[id]={ratio:Math.max(floor,ratio),lastDeployedTurn:c.turn};}
 }
@@ -2351,7 +2423,7 @@ createCampaign=function(team,seed=Date.now()>>>0){
 };
 cSeekTurn=function(c){
  if(cCheckEnd(c))return;while(c.cursor<c.order.length&&!cOwned(c,c.order[c.cursor]).length)c.cursor++;
- if(c.cursor>=c.order.length){const rested=recoverAfterRound(c,c.turn);c.turn++;c.cursor=0;c.attacked={};c.defended={};c.order=cShuffle(c,cFactions(c));cLog(c,`제 ${c.turn}턴 시작 · 순서 재배정${rested?' · 휴식 장수 '+rested+'명 완전 회복':''}`);}
+ if(c.cursor>=c.order.length){const rested=recoverAfterRound(c,c.turn);c.turn++;c.cursor=0;c.attacked={};c.defended={};c.order=cShuffle(c,cFactions(c));cLog(c,`제 ${c.turn}턴 시작 · 순서 재배정${rested?' · 장수 '+rested+'명 완전 회복':''}`);}
 };
 cBegin=function(c,from,to){
  const legal=cAttacks(c).find(a=>a.from===from&&a.to===to);if(!legal)throw Error('현재 차례·인접 관계·공격/방어 제한을 확인하세요.');ensureHealth(c);
@@ -2371,6 +2443,7 @@ cResolve=function(c,attackWon,health=null){
  if(attackWon)c.owners[b.to]=b.attacker;
  const extinct=attackWon&&cOwned(c,b.defender).length===0?b.defender:null;
  if(extinct&&!c.eliminated.includes(extinct)){c.eliminated.push(extinct);const notice={id:b.id,faction:extinct,conqueror:b.attacker,city:b.to,turn:b.turn};c.notices.push(notice);cLog(c,`${TEAMS[extinct].name} 멸망! 마지막 거점 ${MAP_BY_ID[b.to].name}을 잃었습니다.`);}
+ if(extinct&&b.attacker===c.player){ensureRecruitment(c);if(!c.recruitmentUnlocked.includes(extinct)){c.recruitmentUnlocked.push(extinct);cLog(c,TEAMS[extinct].name+'의 장수들을 군영에서 영입할 수 있습니다.');}}
  c.results.push(b.id);c.results=c.results.slice(-500);const rec={...b,winner,loser,city,attackWon,territoryChanged:attackWon,eliminated:extinct};c.lastResult=rec;c.pending=null;
  cLog(c,attackWon?`${TEAMS[b.attacker].name} 승리 · ${MAP_BY_ID[b.to].name} 점령`:`${TEAMS[b.defender].name} 방어 성공 · 양측 영토 유지`);
  c.cursor++;cSeekTurn(c);return rec;
@@ -2397,23 +2470,24 @@ sanitizeCampaign=function(raw){
  if(!Array.isArray(raw.order)||!raw.order.length||raw.order.some(t=>!TEAMS[t])||new Set(raw.order).size!==raw.order.length)throw Error('턴 순서가 잘못되었습니다.');c.order=[...raw.order];for(const t of cFactions(c))if(!c.order.includes(t))throw Error('생존 진영이 턴 순서에서 빠져 있습니다.');
  c.cursor=clamp(Math.floor(Number(raw.cursor)||0),0,c.order.length);for(const t of Object.keys(TEAMS)){c.attacked[t]=!!raw.attacked?.[t];c.defended[t]=!!raw.defended?.[t];}
  c.log=(Array.isArray(raw.log)?raw.log:[]).slice(0,60).map(x=>({turn:clamp(Math.floor(Number(x.turn)||1),1,999999),msg:String(x.msg||'').slice(0,240)}));c.results=(Array.isArray(raw.results)?raw.results:[]).filter(v=>typeof v==='string').map(v=>v.slice(0,160)).slice(-500);
- const validSquad=(ids,t)=>Array.isArray(ids)&&ids.length===3&&new Set(ids).size===3&&ids.every(id=>TEAMS[t].ids.includes(id));c.squad=validSquad(raw.squad,c.player)?[...raw.squad]:TEAMS[c.player].ids.slice(0,3);
+ sanitizeRecruitment(c,raw);
+ const validSquad=(ids,t)=>Array.isArray(ids)&&ids.length===3&&new Set(ids).size===3&&ids.every(id=>campaignRoster(c,t).includes(id));c.squad=validSquad(raw.squad,c.player)?[...raw.squad]:TEAMS[c.player].ids.slice(0,3);
  for(const id of v9BaseHeroIDs){const h=raw.heroHealth?.[id];c.heroHealth[id]={ratio:clamp(Number.isFinite(h?.ratio)?h.ratio:1,0,1),lastDeployedTurn:clamp(Math.floor(Number(h?.lastDeployedTurn)||0),0,c.turn)};}ensureHealth(c);
  c.eliminated=(Array.isArray(raw.eliminated)?raw.eliminated:[]).filter(t=>TEAMS[t]&&!cOwned(c,t).length);c.notices=(Array.isArray(raw.notices)?raw.notices:[]).slice(0,17).filter(x=>x&&TEAMS[x.faction]&&TEAMS[x.conqueror]&&MAP_BY_ID[x.city]).map(x=>({id:String(x.id).slice(0,160),faction:x.faction,conqueror:x.conqueror,city:x.city,turn:clamp(Math.floor(Number(x.turn)||1),1,c.turn)}));
  if(raw.pending){const b=raw.pending;if(!MAP_BY_ID[b.from]||!MAP_BY_ID[b.to]||!TEAMS[b.attacker]||!TEAMS[b.defender]||b.attacker===b.defender||c.owners[b.from]!==b.attacker||c.owners[b.to]!==b.defender||c.order[c.cursor]!==b.attacker)throw Error('진행 중 전투 정보가 잘못되었습니다.');if(raw.schemaVersion===3&&!b.legacyRoute&&!MAP_BY_ID[b.from].neighbors.includes(b.to))throw Error('인접하지 않은 공격 기록입니다.');
   const other=b.attacker===c.player?b.defender:b.attacker,lineups={};for(const t of [b.attacker,b.defender])lineups[t]=validSquad(b.lineups?.[t],t)?[...b.lineups[t]]:t===c.player?[...c.squad]:validSquad(b.enemySquad,t)?[...b.enemySquad]:TEAMS[t].ids.slice(0,3);
   const storedReserves=Array.isArray(b.reserves)&&b.reserves.length<=2&&b.reserves.every(v=>['spear','archer','shield'].includes(v));
-  c.pending={id:String(b.id||'restored_'+Date.now()).slice(0,160),from:b.from,to:b.to,attacker:b.attacker,defender:b.defender,turn:clamp(Math.floor(Number(b.turn)||c.turn),1,c.turn),lineups,enemySquad:[...lineups[other]],legacyRoute:raw.schemaVersion===2||!!b.legacyRoute,reserves:storedReserves?[...b.reserves]:MAP_BY_ID[b.to].major?['spear']:[],launched:!!b.launched,matchId:typeof b.matchId==='string'?b.matchId.slice(0,160):null,matchLoadout:Array.isArray(b.matchLoadout)?b.matchLoadout.filter(x=>x&&ITEMS[x.itemId]).slice(0,3).map(x=>({itemId:x.itemId,remaining:1,uid:String(x.uid||x.itemId).slice(0,120)})):[]};
+  c.pending={id:String(b.id||'restored_'+Date.now()).slice(0,160),from:b.from,to:b.to,attacker:b.attacker,defender:b.defender,turn:clamp(Math.floor(Number(b.turn)||c.turn),1,c.turn),lineups,enemySquad:[...lineups[other]],legacyRoute:raw.schemaVersion===2||!!b.legacyRoute,reserves:storedReserves?[...b.reserves]:MAP_BY_ID[b.to].major?['spear']:[],marchShown:!!b.marchShown,launched:!!b.launched,matchId:typeof b.matchId==='string'?b.matchId.slice(0,160):null,matchLoadout:Array.isArray(b.matchLoadout)?b.matchLoadout.filter(x=>x&&ITEMS[x.itemId]).slice(0,3).map(x=>({itemId:x.itemId,remaining:1,uid:String(x.uid||x.itemId).slice(0,120)})):[]};
  }
  if(missing.length)cLog(c,`v8 지도 계승 · 기존 소유권 유지, 새 거점 ${missing.length}곳 배정. 장수 체력은 100%로 시작합니다.`);
- cCheckEnd(c);if(!c.pending)cSeekTurn(c);return c;
+ recoverAfterRound(c,c.turn-1);cCheckEnd(c);if(!c.pending)cSeekTurn(c);return c;
 };
 function loadV9Campaign(){try{const now=localStorage.getItem(CONQUEST_KEY),old=localStorage.getItem('samguk_warlords_v8_conquest');return now?sanitizeCampaign(JSON.parse(now)):old?sanitizeCampaign(JSON.parse(old)):null}catch{return null;}}
 campaign=loadV9Campaign();if(campaign)saveCampaign();
 
 // New troop labels are legible on the existing six-hero selection layout.
 rosterMarkup=function(team,selected,group,compact=false){
- const inCampaign=group==='battlepick';return TEAMS[team].ids.map(id=>{const d=HEROES[id],n=selected.indexOf(id),u=unitFor(d),ratio=inCampaign?healthRatio(campaign,id):1;
+ const inCampaign=group==='battlepick';return (inCampaign?campaignRoster(campaign,team):TEAMS[team].ids).map(id=>{const d=HEROES[id],n=selected.indexOf(id),u=unitFor(d),ratio=inCampaign?healthRatio(campaign,id):1;
  return `<div class="lineup-hero ${n>=0?'selected':''}" style="--hero:${d.robe}"><button class="hero-pick" data-${group}="${id}" aria-pressed="${n>=0}" aria-label="${d.name} ${u.name} ${n>=0?'출전 해제':'출전 선택'}" title="${u.desc}"><span class="lead-tag">${n===0?'① 선발':n>=0?'출전 '+(n+1):'대기'}</span><span class="v9-unit-tag" style="color:${u.color}">${u.symbol} ${u.name}</span><canvas data-squad-art="${id}" width="320" height="244" aria-hidden="true"></canvas><b>${d.name}</b><small>${inCampaign?'체력 '+Math.round(ratio*100)+'%':u.desc}</small>${inCampaign?`<span class="v9-health-meter"><i style="width:${ratio*100}%"></i></span>`:''}</button>${n>0?`<button class="make-leader" data-lead="${id}">선발로</button>`:''}</div>`;
  }).join('');
 };
@@ -2436,7 +2510,7 @@ renderBattleDraft=function(){
 };
 launchCampaignBattle=function(){
  if(!campaign||battleDraftSquad.length!==3)return;if(!campaign.pending){try{cBegin(campaign,cSelectedFrom,cSelectedTo)}catch(e){toast(e.message);return;}}
- const b=campaign.pending,foe=b.attacker===campaign.player?b.defender:b.attacker;campaign.squad=b.launched?[...b.lineups[campaign.player]]:[...battleDraftSquad];b.lineups[campaign.player]=[...campaign.squad];selectedTeam=campaign.player;setSquad(selectedTeam,campaign.squad);difficulty=campaign.difficulty;
+ const b=campaign.pending,foe=b.attacker===campaign.player?b.defender:b.attacker;campaign.squad=b.launched?[...b.lineups[campaign.player]]:[...battleDraftSquad];b.lineups[campaign.player]=[...campaign.squad];selectedTeam=campaign.player;selectedHero=campaign.squad[0];difficulty=campaign.difficulty;
  G.matchMode='conquest';G.round=0;G.opponents=[foe];G.entrySide=b.defender===campaign.player?'home':'away';G.firstArena=b.to;G.conquestBattle=copyData(b);G.battleLineups=copyData(b.lineups);
  const reuse=!!(b.launched&&b.matchId);G.matchId=reuse?b.matchId:null;G.matchLoadout=reuse?copyData(b.matchLoadout||[]):null;G.roundSettled=false;closeBattleDraft();$('campaignScreen').inert=false;saveCampaign();startRound(reuse);
 };
@@ -2484,7 +2558,7 @@ campaignAdvance=function(auto=false){
 function openV9Guide(cityId=null){
  v9DetailsReturn=document.activeElement;const n=MAP_BY_ID[cityId],box=$('v9GuideContent');$('v9GuideTitle').textContent=n?n.name+' · 지역·병종':'병종·회복·대도시 도감';
  if(n){const t=TERRAIN[n.terrain];box.innerHTML=`<div class="guide-hero"><span>${t.symbol}</span><div><h3>${t.name}</h3><p>${t.feature}</p></div></div><p>${t.reason}</p><div class="v9-badge-row">${regionBadges(n)}</div><p>${n.major?'<b>대도시 수비대:</b> '+n.majorReason+' · 점령전 수비팀에 무작위 지원병 1~2명. 원래 장수가 아웃된 자리에 순차 출전합니다.':'일반 거점: 추가 수비 지원병 없음.'}</p><p class="guide-disclaimer">상성 ±5%는 실제 전투 수치가 아닌 게임용 조정입니다. 양 팀에 같은 상성을 적용하며 특화 능력 하나에 곱합니다.</p><h3>참고 자료</h3>${n.sources.map(k=>V9_DATA.sources[k]).filter(Boolean).map(s=>`<p><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.title}</a><small>${s.note}</small></p>`).join('')}`;
- }else{box.innerHTML=`<div class="guide-grid">${Object.entries(TROOPS).map(([id,u])=>`<article><b style="color:${u.color}">${u.symbol} ${u.name}</b><p>${u.desc}</p><small>지역에 따라 ${u.stat} 특성 ×1.05 / ×0.95</small></article>`).join('')}</div><p><b>군주 지휘:</b> 출전 명단에 군주가 있으면 그 경기 아군 체력·이동·투구 피해·기 충전·방어에 +3%. 군주 2명도 중복되지 않으며 해당 경기 동안 유지됩니다.</p><p><b>체력 정비:</b> 쉬움 80% / 보통 75% / 어려움 70% 이상으로 회복. 남은 체력이 더 높으면 그대로 유지합니다. 한 전체턴 내내 출전하지 않은 장수는 그 전체턴 종료 때 100%로 회복합니다.</p><p><b>수비대:</b> 낙양·장안·성도·건업·업성·허도 방어 시 무작위 창병·궁병·방패병 총 1~2명. 동시에 최대 3명이며 새 장수 영입이 아닙니다. 지원병의 체력은 군공 점수에 더하지 않습니다.</p><p><b>공격 실패:</b> 공격·수비팀의 영토 모두 유지. 한 세력의 마지막 도시를 점령하면 멸망 알림. 기존 턴당 공격 1회·방어 1회 규칙은 유지합니다.</p><p class="guide-disclaimer">${V9_DATA.balanceNote} 군주·문관을 포함한 7종 구분 및 장수 배정은 게임상 역할입니다. 대도시 선정은 동일 연도 인구 순위가 아니라 당시의 도읍·정치 거점을 기준으로 했습니다.</p>`;}
+ }else{box.innerHTML=`<div class="guide-grid">${Object.entries(TROOPS).map(([id,u])=>`<article><b style="color:${u.color}">${u.symbol} ${u.name}</b><p>${u.desc}</p><small>지역에 따라 ${u.stat} 특성 ×1.05 / ×0.95</small></article>`).join('')}</div><p><b>군주 지휘:</b> 출전 명단에 군주가 있으면 그 경기 아군 체력·이동·투구 피해·기 충전·방어에 +3%. 군주 2명도 중복되지 않으며 해당 경기 동안 유지됩니다.</p><p><b>체력 정비:</b> 쉬움 80% / 보통 75% / 어려움 70% 이상으로 회복. 남은 체력이 더 높으면 그대로 유지합니다. 다음 전체턴이 시작되면 모든 장수의 체력이 100%로 회복합니다. 같은 전체턴의 공격·수비 사이에는 정비 체력(쉬움 80% / 보통 75% / 어려움 70%)을 유지합니다.</p><p><b>수비대:</b> 낙양·장안·성도·건업·업성·허도 방어 시 무작위 창병·궁병·방패병 총 1~2명. 동시에 최대 3명이며 새 장수 영입이 아닙니다. 지원병의 체력은 군공 점수에 더하지 않습니다.</p><p><b>공격 실패:</b> 공격·수비팀의 영토 모두 유지. 한 세력의 마지막 도시를 점령하면 멸망 알림. 기존 턴당 공격 1회·방어 1회 규칙은 유지합니다.</p><p class="guide-disclaimer">${V9_DATA.balanceNote} 군주·문관을 포함한 7종 구분 및 장수 배정은 게임상 역할입니다. 대도시 선정은 동일 연도 인구 순위가 아니라 당시의 도읍·정치 거점을 기준으로 했습니다.</p>`;}
  $('v9Guide').classList.add('show');$('v9Guide').setAttribute('aria-hidden','false');$('v9GuideClose').focus({preventScroll:true});
 }
 function closeV9Guide(){$('v9Guide').classList.remove('show');$('v9Guide').setAttribute('aria-hidden','true');v9DetailsReturn?.focus?.({preventScroll:true});}
@@ -2497,9 +2571,9 @@ $('troopGuideBtn').onclick=()=>openV9Guide();$('conquestGuideBtn').onclick=()=>o
 $('mapRoutes').onclick=()=>{mapAllRoutes=!mapAllRoutes;renderCampaign()};$('mapTerrain').onclick=()=>{mapTerrainMode=!mapTerrainMode;renderCampaign()};
 // Keep popup keyboard focus inside the active reference / elimination panel.
 document.addEventListener('keydown',e=>{const m=$('v9Elimination').classList.contains('show')?$('v9Elimination'):$('v9Guide').classList.contains('show')?$('v9Guide'):null;if(!m)return;e.stopImmediatePropagation();if(e.key==='Escape'){e.preventDefault();if(m.id==='v9Guide')closeV9Guide();else $('v9ElimClose').click();}if(e.key==='Tab'){const b=[...m.querySelectorAll('button,a[href]')],f=b[0],l=b.at(-1);if(e.shiftKey&&document.activeElement===f){e.preventDefault();l.focus()}else if(!e.shiftKey&&document.activeElement===l){e.preventDefault();f.focus()}}},true);
-function exportV9(){downloadJSON('삼국지피구_천하도_v9.json',{game:'samguk-dodgeball',version:'9.0.0',profile:copyData(profile),campaign:campaign?copyData(campaign):null});toast('군공 · 도시 · 장수 체력 · 수비대 기록을 저장했습니다.');}
+function exportV9(){downloadJSON('삼국지피구_천하도_v9_2.json',{game:'samguk-dodgeball',version:'9.2.0',profile:copyData(profile),campaign:campaign?copyData(campaign):null});toast('군공 · 도시 · 영입 장수 · 체력 · 전투 진행을 저장했습니다.');}
 exportV8=exportV9;$('exportSave').onclick=exportV9;$('conquestExport').onclick=exportV9;
-const v9OpenSave=openSave;openSave=function(){v9OpenSave();$('worldNote').textContent='51개 점령 거점 · 7병종 · 장수별 체력/마지막 출전 턴 · 대도시 지원병을 저장합니다. v8 파일은 기존 34개 소유권을 유지하며 새 17곳을 추가 배정합니다. 진행 중인 경기는 출전 당시 상태로 다시 시작합니다.';};$('saveMenu').onclick=()=>openSave();
+const v9OpenSave=openSave;openSave=function(){v9OpenSave();$('worldNote').textContent='51개 거점 · 7병종 · 장수 체력 · 영입 명단과 후보 · 대도시 지원병을 함께 저장합니다. v8 파일은 기존 34개 소유권을 유지하며 새 17곳을 추가 배정합니다. 진행 중인 경기는 출전 당시 상태로 다시 시작합니다.';};$('saveMenu').onclick=()=>openSave();
 Object.assign(window.SamgukDodgeball,{version:'9.0.1',units:TROOPS,terrain:TERRAIN,world:WORLD_DATA,heroes:HEROES,choose:(team,level='normal')=>{if(!TEAMS[team]||!LEVELS[level])throw Error('Unknown team or difficulty');selectedTeam=team;selectedHero=fieldSquad(team)[0]||TEAMS[team].ids[0];difficulty=level;renderMenu()},start:()=>startTournament(),shoot:kind=>shootAction(kind),guide:openV9Guide});
 Object.assign(window.SamgukDodgeball.conquest,{rules:CONQUEST_RULES,export:exportV9,advance:campaignAdvance,launch:launchCampaignBattle,create:(team=selectedTeam,seed)=>{selectedTeam=team;newConquest(seed);return copyData(campaign)},engine:{create:createCampaign,attacks:cAttacks,begin:cBegin,resolve:cResolve,pass:cPass,auto:cAutoOne,current:cCurrent,owned:cOwned,seek:cSeekTurn,validate:sanitizeCampaign,recordHealth:recordBattleHealth,recover:recoverAfterRound,health:healthRatio,pickSquad:pickCampaignSquad},load:data=>{campaign=sanitizeCampaign(data);saveCampaign();showCampaign()}});
 Object.assign(window.SamgukDodgeball.diagnostics,{startRound:reuse=>startRound(reuse),finishRound:win=>finishRound(win),makeProjectile:(...a)=>makeProjectile(...a),eliminateActor:(...a)=>eliminateActor(...a),makeRoster:()=>makeRoster(),applyMatchBuffs:()=>applyMatchBuffs(),scoreMatch:win=>scoreMatch(win),troopFactors,deployReserve,originalHeroIDs:[...v9BaseHeroIDs],MAP_NODES,updateHUD:()=>updateHUD(),draftSet:ids=>{battleDraftSquad=ids;renderBattleDraft()},renderCampaign:()=>renderCampaign(),reserves:()=>copyData(G.reserveState)});
@@ -2515,6 +2589,361 @@ Object.assign(window.SamgukDodgeball,{controlVersion:'floating-1.0',inputState:(
   thumb:{x:floatingInput.clientX,y:floatingInput.clientY},radius:floatingInput.max,
   stick:{...stickInput},touchUsed:floatingInput.touchUsed,surface:movementSurfaceReady()
 })});
+/* v9.2 – recruitment, one-round recovery, legible cities, transactional marches.
+   TEAMS/HEROES remain immutable roster catalogs. Recruits belong to one campaign.
+   Marches are presentation only: combat RNG and cResolve execute exactly once. */
+function ensureRecruitment(c){
+ if(!c)return null;
+ c.recruitmentVersion=1;c.recruits=Array.isArray(c.recruits)?c.recruits:[];
+ c.recruitmentUnlocked=Array.isArray(c.recruitmentUnlocked)?c.recruitmentUnlocked:[];
+ return c;
+}
+function originFaction(id){return Object.keys(TEAMS).find(t=>TEAMS[t].ids.includes(id))||null;}
+function campaignRoster(c,team){
+ if(!TEAMS[team])return [];
+ const base=TEAMS[team].ids;
+ if(!c||team!==c.player)return [...base];
+ return [...base,...(c.recruits||[]).filter(id=>HEROES[id]&&!HEROES[id].isSupport&&!base.includes(id))].filter((id,i,a)=>a.indexOf(id)===i).slice(0,9);
+}
+function recruitCandidates(c){
+ if(!c)return [];ensureRecruitment(c);const owned=new Set(campaignRoster(c,c.player));
+ return c.recruitmentUnlocked.filter(t=>TEAMS[t]&&t!==c.player&&!cOwned(c,t).length).flatMap(t=>TEAMS[t].ids).filter((id,i,a)=>a.indexOf(id)===i&&!owned.has(id));
+}
+function sanitizeRecruitment(c,raw){
+ // Old v9 saves with an unacknowledged player victory can open the new offer too.
+ const unlocked=Array.isArray(raw.recruitmentUnlocked)?raw.recruitmentUnlocked:[];
+ const notices=Array.isArray(raw.notices)?raw.notices:[];
+ c.recruitmentUnlocked=[...new Set([...unlocked,...notices.filter(x=>x&&x.conqueror===c.player).map(x=>x.faction)])].filter(t=>TEAMS[t]&&t!==c.player&&!cOwned(c,t).length);
+ const allowed=new Set(c.recruitmentUnlocked.flatMap(t=>TEAMS[t].ids));
+ c.recruits=[...new Set(Array.isArray(raw.recruits)?raw.recruits:[])].filter(id=>typeof id==='string'&&allowed.has(id)&&!TEAMS[c.player].ids.includes(id)).slice(0,Math.max(0,9-TEAMS[c.player].ids.length));
+ c.recruitmentVersion=1;
+}
+function repairCampaignSquad(c){
+ const roster=campaignRoster(c,c.player);c.squad=[...new Set((c.squad||[]).filter(id=>roster.includes(id)))].slice(0,3);
+ for(const id of roster)if(c.squad.length<3&&!c.squad.includes(id))c.squad.push(id);
+}
+function recruitOfficer(c,id,release=null){
+ if(!c)throw Error('진행 중인 점령전이 없습니다.');ensureRecruitment(c);
+ if(c.pending)throw Error('준비 중인 전투를 마친 뒤 장수를 영입하세요.');
+ if(c.ended?.reason==='eliminated')throw Error('멸망한 진영은 영입할 수 없습니다.');
+ if(!recruitCandidates(c).includes(id))throw Error('영입 가능한 장수가 아닙니다.');
+ if(release!==null&&!c.recruits.includes(release))throw Error('기존 장수는 하야할 수 없습니다.');
+ if(campaignRoster(c,c.player).length>=9&&!release)throw Error('최대 9명입니다. 교체할 영입 장수를 선택하세요.');
+ // Check everything before mutation, so an invalid exchange never releases anyone.
+ if(release)c.recruits=c.recruits.filter(h=>h!==release);
+ c.recruits.push(id);repairCampaignSquad(c);
+ cLog(c,(release?HEROES[release].name+' 하야 · ':'')+HEROES[id].name+' 영입 ('+campaignRoster(c,c.player).length+'/9명)');
+ return {recruited:id,released:release,roster:campaignRoster(c,c.player)};
+}
+function releaseOfficer(c,id){
+ if(!c||c.pending)throw Error('준비 중인 전투를 마친 뒤 변경하세요.');ensureRecruitment(c);
+ if(!c.recruits.includes(id))throw Error('기존 장수는 하야할 수 없습니다.');
+ c.recruits=c.recruits.filter(h=>h!==id);repairCampaignSquad(c);cLog(c,HEROES[id].name+' 하야 · 영입 후보로 복귀');return true;
+}
+function battleIncludesPlayer(b,c=campaign){return !!(b&&c&&(b.attacker===c.player||b.defender===c.player));}
+
+// HOME/AWAY uses normal buttons, not an operating-system select sheet.
+const v92RenderOptions=renderMatchOptions;
+renderMatchOptions=function(){v92RenderOptions();document.querySelectorAll('[data-side]').forEach(b=>{b.disabled=$('sideSelect').disabled;b.setAttribute('aria-pressed',String(b.dataset.side===entrySide));});};
+document.querySelectorAll('[data-side]').forEach(b=>b.onclick=()=>{if(b.disabled)return;entrySide=b.dataset.side;renderMatchOptions();sfx('click');});
+
+let recruitChoice=null,recruitRelease=null,recruitReturn=null;
+let campaignBusy=false,marchRun=null,marchMotion=null,marchStop=false,mapListMode=false,mapFilter='all',mapQuery='';
+function officerMiniMarkup(id,base=false,candidate=false){
+ const d=HEROES[id],u=unitFor(d),origin=TEAMS[originFaction(id)],ratio=healthRatio(campaign,id);
+ const armed=id===recruitChoice||id===recruitRelease;
+ return `<article class="v92-officer ${base?'original':''} ${armed?'armed':''}" data-officer="${id}"><span class="officer-origin">${origin?.name||''}</span><span class="officer-label">${base?'기존 · 보호':candidate?'영입 후보':'영입'}</span><canvas data-squad-art="${id}" width="320" height="244" aria-hidden="true"></canvas><h4>${d.name}</h4><p>${u.name} · 체력 ${Math.round(ratio*100)}%</p>${base?'<button disabled>기존 장수 · 하야 불가</button>':candidate?`<button data-recruit="${id}">${id===recruitChoice?'영입 대상 선택됨':campaignRoster(campaign,campaign.player).length>=9?'교체하여 영입':'영입 선택'}</button>`:`<button class="release" data-release="${id}">${recruitChoice?'이 장수와 교체':'하야 선택'}</button>`}</article>`;
+}
+function renderRecruitment(){
+ if(!campaign)return;ensureRecruitment(campaign);
+ const roster=campaignRoster(campaign,campaign.player),pool=recruitCandidates(campaign);
+ if(recruitChoice&&!pool.includes(recruitChoice))recruitChoice=null;
+ if(recruitRelease&&!campaign.recruits.includes(recruitRelease))recruitRelease=null;
+ $('recruitCount').textContent=roster.length+' / 9명';$('recruitPoolCount').textContent='· '+pool.length+'명';
+ $('recruitTitle').textContent=TEAMS[campaign.player].name+' 군영 · 장수 영입';
+ $('recruitRosterHint').textContent='기존 '+TEAMS[campaign.player].ids.length+'명 + 영입 '+campaign.recruits.length+'명 · 최대 9명';
+ const a=$('recruitRoster').scrollTop,b=$('recruitCandidates').scrollTop;
+ $('recruitRoster').innerHTML=roster.map(id=>officerMiniMarkup(id,TEAMS[campaign.player].ids.includes(id))).join('');
+ $('recruitCandidates').innerHTML=pool.length?pool.map(id=>officerMiniMarkup(id,false,true)).join(''):'<div class="v92-empty">직접 멸망시킨 세력의 장수가<br>이곳에 영입 후보로 나타납니다.<br><br>명단이 가득 차도 후보는 남아 있습니다.</div>';
+ $('recruitRoster').scrollTop=a;$('recruitCandidates').scrollTop=b;drawSquadArt($('recruitModal'));
+ $('recruitCandidates').querySelectorAll('[data-recruit]').forEach(b=>b.onclick=()=>{recruitChoice=b.dataset.recruit;recruitRelease=null;renderRecruitment();});
+ $('recruitRoster').querySelectorAll('[data-release]').forEach(b=>b.onclick=()=>{recruitRelease=b.dataset.release;renderRecruitment();});
+ const full=roster.length>=9,ready=!!((recruitChoice&&(!full||recruitRelease))||(!recruitChoice&&recruitRelease));
+ $('recruitConfirm').hidden=!ready;$('recruitCancel').hidden=!recruitChoice&&!recruitRelease;
+ $('recruitConfirm').textContent=recruitChoice?(recruitRelease?'하야 후 영입 확정':'영입 확정'):'하야 확정';
+ $('recruitMessage').innerHTML=recruitChoice?(recruitRelease?`<b>${HEROES[recruitRelease].name}</b> 하야 → <b>${HEROES[recruitChoice].name}</b> 영입. 출전 중이던 장수는 자동으로 교체됩니다.`:full?`<b>${HEROES[recruitChoice].name}</b> 영입을 위해 왼쪽에서 하야할 <b>영입 장수</b>를 선택하세요. 기존 장수는 선택할 수 없습니다.`:`<b>${HEROES[recruitChoice].name}</b>을 군영에 추가할까요? 영입 후에도 경기 출전은 3명입니다.`):recruitRelease?`<b>${HEROES[recruitRelease].name}</b>을 하야시킬까요? 장수는 후보 목록으로 돌아가며 체력은 그대로 유지합니다.`:'후보를 골라 영입하세요. 기존 장수는 유지되며, 영입 장수만 하야·교체할 수 있습니다.';
+}
+function openRecruitment(){
+ if(!campaign||campaignBusy||campaign.pending){toast('현재 전투를 마친 뒤 군영을 열 수 있습니다.');return;}
+ if(campaign.ended?.reason==='eliminated'){toast('멸망한 진영은 영입할 수 없습니다.');return;}
+ resetInput();recruitReturn=document.activeElement;recruitChoice=null;recruitRelease=null;
+ $('campaignScreen').inert=true;$('recruitModal').classList.add('show');$('recruitModal').setAttribute('aria-hidden','false');renderRecruitment();$('recruitTitle').focus({preventScroll:true});
+}
+function closeRecruitment(){
+ $('recruitModal').classList.remove('show');$('recruitModal').setAttribute('aria-hidden','true');$('campaignScreen').inert=false;recruitChoice=null;recruitRelease=null;saveCampaign();renderCampaign();
+ if(!$('v9Elimination').classList.contains('show'))(recruitReturn?.isConnected?recruitReturn:$('conquestRecruit'))?.focus?.({preventScroll:true});
+}
+$('conquestRecruit').onclick=openRecruitment;$('recruitClose').onclick=closeRecruitment;$('recruitDone').onclick=closeRecruitment;
+$('recruitCancel').onclick=()=>{recruitChoice=null;recruitRelease=null;renderRecruitment();};
+$('recruitConfirm').onclick=()=>{
+ try{if(campaignBusy)throw Error('행군이 끝난 뒤 변경하세요.');if(recruitChoice)recruitOfficer(campaign,recruitChoice,recruitRelease);else if(recruitRelease)releaseOfficer(campaign,recruitRelease);else return;
+  saveCampaign();recruitChoice=null;recruitRelease=null;renderRecruitment();toast('군영 명단을 저장했습니다.');
+ }catch(e){toast(e.message);}
+};
+$('recruitModal').addEventListener('click',e=>{if(e.target===$('recruitModal'))closeRecruitment();});
+document.addEventListener('keydown',e=>{
+ if(!$('recruitModal').classList.contains('show'))return;e.stopImmediatePropagation();
+ if(e.key==='Escape'){e.preventDefault();closeRecruitment();return;}
+ if(e.key==='Tab'){const b=[...$('recruitModal').querySelectorAll('button:not(:disabled)')].filter(el=>!el.hidden&&el.getClientRects().length),first=b[0],last=b.at(-1);
+  if(e.shiftKey&&(document.activeElement===first||document.activeElement===$('recruitTitle'))){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
+},true);
+const v92Elimination=showElimination;
+showElimination=function(){v92Elimination();const x=campaign?.notices[0];if(!x)return;
+ const recruit=x.conqueror===campaign.player&&campaign.recruitmentUnlocked?.includes(x.faction);
+ $('v9ElimClose').textContent=recruit?'멸망 세력 장수 영입 →':'전황 지도로 돌아가기';
+ if(recruit)$('v9ElimBody').textContent+=' 이 세력의 장수를 영입할 수 있습니다. 군영은 최대 9명이며 기존 장수는 하야할 수 없습니다.';
+};
+$('v9ElimClose').onclick=()=>{const x=campaign?.notices.shift();saveCampaign();$('v9Elimination').classList.remove('show');$('v9Elimination').setAttribute('aria-hidden','true');renderCampaign();if(x?.conqueror===campaign?.player&&!$('v9Elimination').classList.contains('show'))openRecruitment();};
+
+/* City cards keep the true coordinate as a dot; collision-avoiding labels use leaders.
+   The map and the alternative searchable table share exactly the same city IDs. */
+function mapPosition(n){return {x:20+n.x*1.08,y:10+n.y*.75};}
+function atlasTransform(){return `translate(${mapPan.x} ${mapPan.y}) translate(550 250) scale(${mapZoom}) translate(-550 -250)`;}
+function computeCityLabelLayout(){
+ const labels=MAP_NODES.map(n=>{const a=mapPosition(n);return {id:n.id,x:a.x,y:a.y,w:Math.max(72,n.name.length*19+24),h:42,ax:a.x,ay:a.y};});
+ const offsets=[];for(let x=-256;x<=256;x+=8)for(let y=-256;y<=256;y+=8)offsets.push({x,y,cost:x*x+y*y});offsets.sort((a,b)=>a.cost-b.cost);
+ const density=p=>labels.filter(q=>Math.abs(q.ax-p.ax)<110&&Math.abs(q.ay-p.ay)<85).length;
+ const ordered=[...labels].sort((a,b)=>density(b)-density(a)||a.ay-b.ay),placed=[];
+ for(const p of ordered){
+  const safe=(x,y)=>x-p.w/2>=22&&x+p.w/2<=1078&&y>=32&&y<=474&&!placed.some(q=>Math.abs(q.x-x)<(q.w+p.w)/2+5&&Math.abs(q.y-y)<47);
+  let spot=offsets.find(d=>safe(p.ax+d.x,p.ay+d.y));
+  if(spot){p.x=p.ax+spot.x;p.y=p.ay+spot.y;}
+  else{let best=null;for(let y=32;y<=474;y+=4)for(let x=60;x<=1030;x+=4)if(safe(x,y)){const cost=(x-p.ax)**2+(y-p.ay)**2;if(!best||cost<best.cost)best={x,y,cost};}if(best){p.x=best.x;p.y=best.y;}}
+  placed.push(p);
+ }
+ return Object.fromEntries(labels.map(p=>[p.id,p]));
+}
+const cityLabelLayout=computeCityLabelLayout();
+function matchingCities(){
+ if(!campaign)return [];const q=mapQuery.trim().toLowerCase(),attack=new Set(cAttacks(campaign,campaign.player).map(a=>a.to));
+ return MAP_NODES.filter(n=>(!q||[n.name,TEAMS[campaign.owners[n.id]].name,n.region,TERRAIN[n.terrain].name].some(v=>String(v||'').toLowerCase().includes(q)))&&(mapFilter!=='mine'||campaign.owners[n.id]===campaign.player)&&(mapFilter!=='attack'||attack.has(n.id)));
+}
+const v92AtlasBase=mapSVGMarkup;
+mapSVGMarkup=function(){
+ if(!campaign)return '';
+ // Reuse existing geography and routes; replace only city labels and metadata.
+ const doc=new DOMParser().parseFromString(v92AtlasBase(),'image/svg+xml'),svg=doc.documentElement,ns='http://www.w3.org/2000/svg',pins=[...svg.querySelectorAll('.atlas-city')];
+ const legal=cAttacks(campaign,campaign.player),src=MAP_BY_ID[cSelectedFrom],targets=new Set(legal.filter(a=>!src||a.from===src.id).map(a=>a.to)),show=new Set(matchingCities().map(n=>n.id));
+ const world=svg.querySelector('#mapTransform');
+ pins.forEach(el=>el.remove());
+ const geo=doc.createElementNS(ns,'g');geo.setAttribute('transform','translate(20 10) scale(1.08 .75)');
+ while(world.firstChild)geo.append(world.firstChild);world.append(geo);world.setAttribute('transform',atlasTransform());
+ svg.setAttribute('viewBox','0 0 1100 500');
+ for(const r of [...svg.children].filter(el=>el.tagName==='rect')){r.setAttribute('width','1100');r.setAttribute('height','500');}
+ for(const old of pins){
+  const id=old.getAttribute('data-city'),n=MAP_BY_ID[id],p=cityLabelLayout[id],t=TEAMS[campaign.owners[id]],mine=campaign.owners[id]===campaign.player,sel=id===cSelectedFrom,tar=id===cSelectedTo,can=targets.has(id),locked=campaign.defended[campaign.owners[id]];
+  const g=doc.createElementNS(ns,'g');g.setAttribute('class',`atlas-city ${mine?'mine':''} ${sel?'selected':''} ${tar?'target':''} ${can?'attackable':''} ${show.has(id)?'':'dim'}`);g.setAttribute('data-city',id);g.setAttribute('role','button');g.setAttribute('tabindex',show.has(id)?'0':'-1');g.setAttribute('aria-label',`${n.name}, ${t.name}${mine?', 내 도시':''}${locked?', 이번 턴 방어 완료':''}${can?', 공격 가능':''}`);
+  const anchor=mapPosition(n),dx=p.x-anchor.x,dy=p.y-anchor.y;
+  g.innerHTML=`<title>${n.name} · ${t.name} · ${TERRAIN[n.terrain].name}${n.major?' · 대도시 지원병':''}</title>${Math.hypot(dx,dy)>13?`<path d="M${anchor.x} ${anchor.y}L${p.x} ${p.y}" fill="none" stroke="#526f62" stroke-opacity=".7" stroke-width="1.4"/><circle cx="${anchor.x}" cy="${anchor.y}" r="3.4" fill="${t.color}" stroke="#fffbea" stroke-width="1.2"/>`:''}<g transform="translate(${p.x} ${p.y})"><rect class="v92-nameplate" x="${-p.w/2}" y="-21" width="${p.w}" height="42" rx="4" fill="${tar?'#ffead4':sel?'#e5f1da':mine?'#f0f6e7':'#fffdf4'}"/><rect x="${-p.w/2+1}" y="-19" width="5" height="38" rx="2" fill="${t.color}"/><text class="atlas-city-label" x="3" y="-2">${n.name}</text><text class="v92-city-owner" x="3" y="14">${mine?'★ ':''}${t.name}${locked?' · ✓':''}</text>${n.major?`<path d="M${p.w/2-10} -19l-1-8 4 4 4-6 4 6 4-4-1 8Z" fill="#a77b28" stroke="#fff4cb" stroke-width="1"/>`:''}</g>`;
+  world.append(g);
+ }
+ svg.querySelector('.atlas-legend')?.remove();svg.querySelector('[transform="translate(950 523)"]')?.setAttribute('transform','translate(1040 431)');
+ const layer=doc.createElementNS(ns,'g');layer.id='marchLayer';layer.setAttribute('pointer-events','none');world.append(layer);
+ svg.setAttribute('aria-label','51개 도시의 점령 지도. 도시 이름 아래 소유 세력 표시. 확대 또는 도시 목록으로 탐색하세요.');
+ return new XMLSerializer().serializeToString(svg);
+};
+function renderCityTable(){
+ const legal=new Set(cAttacks(campaign,campaign.player).map(a=>a.to)),nodes=matchingCities(),selected=cSelectedTo||cSelectedFrom;
+ return `<table class="v92-city-table"><thead><tr><th scope="col">도시</th><th scope="col">소유 세력</th><th scope="col">지역 특성</th><th scope="col">상태</th></tr></thead><tbody>${nodes.map(n=>{const t=TEAMS[campaign.owners[n.id]],mine=campaign.owners[n.id]===campaign.player,can=legal.has(n.id),lock=campaign.defended[campaign.owners[n.id]];return `<tr class="${selected===n.id?'selected':''}"><td><button data-table-city="${n.id}">${n.major?'♛ ':''}${n.name}</button></td><td><span class="city-owner-dot" style="background:${t.color}"></span>${mine?'★ ':''}${t.name}</td><td>${TERRAIN[n.terrain].name}</td><td><span class="city-state ${can?'can':''}">${can?'공격 가능':lock?'방어 완료':mine?'우리 도시':'상대 도시'}</span></td></tr>`;}).join('')}</tbody></table>${nodes.length?'':'<div class="v92-empty">조건에 맞는 도시가 없습니다.</div>'}`;
+}
+function updateMapMode(){
+ const wrap=$('conquestMapWrap');wrap.classList.toggle('list-view',mapListMode);
+ if(mapListMode){const scroll=wrap.scrollTop;wrap.innerHTML=renderCityTable();wrap.scrollTop=scroll;wrap.querySelectorAll('[data-table-city]').forEach(b=>b.onclick=()=>mapCellClick(b.dataset.tableCity));}
+ $('mapListToggle').textContent=mapListMode?'지도로 보기':'도시 목록';$('mapListToggle').setAttribute('aria-pressed',String(mapListMode));
+ $('citySearchCount').textContent=matchingCities().length+' / 51';
+ document.querySelectorAll('[data-city-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.cityFilter===mapFilter)));
+ for(const id of ['mapZoomIn','mapZoomOut','mapZoomReset','mapRoutes','mapTerrain'])$(id).disabled=mapListMode;
+}
+$('mapListToggle').onclick=()=>{if(campaignBusy)return;mapListMode=!mapListMode;renderCampaign();};
+$('citySearch').addEventListener('input',e=>{if(campaignBusy)return;mapQuery=e.target.value;renderCampaign();});
+document.querySelectorAll('[data-city-filter]').forEach(b=>b.onclick=()=>{if(campaignBusy)return;mapFilter=b.dataset.cityFilter;renderCampaign();});
+const v92CellClick=mapCellClick;
+mapCellClick=function(id){if(campaignBusy||!MAP_BY_ID[id])return;v92CellClick(id);};
+// SVG CTM handles letterboxing correctly and adds two-finger map zoom.
+applyMapTransform=function(){const el=$('mapTransform');if(el)el.setAttribute('transform',atlasTransform());};
+let mapPointers=new Map(),mapGesture=null;
+function svgPoint(svg,x,y){const p=svg.createSVGPoint();p.x=x;p.y=y;return p.matrixTransform(svg.getScreenCTM().inverse());}
+bindMapInput=function(){
+ const svg=$('conquestMap');if(!svg)return;mapPointers.clear();mapGesture=null;
+ svg.addEventListener('wheel',e=>{e.preventDefault();if(!campaignBusy)zoomMap(e.deltaY<0?1.12:1/1.12);},{passive:false});
+ svg.querySelectorAll('[data-city]').forEach(el=>el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();mapCellClick(el.dataset.city);}}));
+ svg.addEventListener('pointerdown',e=>{if(campaignBusy)return;e.preventDefault();const p=svgPoint(svg,e.clientX,e.clientY);mapPointers.set(e.pointerId,{x:e.clientX,y:e.clientY,p});svg.setPointerCapture?.(e.pointerId);
+  if(mapPointers.size===1)mapGesture={id:e.pointerId,x:p.x,y:p.y,px:mapPan.x,py:mapPan.y,city:e.target.closest('[data-city]')?.dataset.city,moved:false};
+  else if(mapPointers.size===2){const [a,b]=[...mapPointers.values()];mapGesture={pinch:true,startDistance:Math.hypot(a.p.x-b.p.x,a.p.y-b.p.y),zoom:mapZoom,moved:true};}
+ });
+ svg.addEventListener('pointermove',e=>{if(!mapPointers.has(e.pointerId)||!mapGesture)return;const p=svgPoint(svg,e.clientX,e.clientY);mapPointers.set(e.pointerId,{x:e.clientX,y:e.clientY,p});
+  if(mapGesture.pinch&&mapPointers.size===2){const [a,b]=[...mapPointers.values()];mapZoom=clamp(mapGesture.zoom*Math.hypot(a.p.x-b.p.x,a.p.y-b.p.y)/Math.max(1,mapGesture.startDistance),1,2.6);if(mapZoom===1)mapPan={x:0,y:0};applyMapTransform();return;}
+  if(!mapGesture.pinch&&mapGesture.id===e.pointerId){const dx=p.x-mapGesture.x,dy=p.y-mapGesture.y;if(Math.hypot(dx,dy)>8)mapGesture.moved=true;if(mapZoom>1&&mapGesture.moved){mapPan={x:clamp(mapGesture.px+dx,-550*(mapZoom-1),550*(mapZoom-1)),y:clamp(mapGesture.py+dy,-250*(mapZoom-1),250*(mapZoom-1))};applyMapTransform();}}
+ });
+ const end=(e,cancel=false)=>{const g=mapGesture;mapPointers.delete(e.pointerId);if(!mapPointers.size){mapGesture=null;if(!cancel&&g&&!g.pinch&&!g.moved&&g.city)mapCellClick(g.city);}else if(g?.pinch){mapGesture={pinch:true,moved:true};}};
+ svg.addEventListener('pointerup',e=>end(e));svg.addEventListener('pointercancel',e=>end(e,true));
+};
+
+/* A march commits cBegin before drawing, then resolves only after the visual arrives.
+   Saving midway stores a pending encounter, not a partial territory transfer. */
+document.querySelector('.conquest-sidebar').prepend($('marchAnnouncement'));
+function lockCampaignControls(){
+ document.querySelector('.conquest-sidebar').classList.toggle('following-march',campaignBusy);
+ for(const id of ['conquestHome','conquestRecruit','conquestShop','conquestGuideBtn','conquestAttack','conquestPass','conquestAdvance','conquestResumeBattle','mapListToggle','mapRoutes','mapTerrain','mapZoomIn','mapZoomOut','mapZoomReset']){
+  if(campaignBusy)$(id).disabled=true;
+ }
+ $('citySearch').disabled=campaignBusy;document.querySelectorAll('[data-city-filter]').forEach(b=>b.disabled=campaignBusy);
+ if(campaignBusy){$('conquestAuto').disabled=false;$('conquestAuto').textContent=marchStop?'현재 전투 후 멈춥니다':'현재 전투 후 멈춤';}
+ else {$('conquestAuto').textContent='내 차례 / 방어까지 →';$('conquestHome').disabled=false;$('conquestGuideBtn').disabled=false;$('conquestResumeBattle').disabled=false;}
+}
+const v92RenderCampaign=renderCampaign;
+renderCampaign=function(){
+ v92RenderCampaign();if(!campaign)return;ensureRecruitment(campaign);updateMapMode();
+ const roster=campaignRoster(campaign,campaign.player),offers=recruitCandidates(campaign);
+ $('conquestRecruit').textContent='군영 '+roster.length+'/9'+(offers.length?' · 영입':'');
+ $('conquestRecruit').disabled=!!campaign.pending||campaign.ended?.reason==='eliminated';
+ $('conquestSaveStatus').textContent=(campaignSaved?'자동 저장':'파일 저장 필요')+' · 다음 전체턴 100% 회복';
+ if(campaign.pending&&!battleIncludesPlayer(campaign.pending)){
+  $('conquestStatus').textContent='이어서 볼 전투 · '+TEAMS[campaign.pending.attacker].name+' → '+MAP_BY_ID[campaign.pending.to].name;
+  $('conquestResumeBattle').hidden=true;$('conquestAdvance').disabled=false;$('conquestAdvance').textContent='대기 중 행군 계속';
+ }else $('conquestAdvance').textContent='다음 순서 진행';
+ lockCampaignControls();
+};
+const v92Draft=renderBattleDraft;
+renderBattleDraft=function(){
+ if(!campaign)return;v92Draft();
+ $('battleRosterCount').textContent+=' · 보유 '+campaignRoster(campaign,campaign.player).length+'/9명';
+ $('battleRoster').querySelectorAll('[data-battlepick]').forEach(b=>{if(campaign.recruits?.includes(b.dataset.battlepick)){
+  const badge=document.createElement('span');badge.className='v92-recruit-badge';badge.textContent='영입 · '+TEAMS[originFaction(b.dataset.battlepick)].name;b.append(badge);
+ }});
+};
+const v92Prepare=openCampaignBattle;
+openCampaignBattle=function(){if(campaignBusy||!campaign)return;if(campaign.pending&&!battleIncludesPlayer(campaign.pending)){campaignAdvance(false);return;}v92Prepare();};
+const v92Pass=campaignPass;
+campaignPass=function(){if(campaignBusy||$('recruitModal').classList.contains('show')||campaign?.notices.length)return;v92Pass();};
+const v92Create=createCampaign;
+createCampaign=function(...args){return ensureRecruitment(v92Create(...args));};
+function marchAnnouncement(b,caption='행군 중',subtext='출발 도시에서 목표 도시로 이동합니다.'){
+ const box=$('marchAnnouncement'),a=TEAMS[b.attacker],d=TEAMS[b.defender];box.hidden=false;
+ box.innerHTML=`<span class="march-seal" style="color:${a.soft}">${a.han}</span><div class="march-copy"><strong>${a.name} · ${MAP_BY_ID[b.from].name} → ${d.name} · ${MAP_BY_ID[b.to].name}</strong><small>${caption} · ${subtext}</small></div><button id="skipMarch">연출 넘기기</button><div id="marchProgress" class="v92-march-progress" style="width:0%"></div>`;
+ $('skipMarch').onclick=()=>{if(marchMotion)marchMotion.skip=true;};
+}
+function prepareMarchLayer(b){
+ const a=mapPosition(MAP_BY_ID[b.from]),z=mapPosition(MAP_BY_ID[b.to]),team=TEAMS[b.attacker],dx=z.x-a.x,dy=z.y-a.y,dist=Math.hypot(dx,dy)||1;
+ const mid={x:(a.x+z.x)/2-dy/dist*Math.min(32,dist*.15),y:(a.y+z.y)/2+dx/dist*Math.min(32,dist*.15)};
+ const path=`M${a.x} ${a.y}Q${mid.x} ${mid.y} ${z.x} ${z.y}`,layer=$('marchLayer');
+ if(layer)layer.innerHTML=`<defs><marker id="marchArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5 0 10Z" fill="#af5934"/></marker></defs><path d="${path}" stroke="#fff9d9" stroke-width="9" fill="none" opacity=".95"/><path id="marchPath" d="${path}" stroke="#af5934" stroke-width="3.5" stroke-dasharray="7 5" fill="none" marker-end="url(#marchArrow)"/><circle cx="${a.x}" cy="${a.y}" r="15" fill="none" stroke="#416d4f" stroke-width="3"/><circle id="marchDestination" cx="${z.x}" cy="${z.y}" r="18" fill="none" stroke="#b95b30" stroke-width="3"/><g id="marchParty"><ellipse cx="-3" cy="12" rx="22" ry="7" fill="#75634b" opacity=".23"/><g fill="#f4ead1" stroke="#354e41" stroke-width="1.8"><circle cx="-16" cy="0" r="5"/><path d="M-20 5l-2 8m7-8 2 8"/><circle cx="-3" cy="6" r="5"/><path d="M-7 11l-1 6m7-6 2 6"/></g><path d="M7 11V-31" stroke="#48412f" stroke-width="3"/><path d="M8-31H41V-7L24-4 8-7Z" fill="${team.color}" stroke="#fff3c0" stroke-width="2"/><text x="25" y="-13" fill="#fff7d7" font-size="17" font-weight="900">${team.han}</text></g>`;
+ return {a,z,mid};
+}
+async function animateMarch(b){
+ mapListMode=false;mapFilter='all';mapQuery='';$('citySearch').value='';
+ // Follow the encounter, rather than leaving enemy movement outside a zoomed viewport.
+ const a={...MAP_BY_ID[b.from],...mapPosition(MAP_BY_ID[b.from])},z={...MAP_BY_ID[b.to],...mapPosition(MAP_BY_ID[b.to])};mapZoom=1.1;
+ mapPan={x:clamp((550-(a.x+z.x)/2)*mapZoom,-190,190),y:clamp((250-(a.y+z.y)/2)*mapZoom,-130,130)};
+ renderCampaign();$('conquestStatus').textContent=TEAMS[b.attacker].name+' 행군 · '+a.name+' → '+z.name;
+ marchAnnouncement(b);const points=prepareMarchLayer(b),current=campaign;
+ const reduceMotion=reduced||window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const state={id:b.id,battle:{...b},progress:0,elapsed:0,skip:false,phase:'march',cancelled:false};marchMotion=state;
+ const duration=reduceMotion?.45:1.45;
+ const completed=await new Promise(resolve=>{
+  let last=performance.now();
+  const step=now=>{const dt=Math.min(.08,Math.max(0,(now-last)/1000));last=now;
+   if(state.cancelled||current!==campaign||G.phase!=='campaign'){resolve(false);return;}
+   if(!document.hidden)state.elapsed+=dt;if(state.skip)state.elapsed=duration;
+   const p=clamp(state.elapsed/duration,0,1),q=reduceMotion?1:p;state.progress=p;
+   const x=(1-q)*(1-q)*points.a.x+2*(1-q)*q*points.mid.x+q*q*points.z.x,y=(1-q)*(1-q)*points.a.y+2*(1-q)*q*points.mid.y+q*q*points.z.y;
+   $('marchParty')?.setAttribute('transform',`translate(${x} ${y+(reduceMotion?0:Math.sin(p*45)*1.7)})`);
+   $('marchPath')?.setAttribute('stroke-dashoffset',String(-p*36));$('marchDestination')?.setAttribute('r',String(18+(reduceMotion?0:Math.sin(p*Math.PI*7)*3)));
+   if($('marchProgress'))$('marchProgress').style.width=(p*100)+'%';
+   if(p>=1){resolve(true);return;}requestAnimationFrame(step);
+  };requestAnimationFrame(step);
+ });
+ if(completed){b.marchShown=true;saveCampaign();}
+ if(marchMotion===state)marchMotion=null;
+ return completed;
+}
+function waitMarchResult(b,result){
+ const message=result.territoryChanged?TEAMS[result.attacker].name+' 승리 · '+MAP_BY_ID[result.to].name+' 점령':TEAMS[result.defender].name+' 방어 성공 · 영토 유지';
+ marchAnnouncement(b,'전투 결과',message);const st={phase:'result',battle:{...b},progress:1,elapsed:0,skip:false};marchMotion=st;
+ return new Promise(resolve=>{let last=performance.now();const step=now=>{const dt=Math.min(.1,(now-last)/1000);last=now;if(!document.hidden)st.elapsed+=dt;if(st.skip||st.elapsed>=.65||st.cancelled){if(marchMotion===st)marchMotion=null;resolve();return;}requestAnimationFrame(step);};requestAnimationFrame(step);});
+}
+function simulatePendingBattle(c){
+ const b=c.pending;if(!b||battleIncludesPlayer(b,c))return null;
+ const atk=simulatedRating(c,b.attacker,b.lineups[b.attacker],b.to)*(.78+cRandom(c)*.48),def=simulatedRating(c,b.defender,b.lineups[b.defender],b.to)*(1+b.reserves.length*.09)*(.78+cRandom(c)*.48),won=atk>=def,health={};
+ for(const team of [b.attacker,b.defender])for(const id of b.lineups[team])health[id]=team===(won?b.attacker:b.defender)?Math.max(0,healthRatio(c,id)-(.14+cRandom(c)*.56)):0;
+ return cResolve(c,won,health);
+}
+campaignAdvance=async function(auto=false){
+ if(campaignBusy){marchStop=true;lockCampaignControls();return;}
+ if(!campaign||campaign.ended||campaign.notices.length||$('recruitModal').classList.contains('show'))return;
+ if(campaign.pending&&battleIncludesPlayer(campaign.pending)){openCampaignBattle();return;}
+ const current=campaign;campaignBusy=true;marchStop=false;marchRun={auto,seed:campaign.initialSeed};let playerBattle=false;
+ try{
+  const limit=auto?Object.keys(TEAMS).length*2:1;
+  for(let i=0;i<limit;i++){
+   if(current!==campaign||campaign.ended||campaign.notices.length||marchStop||(!campaign.pending&&cCurrent(campaign)===campaign.player))break;
+   let b=campaign.pending;
+   if(!b){const actions=cAttacks(campaign);if(!actions.length){cPass(campaign);saveCampaign();renderCampaign();continue;}
+    const action=actions[Math.floor(cRandom(campaign)*actions.length)];b=cBegin(campaign,action.from,action.to);saveCampaign();
+   }
+   if(!(await animateMarch(b)))break;
+   if(battleIncludesPlayer(b)){playerBattle=true;break;}
+   const result=simulatePendingBattle(campaign);saveCampaign();if(result)await waitMarchResult(b,result);
+   if(!auto)break;
+  }
+ }catch(e){console.error('Campaign march:',e);toast('전투 진행을 멈췄습니다. 저장된 전투를 다시 열어 주세요.');}
+ finally{campaignBusy=false;marchRun=null;marchMotion=null;$('marchAnnouncement').hidden=true;saveCampaign();renderCampaign();}
+ if(playerBattle&&campaign?.pending)openCampaignBattle();
+};
+const v92Launch=launchCampaignBattle;
+launchCampaignBattle=async function(){
+ if(campaignBusy||!campaign||battleDraftSquad.length!==3)return;
+ if(battleDraftSquad.some(id=>!campaignRoster(campaign,campaign.player).includes(id))){toast('출전 명단을 다시 확인하세요.');return;}
+ const chosen=[...battleDraftSquad];
+ try{
+  if(!campaign.pending)cBegin(campaign,cSelectedFrom,cSelectedTo);
+  const b=campaign.pending;if(!battleIncludesPlayer(b))return;
+  if(!b.launched&&!b.marchShown){
+   campaign.squad=[...chosen];b.lineups[campaign.player]=[...chosen];saveCampaign();
+   $('campaignBattle').classList.remove('show');$('campaignBattle').setAttribute('aria-hidden','true');$('campaignScreen').inert=false;
+   campaignBusy=true;marchRun={auto:false,player:true};marchStop=false;
+   const ok=await animateMarch(b);campaignBusy=false;marchRun=null;marchMotion=null;$('marchAnnouncement').hidden=true;
+   if(!ok){renderCampaign();return;}
+  }
+  battleDraftSquad=chosen;v92Launch();
+ }catch(e){campaignBusy=false;marchRun=null;marchMotion=null;$('marchAnnouncement').hidden=true;renderCampaign();toast(e.message);}
+};
+// Readouts and guides use the same turn definition as the engine.
+const v92Guide=openV9Guide;
+openV9Guide=function(id=null){v92Guide(id);if(!id){const p=document.createElement('p');p.innerHTML='<b>장수 영입:</b> 플레이어가 마지막 도시를 점령해 멸망시킨 세력의 장수는 군영에서 영입할 수 있습니다. 기존 장수와 합쳐 최대 9명, 출전은 3명입니다. 기존 장수는 하야 불가. 영입 장수만 교체할 수 있고 하야한 장수는 체력을 유지한 채 후보로 돌아갑니다.';$('v9GuideContent').append(p);}};
+$('troopGuideBtn').onclick=()=>openV9Guide();$('conquestGuideBtn').onclick=()=>openV9Guide();
+$('conquestAdvance').onclick=()=>campaignAdvance(false);$('conquestAuto').onclick=()=>campaignAdvance(true);$('conquestPass').onclick=()=>campaignPass();
+$('conquestAttack').onclick=()=>openCampaignBattle();$('conquestResumeBattle').onclick=()=>openCampaignBattle();$('campaignBattleStart').onclick=()=>launchCampaignBattle();
+const v92Home=home;home=function(){if(campaignBusy)return;v92Home();};$('homeBtn').onclick=()=>home();$('resultHome').onclick=()=>home();
+const v92OldShow=showCampaign;
+showCampaign=function(){if(campaignBusy)return;v92OldShow();};$('resumeConquest').onclick=()=>showCampaign();
+// Loading retains recruits, candidate pools and pending lineups; ordinary matches remain unchanged.
+if(campaign)ensureRecruitment(campaign);
+Object.assign(window.SamgukDodgeball,{version:'9.2.0',setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:openV9Guide,home:()=>home()});
+Object.assign(window.SamgukDodgeball.conquest,{
+ show:()=>showCampaign(),advance:(auto)=>campaignAdvance(auto),pass:()=>campaignPass(),select:id=>mapCellClick(id),prepare:()=>openCampaignBattle(),launch:()=>launchCampaignBattle(),
+ create:(team=selectedTeam,seed)=>{if(campaignBusy)throw Error('행군 진행 중');selectedTeam=team;newConquest(seed);return copyData(campaign);},
+ load:data=>{if(campaignBusy)throw Error('행군 진행 중');campaign=sanitizeCampaign(data);saveCampaign();showCampaign();},
+ roster:()=>campaign?campaignRoster(campaign,campaign.player):[],
+ recruitment:{open:openRecruitment,close:closeRecruitment,candidates:()=>campaign?recruitCandidates(campaign):[],
+  recruit:(id,release=null)=>{if(campaignBusy)throw Error('행군 진행 중');const r=recruitOfficer(campaign,id,release);saveCampaign();return r;},
+  release:id=>{if(campaignBusy)throw Error('행군 진행 중');const r=releaseOfficer(campaign,id);saveCampaign();return r;}},
+ march:()=>({busy:campaignBusy,auto:!!marchRun?.auto,stopping:marchStop,phase:marchMotion?.phase||null,battle:marchMotion?.battle?copyData(marchMotion.battle):null,progress:marchMotion?.progress||0}),
+ stop:()=>{marchStop=true;lockCampaignControls();},skipMarch:()=>{if(marchMotion)marchMotion.skip=true;},
+ engine:{create:createCampaign,attacks:cAttacks,begin:cBegin,resolve:cResolve,pass:cPass,auto:cAutoOne,current:cCurrent,owned:cOwned,seek:cSeekTurn,validate:sanitizeCampaign,recordHealth:recordBattleHealth,recover:recoverAfterRound,health:healthRatio,pickSquad:pickCampaignSquad,roster:campaignRoster,candidates:recruitCandidates,recruit:recruitOfficer,release:releaseOfficer}
+});
+Object.assign(window.SamgukDodgeball.diagnostics,{renderCampaign:()=>renderCampaign(),draftSet:ids=>{battleDraftSquad=[...ids];renderBattleDraft();},labelLayout:()=>copyData(cityLabelLayout),mapView:()=>({zoom:mapZoom,pan:{...mapPan},list:mapListMode,query:mapQuery,filter:mapFilter}),simulatePendingBattle});
+
 fitStage();renderMenu();render();requestAnimationFrame(frame);
 })();
 
