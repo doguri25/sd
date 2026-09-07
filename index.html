@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#102b38">
-<title>삼국피구 · 10.4.1 · 군웅과 무주지</title>
+<title>삼국피구 · 10.4.4 · 군웅과 무주지</title>
 <style>
 :root{--gold:#efce87;--cream:#fff5dc;--muted:#adbbc0;--navy:#102632;--team:#3b9b7e;--teamLight:#78dcaf;--font:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}body{background:#091920;color:var(--cream);font-family:var(--font);display:grid;place-items:center;user-select:none;-webkit-user-select:none}button{font:inherit;border:0;cursor:pointer;color:inherit;touch-action:manipulation;user-select:none;-webkit-user-select:none}button:focus-visible{outline:3px solid #fff4ae;outline-offset:4px}button:active{filter:brightness(1.2)}button:disabled{cursor:default}#stage{position:absolute;width:1280px;height:720px;transform-origin:center;overflow:hidden;background:#213f46;box-shadow:0 0 0 1px #71877b,0 20px 80px #000b;touch-action:none}canvas{image-rendering:pixelated;display:block}.scene{position:absolute;inset:0;width:1280px;height:720px}.screen{position:absolute;inset:0;display:none}.screen.active{display:block}.menu-shade{position:absolute;inset:0;background:linear-gradient(90deg,#061e2cee 0%,#0c2936b8 36%,#0c2530e8 55%,#0b2430f5 100%)}.menu-top{position:absolute;left:40px;right:40px;top:24px;display:flex;align-items:center;justify-content:space-between}.eyebrow{font-size:12px;letter-spacing:3px;color:#a8cbd0;font-weight:850}.top-buttons{display:flex;gap:9px}.icon-btn{min-width:37px;height:34px;border:1px solid #809b9b6b;background:#142e3fd9;color:#eee0ba;border-radius:5px;font-size:15px;display:grid;place-items:center}.hero-copy{position:absolute;left:51px;top:96px;pointer-events:none}.edition{display:inline-block;padding:6px 13px;border:1px solid #d4b37370;background:#302d24a1;font-weight:800;color:#f4d191;letter-spacing:4px;font-size:13px}h1{font-weight:1000;font-size:78px;line-height:1.02;letter-spacing:-5px;margin:17px 0 12px;text-shadow:0 6px 0 #0c1823,3px 0 0 #132b35,-3px 0 0 #132b35}h1 strong{display:block;font-size:91px;color:#f4d392;letter-spacing:-6px;text-shadow:0 6px 0 #71563c,0 10px 0 #10242e}.hero-sub{font-size:16px;color:#c4d5d4;line-height:1.8;margin:20px 0 0}.menu-heroes{position:absolute;left:22px;top:341px;width:568px;height:253px;pointer-events:none}.hero-notes{position:absolute;left:50px;top:610px;display:flex;gap:16px;align-items:center;font-size:12px;color:#becfcf}.hero-notes span{border-left:2px solid #c7af6c;padding-left:10px;line-height:1.7}.select-panel{position:absolute;top:97px;right:44px;width:623px;bottom:37px;padding:22px 24px;background:linear-gradient(145deg,#1a3846ed,#0e2735f5);border:1px solid #8b9f9254;box-shadow:0 7px 0 #051b2673,inset 0 0 0 4px #abc1b509;display:flex;flex-direction:column;border-radius:7px}.select-heading{display:flex;justify-content:space-between;align-items:center}.select-heading h2{font-size:21px;letter-spacing:-.7px;margin:0}.select-heading span{font-size:11px;color:#aec3c7}.number{color:#e4c27c;letter-spacing:1px;margin-right:8px;font-size:13px}.team-tabs{display:flex;gap:10px;margin-top:17px}.team-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;background:#0c2330;border:1px solid #5e797b;color:#a5b9be;padding:10px 6px;border-radius:4px}.team-tab.selected{border-color:var(--teamLight);background:linear-gradient(100deg,#255948,#173847);box-shadow:0 3px 0 var(--team)}.team-seal{width:36px;height:42px;background:var(--team);border:1px solid #efd18b96;display:grid;place-items:center;font-family:serif;font-size:27px;font-weight:900;color:#fff0bd;clip-path:polygon(0 0,100% 0,100% 83%,50% 100%,0 83%)}.team-name{font-size:22px;font-weight:1000;text-align:left;line-height:1.1}.team-name small{font-size:10px;font-weight:500;display:block;margin-top:6px;color:#b3c5c6}.hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 12px}.hero-card{position:relative;min-height:162px;border:1px solid #536e74;border-radius:4px;background:linear-gradient(155deg,#304e55,#182f3c);padding:0 0 9px;text-align:center;overflow:hidden}.hero-card.selected{border-color:#efd18c;box-shadow:0 0 0 1px #efd18c,inset 0 0 22px #87ad8940}.hero-card:after{content:"";position:absolute;left:8px;right:8px;top:98px;height:1px;background:#c8dcd222}.portrait{width:100%;height:110px}.hero-card b{display:block;font-size:17px}.hero-card .hero-meta{font-size:10px;color:#c4d7d5;display:block;margin-top:4px}.hp-label{position:absolute;top:8px;left:9px;font-size:9px;color:#c2decf;font-weight:800;background:#10232caa;padding:3px 5px}.ability-panel{border-left:3px solid #d9bc7c;background:#0b2430b0;padding:11px 13px;min-height:79px;font-size:12px;line-height:1.65;color:#bfd1cf}.ability-panel strong{color:#fff0ca;font-size:13px}.ability-panel .tag{font-size:10px;background:#315c50;color:#b7efcd;padding:2px 5px;margin-right:7px;font-weight:800}.ability-panel .tag.gold{background:#664f2d;color:#ffe2a0}.ability-panel .desc{margin-left:7px;color:#a1b9be;font-size:11px}.match-options{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:13px 0 11px;font-size:12px}.difficulty{display:flex;gap:4px;padding:3px;background:#091e2b;border-radius:5px}.difficulty button{background:transparent;color:#a0b4ba;padding:6px 14px;border-radius:3px;font-size:11px}.difficulty button.selected{background:#d6bd87;color:#21343a;font-weight:900}.start-btn{position:relative;height:52px;min-height:52px;border:2px solid #ffdc8c;background:linear-gradient(#eed39a,#dab26c);box-shadow:0 4px 0 #85653d,inset 0 0 0 2px #fbe3b05c;color:#26353a;font-size:20px;font-weight:1000;letter-spacing:-.5px;border-radius:4px}.start-btn span{position:absolute;right:18px;font-size:23px}.route-note{text-align:center;margin:12px 0 0;font-size:10px;color:#93adb4;letter-spacing:.1px}.menu-foot{position:absolute;left:42px;bottom:21px;font-size:9px;color:#78979f;letter-spacing:1px}
@@ -315,7 +315,7 @@ html.floating-input-on,body.floating-input-on{touch-action:none;overscroll-behav
 .setup-card .ability-panel.v94-skill-detail{padding:7px 12px;min-height:130px}
 
 
-/* v10.4.1 portrait and readability tuning */
+/* v10.4.4 portrait and readability tuning */
 .hero-card .portrait{height:108px}
 .active-panel{width:316px}
 #game .active-portrait{width:84px;height:88px}
@@ -798,7 +798,7 @@ body.mode-hub-open #menu{visibility:hidden!important;pointer-events:none!importa
 <header class="menu-top"><div class="menu-brand"><div class="v97-mode-crumb"><button type="button" id="backToModes">← 게임 모드</button><span id="entryModeName">게임 모드 선택</span></div><h1><button type="button" class="game-title-link" data-about>삼국피구</button></h1></div><div class="top-buttons"><span class="wallet-pill">軍功 <b id="menuWallet">0</b></span><button id="troopGuideBtn">병종·지역 도감</button><button id="resumeConquest" class="menu-utility" hidden>점령전 계속</button><button id="menuShop" class="menu-utility">군공 상점</button><button id="saveMenu" class="menu-utility">기록</button><button class="icon-btn sound-toggle" aria-label="효과음 설정">♪</button><button class="icon-btn fullscreen-toggle" aria-label="전체 화면">⛶</button><button class="icon-btn" id="helpMenu" aria-label="게임 방법">?</button></div></header>
 <aside class="nation-browser"><div class="browser-heading"><h2>진영 선택</h2><span id="factionCount">20개 진영</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="factionSearch" type="search" placeholder="진영 · 장수 검색" aria-label="진영 또는 장수 검색" autocomplete="off" maxlength="40"></label><div id="teamTabs" class="nation-list" role="group" aria-label="확장형 진영 목록"></div><p class="browser-foot">목록을 스크롤해 다른 진영을 찾아보세요.</p></aside>
 <section class="lineup-preview"><header class="lineup-heading"><div><span class="lineup-kicker" id="lineupKicker">촉</span><h2 id="lineupName">촉</h2></div><p id="lineupMotto">뜨거운 의리</p><span class="lineup-seal" id="lineupSeal">蜀</span></header><div class="lineup-heroes" id="lineupHeroes"></div><footer class="lineup-footer"><div><b id="lineupCities"></b><span id="loadoutNote">장수를 선택한 뒤 경기 설정을 열어주세요.</span></div><button id="configureBtn" class="start-btn">경기 설정 <span>→</span></button></footer></section>
-<div class="menu-version">천하도 10.4.1 · 대형 공 / 고속 투구 / 짧은 회피 · 유동형 조이스틱</div>
+<div class="menu-version">천하도 10.4.4 · 대형 공 / 고속 투구 / 짧은 회피 · 유동형 조이스틱</div>
 </section>
 <section id="game" class="screen" aria-label="피구 경기 조작 화면">
 <div class="hud-team ally" id="allyTeam"><div class="banner" id="allyBanner">蜀</div><div class="hud-roster"><div class="hud-heading"><span id="allyName">촉 · 우리</span><small>장수를 눌러 교대</small></div><div class="roster-cards" id="allyRoster"></div></div></div>
@@ -814,7 +814,7 @@ body.mode-hub-open #menu{visibility:hidden!important;pointer-events:none!importa
 <button id="dodgeBtn" class="action"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M2 15h12M0 23h10M5 31h9" stroke="#d3f2f5" stroke-width="2"/><circle cx="26" cy="7" r="5" fill="#c8f4f5"/><path d="M22 14l-7 8 7 6-5 9M23 16l7 8h8M21 27l10 9" fill="none" stroke="#c8f4f5" stroke-width="5" stroke-linecap="round"/></svg><b>회피</b><small>L / SHIFT</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="skillBtn" class="action skill"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M30 2L10 21l9 2-6 15 20-20-11-1z" fill="#fff1aa" stroke="#d2fff0" stroke-width="1.5"/><path d="M7 9l-4 9M35 26l-4 7" stroke="#a6f9df" stroke-width="2"/></svg><b>특징 기술</b><small>E</small><i class="cd"></i><span class="cd-label"></span></button>
 <button id="switchBtn" class="action switch"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="15" r="6" fill="#a7d9df"/><circle cx="30" cy="23" r="6" fill="#d4eded"/><path d="M1 33v-7q9-9 19 0v7M20 38v-5q10-9 19 0v5" fill="#a7d9df"/><path d="M19 5h13l-4-4M33 5l-4 5" fill="none" stroke="#f2d99b" stroke-width="2.5"/></svg><b>교대 / 전달</b><small>Q · 1 / 2 / 3</small></button>
-</div><div class="keyline">v10.4.1 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
+</div><div class="keyline">v10.4.4 · 왼쪽 화면 밀기 / WASD / 방향키　　P 일시정지　　F 전체 화면</div></div>
 </section>
 <div class="modal setup-modal" id="setupModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="setupTitle" aria-describedby="setupHint">
 <div class="modal-card setup-card">
@@ -866,7 +866,7 @@ body.mode-hub-open #menu{visibility:hidden!important;pointer-events:none!importa
 </main>
 <section id="modeHub" class="mode-hub" aria-labelledby="modeHubTitle">
  <div class="hub-shell">
-  <header class="hub-header"><div><div class="hub-brandline">삼국의 영웅들이 펼치는 피구 <span>10.4.1</span></div><h1 id="modeHubTitle"><button type="button" class="game-title-link" data-about>삼국피구</button></h1><p>게임 모드를 먼저 선택하세요.</p></div><div class="hub-actions"><button type="button" class="sound-toggle" aria-label="효과음 설정">♪</button><button type="button" class="fullscreen-toggle" aria-label="전체 화면">⛶</button></div></header>
+  <header class="hub-header"><div><div class="hub-brandline">삼국의 영웅들이 펼치는 피구 <span>10.4.4</span></div><h1 id="modeHubTitle"><button type="button" class="game-title-link" data-about>삼국피구</button></h1><p>게임 모드를 먼저 선택하세요.</p></div><div class="hub-actions"><button type="button" class="sound-toggle" aria-label="효과음 설정">♪</button><button type="button" class="fullscreen-toggle" aria-label="전체 화면">⛶</button></div></header>
   <div class="hub-cards" role="group" aria-label="게임 모드 선택">
    <article class="hub-card conquest">
     <button type="button" class="mode-choice" data-entry-mode="conquest" aria-label="점령전 선택 후 진영 고르기">
@@ -1021,7 +1021,7 @@ function renderMatchOptions(){
 function setMatchOptions(o={}){if(o.side!==undefined){if(!['home','away'].includes(o.side))throw Error('side must be home or away');entrySide=o.side}if(o.opponent!==undefined){if(!TEAMS[o.opponent]||o.opponent===selectedTeam)throw Error('Choose an opposing nation');firstOpponent=o.opponent}if(o.mode!==undefined){if(!['tour','single'].includes(o.mode))throw Error('mode must be tour or single');matchMode=o.mode}if(o.arena!==undefined){if(!ARENAS[o.arena]||!ARENAS[o.arena].hosts.includes(menuHost()))throw Error('Arena is not a home venue for this nation');selectedVenue=o.arena}renderMatchOptions()}
 ['side','rival','venue','mode'].forEach(key=>{document.getElementById(key+'Select').addEventListener('change',e=>{if(key==='side')entrySide=e.target.value;if(key==='rival')firstOpponent=e.target.value;if(key==='venue')selectedVenue=e.target.value;if(key==='mode')matchMode=e.target.value;renderMatchOptions();sfx('click')})});
 
-// v10.4.1: all factors below are relative to v9.7.1, not compounded on each frame.
+// v10.4.4: all factors below are relative to v9.7.1, not compounded on each frame.
 // Scale real collision radii as well as the art. Never rescale an inherited dead/loose velocity.
 const BALL_MOTION=Object.freeze({previousMultiplier:1.5,multiplier:2.25,
  kindIncrease:Object.freeze({normal:1.5,skill:1.8,ult:2}),
@@ -1171,11 +1171,12 @@ function drawHeroBeard(g,face,hair,dark){
  }
 }
 
-function spriteFrame(d,state,f,live=null,stride=1){
+function spriteFrame(d,state,f,live=null,stride=1,meta=null){
  const c=live?null:document.createElement('canvas');if(c){c.width=320;c.height=280}const g=live||c.getContext('2d');g.save();if(!live){g.scale(2,2);g.translate(80,118)}g.lineCap='round';g.lineJoin='round';
  const t=f/(FRAMES[state]||12)*TAU, prog=f/Math.max(1,FRAMES[state]-1),hold=state==='hold'||state==='holdrun',run=state==='run'||state==='holdrun',dash=state==='dash',thr=state==='throw'||state==='ult',superMove=state==='ult',hurt=state==='hurt',win=state==='win';
- const sw=run?Math.sin(t)*stride:0, bob=run?-Math.abs(Math.sin(t))*4.3*stride:win?-Math.abs(Math.sin(t))*6:state==='hold'?Math.sin(t)*.65:state==='idle'?Math.sin(t)*1.2:0;
- let lean=run?.12+stride*.12+Math.cos(t)*.025:dash?.57:thr?(prog<.4?-.24:Math.sin((prog-.4)/.6*Math.PI)*.35):hurt?-.3*Math.sin(prog*Math.PI):0;
+ const mx=meta?.moveX||0,my=meta?.moveY||0,diag=Math.abs(mx)>.34&&Math.abs(my)>.34,up=my<-.34,down=my>.34,carryBias=hold&&state==='holdrun'?(up?-.9:down?.8:0):0;
+ const sw=run?Math.sin(t)*stride:0, bob=run?-Math.abs(Math.sin(t))*4.3*stride+(state==='holdrun'?(up?-1.1:down?.8:0):0):win?-Math.abs(Math.sin(t))*6:state==='hold'?Math.sin(t)*.65:state==='idle'?Math.sin(t)*1.2:0;
+ let lean=state==='holdrun'?(up?.35:down?.17:.25)+stride*.17+Math.cos(t)*.03+(diag?mx*.03:0):run?.12+stride*.12+Math.cos(t)*.025:dash?.57:thr?(prog<.34?-.12:Math.sin((prog-.34)/.66*Math.PI)*.33):hurt?-.3*Math.sin(prog*Math.PI):0;
  if(state==='out'){g.translate(18*prog,prog*8);g.rotate(prog*1.1);g.globalAlpha=1-prog*.75}
  g.translate(thr?(prog<.4?-prog*12:Math.sin((prog-.4)/.6*Math.PI)*15):0,bob);g.rotate(lean);if(dash)g.scale(1.13,.88);
  const dark='#17283b',hair=d.hair,skin=d.skin,gold=d.trim,light=shade(d.robe,1.3),robe=gradient(g,-18,-39,21,-5,light,shade(d.robe,.75)),skinGrad=gradient(g,-18,-72,24,-38,shade(skin,1.12),skin);
@@ -1200,11 +1201,39 @@ function spriteFrame(d,state,f,live=null,stride=1){
  path(g,'M-11-10 Q-15-3-14 0 L-3-4-2-9Z',d.robe,dark,1);path(g,'M5-9 7-3 17 0 16-12Z',d.robe,dark,1);line(g,-12,-8,-11,-2,gold,1);
  function arm(back){g.save();const sx=back?-15:17,sy=-34;let ex=sx+(back?-4:6),ey=-22,hx=sx+(back?-4:10),hy=-17;
   if(run){ex=sx+(back?-sw:sw)*11;ey=-27;hx=sx+(back?-sw:sw)*19;hy=-24-(back?-sw:sw)*6;}
-  if(thr&&!back){if(prog<.42){let z=prog/.42;ex=17-18*z;ey=-40-10*z;hx=16-37*z;hy=-48-24*z}else{const z=Math.sin(Math.min(1,(prog-.42)/.38)*Math.PI/2);ex=18+12*z;ey=-36;hx=21+26*z;hy=-39+4*z}}
-  if(thr&&back){ex=-23;ey=-29;hx=-31;hy=-36}
+  if(thr&&!back){
+   const atk=meta?.attackKind||state,style=throwProfileForHero(d),passLike=atk==='pass',p1=passLike?.58:style.prep,p2=passLike?.42:(1-style.prep),z=prog<p1?prog/p1:Math.sin(Math.min(1,(prog-p1)/Math.max(.18,p2))*Math.PI/2);
+   if(passLike){
+    if(prog<p1){ex=15-8*z;ey=-32-5*z;hx=24-15*z;hy=-35-7*z}else{ex=13+9*z;ey=-31+1.5*z;hx=18+18*z;hy=-33+4*z}
+   }else if(style.kind==='power'){
+    if(prog<p1){ex=17-21*z;ey=-41-11*z;hx=18-44*z;hy=-49-25*z}else{ex=19+15*z;ey=-35;hx=23+31*z;hy=-39+6*z}
+   }else if(style.kind==='sidearm'){
+    if(prog<p1){ex=20-11*z;ey=-31-2*z;hx=28-26*z;hy=-32-6*z}else{ex=18+18*z;ey=-31+2*z;hx=22+34*z;hy=-28+9*z}
+   }else if(style.kind==='quick'){
+    if(prog<p1){ex=18-13*z;ey=-36-7*z;hx=19-26*z;hy=-43-13*z}else{ex=18+10*z;ey=-34;hx=20+22*z;hy=-36+2*z}
+   }else if(style.kind==='command'){
+    if(prog<p1){ex=16-9*z;ey=-35-5*z;hx=18-20*z;hy=-42-13*z}else{ex=18+8*z;ey=-34;hx=20+20*z;hy=-37+1*z}
+   }else{
+    if(prog<p1){ex=17-18*z;ey=-40-10*z;hx=16-37*z;hy=-48-24*z}else{ex=18+12*z;ey=-36;hx=21+26*z;hy=-39+4*z}
+   }
+  }
+  if(thr&&back){
+   const atk=meta?.attackKind||state,style=throwProfileForHero(d),passLike=atk==='pass';
+   if(passLike){ex=-17;ey=-31;hx=-22;hy=-36}
+   else if(style.kind==='power'){ex=-25;ey=-30;hx=-34;hy=-39}
+   else if(style.kind==='sidearm'){ex=-19;ey=-28;hx=-27;hy=-31}
+   else{ex=-23;ey=-29;hx=-31;hy=-36}
+  }
   if(dash){ex=sx+(back?-16:9);ey=-32;hx=sx+(back?-28:20);hy=-27}
   if(state==='catch'){ex=25;ey=back?-35:-26;hx=38;hy=back?-42:-31}
-  if(hold){const pulse=Math.sin(t)*1.2;if(back){ex=0;ey=-39;hx=22;hy=-48+pulse*.35}else{ex=18;ey=-31;hx=29;hy=-36-pulse*.3}}
+  if(hold){
+   const pulse=Math.sin(t)*.9,carry=state==='holdrun'?Math.sin(t)*.45:0,lift=up?-5.2:down?3.8:0,tuck=up?6:down?-4:0,diagN=diag?(mx>0?2.8:-2.2):0;
+   if(back){
+    ex=4+tuck*.22;ey=-38-pulse*.12+lift*.42;hx=18+tuck*.34;hy=-46-pulse*.2+lift*.66;
+   }else{
+    ex=18+tuck*.18+diagN*.22;ey=-34+carry*.2+lift*.36;hx=35+tuck+diagN;hy=-42-pulse*.18+lift;
+   }
+  }
   if(hurt){ex=sx+(back?-10:8);ey=-45;hx=sx+(back?-15:14);hy=-55}
   if(win){ex=sx+(back?-6:6);ey=-50;hx=sx+(back?-7:5);hy=-64}
   line(g,sx,sy,ex,ey,dark,12);line(g,sx,sy,ex,ey,d.robe,8);line(g,ex,ey,hx,hy,dark,10);line(g,ex,ey,hx,hy,shade(d.robe,.85),6.7);
@@ -1326,11 +1355,24 @@ function spriteFrame(d,state,f,live=null,stride=1){
  g.restore();return c;
 }
 function sprite(d,state,frame){const key=`${d.id}_${state}_${frame}`;if(!sprites.has(key)){if(sprites.size>=180)sprites.delete(sprites.keys().next().value);sprites.set(key,spriteFrame(d,state,frame))}const image=sprites.get(key);sprites.delete(key);sprites.set(key,image);return image}
-function drawHero(c,d,x,y,scale=1.5,state='idle',phase=0,face=1,alpha=1,stride=1){
+
+function throwProfileForHero(d){
+ const byId={lubu:{kind:'power',prep:.48},guan:{kind:'power',prep:.46},zhang:{kind:'power',prep:.46},xu:{kind:'power',prep:.47},dongzhuo:{kind:'power',prep:.5},menghuo:{kind:'power',prep:.5},
+ zhao:{kind:'quick',prep:.34},gan:{kind:'quick',prep:.33},zhangliao:{kind:'quick',prep:.34},wenchou:{kind:'quick',prep:.35},gongsunzan:{kind:'quick',prep:.34},
+ zhou:{kind:'sidearm',prep:.4},shixie:{kind:'sidearm',prep:.4},liru:{kind:'sidearm',prep:.41},zhugeliang:{kind:'command',prep:.42},simayi:{kind:'command',prep:.43},cao:{kind:'command',prep:.41},yuanshao:{kind:'command',prep:.42},sun:{kind:'command',prep:.39},xiandi:{kind:'command',prep:.4},yuanshu:{kind:'command',prep:.41},shiyi:{kind:'command',prep:.39},simazhao:{kind:'command',prep:.4},simashi:{kind:'overhand',prep:.39},zhujun:{kind:'overhand',prep:.38},huangfusong:{kind:'overhand',prep:.39},zhurong:{kind:'sidearm',prep:.37}};
+ if(byId[d.id]) return byId[d.id];
+ if(['fan','scroll'].includes(d.weapon)) return {kind:'sidearm',prep:.4};
+ if(['command'].includes(d.weapon)||['scholar','emperor','crown'].includes(d.look)) return {kind:'command',prep:.41};
+ if(['club','mace','axe','halberd','shield'].includes(d.weapon)||d.beard==='full') return {kind:'power',prep:.47};
+ if(['spear','twins'].includes(d.weapon)||d.speed>=280) return {kind:'quick',prep:.34};
+ return {kind:'overhand',prep:.39};
+}
+
+function drawHero(c,d,x,y,scale=1.5,state='idle',phase=0,face=1,alpha=1,stride=1,meta=null){
  const count=FRAMES[state]||12;let f=((phase%count)+count)%count;
  if(['throw','ult','hurt','out'].includes(state))f=clamp(phase,0,count-1.001);
  const courtSquash=(typeof ctx!=='undefined'&&c===ctx&&scale<1.6&&['play','countdown','paused'].includes(G.phase))?.88:1;
- c.save();c.globalAlpha*=alpha;c.translate(x,y);c.scale(face*scale,scale*courtSquash);spriteFrame(d,state,f,c,stride);c.restore();
+ c.save();c.globalAlpha*=alpha;c.translate(x,y);c.scale(face*scale,scale*courtSquash);spriteFrame(d,state,f,c,stride,meta);c.restore();
 }
 
 
@@ -2013,7 +2055,7 @@ function drawActor(a){const pose=poseOf(a);if(a.out&&a.outT<=0)return;const alph
  if(a.id===G.activeId&&!a.out){const pulse=reduced?1:1+Math.sin(G.visualTime*3.8)*.10;ellipse(ctx,a.x,a.y+4,39*pulse,24*pulse,'#ffe4a614','#fff0b4',2);ctx.save();ctx.translate(a.x,a.y+4);ctx.scale(.90*pulse,.55*pulse);ellipse(ctx,0,0,46,46,null,'#ffdf70',2.4);ctx.globalAlpha=.28;ellipse(ctx,0,0,53,53,null,'#fff0b4',1.3);ctx.restore()}
  if(a.qi>=100&&!a.out){ctx.save();const g=ctx.createRadialGradient(a.x,a.y-50,20,a.x,a.y-50,96);g.addColorStop(0,'#ffd74c20');g.addColorStop(1,'#ffd74c00');ellipse(ctx,a.x,a.y-50,96,92,g);for(let i=0;i<4;i++){const q=G.visualTime*2+i*TAU/4;star(ctx,a.x+Math.cos(q)*46,a.y-63+Math.sin(q)*55,3.4,'#ffe59d',q)}ctx.restore()}
  if(a.moving&&a.dashT>0){ctx.save();ctx.globalAlpha=.24;for(let i=0;i<4;i++){line(ctx,a.x-a.moveX*25,a.y-31-i*13,a.x-a.moveX*(92+i*10),a.y-31-i*13,'#d7f6ff',4-i*.5)}ctx.restore()}
- const depthScale=.88+.18*clamp((a.y-COURT_VIEW.moveTop)/(COURT_VIEW.moveBottom-COURT_VIEW.moveTop),0,1);drawHero(ctx,a.def,a.x,a.y-pose.jump,COURT_VIEW.actorScale*depthScale*1.10,pose.state,pose.f,a.face,alpha,clamp((a.visualSpeed||0)/155,.25,1));
+ const depthScale=.88+.18*clamp((a.y-COURT_VIEW.moveTop)/(COURT_VIEW.moveBottom-COURT_VIEW.moveTop),0,1);drawHero(ctx,a.def,a.x,a.y-pose.jump,COURT_VIEW.actorScale*depthScale*1.10,pose.state,pose.f,a.face,alpha,clamp((a.visualSpeed||0)/155,.25,1),{moveX:a.moveX||0,moveY:a.moveY||0,attackKind:a.attackKind||'',holding:G.ball?.mode==='held'&&G.ball.owner===a.id});
  if(!a.out){const hp=a.hp/a.def.maxHp,barY=a.y-137;rr(ctx,a.x-37,barY,74,9,4,'#112837','#dee2c696',1.1);rr(ctx,a.x-34,barY+2,68*hp,5,2,gradient(ctx,0,barY,0,barY+9,hp<.3?'#ffb090':'#abedaa',hp<.3?'#e86752':'#4eb787'));rr(ctx,a.x-34,barY+11,68,3,1,'#092d37');rr(ctx,a.x-34,barY+11,68*a.qi/100,3,1,'#f6c761');
   rr(ctx,a.x-34,a.y+14,68,21,10,a.side===G.playerSide?'#153d44de':'#1e374cde');txt(ctx,a.def.name,a.x,a.y+24,13.5,'#fff2d9');
   if(a.id===G.activeId){rr(ctx,a.x-78,barY-2,33,21,6,'#133f42','#7cbf98',1);txt(ctx,'나',a.x-61.5,barY+9,14,'#d9ffe8');poly(ctx,[[a.x-43,barY+4],[a.x-38,barY+8],[a.x-43,barY+12]],'#ffe3a0',null)}
@@ -3257,7 +3299,7 @@ sanitizeCampaign=function(raw){
  }
  if(missing.length)cLog(c,`v8 지도 계승 · 기존 소유권 유지, 새 거점 ${missing.length}곳 배정. 장수 체력은 100%로 시작합니다.`);
  if(raw.economy)c.economy=sanitizeRunEconomy(raw.economy,'conquest');
- c.aiEconomies=sanitizeAIAccounts(raw.aiEconomies);c.neutralDefended=Object.fromEntries(MAP_NODES.filter(n=>raw.neutralDefended?.[n.id]).map(n=>[n.id,true]));c.activeFactions=cFactions(c);c.worldVersion='10.4.1';
+ c.aiEconomies=sanitizeAIAccounts(raw.aiEconomies);c.neutralDefended=Object.fromEntries(MAP_NODES.filter(n=>raw.neutralDefended?.[n.id]).map(n=>[n.id,true]));c.activeFactions=cFactions(c);c.worldVersion='10.4.4';
  if(c.pending){c.pending.aiLoadouts=sanitizeAILoadouts(raw.pending?.aiLoadouts);if(c.pending.defender===NEUTRAL_FACTION){c.pending.lineups[NEUTRAL_FACTION]=[...TEAMS[NEUTRAL_FACTION].ids];c.pending.enemySquad=c.pending.attacker===c.player?[...TEAMS[NEUTRAL_FACTION].ids]:c.pending.enemySquad;c.pending.reserves=[];}}
  recoverAfterRound(c,c.turn-1);cCheckEnd(c);if(!c.pending)cSeekTurn(c);return c;
 };
@@ -4115,7 +4157,7 @@ $('resumeConquest').onclick=()=>showCampaign();$('nextBtn').onclick=()=>openShop
 $('shopContinue').onclick=()=>advanceAfterShop();
 
 // Per-campaign currency is in campaign.economy, never in a common top-level account.
-function exportV94Payload(){return {game:'samguk-dodgeball',version:'10.4.1',economySchema:2,profile:freshProfile(),campaign:campaign?copyData(campaign):null};}
+function exportV94Payload(){return {game:'samguk-dodgeball',version:'10.4.4',economySchema:2,profile:freshProfile(),campaign:campaign?copyData(campaign):null};}
 exportV9=function(){if(campaign)saveCampaign();downloadJSON('삼국피구_천하도_v10.json',exportV94Payload());toast('점령전 전용 군공·아이템과 지도·군영을 저장했습니다.');};
 exportV8=exportV9;$('exportSave').onclick=()=>exportV9();$('conquestExport').onclick=()=>exportV9();
 const v94OpenSave=openSave;
@@ -4276,7 +4318,7 @@ const v95OpenSetup=openSetup;openSetup=function(){setupPage='roster';v95OpenSetu
 const v95Guide=openV9Guide;
 openV9Guide=function(id=null){v95Guide(id);if(id===null){const p=document.createElement('section');p.className='v93-guide-extra';p.innerHTML='<h3>v9.5 · 특징 기술은 기를 소비합니다</h3><p>E를 실제로 던지면 기 12를 소모합니다. 그 장수의 다음 투구에서는 E를 사용할 수 없습니다. J 또는 R로 한 번 투구하면 해제되며, 명중 여부는 상관없습니다. 잡기·공 회수·전달·교대·대기만으로는 해제되지 않습니다. 상대 AI에도 동일하게 적용합니다. E는 기 100에서도 특징 기술, J는 기존처럼 기 100일 때 자동 필살기를 사용합니다. 경기 시작/재시작에서는 사용 제한을 초기화합니다.</p><p>경기 설정·점령전 출전·제패전 선수 교체는 화면의 실제 크기에 맞춰 카드와 기술 설명을 배치합니다. 최대 9명을 내부 스크롤 없이 함께 보여줍니다.</p>';$('v9GuideContent').append(p);}};
 $('troopGuideBtn').onclick=()=>openV9Guide();$('conquestGuideBtn').onclick=()=>openV9Guide();
-Object.assign(window.SamgukDodgeball,{version:'10.4.1',skillRules:SKILL_RULES,setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:id=>openV9Guide(id)});
+Object.assign(window.SamgukDodgeball,{version:'10.4.4',skillRules:SKILL_RULES,setup:{open:()=>openSetup(),close:()=>closeSetup()},guide:id=>openV9Guide(id)});
 Object.assign(window.SamgukDodgeball.diagnostics,{
  canShoot:(...args)=>canShoot(...args),queueShot:(...args)=>queueShot(...args),releaseShot:(...args)=>releaseShot(...args),
  skillUnavailableReason,shootAction:kind=>shootAction(kind),updateHUD:()=>updateHUD(),fitSelectionDialogs,
@@ -4349,15 +4391,15 @@ window.addEventListener('keydown',e=>{
   }
  }else if(e.key==='Escape'){e.preventDefault();showModeHub();}
 },true);
-Object.assign(window.SamgukDodgeball,{version:'10.4.1',configure:o=>setMatchOptions(o),entry:{choose:chooseEntryMode,show:showModeHub,state:()=>({screen:entryScreen,mode:matchMode}),refresh:refreshModeHub}});
+Object.assign(window.SamgukDodgeball,{version:'10.4.4',configure:o=>setMatchOptions(o),entry:{choose:chooseEntryMode,show:showModeHub,state:()=>({screen:entryScreen,mode:matchMode}),refresh:refreshModeHub}});
 window.SamgukDodgeball.conquest.show=()=>showCampaign();
 
 // Restore visibility when a browser restores a menu page; do not interrupt a match.
 window.addEventListener('pageshow',()=>{if(G.phase==='menu'&&entryScreen==='modes')showModeHub();});
 Object.assign(window.SamgukDodgeball,{ballMotion:BALL_MOTION,dodgeMotion:DODGE_MOTION});
-/* 삼국피구 10.4.1 — factions, independent AI supplies, neutral cities and timed battles.
+/* 삼국피구 10.4.4 — factions, independent AI supplies, neutral cities and timed battles.
    Save identifiers and legacy mode keys deliberately remain unchanged. */
-const GAME_VERSION='10.4.1';
+const GAME_VERSION='10.4.4';
 const v10ExportPayload=exportV94Payload;exportV94Payload=function(){const p=v10ExportPayload();p.version=GAME_VERSION;return p;};
 const MATCH_RULES=Object.freeze({seconds:120,points:'dealtHpDamage + remainingHp',campaignTimeoutWinner:'defender',tieBreak:'dealtHpDamage, then draw'});
 for(const [id,team] of [['hanzhong','zhanglu'],['chengdu','liuzhang'],['xiangyang','liubiao']]){
@@ -4566,12 +4608,12 @@ syncModeNavigation=function(){v10Modes();if(matchMode==='tour')$('setupModeValue
 const v10MatchOptions=renderMatchOptions;
 renderMatchOptions=function(){v10MatchOptions();if(matchMode==='conquest')$('routeNote').textContent='선택 진영 포함 10~16개 세력 · 무주지 8~13곳 · 무작위 배치';else $('routeNote').textContent=(matchMode==='tour'?'나머지 '+(Object.keys(TEAMS).length-1)+'개 진영과 연속 대전 · ':'')+'제한 두 분 · 피해량 + 잔여 체력으로 판정';};
 const v10Guide=openV9Guide;
-openV9Guide=function(id=null){v10Guide(id);if(id===null){const box=document.createElement('section');box.className='v93-guide-extra';box.innerHTML='<h3>삼국피구 10.4.1 · 두 분의 승부</h3><p>상대를 모두 퇴장시키면 즉시 승리합니다. 그 전에 두 분이 끝나면 평가전·군웅 제패전은 가한 실제 체력 피해 + 남은 체력으로 판정합니다. 합계가 같으면 가한 피해가 더 큰 쪽, 이것도 같으면 무승부로 재도전합니다. 점령전은 점수와 관계없이 수비군이 승리합니다. 일시정지 중에는 시간이 흐르지 않습니다.</p><h3>무주지와 군수 보급</h3><p>새 점령전에는 선택 진영을 포함한 10~16개 세력만 참전하고, 8~13곳은 무주지로 남습니다. 황건 창병·궁병·방패병 총 3명이 고정 수비하며 대도시라도 지원병이 나오지 않습니다. 무주지는 턴을 갖거나 다른 도시를 공격하지 않으며 영입 대상도 아닙니다. 한 무주지가 방어했다고 다른 무주지까지 보호되지 않습니다.</p><p>컴퓨터도 점령전의 진영별 전용 군공으로 같은 물품을 구매합니다. 제패전은 상대 측의 보급 계정이 그 연속 대전 안에서 유지됩니다. 모든 계정은 새 진행에서 0으로 시작합니다. 물품은 1~2대전용, 최대 3종이며 재시작으로 사용 횟수가 추가 차감되지 않습니다.</p>'; $('v9GuideContent').prepend(box);}};
+openV9Guide=function(id=null){v10Guide(id);if(id===null){const box=document.createElement('section');box.className='v93-guide-extra';box.innerHTML='<h3>삼국피구 10.4.4 · 두 분의 승부</h3><p>상대를 모두 퇴장시키면 즉시 승리합니다. 그 전에 두 분이 끝나면 평가전·군웅 제패전은 가한 실제 체력 피해 + 남은 체력으로 판정합니다. 합계가 같으면 가한 피해가 더 큰 쪽, 이것도 같으면 무승부로 재도전합니다. 점령전은 점수와 관계없이 수비군이 승리합니다. 일시정지 중에는 시간이 흐르지 않습니다.</p><h3>무주지와 군수 보급</h3><p>새 점령전에는 선택 진영을 포함한 10~16개 세력만 참전하고, 8~13곳은 무주지로 남습니다. 황건 창병·궁병·방패병 총 3명이 고정 수비하며 대도시라도 지원병이 나오지 않습니다. 무주지는 턴을 갖거나 다른 도시를 공격하지 않으며 영입 대상도 아닙니다. 한 무주지가 방어했다고 다른 무주지까지 보호되지 않습니다.</p><p>컴퓨터도 점령전의 진영별 전용 군공으로 같은 물품을 구매합니다. 제패전은 상대 측의 보급 계정이 그 연속 대전 안에서 유지됩니다. 모든 계정은 새 진행에서 0으로 시작합니다. 물품은 1~2대전용, 최대 3종이며 재시작으로 사용 횟수가 추가 차감되지 않습니다.</p>'; $('v9GuideContent').prepend(box);}};
 $('troopGuideBtn').onclick=()=>openV9Guide();$('conquestGuideBtn').onclick=()=>openV9Guide();
 // Optional donor/creator metadata is supplied by the author; never sent over a network.
 
 
-/* 삼국피구 10.4.1 — 세력 확장, 개성 있는 장수 초상, 큰 조작 안내, 풍부한 절차형 사운드, 군웅 천하도 고도화. */
+/* 삼국피구 10.4.4 — 세력 확장, 개성 있는 장수 초상, 큰 조작 안내, 풍부한 절차형 사운드, 군웅 천하도 고도화. */
 Object.assign(TEAMS.wei,{name:'위(조조)',motto:'치밀한 한 수',description:'치밀한 한 수'});
 Object.assign(TEAMS.shu,{name:'촉(유비)',motto:'뜨거운 의리',description:'뜨거운 의리'});
 Object.assign(TEAMS.wu,{name:'오(손권)',motto:'거침없는 기세',description:'거침없는 기세'});
@@ -4593,7 +4635,7 @@ function v101AddOfficer(team,spec){
  const look=roleKey==='lord'?'crown':(['strategy','tech'].includes(roleKey)?'scholar':'helmet');
  HEROES[id]={id,name,title,team,unit,weapon,robe:t.color,trim:t.soft,hair:'#303744',skin:'#ebc4a3',look,beard:roleKey==='swift'?'none':'short',style:'signature_'+id,ultimate:'signature_'+id,skill:theme+'구',ult:theme+' 결전구',skillConfig:copyData(r.skill),ultConfig:copyData(r.ult),personalBoost:copyData(r.boost),crest:mark,qiRate:QI_RULES.possessionRate,skillDesc:r.desc,ultDesc:r.udesc};
  const m=r.mods;HEROES[id].maxHp=Math.round(OFFICER_DATA.baseline.health*(1+m.health/100));HEROES[id].damage=Math.round(OFFICER_DATA.baseline.power*(1+m.power/100));HEROES[id].speed=OFFICER_DATA.baseline.speed*(1+m.speed/100);HEROES[id].baseDefense=100+m.defense;HEROES[id].baseSkill=100+m.skill;HEROES[id].baseUlt=100+m.ult;
- const p={id,name,archetype:r.arch,label:r.label,mods:copyData(m),evidence:'limited',note:'10.4.1 세력 확장용 게임 편성입니다. 기본 수치는 공통 기준의 ±3% 안에서 역할에 맞게 배분했습니다.',sources:[]};OFFICER_DATA.records[id]=p;HEROES[id].officerProfile=p;EFFECTS[id]={color:t.soft,mark,motif:roleKey==='strategy'?'scrolls':roleKey==='swift'?'horse':roleKey==='guard'?'bastion':roleKey==='assault'?'lance':roleKey==='lord'?'standard':'seal'};
+ const p={id,name,archetype:r.arch,label:r.label,mods:copyData(m),evidence:'limited',note:'10.4.4 세력 확장용 게임 편성입니다. 기본 수치는 공통 기준의 ±3% 안에서 역할에 맞게 배분했습니다.',sources:[]};OFFICER_DATA.records[id]=p;HEROES[id].officerProfile=p;EFFECTS[id]={color:t.soft,mark,motif:roleKey==='strategy'?'scrolls':roleKey==='swift'?'horse':roleKey==='guard'?'bastion':roleKey==='assault'?'lance':roleKey==='lord'?'standard':'seal'};
  if(!v9BaseHeroIDs.includes(id))v9BaseHeroIDs.push(id);
 }
 for(const [team,list] of Object.entries(V101_OFFICER_SPECS))for(const spec of list)v101AddOfficer(team,spec);
@@ -4666,7 +4708,7 @@ renderCampaign=function(){v101RenderCampaign();if(!campaign)return;const cap=doc
 const v101TeamCount=()=>Object.keys(TEAMS).length,v101OfficerCount=()=>new Set(Object.values(TEAMS).flatMap(t=>t.ids)).size;
 const hubTour=$('modeHub').querySelector('[data-entry-mode="tour"]');hubTour?.querySelector('p')?.replaceChildren(document.createTextNode('나머지 '+(v101TeamCount()-1)+'개 진영과 연속 대전 · 군공으로 전력을 보강하세요.'));hubTour?.querySelector('.mode-tags')?.replaceChildren(document.createTextNode((v101TeamCount()-1)+'경기 · 연속 도전'));
 const footer=document.querySelector('.hub-footer span');if(footer)footer.textContent=v101TeamCount()+'개 진영 · '+v101OfficerCount()+'명 장수 · 51개 거점';
-Object.assign(window.SamgukDodgeball,{version:'10.4.1',teams:TEAMS,heroes:HEROES});if(window.SamgukDodgeball.diagnostics)window.SamgukDodgeball.diagnostics.currentCatalog=()=>({teams:v101TeamCount(),officers:v101OfficerCount(),items:Object.keys(ITEMS).length});
+Object.assign(window.SamgukDodgeball,{version:'10.4.4',teams:TEAMS,heroes:HEROES});if(window.SamgukDodgeball.diagnostics)window.SamgukDodgeball.diagnostics.currentCatalog=()=>({teams:v101TeamCount(),officers:v101OfficerCount(),items:Object.keys(ITEMS).length});
 
 // Update static labels left by earlier editions while retaining save-field IDs.
 document.querySelector('.menu-version').textContent='삼국피구 '+GAME_VERSION+' · 세력 확장 군웅 천하도 · 제목을 누르면 제작 정보';
@@ -4701,7 +4743,7 @@ $('conquestShop').onclick=()=>openShop('campaign');$('menuShop').onclick=()=>ope
 if(campaign){campaign.aiEconomies=sanitizeAIAccounts(campaign.aiEconomies);saveCampaign();}
 
 
-/* v10.4.1 patch — signature faction tuning, per-hero equipment, terrain arenas, stored qi and portrait refresh. */
+/* v10.4.4 patch — signature faction tuning, per-hero equipment, terrain arenas, stored qi and portrait refresh. */
 ITEMS.cranefan.effect='공 획득 기 +40% · 기술 피해 +5%';
 ITEMS.cranefan.caption='공을 잡거나 주울 때의 즉시 기 충전량을 높입니다.';
 ITEMS.tactics.effect='공격력 +10% · 공 획득 기 +20%';ITEMS.tactics.caption='공 획득 순간의 기 보너스를 높이며, 보유 시간에 따른 추가 충전은 없습니다.';
@@ -4869,7 +4911,7 @@ acquire=function(a,caught=false,source=G.ball){
  G.possessionQi={side:a?.side??null,remaining:0};
  return result;
 };
-tickPossessionQi=function(){/* v10.4.1: holding the ball no longer grants time-based qi. */};
+tickPossessionQi=function(){/* v10.4.4: holding the ball no longer grants time-based qi. */};
 
 const v102UpdateHUDBase=updateHUD;
 updateHUD=function(){
@@ -4921,24 +4963,29 @@ drawMenuArt=function(){
  drawSquadArt(root);
 };
 
-/* v10.4.1 — one-hand ball grip, team dodge cooldown, biographies, and five new factions. */
+/* v10.4.4 — one-hand ball grip, team dodge cooldown, biographies, and five new factions. */
 const DODGE_TEAM_COOLDOWN=4.2;
 
-// A single visible near hand grips the ball. A short sleeve/forearm connects it to the body,
-// while the far hand stays behind the ball as part of the sprite pose.
+// A single visible near arm and hand cradle the ball. The whole arm reaches to the ball,
+// so the pose reads as 'holding' even while moving.
 drawHeldGrip=function(){
  const b=G.ball;if(!b||b.mode!=='held')return;const a=actor(b.owner);if(!a||a.out||a.shot)return;
  const r=b.r||BALL_MOTION.baseRadius,skin=a.def.skin||'#e8bd98',edge='#17283b',dir=a.face||1,robe=a.def.robe||'#496987',trim=a.def.trim||'#e8cf8c';
- const handX=b.x-dir*r*.56,handY=b.y+r*.30,elbowX=a.x+dir*22,elbowY=a.y-37;
- ctx.save();ctx.globalAlpha=.98;
- // sleeve and cuff: this keeps the hand from appearing detached from the character.
- line(ctx,elbowX,elbowY,handX-dir*7,handY+2,edge,12);
- line(ctx,elbowX,elbowY,handX-dir*7,handY+2,shade(robe,.9),7.5);
- ellipse(ctx,handX-dir*8,handY+2,5.5,6.3,trim,edge,1.1);
+ const shoulderX=a.x+dir*16.5,shoulderY=a.y-43.5;
+ const wristX=b.x-dir*r*.63,wristY=b.y+r*.18;
+ const elbowX=shoulderX+(wristX-shoulderX)*.56+dir*2.5,elbowY=shoulderY+(wristY-shoulderY)*.54-6.5;
+ ctx.save();ctx.globalAlpha=.985;
+ // shoulder guard and sleeve
+ ellipse(ctx,shoulderX-dir*2.2,shoulderY+1.5,7.5,6.6,trim,edge,1.15);
+ line(ctx,shoulderX,shoulderY,elbowX,elbowY,edge,13.5);
+ line(ctx,shoulderX,shoulderY,elbowX,elbowY,shade(robe,.9),8.9);
+ line(ctx,elbowX,elbowY,wristX-dir*4.8,wristY+1.4,edge,11.2);
+ line(ctx,elbowX,elbowY,wristX-dir*4.8,wristY+1.4,shade(robe,.98),7.1);
+ ellipse(ctx,wristX-dir*6.2,wristY+1.4,5.2,5.8,trim,edge,1.0);
  // only the near hand is visible on the rim; facing left/right automatically mirrors it.
- ellipse(ctx,handX,handY,7.6,6.5,skin,edge,1.25);
- line(ctx,handX-dir*4,handY-1,handX+dir*4,handY-1.8,shade(skin,.72),.9);
- line(ctx,handX-dir*2,handY+2.8,handX+dir*4,handY+2.1,shade(skin,.78),.75);
+ ellipse(ctx,wristX,wristY,7.7,6.6,skin,edge,1.25);
+ line(ctx,wristX-dir*4.1,wristY-.9,wristX+dir*4.4,wristY-1.4,shade(skin,.72),.9);
+ line(ctx,wristX-dir*2.2,wristY+2.5,wristX+dir*3.9,wristY+1.8,shade(skin,.78),.75);
  ctx.restore();
 };
 
@@ -5090,7 +5137,7 @@ Object.assign(window.SamgukDodgeball,{version:GAME_VERSION,teams:TEAMS,heroes:HE
 if(window.SamgukDodgeball.diagnostics)window.SamgukDodgeball.diagnostics.currentCatalog=()=>({teams:v103TeamCount(),officers:v103OfficerCount(),items:Object.keys(ITEMS).length});
 
 
-/* v10.4.1 — separated biography/ability buttons, Wuhuan & Shanyue, adjustable conquest factions, faction-colored selection panels. */
+/* v10.4.4 — separated biography/ability buttons, Wuhuan & Shanyue, adjustable conquest factions, faction-colored selection panels. */
 const V104_TEAM_DEFS={
  wuhuan:{name:'오환',han:'烏',color:'#66748d',soft:'#e2e8ef',motto:'북방의 기마 연맹',leader:'답돈'},
  shanyue:{name:'산월',han:'越',color:'#5f7c52',soft:'#e1ecd7',motto:'강동 산지의 결집',leader:'조랑'}
@@ -5258,7 +5305,7 @@ Object.assign(window.SamgukDodgeball,{version:GAME_VERSION,teams:TEAMS,heroes:HE
 if(window.SamgukDodgeball.diagnostics)window.SamgukDodgeball.diagnostics.currentCatalog=()=>({teams:v104TeamCount(),officers:v104OfficerCount(),items:Object.keys(ITEMS).length});
 
 
-/* v10.4.1 — richer 3–4 line biographies from Namuwiki summaries, duplicate officer cleanup. */
+/* v10.4.4 — richer 3–4 line biographies from Namuwiki summaries, duplicate officer cleanup. */
 const V105_NAMU_BIO={"cao":"후한 말의 군웅으로, 황건적 토벌과 동탁 토벌전을 거쳐 독자적인 세력을 구축했다.\n헌제를 허도로 맞아들인 뒤 조정의 실권을 장악했고, 관도대전에서 원소를 격파하며 화북의 주도권을 잡았다.\n적벽대전에서는 손권·유비 연합군에 패했지만 이후에도 위공·위왕에 올라 조위 건국의 기반을 마련했다.\n《삼국연의》에서는 뛰어난 지략과 냉혹한 면모가 함께 강조되는 대표적인 영웅으로 그려진다.","xia":"조조의 종친이자 오랜 측근으로, 조조가 거병하던 초기부터 군사 활동을 함께했다.\n전투 중 한쪽 눈을 잃은 일로 유명하지만, 정사에서는 무용뿐 아니라 여러 지역의 행정과 군 지휘를 맡은 경력이 두드러진다.\n조조가 위왕이 된 뒤에도 높은 지위를 유지했고, 조비 때에는 대장군에 올랐다.\n연의에서는 애꾸눈의 맹장 이미지가 크게 부각되어 실제보다 전투형 인물로 묘사되는 편이다.","xu":"조조의 친위 장수로 이름난 인물로, 큰 체격과 뛰어난 완력 때문에 ‘호치’라는 별칭으로도 알려져 있다.\n조조를 가까이 호위하며 위험한 상황에서 여러 차례 주군을 지켰고, 특히 관중 전선에서 마초를 상대할 때의 일화가 유명하다.\n정사에서는 충성심과 경호 능력이 핵심으로 기록된다.\n연의에서도 조조를 지키는 대표적인 괴력의 장수로 묘사된다.","dianwei":"조조 휘하의 대표적인 호위 장수로, 힘이 매우 세고 큰 무기를 잘 다룬 인물로 전해진다.\n장막·여포 세력과의 전투에서 활약한 뒤 조조의 가까운 호위가 되었다.\n197년 완성에서 장수의 기습을 받았을 때 조조가 빠져나갈 시간을 벌기 위해 끝까지 싸우다 전사했다.\n연의에서도 충성스러운 맹장으로 묘사되어 조조 진영의 상징적인 호위무장 가운데 하나로 꼽힌다.","zhanghe":"처음에는 한복과 원소를 섬겼으나 관도대전 무렵 조조에게 귀순한 뒤 위나라의 핵심 장수가 되었다.\n지형 판단과 임기응변에 능한 장수로 평가받았고, 서북·한중·촉한 방면의 전투에 꾸준히 참가했다.\n제갈량의 북벌을 막는 전선에서도 중용되었으며 231년 목문도 추격전에서 전사했다.\n연의에서는 오장군 가운데 한 명으로 무예와 지략을 겸한 장수로 그려진다.","xuhuang":"처음에는 양봉을 섬겼다가 조조에게 귀순하여 여러 전선에서 활약한 장수다.\n관도대전과 형주 전선 등에 참가했고, 번성에서 관우의 포위를 풀어낸 공으로 특히 높은 평가를 받았다.\n조조가 군율과 진영 운용이 뛰어나다며 칭찬한 일화가 정사에 전한다.\n연의에서는 큰 도끼를 사용하는 위나라의 대표적인 맹장으로 묘사된다.","liubei":"한 황실의 종친을 자처한 후한 말 군웅으로, 여러 세력을 전전하면서도 꾸준히 사람을 모아 기반을 넓혔다.\n도겸·여포·조조·원소·유표 등과 얽힌 긴 유랑 끝에 형주와 익주에서 세력을 확보했다.\n219년 한중왕에 올랐고 221년에는 촉한의 황제로 즉위했다.\n연의에서는 관우·장비와의 도원결의와 인덕을 중시하는 군주상으로 크게 이상화된다.","guan":"유비가 세력을 일으킬 때부터 함께한 핵심 장수로, 장비와 함께 오랫동안 유비를 보좌했다.\n한때 조조에게 붙잡혔으나 원소군의 안량을 베는 공을 세운 뒤 다시 유비에게 돌아갔다.\n219년 번성 전투에서 위를 압박했지만 손권군의 형주 기습으로 고립되어 붙잡혀 죽었다.\n연의에서는 충의의 상징으로 더욱 신격화되었고 후대에는 관제 신앙의 중심 인물이 되었다.","zhang":"유비의 초기부터 함께한 핵심 장수로, 관우와 나란히 용맹으로 이름을 떨쳤다.\n장판에서 후퇴하는 유비군의 뒤를 지키며 추격군을 막아낸 일화가 유명하고, 이후 익주 공략에도 중요한 역할을 했다.\n부하를 거칠게 다루는 성격이 문제로 지적되었으며 결국 범강·장달에게 살해되었다.\n연의에서는 장판교의 호통과 호쾌한 성격이 크게 부각된 대표적인 맹장으로 그려진다.","zhao":"처음에는 공손찬 휘하에 있었고 이후 유비를 따라 촉한의 장수가 되었다.\n장판 전투에서 유비의 가족을 보호한 일화로 특히 유명하며, 한중 전선과 북벌 초기에도 활동했다.\n정사에서는 신중하고 충실한 장수로 평가되며 유비 사후에도 촉한을 계속 섬겼다.\n연의에서는 장판에서 홀로 적진을 누비는 백마의 영웅으로 크게 영웅화된다.","huangzhong":"형주에서 유표와 한현 계통의 관료·장수로 활동하다가 유비의 익주 세력에 합류했다.\n한중 전투에서 정군산의 하후연을 격파한 공으로 촉한의 명장 반열에 올랐다.\n유비가 한중왕이 된 뒤 후장군에 임명되었으며 노장으로서 높은 명성을 얻었다.\n연의에서는 관우와의 장사 대결과 뛰어난 활솜씨가 더해져 ‘노익장’의 상징으로 묘사된다.","zhugeliang":"형주 융중에 은거하다가 유비의 삼고초려를 받고 출사한 촉한의 정치가·군사 지도자다.\n유비에게 천하삼분 구상을 제시했고, 적벽대전 전후의 외교와 익주 경영에 큰 역할을 했다.\n유비 사후에는 승상으로서 유선을 보좌하며 남중을 안정시키고 여러 차례 북벌을 추진하다 234년 오장원에서 죽었다.\n연의에서는 기상·진법·책략에 능한 천재 군사로 신비화되어 실제보다 훨씬 초인적인 모습으로 그려진다.","sun":"손견의 아들이자 손책의 동생으로, 형의 죽음 뒤 강동 세력을 계승했다.\n주유·노숙·여몽·육손 등 다양한 인재를 중용했고 적벽대전에서 조조의 남하를 저지하며 독립 기반을 지켰다.\n229년 황제로 즉위해 오나라를 정식으로 세웠으며 장기간 강동을 통치했다.\n연의에서는 젊은 군주가 신하들의 의견을 조율하며 위·촉 사이에서 세력을 지키는 모습이 강조된다.","zhou":"손책과 가까운 사이였고 손책 사후에는 손권을 보좌한 오나라의 핵심 지휘관이다.\n208년 조조의 대군이 남하하자 항전을 주장했고 적벽대전에서 오군의 주도적인 지휘를 맡아 승리를 이끌었다.\n이후 형주 방면의 작전을 계속 준비했으나 210년 비교적 이른 나이에 죽었다.\n연의에서는 제갈량과 경쟁하는 미남 천재 군사로 각색되지만, 정사에서는 대범하고 인망이 높은 장수로 평가된다.","gan":"젊은 시절 장강 일대에서 무리를 이끌던 경력이 있어 ‘금범적’으로 알려졌고, 이후 황조를 거쳐 손권에게 귀순했다.\n오나라 장수가 된 뒤 기습과 선봉 임무에서 여러 차례 공을 세웠고 합비 전선에서도 활약했다.\n거칠고 사치스러운 면이 있었지만 병사들을 아끼고 과감한 행동으로 인정받았다.\n연의에서도 방울과 비단 돛을 연상시키는 호쾌한 수군 장수의 이미지가 강하다.","taishici":"북해의 공융을 돕기 위해 포위를 뚫고 원군을 청한 일화로 이름을 알린 장수다.\n이후 양주에서 유요를 섬기며 손책과 맞섰고, 패한 뒤 손책에게 귀순해 강동 세력의 장수가 되었다.\n정사에서는 활솜씨와 담력이 뛰어난 인물로 기록된다.\n연의에서는 손책과 일대일로 겨루는 장면이 유명해 강동의 대표적인 무장으로 자리 잡았다.","luxun":"오나라의 명문 출신으로 손권에게 등용되어 형주와 촉한 방면에서 두각을 나타낸 장수·정치가다.\n관우를 방심시키는 과정에 참여했고 222년 이릉대전에서는 유비의 대군을 화공과 지구전으로 격파했다.\n이후 오나라의 최고 지휘관과 승상에 올랐으나 말년에는 후계 문제에 휘말려 어려움을 겪었다.\n연의에서도 이릉대전의 승장으로 유명하지만 정사에서는 군사뿐 아니라 정치 능력도 크게 평가된다.","lvmeng_wu":"손권 휘하의 장수로, 젊을 때는 무예 중심의 인물이었으나 학문을 익힌 뒤 지략까지 갖춘 지휘관으로 성장했다.\n여러 차례 강하·합비·형주 전선에서 활약했고, 219년에는 백의도강 작전으로 관우의 형주를 빼앗았다.\n형주 점령 직후 병으로 죽어 이후 장기적인 경영에는 참여하지 못했다.\n연의에서는 관우를 몰락시킨 인물이라는 점이 특히 강조되지만, 정사에서는 노력과 성장의 사례로 자주 언급된다.","lubu":"병주 출신의 무장으로 정원과 동탁을 차례로 섬겼으나 두 사람을 모두 죽이고 독자 세력으로 나섰다.\n기병과 활을 잘 다루고 개인 무용이 뛰어나다는 평판을 얻었지만, 여러 세력과의 관계를 자주 바꾸며 안정적인 기반을 만들지 못했다.\n서주를 차지했다가 조조·유비 연합군에게 하비에서 포위되어 198년 붙잡혀 처형되었다.\n연의에서는 적토마와 방천화극을 든 ‘인중여포’의 이미지가 극대화되어 최강의 무장으로 묘사된다.","zhangliao":"처음에는 정원·동탁·여포 계통에서 활동했고 하비 함락 뒤 조조에게 귀순했다.\n조조 휘하에서 여러 전투에 참가했으며 215년 합비에서 적은 병력으로 손권의 대군을 크게 위협한 전공이 가장 유명하다.\n이후에도 오나라 방면의 핵심 장수로 활동하다 222년 병사했다.\n연의에서도 합비의 영웅으로 묘사되어 위나라의 대표적인 맹장으로 자리 잡았다.","gaoshun":"여포 휘하에서 가장 규율이 엄격한 장수 가운데 하나로, 정예부대 ‘함진영’을 이끈 것으로 전한다.\n군대의 기강이 뛰어나 공격한 진영을 무너뜨린다는 평판을 얻었고 여포에게 충성했다.\n하비 함락 뒤 조조에게 붙잡혔지만 항복하지 않고 여포·진궁과 함께 처형되었다.\n연의에서도 과묵하고 충성스러운 정예 지휘관의 이미지가 유지된다.","chengong":"처음에는 조조와 관계를 맺었으나 이후 등을 돌리고 장막과 함께 여포를 연주로 불러들였다.\n여포의 참모로서 여러 계책을 제안했지만 여포가 이를 충분히 받아들이지 않아 세력 확장에 실패했다.\n하비에서 패한 뒤 조조가 살려주려 했으나 뜻을 굽히지 않고 처형을 받아들였다.\n연의에서는 조조의 잔혹함에 실망해 떠난 의기 있는 책사로 각색되어 인상이 더욱 강해졌다.","yuanshao":"명문 원씨 출신으로 젊을 때부터 사대부 사회에서 이름이 높았고, 동탁 토벌 연합에서는 맹주 역할을 맡았다.\n공손찬을 격파하며 기주·청주·병주·유주에 걸친 거대한 세력을 형성해 화북 최대의 군웅이 되었다.\n200년 관도대전에서 조조에게 패한 뒤 세력이 흔들렸고 202년 병사하면서 아들들의 후계 분쟁이 시작되었다.\n연의에서는 명문과 대군을 가졌지만 결단력이 부족한 군주로 묘사되는 경우가 많다.","yanliang":"원소 휘하의 대표적인 장수로 백마 전투에서 선봉을 맡았다.\n200년 조조군과 싸우던 중 관우의 돌격을 받아 전사한 사실이 정사에 기록되어 있다.\n원소군 내부에서 용맹으로 이름이 높았지만 독립적인 생애 기록은 많지 않다.\n연의에서는 문추와 함께 원소군의 쌍벽을 이루는 맹장으로 더욱 강조된다.","wenchou":"원소 휘하에서 안량과 함께 용맹한 장수로 이름이 난 인물이다.\n백마 전투 직후 연진 일대에서 조조군과 싸우다 전사했으며, 정사에는 그를 직접 죽인 사람이 누구인지는 명확하지 않다.\n원소군의 주력 장수로 평가되지만 개인 행적은 짧게 전한다.\n연의에서는 관우에게 죽는 것으로 각색되어 안량과 한 쌍의 장수처럼 묘사된다.","tianfeng":"원소의 핵심 참모로, 조조와 싸우기 전에 장기적인 준비와 신중한 전략이 필요하다고 여러 차례 간언했다.\n원소가 관도대전을 서두르는 것을 반대해 투옥되었고, 전쟁이 패배로 끝난 뒤 오히려 원소의 분노를 사 죽임을 당했다.\n정사에서는 직언을 아끼지 않은 뛰어난 모사로 평가된다.\n연의에서도 원소가 충언을 듣지 않아 몰락하는 과정을 보여주는 대표적인 인물로 등장한다.","jushou":"원소의 참모로 기주 장악과 하북 경영에 중요한 조언을 한 인물이다.\n헌제를 맞아들여 정치적 명분을 확보하자는 방안을 제시했고, 조조와의 전쟁에서도 신중한 장기전을 주장했다.\n관도대전에서 패한 뒤 조조에게 사로잡혔으나 끝내 원소에게 돌아가려다 죽었다.\n연의에서도 전풍과 함께 원소가 놓친 뛰어난 참모로 묘사된다.","dongzhuo":"서량의 군사력을 기반으로 성장해 황건의 난과 변방 전투를 거친 군벌이다.\n189년 낙양에 입성한 뒤 소제를 폐하고 헌제를 세워 조정의 실권을 장악했으며, 반동탁 연합이 일어나자 수도를 장안으로 옮겼다.\n폭력적인 통치로 반발을 샀고 192년 왕윤의 계책에 가담한 여포에게 살해되었다.\n연의에서는 폭정과 탐욕을 상징하는 대표적인 악역으로 더욱 과장되어 묘사된다.","jiaxu":"동탁 사후 이각·곽사에게 장안으로 진군할 것을 권한 계책으로 처음 크게 이름을 알렸다.\n이후 장수의 참모로 조조를 여러 차례 곤경에 빠뜨렸고, 장수에게 조조로 귀순할 것을 권해 위나라에 들어갔다.\n조조와 조비 아래에서 신중한 조언을 했으며 223년까지 높은 지위를 유지했다.\n연의에서도 상황 판단이 빠르고 자신을 잘 보전하는 냉철한 책사로 묘사된다.","huaxiong":"동탁 휘하의 도독으로 관동 연합군과 맞선 장수다.\n정사에서는 양인 전투에서 손견군에게 패해 전사한 것으로 기록되어 있다.\n개인 행적은 길지 않지만 반동탁 전쟁의 초기 장면에서 이름이 남았다.\n연의에서는 여러 장수를 연달아 쓰러뜨리다가 관우에게 베이는 장면으로 크게 각색되었다.","xurong_dz":"동탁 휘하에서 활동한 장수로, 반동탁 연합 시기의 전투에서 뛰어난 전과를 올렸다.\n형양 전투에서는 추격해 온 조조군을 격파해 조조가 크게 위험해질 정도의 승리를 거두었다.\n동탁 사후에는 왕윤 측에 섰다가 이각·곽사군과 싸우는 과정에서 전사했다.\n연의에서는 비중이 줄어 정사에서의 전공에 비해 상대적으로 덜 알려져 있다.","simayi":"조조 말기부터 조위에 출사해 조비·조예·조방 시대까지 활동한 정치가이자 장군이다.\n촉한의 제갈량 북벌에 맞서 관중을 지켰고 요동의 공손연을 토벌하는 등 여러 군사 작전을 지휘했다.\n249년 고평릉 사변으로 조상 세력을 제거해 사마씨가 위나라의 실권을 장악하는 기반을 만들었다.\n연의에서는 제갈량의 최대 라이벌로 부각되며 서로 책략을 겨루는 장면이 크게 강조된다.","dengai":"위나라의 관리로 출발해 군사 재능을 인정받고 촉한 전선의 주요 장수가 되었다.\n강유의 북벌을 여러 차례 막았고 263년에는 음평의 험로를 넘어 성도에 기습적으로 접근해 유선의 항복을 받아냈다.\n촉 정복 직후 권한을 독단적으로 행사한다는 의심을 받아 체포되었고 혼란 속에서 죽었다.\n연의에서도 험로를 돌파해 촉을 멸망시킨 장수로 가장 유명하다.","zhonghui":"위나라의 학자·관료 출신 장수로 사마씨 정권 아래에서 빠르게 출세했다.\n263년 등애와 함께 촉한 정벌을 지휘해 강유의 주력군을 압박하고 촉 멸망에 큰 역할을 했다.\n정벌 뒤 강유와 손잡고 독립을 꾀했으나 부하들의 반발로 성도에서 죽었다.\n연의에서도 촉 멸망 이후의 야심과 강유의 마지막 계책을 보여주는 핵심 인물로 등장한다.","gongsunzan":"유주를 기반으로 활동한 군벌로 북방 이민족과의 전투에서 이름을 알렸다.\n백마를 탄 정예 기병을 운용한 일로 ‘백마의종’ 이미지가 유명하며, 한때 유비와 조운도 그의 세력과 관계를 맺었다.\n기주를 둘러싸고 원소와 장기간 싸웠으나 점차 밀려 199년 역경에서 최후를 맞았다.\n연의에서는 유비의 초기 후원자이자 원소와 경쟁한 북방 군웅으로 등장한다.","menghuo":"남중 지역의 유력자로 전해지는 인물로, 제갈량의 남정과 관련된 기록에 이름이 보인다.\n정사 본문보다 주석과 후대 전승에서 비중이 커졌으며 실제 활동의 세부 내용은 분명하지 않은 부분이 많다.\n‘일곱 번 사로잡고 일곱 번 놓아주었다’는 이야기는 후대 전승과 연의에서 크게 발전한 유명한 일화다.\n연의에서는 남만왕으로 등장해 촉군과 여러 차례 싸운 뒤 제갈량에게 마음으로 복종하는 인물로 그려진다.","zhurong":"정사에는 등장하지 않고 《삼국연의》에서 창작된 남만 계열 인물이다.\n맹획의 아내이자 화신 축융의 후예를 자처하는 여성 무장으로 등장하며, 비도를 잘 쓰는 용맹한 장수로 묘사된다.\n촉군 장수들과 직접 싸워 포로를 잡는 등 남정 에피소드에서 드문 여성 전투 인물로 활약한다.\n후대 삼국지 게임과 창작물에서도 남만을 대표하는 여성 무장으로 널리 사용된다.","xiandi":"후한의 마지막 황제로, 동탁이 소제를 폐위한 뒤 189년 어린 나이에 즉위했다.\n동탁 사후 장안의 군벌들에게 휘둘리다 낙양으로 탈출했고, 이후 조조의 보호 아래 허도에 머물렀다.\n실권은 거의 없었지만 후한 황실의 정통성을 상징하는 존재로 오랫동안 이용되었다.\n220년 조비에게 제위를 넘기며 후한이 멸망했고, 이후 산양공으로 생을 마쳤다.","huangfusong":"후한의 명장으로 황건의 난 진압에서 가장 큰 공을 세운 지휘관 가운데 하나다.\n주준과 함께 영천·기주 등지에서 황건군을 격파했고 장각 사후에도 반란 세력을 정리했다.\n전공에 비해 정치적으로는 신중한 태도를 보였으며 동탁과의 관계에서도 쉽게 권력투쟁에 뛰어들지 않았다.\n연의에서도 황건의 난 초반 관군의 대표 지휘관으로 등장한다.","luzhi":"후한의 학자이자 관료·장수로 경학에 밝았고 유비와 공손찬을 가르친 스승으로도 알려져 있다.\n황건의 난 때 장각 세력을 토벌했으나 환관의 모함으로 한때 해임되었다.\n동탁이 황제를 폐하려 할 때 반대 의견을 낸 인물 가운데 하나로도 기록된다.\n연의에서는 유비의 스승이자 원칙을 지키는 명신의 이미지가 강조된다.","wangyun":"후한 말의 고위 관료로 동탁 정권 아래에서 사도에 올랐다.\n동탁의 폭정을 끝내기 위해 여포와 손잡아 192년 동탁 암살을 성공시켰다.\n그러나 동탁의 옛 부하들을 충분히 포용하지 못해 이각·곽사의 반격을 불렀고 결국 장안에서 죽었다.\n연의에서는 초선과 연환계를 이용해 동탁과 여포를 갈라놓는 인물로 유명하지만 초선 관련 이야기는 소설적 각색이다.","mateng":"서량에서 성장한 군벌로 한수와 오랜 기간 협력과 대립을 반복하며 관중 정세에 큰 영향을 미쳤다.\n후한 조정과도 관계를 유지했고 한때 장안의 권력 다툼에 관여했다.\n말년에는 조조의 통제 아래 업으로 들어갔으며, 아들 마초가 관중에서 반란을 일으킨 뒤 일가와 함께 처형되었다.\n연의에서는 한실에 충성하고 조조 제거를 꾀한 충신 이미지가 더 강하게 부각된다.","machao":"마등의 아들로 서량 기병 세력을 대표하는 장수다.\n211년 한수 등 관중 군벌들과 함께 조조에게 대항해 동관에서 큰 위협을 주었으나 패배했다.\n이후 장로에게 의탁했다가 유비에게 귀순해 촉한의 장수가 되었고 222년 죽었다.\n연의에서는 화려한 갑옷과 뛰어난 무용으로 ‘금마초’라 불리는 최상급 맹장으로 묘사된다.","pangde":"마등·마초 휘하에서 서량의 장수로 활동했고 이후 장로를 거쳐 조조에게 귀순했다.\n219년 번성 전투에서 조인 구원군으로 관우와 싸웠으며 홍수로 패해 사로잡혔다.\n관우가 항복을 권했으나 거부하고 처형되어 충절을 높이 평가받았다.\n연의에서도 관우와 치열하게 맞서는 강직한 맹장으로 묘사된다.","zhanglu":"오두미도 계통의 종교 지도자이자 한중의 지배자로, 장기간 독자적인 통치 체제를 유지했다.\n익주목 유장과 대립하면서 한중을 기반으로 세력을 유지했고 215년 조조의 한중 원정에 맞섰다.\n패배 뒤 재산과 창고를 불태우지 않고 보존한 채 항복해 조조에게 우대받았다.\n연의에서도 한중의 군주로 등장하지만 종교적 통치의 실제 모습은 정사 기록이 더 자세하다.","liuzhang":"유언의 아들로 익주목을 계승해 성도를 중심으로 익주를 다스렸다.\n장로의 한중 세력을 견제하기 위해 유비를 불러들였으나, 두 세력의 관계가 틀어지면서 결국 유비의 익주 공략이 시작되었다.\n214년 성도가 포위되자 백성의 피해를 줄이기 위해 항복했고 이후 형주로 옮겨졌다.\n연의에서는 우유부단한 군주로 묘사되지만 정사에서는 익주 내부의 복잡한 정치 상황도 함께 드러난다.","fazheng":"처음에는 유장 휘하에서 일했으나 제대로 중용되지 못하다가 장송 등과 함께 유비를 익주로 끌어들이는 데 관여했다.\n유비에게 귀순한 뒤 익주 공략과 한중 전투에서 핵심적인 전략을 제시했다.\n성격이 엄격하고 개인적인 원한을 갚았다는 비판도 있었지만 유비의 신임은 매우 두터웠다.\n220년 비교적 일찍 죽었고 유비가 크게 슬퍼했다고 전한다.","liubiao":"후한 황실의 종친이자 명사로, 혼란한 형주에 부임해 지역 호족을 제압하고 장기간 안정적으로 통치했다.\n원소와 가까운 외교 노선을 취하며 조조와 대립했고, 유비가 형주에 머물 수 있도록 받아들였다.\n208년 죽은 뒤 후계 문제에서 차남 유종이 조조에게 항복하면서 형주 세력이 빠르게 무너졌다.\n연의에서는 명망은 높지만 결단력이 부족해 기회를 놓치는 군주로 묘사된다.","caopi_wei":"조조의 아들로 형 조앙이 일찍 죽은 뒤 후계 경쟁을 거쳐 위왕 세자가 되었다.\n220년 조조가 죽자 위왕을 계승했고 같은 해 헌제에게 선양을 받아 조위를 건국해 초대 황제가 되었다.\n문학에도 뛰어나 건안문학의 중요한 인물로 평가되며, 통치 기간에는 제도 정비와 대외 방어에 힘썼다.\n연의에서는 조식과의 후계 경쟁과 한 황실로부터 제위를 넘겨받는 장면이 특히 강조된다.","liushan_shu":"유비의 아들로 223년 촉한의 두 번째 황제가 되었으며 즉위 당시 나이가 어려 제갈량이 국정을 주도했다.\n제갈량 사후에는 장완·비의 등에게 정사를 맡겼지만 말년에는 황호가 권력을 넓히며 정치가 흔들렸다.\n263년 등애가 성도에 접근하자 항복해 촉한이 멸망했고 이후 위·진에서 안락공으로 살았다.\n후대에는 ‘낙불사촉’ 일화 때문에 무능한 군주의 상징처럼 알려졌지만 그 평가에는 논쟁이 있다.","jiangwei_shu":"원래 위나라 천수 지역의 장수였으나 제갈량의 북벌 과정에서 촉한으로 넘어왔다.\n제갈량 사후 점차 군사권을 맡아 여러 차례 북벌을 추진했지만 큰 성과를 얻지는 못했고 국력 소모를 둘러싼 비판도 받았다.\n263년 촉이 멸망한 뒤 종회와 손잡고 위에 반기를 들며 촉 부흥을 노렸으나 실패해 264년 죽었다.\n연의에서는 제갈량의 병법을 잇는 후계자로 더욱 강하게 묘사된다.","sunjian_wu":"후한 말 장수로 황건의 난과 여러 반란 진압에서 공을 세우며 이름을 알렸다.\n동탁 토벌전에서는 관동 연합군 가운데 실제로 낙양 방면까지 진격해 동탁군을 압박한 주요 지휘관이었다.\n이후 원술과 손잡고 유표를 공격하다 191~192년 무렵 전사했다.\n연의에서는 옥새를 얻은 일화와 ‘강동의 맹호’ 이미지가 크게 부각된다.","sunce":"손견의 장남으로 아버지 사후 원술 밑에서 군사를 얻어 강동 평정을 시작했다.\n유요·엄백호·왕랑 등 여러 세력을 빠르게 격파하며 짧은 기간에 강동의 기반을 세웠다.\n200년 자객에게 입은 상처가 악화되어 젊은 나이에 죽으면서 동생 손권에게 세력을 넘겼다.\n연의에서는 ‘소패왕’이라 불리며 항우에 비견되는 과감한 무장으로 묘사된다.","hansui_hs":"서량과 관중을 기반으로 수십 년간 활동한 군벌로, 후한 말 서북 정세의 핵심 인물 가운데 하나다.\n마등과 협력과 대립을 반복했고 211년에는 마초 등과 함께 조조의 관중 진출에 저항했다.\n동관에서 패한 뒤에도 서북에서 세력을 유지했으나 말년에 몰락했다.\n연의에서는 마초와 함께 조조에 맞서는 서량 세력의 원로 군주로 묘사된다.","lijue":"동탁 휘하의 서량계 장수로 동탁 사후 왕윤 정권의 처벌을 두려워하다 가후의 조언을 받고 장안으로 진군했다.\n곽사·번조 등과 함께 장안을 장악해 헌제를 통제하며 조정의 실권을 잡았다.\n이후 곽사와 내전을 벌여 장안을 혼란에 빠뜨렸고 헌제가 탈출한 뒤 세력이 급격히 약해졌다.\n연의에서도 동탁 사후 한 조정을 유린한 군벌로 등장한다.","guosi":"동탁 휘하에서 활동한 장수로, 동탁 사후 이각과 함께 장안을 공격해 왕윤 정권을 무너뜨렸다.\n한동안 이각과 함께 조정을 장악했지만 곧 서로 반목해 장안에서 내전을 벌였다.\n헌제를 사이에 둔 싸움으로 세력이 크게 약해졌고 이후 부하에게 살해되었다.\n연의에서도 이각과 짝을 이루어 후한 말 장안의 혼란을 상징하는 군벌로 묘사된다.","taoqian_tq":"후한 말 서주목으로 부임해 서주를 다스린 군벌이다.\n조조의 아버지 조숭이 서주를 지나다 살해된 사건을 계기로 조조의 대규모 서주 침공을 받았다.\n조조군의 압박 속에서 유비의 도움을 받았고 194년 죽기 전후로 서주의 주도권이 유비에게 넘어갔다.\n연의에서는 유비에게 여러 차례 서주를 맡아 달라고 청하는 온화한 군주로 묘사된다.","mizhu_tq":"서주의 부유한 호족 출신으로 도겸을 섬기다가 유비에게 합류한 문신이다.\n유비가 여러 차례 패해 기반을 잃었을 때도 재산과 인맥을 제공하며 계속 지원했다.\n여동생 미씨가 유비의 부인이 되어 유비와 사돈 관계를 맺었고 촉한 건국 뒤 높은 대우를 받았다.\n연의에서도 유비의 어려운 시절을 끝까지 따르는 충실한 신하로 등장한다.","kongrong_kr":"공자의 후손으로 알려진 후한 말의 명사이자 문인으로, 북해상으로 재직해 흔히 ‘공북해’라 불렸다.\n황건 잔당과 주변 군벌의 압박 속에서 북해를 지켰고 유비·태사자와 관련된 일화도 전한다.\n조조 아래에서 관직을 지냈지만 그의 정책을 자주 비판하다 208년 일가와 함께 처형되었다.\n연의에서는 예형을 조조에게 추천하는 등 학식과 명망을 상징하는 인물로 등장한다.","liuyao_ly":"한 황실의 종친으로 양주자사에 임명되어 장강 하류 지역에서 세력을 형성했다.\n원술 세력과 대립하면서 곡아 일대를 근거지로 삼았고 손책의 강동 진출과 정면으로 충돌했다.\n손책에게 패한 뒤 예장 방면으로 물러났으며 197년 무렵 죽었다.\n연의에서는 태사자·장영 등 장수들을 거느리고 손책의 강동 평정에 맞선 군주로 묘사된다.","zerong_ly":"후한 말의 군벌로 불교를 적극적으로 후원해 대규모 사찰과 불교 행사를 운영한 것으로 유명하다.\n처음에는 도겸 휘하에서 군량 수송을 맡았으나 병력과 재물을 빼돌려 독립적으로 움직였다.\n조욱을 살해하고 유요에게 의탁한 뒤 다시 반란을 일으켰다가 패해 산중에서 죽었다.\n정사에서 종교 후원과 잔혹한 군벌 행동이 함께 기록되는 독특한 인물이다.","wanglang_wl":"후한 말 회계태수로 재직하다 손책의 강동 공략에 맞서 싸웠으나 패배했다.\n손책에게 사로잡힌 뒤 목숨을 건졌고 후일 조조에게 불려가 중앙 관료로 활동했다.\n조위가 세워진 뒤에는 고위 관직을 지낸 원로 대신이 되었으며 학문과 문장에도 이름이 있었다.\n연의에서는 제갈량과 설전을 벌이다 죽는 장면이 유명하지만 이는 소설의 과장된 각색이다.","yufan_wl":"회계 출신의 학자·관료로 처음에는 왕랑을 섬기다가 손책과 손권 휘하에서 활동했다.\n주역에 밝은 학자로 이름이 높았고, 정치와 군사 문제에서도 직설적인 의견을 자주 냈다.\n성격이 지나치게 강직하고 말이 거칠어 손권과 충돌한 끝에 교주로 유배되었다.\n연의에서는 비중이 크지 않지만 정사에서는 학문과 직언으로 개성이 뚜렷한 인물이다.","heqi_wl":"손책·손권 시대 오나라의 장수로 강동 남부와 산월 지역의 토벌·안정화에 오랫동안 종사했다.\n산악 지형의 여러 세력을 제압하고 군현을 정비해 오나라가 강동 내륙을 통제하는 데 기여했다.\n화려한 무기와 군장으로 병력을 꾸미는 것을 좋아했다는 기록도 전한다.\n연의에서는 비중이 작지만 정사에서는 장기간 지방 군사 실무를 맡은 중요 장수다.","yufuluo_xn":"후한 말 남흉노의 선우로, 강거의 아들이며 유표(劉豹)의 아버지다.\n남흉노 내부 반란 때문에 본거지로 돌아가지 못하고 중원에 머물며 여러 군벌과 얽혀 활동했다.\n백파적 등과 함께 움직인 기록도 있으며 후한 말 중원 혼란에 참여한 북방 세력의 대표 인물이다.\n후대 전조를 세운 유연의 가계와 연결되기 때문에 오호십육국 역사에서도 중요하게 다뤄진다.","liubao_xn":"남흉노 선우 어부라의 아들로, 호주천 시기에 좌현왕이 되어 남흉노의 유력 지도자가 되었다.\n채염이 흉노에 머물던 시기와 관련된 인물로 전하며, 조조가 남흉노를 여러 부로 나눈 뒤에도 한 부를 맡았다.\n후대 전조를 세운 유연의 아버지로 알려져 있어 삼국 말 이후의 역사와도 이어진다.\n형주의 유표(劉表)와는 한글 이름만 같을 뿐 전혀 다른 인물이다.","liuyuan_xn":"남흉노 계통의 유력자 유표(劉豹)의 아들로, 삼국 시대보다 뒤인 서진 말기에 본격적으로 활동한 인물이다.\n젊을 때부터 한족 문화와 학문을 익혔고 서진에서 관직과 인질 생활을 경험했다.\n팔왕의 난으로 서진이 약해진 틈을 타 304년 한을 세워 독립했고, 훗날 전조로 이어지는 정권의 기초를 마련했다.\n삼국 인물들의 다음 세대를 잇는 인물이라는 점에서 이 게임의 시대혼합 진영에 포함되어 있다.","kebineng_xb":"후한 말~조위 초의 선비족 지도자로, 여러 부족을 규합해 북방에서 큰 세력을 형성했다.\n조조·조비 시대에는 위나라와 복종과 대립을 반복하며 변경 정세에 큰 영향을 미쳤다.\n세력이 커지자 위 조정의 경계 대상이 되었고 235년 유주자사 왕웅이 보낸 자객에게 살해되었다.\n정사에서는 단석괴 이후 선비 세력을 다시 크게 모은 지도자로 평가된다.","tanshihuai_xb":"2세기 후반 선비족의 여러 부족을 통합해 거대한 세력을 만든 지도자다.\n동쪽 부여·요동에서 서쪽 변경까지 넓은 지역에 영향력을 행사하며 후한의 북방 국경을 지속적으로 압박했다.\n후한 조정이 왕호와 혼인을 제안했지만 받아들이지 않았고 독자적인 세력 체계를 유지했다.\n181년 무렵 죽은 뒤 선비 세력은 다시 여러 집단으로 분열되었다.","hejin":"후한 영제의 황후 하씨의 이복오빠로 외척의 지위를 바탕으로 대장군에 올랐다.\n황건의 난 시기 수도 방위를 맡았고 영제 사후에는 원소 등과 함께 환관 세력을 제거할 방안을 논의했다.\n동탁 등 지방 군벌을 불러 압박하려는 계획을 세웠으나 189년 궁중에 들어갔다가 환관들에게 살해되었다.\n그의 죽음은 낙양의 무력 충돌과 동탁 집권으로 이어지는 결정적인 계기가 되었다.","hemiao_hj":"하진의 이복동생으로 후한 말 거기장군까지 오른 외척 계열의 장군이다.\n형 하진과 환관 문제를 두고 입장이 달랐던 것으로 전하며, 하진이 살해된 뒤 주변 장수들에게 환관과 내통했다는 의심을 받았다.\n오광과 동민 등의 공격을 받아 189년 낙양의 혼란 속에서 죽었다.\n하씨 외척 세력이 한꺼번에 무너지는 과정을 보여주는 인물 가운데 하나다.","wukuang_hj":"후한 말 하진 휘하의 부곡장으로, 오반의 아버지이자 오의의 친족으로 전한다.\n189년 하진이 환관들에게 살해되자 장장 등과 함께 궁문을 공격하며 복수를 시도했다.\n하묘가 환관과 한편이라고 의심해 동민과 함께 하묘를 공격해 죽였고, 이후 하진의 병력은 동탁 세력에 흡수되었다.\n나무위키에서도 하진 사후 낙양의 혼란을 보여주는 실무 장수로 비교적 자세히 정리되는 인물이다.","weiyan_hx":"촉한의 장수 위연(魏延)으로, 유비의 익주 평정 과정에서 두각을 나타내고 한중태수에 임명되었다.\n유비 사후에도 제갈량의 북벌에 참가해 선봉과 독립 작전을 맡았으며 과감한 군사 의견을 자주 제시했다.\n234년 제갈량 사후 철수 문제를 두고 양의와 충돌했고, 내분 과정에서 마대에게 살해되었다.\n연의에서는 ‘반골’ 일화가 크게 강조되지만 정사에서는 오랫동안 촉한의 중진 장수로 활약한 경력이 더 중요하다.","weiyan_dy":"동연의 인물 위연(衛演)으로, 촉한 장수 위연(魏延)과는 전혀 다른 사람이다.\n공손연 휘하에서 시중을 지냈으며 238년 사마의가 요동을 공격해 양평성을 포위했을 때 사신으로 파견되었다.\n공손연 측은 볼모를 보내 화의를 청하려 했지만 사마의는 이를 받아들이지 않았다.\n이후의 행적은 자세히 전하지 않으며 요동 정권 최후의 외교 장면에서 이름이 남는다.","jinxuan_jx":"후한 말 무릉태수로 이름이 전하는 인물로, 유비가 형남 사군을 장악하던 시기와 연결된다.\n정사 계통에서는 그의 최후와 귀순 과정에 대한 전승이 단순하고 서로 다른 부분이 있다.\n《삼국연의》에서는 장비가 무릉을 공격하자 항전하려 하지만 부하 공지가 항복을 주장하며 내부 갈등이 벌어진다.\n연의의 형남 사군 에피소드 덕분에 실제 기록보다 대중적으로 더 잘 알려진 인물이다.","liudu_ld":"후한 말 영릉태수로, 유비가 적벽대전 이후 형남 사군을 확보할 때 그 지역을 다스리던 인물이다.\n정사에서는 유비에게 귀순한 사실을 중심으로 비교적 짧게 전한다.\n《삼국연의》에서는 아들 유현과 장수 형도영을 내보내 유비군에 저항하다 결국 항복한다.\n소설에서는 영릉 공략전을 구성하는 군주 역할 때문에 실제 기록보다 비중이 커졌다.","zhaofan_zf":"후한 말 계양태수로, 유비의 형남 진출 과정에서 조운에게 항복한 인물이다.\n정사 주석에는 과부가 된 형수 번씨를 조운과 혼인시키려 했으나 조운이 거절했다는 일화가 전한다.\n《삼국연의》에서는 진응·포륭 등을 거느리고 처음에는 조운을 경계하며 거짓 항복 계책까지 꾸미는 모습이 더해진다.\n계양 공략전에서 조운의 신중함을 보여주는 상대 인물로 유명하다.","hanxuan_hx":"후한 말 장사태수로, 유비가 적벽대전 뒤 형남을 장악할 때 장사를 다스리던 인물로 전한다.\n정사에서 독립적인 행적은 매우 짧고 장사의 귀순 과정과 함께 이름이 확인되는 정도다.\n《삼국연의》에서는 성급하고 의심이 많은 통치자로 각색되어 황충을 처형하려다 위연의 반발을 산다.\n장사 공략 에피소드에서 황충·위연이 유비 진영으로 들어오는 계기를 만드는 인물이다.","tadun_wh":"후한 말 요서오환의 지도자로, 구력거의 조카이며 누반이 어렸을 때 여러 오환 부락을 대신 통솔했다.\n원소와 우호 관계를 맺고 공손찬 공격을 도왔으며, 원소의 아들 원상·원희가 조조에게 패하자 이들을 받아들였다.\n207년 조조의 오환 원정 때 백랑산 전투에서 패해 전사했다.\n정사와 나무위키 모두 후한 말 오환 세력을 대표하는 가장 강력한 지도자 가운데 하나로 다룬다.","zulang_sy":"단양 지역에서 활동한 산월계 지도자로 손책의 강동 평정 초기에 강하게 저항했다.\n전투 중 손책을 큰 위기에 몰아넣은 적도 있었지만 결국 패해 사로잡혔다.\n손책은 과거의 원한을 묻지 않고 조랑을 풀어주고 부하로 받아들였다고 전한다.\n강동에서 손씨 세력이 산악 지역 세력과 싸우고 포섭해 가는 과정을 보여주는 인물이다."};
 
 // Remove true duplicate historical officers from visible rosters.
@@ -5317,6 +5364,155 @@ if(window.SamgukDodgeball.diagnostics)window.SamgukDodgeball.diagnostics.current
 
 
 renderMenu();
+
+
+/* v10.4.4 — stronger carry posture, directional carry poses, and clearer pass/throw anticipation. */
+const V1043_PASS_PREP=.36, V1043_THROW_PREP=.34, V1043_ULT_PREP=.45;
+
+selectActor=function(id){
+ if(G.phase!=='play')return;
+ const a=actor(id);if(!a||a.side!==G.playerSide||a.out)return;
+ const prior=active();G.activeId=id;G.pointer=null;
+ const owner=G.ball.mode==='held'?actor(G.ball.owner):null;
+ if(owner?.side===G.playerSide&&owner.id!==id&&!owner.shot){
+  G.ball={mode:'pass',x:owner.x+owner.face*25,y:owner.y-32,owner:owner.id,target:id,side:G.playerSide,age:0,r:BALL_MOTION.baseRadius,...ballPose(G.ball)};
+  owner.attackKind='pass';owner.attackMax=V1043_PASS_PREP;owner.attackT=V1043_PASS_PREP;owner.passPrepT=.18;
+  sfx('throw');addText('전달!',owner.x,owner.y-113,'#c6f3e5',15);
+ }else if(prior?.id!==id)sfx('click');
+ uiTick=.2;
+};
+
+queueShot=function(a,kind){
+ if(!canShoot(a,kind,true))return false;
+ const t=targetOf(a);if(!t)return false;
+ if(a.qi>=100&&kind==='normal')kind='ult';
+ a.attackKind=kind;
+ a.attackMax=kind==='ult'?1.16:.76;
+ a.attackT=a.attackMax;
+ a.shot={kind,target:t.id,delay:kind==='ult'?V1043_ULT_PREP:V1043_THROW_PREP};
+ a.catchT=0;a.holdT=0;a.passPrepT=kind==='ult'?.22:.14;
+ if(kind==='ult'){a.chargeT=.4;addImpact(a.x,a.y-35,'#ffe08d','charge');sfx('ready')}
+ return true;
+};
+
+poseOf=function(a){
+ if(a.out)return{state:'out',f:(1-a.outT/1.05)*9.8,jump:Math.sin((1-a.outT/1.05)*Math.PI)*25};
+ if(a.hitT>0){const t=1-a.hitT/(a.hitMax||.38);return{state:'hurt',f:t*7.8,jump:Math.sin(t*Math.PI)*(a.hitMax>.4?17:8)}}
+ if(a.dashT>0)return{state:'dash',f:(.32-a.dashT)/.32*11.9,jump:Math.sin(a.dashT/.32*Math.PI)*33};
+ if(a.attackT>0){
+  const total=a.attackMax||.68,t=1-a.attackT/total,kind=a.attackKind||'normal';
+  if(kind==='pass'){
+   const phase=t<.55?t/.55*.16:.16+(t-.55)/.45*.84;
+   return{state:'throw',f:phase*13.9,jump:Math.sin(Math.max(0,(t-.35)/.65)*Math.PI)*4};
+  }
+  if(kind==='ult'){
+   const phase=t<.42?t/.42*.22:.22+(t-.42)/.58*.78;
+   return{state:'ult',f:phase*15.9,jump:Math.sin(t*Math.PI)*24};
+  }
+  const phase=t<.34?t/.34*.18:.18+(t-.34)/.66*.82;
+  return{state:'throw',f:phase*13.9,jump:Math.sin(Math.max(0,(t-.28)/.72)*Math.PI)*7};
+ }
+ if(a.braceT>0)return{state:'catch',f:(1-a.braceT/a.braceMax)*7.9,jump:0};
+ if(a.catchT>0)return{state:'catch',f:G.visualTime*17,jump:2};
+ const holding=G.ball?.mode==='held'&&G.ball.owner===a.id&&!a.shot;
+ if(holding){const moving=a.moving||(a.visualSpeed||0)>12;return{state:moving?'holdrun':'hold',f:moving?a.runPhase:G.visualTime*4+a.index*2,jump:0}}
+ if(a.moving||(a.visualSpeed||0)>12)return{state:'run',f:a.runPhase,jump:0};
+ return{state:'idle',f:G.visualTime*9+a.index*3,jump:0};
+};
+
+const v1043UpdateBallBase=updateBall;
+updateBall=function(dt){
+ const b=G.ball;if(!b)return;
+ if(b.mode==='held'){
+  const a=actor(b.owner);if(!a||a.out){dropBall(b.x,b.y);return}
+  b.age+=dt;b.spin=0;
+  const dir=a.face||1,moving=a.moving||(a.visualSpeed||0)>12;
+  if(a.shot){
+   const prepWindow=a.attackKind==='ult'?V1043_ULT_PREP:(a.attackKind==='pass'?V1043_PASS_PREP:V1043_THROW_PREP);
+   const wind=clamp(1-a.shot.delay/prepWindow,0,1);
+   const startX=a.attackKind==='pass'?(dir>0?34:28):(dir>0?36:30);
+   const endPull=a.attackKind==='pass'?38:47;
+   const rise=a.attackKind==='pass'?18:26;
+   b.x=a.x+dir*(startX-endPull*wind);
+   b.y=a.y-(43+rise*wind);
+  }else{
+   const holdBob=!reduced?Math.sin(G.visualTime*4+a.index)*1.05:0;
+   const xOff=moving?(dir>0?36:30):(dir>0?39:33);
+   const yOff=moving?(dir>0?48:42):(dir>0?46:43);
+   b.x=a.x+dir*xOff;
+   b.y=a.y-yOff+holdBob+(moving?-1.4:0);
+  }
+  return;
+ }
+ return v1043UpdateBallBase(dt);
+};
+
+// Visible carry arm follows the ball while moving. Left/right facings are intentionally not identical:
+// facing right keeps the ball slightly farther forward, while facing left tucks it closer to the chest.
+drawHeldGrip=function(){
+ const b=G.ball;if(!b||b.mode!=='held')return;const a=actor(b.owner);if(!a||a.out||a.shot)return;
+ const r=b.r||BALL_MOTION.baseRadius,skin=a.def.skin||'#e8bd98',edge='#17283b',dir=a.face||1,robe=a.def.robe||'#496987',trim=a.def.trim||'#e8cf8c';
+ const moving=a.moving||(a.visualSpeed||0)>12;
+ const shoulderX=a.x+(dir>0?16.5:-14.5),shoulderY=a.y-(moving?45.5:44.2);
+ const wristX=b.x-dir*(dir>0?r*.61:r*.56),wristY=b.y+(dir>0?r*.16:r*.22)+(moving?1.2:0);
+ const elbowLift=dir>0?7.2:5.8,elbowPush=dir>0?3.1:1.0;
+ const elbowX=shoulderX+(wristX-shoulderX)*.56+dir*elbowPush,elbowY=shoulderY+(wristY-shoulderY)*.55-elbowLift;
+ ctx.save();ctx.globalAlpha=.985;
+ ellipse(ctx,shoulderX-dir*2.1,shoulderY+1.5,7.7,6.7,trim,edge,1.15);
+ line(ctx,shoulderX,shoulderY,elbowX,elbowY,edge,13.8);
+ line(ctx,shoulderX,shoulderY,elbowX,elbowY,shade(robe,.9),9.0);
+ line(ctx,elbowX,elbowY,wristX-dir*4.8,wristY+1.3,edge,11.4);
+ line(ctx,elbowX,elbowY,wristX-dir*4.8,wristY+1.3,shade(robe,.98),7.2);
+ ellipse(ctx,wristX-dir*6.1,wristY+1.2,5.1,5.8,trim,edge,1.0);
+ ellipse(ctx,wristX,wristY,7.7,6.6,skin,edge,1.25);
+ line(ctx,wristX-dir*4.1,wristY-.9,wristX+dir*4.3,wristY-1.4,shade(skin,.72),.9);
+ line(ctx,wristX-dir*2.1,wristY+2.4,wristX+dir*3.8,wristY+1.8,shade(skin,.78),.75);
+ ctx.restore();
+};
+
+/* v10.4.4 — diagonal carry polish, distinct pass/shot anticipation, and hero-specific throw forms. */
+const V1044_PASS_PREP=.42, V1044_THROW_PREP=.36, V1044_ULT_PREP=.48;
+selectActor=function(id){
+ if(G.phase!=='play')return;const a=actor(id);if(!a||a.side!==G.playerSide||a.out)return;const prior=active();G.activeId=id;G.pointer=null;
+ const owner=G.ball.mode==='held'?actor(G.ball.owner):null;
+ if(owner?.side===G.playerSide&&owner.id!==id&&!owner.shot){
+  G.ball={mode:'pass',x:owner.x+owner.face*25,y:owner.y-32,owner:owner.id,target:id,side:G.playerSide,age:0,r:BALL_MOTION.baseRadius,...ballPose(G.ball)};
+  owner.attackKind='pass';owner.attackMax=V1044_PASS_PREP;owner.attackT=V1044_PASS_PREP;owner.passPrepT=.2;sfx('throw');addText('전달!',owner.x,owner.y-113,'#c6f3e5',15)
+ }else if(prior?.id!==id)sfx('click');uiTick=.2;
+};
+queueShot=function(a,kind){
+ if(!canShoot(a,kind,true))return false;const t=targetOf(a);if(!t)return false;if(a.qi>=100&&kind==='normal')kind='ult';
+ a.attackKind=kind;a.attackMax=kind==='ult'?1.2:.82;a.attackT=a.attackMax;a.shot={kind,target:t.id,delay:kind==='ult'?V1044_ULT_PREP:V1044_THROW_PREP};a.catchT=0;a.holdT=0;
+ if(kind==='ult'){a.chargeT=.44;addImpact(a.x,a.y-35,'#ffe08d','charge');sfx('ready')}return true;
+};
+poseOf=function(a){
+ if(a.out)return{state:'out',f:(1-a.outT/1.05)*9.8,jump:Math.sin((1-a.outT/1.05)*Math.PI)*25};
+ if(a.hitT>0){const t=1-a.hitT/(a.hitMax||.38);return{state:'hurt',f:t*7.8,jump:Math.sin(t*Math.PI)*(a.hitMax>.4?17:8)}}
+ if(a.dashT>0)return{state:'dash',f:(.32-a.dashT)/.32*11.9,jump:Math.sin(a.dashT/.32*Math.PI)*33};
+ if(a.attackT>0){const t=1-a.attackT/(a.attackMax||.68),kind=a.attackKind||'normal';
+  if(kind==='pass'){const phase=t<.64?t/.64*.13:.13+(t-.64)/.36*.87;return{state:'throw',f:phase*13.9,jump:Math.sin(Math.max(0,(t-.42)/.58)*Math.PI)*3}}
+  if(kind==='ult'){const phase=t<.48?t/.48*.2:.2+(t-.48)/.52*.8;return{state:'ult',f:phase*15.9,jump:Math.sin(t*Math.PI)*26}}
+  const phase=t<.4?t/.4*.15:.15+(t-.4)/.6*.85;return{state:'throw',f:phase*13.9,jump:Math.sin(Math.max(0,(t-.22)/.78)*Math.PI)*8}}
+ if(a.braceT>0)return{state:'catch',f:(1-a.braceT/a.braceMax)*7.9,jump:0};
+ if(a.catchT>0)return{state:'catch',f:G.visualTime*17,jump:2};
+ const holding=G.ball?.mode==='held'&&G.ball.owner===a.id&&!a.shot;
+ if(holding){const moving=a.moving||(a.visualSpeed||0)>12;return{state:moving?'holdrun':'hold',f:moving?a.runPhase:G.visualTime*4+a.index*2,jump:0}}
+ if(a.moving||(a.visualSpeed||0)>12)return{state:'run',f:a.runPhase,jump:0};
+ return{state:'idle',f:G.visualTime*9+a.index*3,jump:0};
+};
+const v1044BaseUpdateBall=updateBall;
+updateBall=function(dt){
+ const b=G.ball;if(!b)return; if(b.mode==='held'){
+  const a=actor(b.owner);if(!a||a.out){dropBall(b.x,b.y);return}b.age+=dt;b.spin=0;const dir=a.face||1,moving=a.moving||(a.visualSpeed||0)>12,mx=a.moveX||0,my=a.moveY||0,diag=Math.abs(mx)>.34&&Math.abs(my)>.34,up=my<-.34,down=my>.34;
+  if(a.shot){const prep=a.attackKind==='ult'?V1044_ULT_PREP:(a.attackKind==='pass'?V1044_PASS_PREP:V1044_THROW_PREP),wind=clamp(1-a.shot.delay/prep,0,1);
+   if(a.attackKind==='pass'){b.x=a.x+dir*((dir>0?30:24)-30*wind);b.y=a.y-(42+14*wind)+(down?2:-1)}
+   else {const style=throwProfileForHero(a.def);const pull=style.kind==='power'?52:style.kind==='sidearm'?34:style.kind==='quick'?39:42, rise=style.kind==='sidearm'?17:style.kind==='power'?28:22, start=dir>0?(style.kind==='sidearm'?34:36):(style.kind==='command'?28:31);b.x=a.x+dir*(start-pull*wind);b.y=a.y-(43+rise*wind)+(style.kind==='sidearm'?wind*4:0)}}
+  else {const holdBob=!reduced?Math.sin(G.visualTime*4+a.index)*1.0:0;const baseX=dir>0?38:31, baseY=dir>0?46:43;const tuck=up?5:down?-3:0, diagX=diag?(mx*3.5):0, diagY=up?-5.2:down?4.4:0;
+   b.x=a.x+dir*(baseX+tuck+diagX);b.y=a.y-(baseY+diagY)+holdBob+(moving?(up?2.4:down?-2.2:0):0)}
+  return;
+ }
+ return v1044BaseUpdateBall(dt);
+};
 
 showModeHub();fitStage();renderMenu();render();requestAnimationFrame(frame);
 })();
